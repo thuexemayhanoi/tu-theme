@@ -10,3 +10,6 @@ vendor/
 *.log
 .DS_Store
 /build/
+
+# Agent worktrees (local only)
+/.claude/

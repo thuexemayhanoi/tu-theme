@@ -1,0 +1,14 @@
+{
+  "name": "mr-tu-flagship",
+  "private": true,
+  "description": "Build + QA tooling for the Mr Tu theme and plugins (not deployed).",
+  "license": "GPL-2.0-or-later",
+  "scripts": {
+    "build:css": "node scripts/build-css.mjs",
+    "build": "bash scripts/build.sh"
+  },
+  "devDependencies": {
+    "lightningcss": "1.29.3",
+    "esbuild": "0.25.2"
+  }
+}

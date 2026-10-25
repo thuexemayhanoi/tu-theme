@@ -1,0 +1,119 @@
+/*
+ * Mr Tu — table of contents: structural styles only (layout, states, focus).
+ * The theme owns the look; every value reads a design token with a fallback.
+ * Markup contract: docs/architecture-contract.md §2.9 · docs/component-markup.md (TOC).
+ */
+.mrtu-toc {
+	margin-block: var(--space-6, 24px);
+	border: 1px solid var(--color-border, #e3e3e0);
+	border-radius: var(--radius-md, 14px);
+	background: var(--color-surface, #f4f4f2);
+	color: var(--color-text, #101114);
+}
+
+.mrtu-toc__summary {
+	display: flex;
+	align-items: center;
+	gap: var(--space-2, 8px);
+	min-height: 44px;
+	padding-block: var(--space-2, 8px);
+	padding-inline: var(--space-4, 16px);
+	border-radius: inherit;
+	font-weight: 600;
+	list-style: none;
+	cursor: pointer;
+}
+
+.mrtu-toc__summary::-webkit-details-marker {
+	display: none;
+}
+
+/* Chevron drawn with currentColor (native markers differ between Safari and other engines). */
+.mrtu-toc__summary::after {
+	content: "";
+	flex: 0 0 auto;
+	width: 0.5em;
+	height: 0.5em;
+	margin: -0.25em 0.25em 0 0;
+	border-right: 2px solid currentColor;
+	border-bottom: 2px solid currentColor;
+	transform: rotate(45deg);
+}
+
+.mrtu-toc[open] > .mrtu-toc__summary::after {
+	margin-top: 0.25em;
+	transform: rotate(-135deg);
+}
+
+.mrtu-toc__count {
+	min-width: 1.75em;
+	margin-inline-start: auto;
+	padding: 0 0.5em;
+	border-radius: var(--radius-pill, 999px);
+	background: var(--color-surface-raised, #fff);
+	color: var(--color-text-muted, #5b5e66);
+	font-size: var(--text-small, 0.9375rem);
+	font-variant-numeric: tabular-nums;
+	line-height: 1.6;
+	text-align: center;
+}
+
+.mrtu-toc__nav {
+	padding-inline: var(--space-4, 16px);
+	padding-block-end: var(--space-3, 12px);
+}
+
+.mrtu-toc__list,
+.mrtu-toc__list ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.mrtu-toc__list ol {
+	padding-inline-start: var(--space-4, 16px);
+}
+
+.mrtu-toc__list a {
+	display: flex;
+	align-items: center;
+	min-height: 44px;
+	padding-inline: var(--space-3, 12px);
+	border-inline-start: 3px solid transparent;
+	color: var(--color-action-ink, #0057e0);
+	text-decoration: none;
+	overflow-wrap: anywhere;
+}
+
+.mrtu-toc__list a:hover {
+	text-decoration: underline;
+}
+
+.mrtu-toc__list a[aria-current="true"] {
+	border-inline-start-color: var(--color-accent, #f56a2a);
+	color: var(--color-text, #101114);
+	font-weight: 600;
+}
+
+.mrtu-toc__summary:focus-visible,
+.mrtu-toc__list a:focus-visible {
+	outline: 3px solid var(--color-focus, #0866ff);
+	outline-offset: 2px;
+}
+
+@media (forced-colors: active) {
+	.mrtu-toc__list a {
+		border-inline-start-color: Canvas;
+	}
+
+	.mrtu-toc__list a[aria-current="true"] {
+		border-inline-start-color: Highlight;
+		text-decoration: underline;
+	}
+}
+
+@media print {
+	.mrtu-toc {
+		display: none;
+	}
+}

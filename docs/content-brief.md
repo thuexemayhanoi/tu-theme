@@ -26,18 +26,27 @@ uses the same facts and the same page roles; emphasis follows each locale's sear
   rental agreement/receipt states price, deposit, period, condition and any delivery cost → return at the agreed time/place, deposit
   refunded per the agreement.
 - Rental price and deposit are **separate**. Deposit amount depends on the model and is confirmed before booking.
-- Legal background (general information, cite "as of 10/2026", link authoritative sources in the guide page only):
-  Vietnam's Law on Road Traffic Order and Safety No. 36/2024/QH15 (in force since 1 January 2025): motorcycles (> 50 cm³) need an
-  A1/A category licence (age 18+); "xe gắn máy" (≤ 50 cm³ and ≤ 50 km/h; electric equivalent) need no licence but riders must be 16+;
-  helmets are mandatory for rider and passenger; foreigners can ride with a Vietnamese licence or an International Driving Permit
-  issued under the **1968 Vienna Convention** carried **together with** their valid national licence (1949-Convention IDPs, e.g.
-  from the USA/Australia, are generally **not** recognised — say "check with your embassy"); a car-only licence does not cover
-  motorcycles. Always add: "This is general information, not legal advice; check the current rules and your travel insurance."
-  (Cross-check every legal sentence against `/home/user/research-notes/standards.md` if present; when sources disagree, use the more
-  cautious wording.)
-- Vietnam's ward/district reform: since 1 July 2025 the district level was abolished; Phúc Tân street belongs to **Hồng Hà ward**,
-  Hanoi. "Hoàn Kiếm" remains in common use as the area name (and a new Hoàn Kiếm ward exists). Use "khu Phố Cổ / Hoàn Kiếm" as an area,
-  not as an administrative claim.
+- Legal background (general information, "last reviewed October 2026", authoritative links only on the guide page; full notes in
+  `/home/user/research-notes/standards.md` §7 — read them):
+  Law on Road Traffic Order and Safety No. 36/2024/QH15 (in force since 1 January 2025): licence class **A1** covers two-wheel
+  motorcycles up to 125 cm³ (or electric up to 11 kW), class **A** above that; A1/A from age 18. Valid licences for foreigners: a
+  Vietnamese licence, or an **International Driving Permit issued under the 1968 Vienna Convention carried together with the valid
+  national licence** of the matching class (an IDP issued under the 1949 Geneva Convention is not covered — tell readers to check
+  which convention their IDP follows; do not list countries). Helmets meeting the national standard, strap fastened, are mandatory
+  for rider and passenger. A car-only licence does not cover motorcycles. Mopeds ("xe gắn máy", ≤ 50 cm³): riders must be 16+;
+  phrase cautiously — "50 cc mopeds do not need a motorcycle licence class, but riders must be 16+ and follow traffic law" — and never
+  write "no licence needed" for normal rental bikes. Riding without third-party insurance is illegal (rental bikes carry the
+  compulsory insurance — do NOT claim extra insurance). Recommend checking that travel insurance covers motorbike riding. Always add
+  "This is general information, not legal advice." Never quote fine amounts.
+  Official/authoritative sources you may link: UK FCDO travel advice https://www.gov.uk/foreign-travel-advice/vietnam/safety-and-security ,
+  Australia Smartraveller https://www.smartraveller.gov.au/destinations/asia/vietnam , UN Treaty Collection 1968 Convention status
+  https://treaties.un.org/Pages/ViewDetailsIII.aspx?src=TREATY&mtdsg_no=XI-B-19&chapter=11&Temp=mtdsg3&clang=_en (and any official
+  embassy page listed in standards.md §8).
+- Deposits: the UK FCDO advises travellers not to use their passport as a deposit — align with it: identity documents are checked,
+  the deposit form (e.g. cash) is agreed lawfully before booking.
+- Vietnam's 2025 reform: since 1 July 2025 the district level was abolished. 17 Phúc Tân lies in **Hồng Hà ward**; "Hoàn Kiếm" is now
+  the name of the Old Quarter core **ward**. Write "near the Old Quarter (Phố Cổ)" / "next to Hoàn Kiếm" — never "in Hoàn Kiếm" or
+  "quận Hoàn Kiếm" for Mr Tu, and never imply a storefront inside Hoàn Kiếm ward.
 
 ## 3. Facts you must NOT state (unverified or false)
 

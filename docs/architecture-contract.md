@@ -312,3 +312,34 @@ See `docs/design-system.md` for values and component specs.
 Source in `private/mr-tu-local-assistant/` (gitignored). Reads only public data through the API above and WordPress queries for
 published content; REST `mrtu-assistant/v1/ask` (public, rate-limited, no nonce so cached pages keep working); assets lazy-loaded
 on first open. Registers `add_filter( 'mrtu_assistant_active', '__return_true' )` and listens for `mrtu:assistant-open`.
+
+## 6. Amendments after core-internals research (2026-10-25, supersede earlier sections)
+
+Source: `docs/research.md` §4 (ADR-A…G) and §4.9, with probes against WordPress 7.1.3.
+
+1. **Router priorities:** strip the prefix in `do_parse_request` at `PHP_INT_MAX` (only when the incoming `$bool` is true); restore
+   `REQUEST_URI`/`PATH_INFO` in `parse_request` at `PHP_INT_MIN` and again on `wp` as a fallback. Never strip `wp-json`, `wp-admin`,
+   `wp-content`, `wp-includes`, `wp-login.php`, `xmlrpc.php`, `wp-sitemap*`, `robots.txt`, `favicon.ico`.
+2. **No public language query var.** Any extra main-query var breaks static-front-page detection for `/en/`. The language lives in
+   plugin state (`Router::current()` / `mrtu_current_language()`).
+3. **Singular language check:** `tax_query` is ignored for singular queries. Resolve `pagename`/`name` in the `request` filter and,
+   on `wp` (before `redirect_canonical`), 404 any slug-based singular request whose object language ≠ URL language. ID-based
+   requests (`?p=`, `?page_id=`, previews) keep working and adopt the object's language.
+4. **Redirect guards:** turn on `strict_redirect_guess_404_permalink` and keep guesses inside the current language; check
+   `old_slug_redirect_post_id` for language; in `redirect_canonical`, when the target is the default-language home but the request
+   belongs to another language, **replace** the target with that language's home (so `/en/<home-slug>/` → 301 `/en/`, `/en/` itself
+   is not redirected); otherwise never redirect across languages (return false).
+5. **Front pages:** option filters for `page_on_front`/`page_for_posts` only on true frontend requests (not admin, AJAX, REST, CLI,
+   cron) after the language is known; `page_link` maps every language home everywhere (admin/CLI too, for Yoast indexables).
+   Fallback if tests fail: map the empty path to `page_id` in `request` and expose `mrtu_is_language_home()`.
+6. **Sitemap index path:** `/mrtu-sitemap-index.xml` (the old `/mrtu-sitemap.xml` collides with Yoast's `([^/]+?)-sitemap\.xml`
+   rule). Children stay `/mrtu-sitemap-{lang}.xml`. Head hreflang and sitemap alternates come from the same function.
+7. **WebSite schema:** one `WebSite` node, `@id` = root `#website`, `url` = root, `name` = "Mr Tu", `inLanguage` = all enabled
+   language codes. Language is expressed on `WebPage.inLanguage`. In compat mode Yoast's WebSite node is left as is.
+8. **hreflang for Vietnamese:** stays `vi-VN` by default because the owner's brief requires it (both `vi` and `vi-VN` are valid;
+   `vi` is broader). Configurable in Languages settings.
+9. **FAQPage schema:** kept only where the Q&A is visible on the guide page; FAQ rich results were retired by Google (2026), so no
+   feature depends on it.
+10. **Theme:** no `html5` `script`/`style` args (deprecated); `should_load_separate_core_block_assets` true; editor CSS via block
+    assets (iframed editor).
+11. **Seeder** assigns languages with `wp_set_object_terms()` (never `tax_input`, which is dropped without `assign_terms`).

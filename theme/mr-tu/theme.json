@@ -1,0 +1,130 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.5/theme.json",
+	"version": 3,
+	"settings": {
+		"appearanceTools": false,
+		"useRootPaddingAwareAlignments": false,
+		"layout": {
+			"contentSize": "720px",
+			"wideSize": "1320px"
+		},
+		"color": {
+			"custom": false,
+			"customGradient": false,
+			"customDuotone": false,
+			"defaultPalette": false,
+			"defaultGradients": false,
+			"defaultDuotone": false,
+			"link": false,
+			"gradients": [],
+			"duotone": [],
+			"palette": [
+				{ "slug": "accent", "name": "Cosmic Orange", "color": "#F56A2A" },
+				{ "slug": "accent-ink", "name": "Orange ink (text)", "color": "#B8460F" },
+				{ "slug": "action", "name": "Electric Blue", "color": "#0866FF" },
+				{ "slug": "action-ink", "name": "Blue ink (links)", "color": "#0057E0" },
+				{ "slug": "text", "name": "Ink", "color": "#101114" },
+				{ "slug": "text-muted", "name": "Muted ink", "color": "#5B5E66" },
+				{ "slug": "background", "name": "Paper", "color": "#FFFFFF" },
+				{ "slug": "surface", "name": "Surface", "color": "#F4F4F2" },
+				{ "slug": "border", "name": "Hairline", "color": "#E3E3E0" }
+			]
+		},
+		"typography": {
+			"customFontSize": false,
+			"defaultFontSizes": false,
+			"dropCap": false,
+			"fluid": false,
+			"fontStyle": false,
+			"fontWeight": false,
+			"letterSpacing": false,
+			"lineHeight": false,
+			"textDecoration": false,
+			"textTransform": false,
+			"writingMode": false,
+			"fontFamilies": [
+				{
+					"slug": "sans",
+					"name": "Be Vietnam Pro",
+					"fontFamily": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallback\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif"
+				},
+				{
+					"slug": "plate",
+					"name": "Barlow Condensed (plates)",
+					"fontFamily": "\"Barlow Condensed\", \"Barlow Condensed Fallback\", \"Arial Narrow\", Arial, sans-serif"
+				}
+			],
+			"fontSizes": [
+				{ "slug": "small", "name": "Small", "size": "0.9375rem" },
+				{ "slug": "body", "name": "Body", "size": "1.0625rem" },
+				{ "slug": "lead", "name": "Lead", "size": "clamp(1.08rem, 1rem + 0.4vw, 1.3rem)" },
+				{ "slug": "h3", "name": "Heading 3", "size": "clamp(1.2rem, 1.1rem + 0.45vw, 1.45rem)" },
+				{ "slug": "h2", "name": "Heading 2", "size": "clamp(1.65rem, 1.3rem + 1.55vw, 2.6rem)" },
+				{ "slug": "display", "name": "Display", "size": "clamp(2.1rem, 1.5rem + 2.7vw, 4rem)" },
+				{ "slug": "hero", "name": "Hero", "size": "clamp(2.6rem, 1.55rem + 4.7vw, 6rem)" }
+			]
+		},
+		"spacing": {
+			"customSpacingSize": false,
+			"defaultSpacingSizes": false,
+			"blockGap": null,
+			"margin": false,
+			"padding": false,
+			"units": [ "px", "rem", "%" ],
+			"spacingSizes": [
+				{ "slug": "1", "name": "4", "size": "4px" },
+				{ "slug": "2", "name": "8", "size": "8px" },
+				{ "slug": "3", "name": "12", "size": "12px" },
+				{ "slug": "4", "name": "16", "size": "16px" },
+				{ "slug": "5", "name": "24", "size": "24px" },
+				{ "slug": "6", "name": "32", "size": "32px" },
+				{ "slug": "7", "name": "48", "size": "48px" },
+				{ "slug": "8", "name": "64", "size": "64px" },
+				{ "slug": "9", "name": "96", "size": "96px" },
+				{ "slug": "10", "name": "128", "size": "128px" }
+			]
+		},
+		"border": {
+			"color": false,
+			"radius": false,
+			"style": false,
+			"width": false
+		},
+		"shadow": {
+			"defaultPresets": false,
+			"presets": []
+		},
+		"dimensions": {
+			"aspectRatios": [
+				{ "name": "3:2", "slug": "3-2", "ratio": "3/2" },
+				{ "name": "16:9", "slug": "16-9", "ratio": "16/9" },
+				{ "name": "1:1", "slug": "square", "ratio": "1" }
+			],
+			"defaultAspectRatios": false
+		},
+		"blocks": {
+			"core/button": {
+				"border": { "radius": false }
+			}
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--background)",
+			"text": "var(--wp--preset--color--text)"
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--sans)",
+			"fontSize": "var(--wp--preset--font-size--body)",
+			"lineHeight": "1.65"
+		},
+		"elements": {
+			"link": {
+				"color": { "text": "var(--wp--preset--color--action-ink)" }
+			},
+			"heading": {
+				"typography": { "fontWeight": "800", "lineHeight": "1.12" }
+			}
+		}
+	}
+}

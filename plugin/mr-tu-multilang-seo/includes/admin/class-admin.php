@@ -148,9 +148,9 @@ final class Admin {
 		return $classes;
 	}
 
-	/* ------------------------------------------------------------------
+	/*
 	 * UI kit — every helper echoes escaped markup.
-	 * ---------------------------------------------------------------- */
+	 */
 
 	/**
 	 * Opens a screen wrapper with title + short Vietnamese-friendly intro.
@@ -245,7 +245,7 @@ final class Admin {
 				'required'    => false,
 			)
 		);
-		$id = 'mrtu-' . sanitize_html_class( str_replace( array( '[', ']' ), '-', $args['name'] ) );
+		$id   = 'mrtu-' . sanitize_html_class( str_replace( array( '[', ']' ), '-', $args['name'] ) );
 		echo '<div class="mrtu-field">';
 		echo '<label class="mrtu-field__label" for="' . esc_attr( $id ) . '">' . esc_html( $args['label'] ) . '</label>';
 		$attrs = '';
@@ -316,7 +316,14 @@ final class Admin {
 	 * @param string $type    success|error|warning|info.
 	 */
 	public static function redirect_with_notice( $url, $message, $type = 'success' ) {
-		set_transient( 'mrtu_flash_' . get_current_user_id(), array( 'message' => $message, 'type' => $type ), 60 );
+		set_transient(
+			'mrtu_flash_' . get_current_user_id(),
+			array(
+				'message' => $message,
+				'type'    => $type,
+			),
+			60
+		);
 		wp_safe_redirect( $url );
 		exit;
 	}

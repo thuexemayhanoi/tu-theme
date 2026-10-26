@@ -1,0 +1,129 @@
+/* ==========================================================================
+   04 · Buttons — theme buttons (.mrtu-btn) and core/button share one look.
+   Orange = brand action, blue = call/interaction, ghost = secondary.
+   ========================================================================== */
+
+.mrtu-btn,
+.wp-block-button__link,
+.wp-element-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.55em;
+	min-height: 44px;
+	padding: 0.6rem 1.15rem;
+	border: 1.5px solid transparent;
+	border-radius: var(--radius-pill);
+	background: var(--color-accent);
+	color: var(--color-on-accent);
+	font-family: var(--font-sans);
+	font-size: 1rem;
+	font-weight: 600;
+	line-height: 1.2;
+	letter-spacing: -0.005em;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	transition:
+		transform var(--dur-fast) var(--ease-out),
+		background-color var(--dur-fast) ease,
+		border-color var(--dur-fast) ease,
+		box-shadow var(--dur-fast) ease,
+		color var(--dur-fast) ease;
+}
+
+.mrtu-btn:hover,
+.wp-block-button__link:hover {
+	transform: translateY(-1px);
+	text-decoration: none;
+}
+
+.mrtu-btn:active,
+.wp-block-button__link:active {
+	transform: scale(0.98);
+	transition-duration: 120ms;
+}
+
+.mrtu-btn:hover .mrtu-icon--arrow {
+	transform: translateX(3px);
+}
+
+.mrtu-btn .mrtu-icon {
+	width: 1.15em;
+	height: 1.15em;
+}
+
+.mrtu-btn--lg {
+	min-height: 52px;
+	padding: 0.8rem 1.45rem;
+	font-size: 1.0625rem;
+}
+
+.mrtu-btn--primary,
+.wp-block-button__link {
+	background: var(--color-accent);
+	color: var(--color-on-accent);
+	box-shadow: 0 10px 24px -14px rgb(245 106 42 / 0.9);
+}
+
+.mrtu-btn--primary:hover,
+.wp-block-button__link:hover {
+	background: #ff7a3c;
+	color: var(--color-on-accent);
+}
+
+.mrtu-btn--call,
+.is-style-call .wp-block-button__link {
+	background: var(--color-action);
+	color: var(--color-on-action);
+	box-shadow: 0 10px 24px -14px rgb(8 102 255 / 0.9);
+}
+
+.mrtu-btn--call:hover,
+.is-style-call .wp-block-button__link:hover {
+	background: #0057e0;
+	color: var(--color-on-action);
+}
+
+.mrtu-btn--ghost,
+.is-style-outline .wp-block-button__link,
+.wp-block-button.is-style-outline > .wp-block-button__link {
+	border-color: var(--color-border-strong);
+	background: transparent;
+	color: var(--color-text);
+	box-shadow: none;
+}
+
+.mrtu-btn--ghost:hover,
+.is-style-outline .wp-block-button__link:hover {
+	border-color: var(--color-text);
+	background: var(--color-hover);
+	color: var(--color-text);
+}
+
+.mrtu-btn--dark {
+	background: var(--color-text);
+	color: var(--color-background);
+	box-shadow: none;
+}
+
+.mrtu-btn--dark:hover {
+	background: var(--color-text);
+	color: var(--color-background);
+	opacity: 0.9;
+}
+
+.wp-block-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--space-3);
+	align-items: center;
+}
+
+.wp-block-buttons.is-content-justification-center {
+	justify-content: center;
+}
+
+.wp-block-button {
+	margin: 0;
+}

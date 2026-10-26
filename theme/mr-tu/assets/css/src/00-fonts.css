@@ -1,0 +1,74 @@
+/* ==========================================================================
+   00 · Fonts — self-hosted WOFF2 subsets (OFL). Preloaded: Be Vietnam Pro 800 + 400.
+   Metric-matched Arial fallbacks keep layout shift near zero while fonts load
+   (values measured against Arial/Liberation Sans on a mixed VI/EN sample).
+   ========================================================================== */
+
+@font-face {
+	font-family: "Be Vietnam Pro";
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("../fonts/bevietnampro-regular.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Be Vietnam Pro";
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+	src: url("../fonts/bevietnampro-semibold.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Be Vietnam Pro";
+	font-style: normal;
+	font-weight: 800;
+	font-display: swap;
+	src: url("../fonts/bevietnampro-extrabold.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Barlow Condensed";
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+	src: url("../fonts/barlowcondensed-semibold.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Barlow Condensed";
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url("../fonts/barlowcondensed-bold.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Be Vietnam Pro Fallback";
+	font-weight: 400 500;
+	src: local("Arial"), local("ArialMT"), local("Helvetica"), local("Liberation Sans");
+	size-adjust: 108.98%;
+	ascent-override: 91.76%;
+	descent-override: 24.32%;
+	line-gap-override: 0%;
+}
+
+@font-face {
+	font-family: "Be Vietnam Pro Fallback";
+	font-weight: 600 900;
+	src: local("Arial Bold"), local("Arial-BoldMT"), local("Helvetica Bold"), local("Liberation Sans Bold");
+	size-adjust: 107.37%;
+	ascent-override: 93.13%;
+	descent-override: 24.68%;
+	line-gap-override: 0%;
+}
+
+@font-face {
+	font-family: "Barlow Condensed Fallback";
+	src: local("Arial"), local("ArialMT"), local("Helvetica"), local("Liberation Sans");
+	size-adjust: 76.3%;
+	ascent-override: 131%;
+	descent-override: 26.2%;
+	line-gap-override: 0%;
+}

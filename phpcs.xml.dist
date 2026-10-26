@@ -27,9 +27,12 @@
 	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
 		<properties>
 			<property name="prefixes" type="array">
+				<!-- Plugins: mrtu_* / MrTu\ / MRTU_ · Theme: mr_tu_* / MR_TU_ (text domain mr-tu). -->
 				<element value="mrtu"/>
 				<element value="MrTu"/>
 				<element value="MRTU"/>
+				<element value="mr_tu"/>
+				<element value="MR_TU"/>
 			</property>
 		</properties>
 	</rule>

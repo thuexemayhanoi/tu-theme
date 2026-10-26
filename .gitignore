@@ -13,3 +13,5 @@ vendor/
 
 # Agent worktrees (local only)
 /.claude/
+/dist/
+/dist-private/

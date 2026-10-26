@@ -431,8 +431,16 @@ mrtu_toc_test_equals( 1, (int) wp_scripts()->get_data( 'mrtu-toc', 'group' ), 't
 wp_dequeue_script( 'mrtu-toc' );
 wp_dequeue_style( 'mrtu-toc' );
 mrtu_toc_test_go_to( $post_id );
+// Simulate a block theme regardless of the active theme (the env may run the classic Mr Tu theme).
+$mrtu_block = static function () {
+	return 'twentytwentyfive';
+};
+add_filter( 'stylesheet', $mrtu_block );
+add_filter( 'template', $mrtu_block );
 Toc::enqueue_style_for_queried_post();
 mrtu_toc_test_assert( ! wp_style_is( 'mrtu-toc', 'enqueued' ), 'block theme: no early toc.css (the TOC render enqueues it before wp_head)' );
+remove_filter( 'stylesheet', $mrtu_block );
+remove_filter( 'template', $mrtu_block );
 $mrtu_classic = static function () {
 	return 'twentytwentyone';
 };

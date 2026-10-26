@@ -1,0 +1,350 @@
+/* ==========================================================================
+   23 · Table of contents (plugin inline .mrtu-toc + theme sticky aside) and the
+   Quick Contact dock (.mrtu-qc). Reading progress: --mrtu-read-progress (0…1) on <html>.
+   ========================================================================== */
+
+.mrtu-toc {
+	position: relative;
+	overflow: hidden;
+	margin-block: 2em;
+	border-radius: var(--radius-lg);
+	background: var(--color-surface);
+	box-shadow: inset 0 0 0 1px var(--color-border);
+}
+
+.mrtu-toc::before {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 3px;
+	background: var(--color-accent);
+	content: "";
+	transform: scaleX(clamp(0, var(--mrtu-read-progress, 0), 1));
+	transform-origin: 0 50%;
+}
+
+.mrtu-toc__summary {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	min-height: 60px;
+	padding: 14px 20px;
+	list-style: none;
+}
+
+.mrtu-toc__summary::-webkit-details-marker {
+	display: none;
+}
+
+.mrtu-toc__summary::after {
+	width: 10px;
+	height: 10px;
+	margin: -4px 4px 0 0;
+	border-right: 2px solid var(--color-text-muted);
+	border-bottom: 2px solid var(--color-text-muted);
+	content: "";
+	transform: rotate(45deg);
+	transition: transform var(--dur-base) var(--ease-out);
+}
+
+.mrtu-toc[open] > .mrtu-toc__summary::after {
+	margin-top: 4px;
+	transform: rotate(-135deg);
+}
+
+.mrtu-toc__title {
+	flex: 1;
+	font-family: var(--font-plate);
+	font-size: 1.05rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.mrtu-toc__count {
+	display: inline-grid;
+	place-items: center;
+	min-width: 30px;
+	height: 26px;
+	padding: 0 6px;
+	border: 1.5px solid var(--color-ink);
+	border-radius: 5px;
+	background: var(--color-paper);
+	color: var(--color-ink);
+	font-family: var(--font-plate);
+	font-size: 0.9rem;
+	font-variant-numeric: tabular-nums;
+	font-weight: 700;
+}
+
+.mrtu-toc__nav {
+	padding: 0 20px 18px;
+}
+
+.mrtu-toc__list,
+.mrtu-toc__list ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.mrtu-toc__list {
+	border-top: 1px dashed var(--color-border-strong);
+	padding-top: 8px;
+	counter-reset: mrtu-toc;
+}
+
+.mrtu-toc__list ol {
+	padding-left: 34px;
+}
+
+.mrtu-toc__item {
+	margin: 0;
+}
+
+.mrtu-toc__item > a {
+	display: flex;
+	gap: 12px;
+	padding: 8px 0;
+	color: var(--color-text);
+	font-weight: 600;
+	line-height: 1.4;
+	text-decoration: none;
+}
+
+.mrtu-toc__item > a:hover {
+	color: var(--color-accent-ink);
+}
+
+.mrtu-toc__item--h2 {
+	counter-increment: mrtu-toc;
+}
+
+.mrtu-toc__item--h2 > a::before {
+	flex: none;
+	width: 22px;
+	color: var(--color-accent-ink);
+	content: counter(mrtu-toc, decimal-leading-zero);
+	font-family: var(--font-plate);
+	font-weight: 700;
+	font-variant-numeric: tabular-nums;
+}
+
+.mrtu-toc__item--h3 > a {
+	padding: 5px 0;
+	color: var(--color-text-muted);
+	font-size: 0.9375rem;
+	font-weight: 400;
+}
+
+.mrtu-toc a[aria-current="true"] {
+	color: var(--color-accent-ink);
+}
+
+/* Sticky desktop copy ---------------------------------------------------------- */
+.toc-aside {
+	display: none;
+}
+
+@media (min-width: 1200px) {
+	.entry-layout.has-aside {
+		display: grid;
+		grid-template-columns: minmax(0, var(--container-prose)) var(--aside-w);
+		justify-content: center;
+		column-gap: var(--aside-gap);
+	}
+
+	.entry-layout.has-aside .entry-content > .mrtu-toc {
+		display: none;
+	}
+
+	.toc-aside {
+		display: block;
+	}
+
+	.toc-aside__card {
+		position: sticky;
+		top: calc(var(--header-h) + 40px);
+		max-height: calc(100vh - var(--header-h) - 80px);
+		overflow-y: auto;
+		padding: 4px 4px 4px 0;
+		overscroll-behavior: contain;
+	}
+}
+
+.toc-aside__title {
+	margin-bottom: 14px;
+	color: var(--color-text-muted);
+	font-family: var(--font-plate);
+	font-size: 0.95rem;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.toc-aside__list a {
+	display: block;
+	padding: 7px 0 7px 16px;
+	border-left: 2px solid var(--color-border);
+	color: var(--color-text-muted);
+	font-size: 0.9375rem;
+	line-height: 1.4;
+	text-decoration: none;
+	transition: color var(--dur-fast) ease, border-color var(--dur-fast) ease;
+}
+
+.toc-aside__list a:hover {
+	color: var(--color-text);
+}
+
+.toc-aside__list a[aria-current="true"] {
+	border-left-color: var(--color-accent);
+	color: var(--color-text);
+	font-weight: 600;
+}
+
+.toc-aside__item--h3 a {
+	padding-left: 30px;
+	font-size: 0.875rem;
+}
+
+.toc-aside__progress {
+	height: 3px;
+	margin-top: 18px;
+	overflow: hidden;
+	border-radius: 2px;
+	background: var(--color-border);
+}
+
+.toc-aside__progress span {
+	display: block;
+	height: 100%;
+	background: var(--color-accent);
+	transform: scaleX(clamp(0, var(--mrtu-read-progress, 0), 1));
+	transform-origin: 0 50%;
+}
+
+@supports (animation-timeline: scroll()) {
+	@media (prefers-reduced-motion: no-preference) {
+		.toc-aside__progress span {
+			animation: mrtu-progress linear both;
+			animation-timeline: scroll(root);
+		}
+	}
+}
+
+/* Quick Contact dock -------------------------------------------------------------- */
+.mrtu-qc {
+	position: fixed;
+	z-index: 40;
+	right: max(16px, env(safe-area-inset-right));
+	bottom: calc(16px + env(safe-area-inset-bottom));
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 10px;
+	transition: transform var(--dur-base) var(--ease-out), opacity var(--dur-base) ease;
+}
+
+.mrtu-qc[data-position="left"] {
+	right: auto;
+	left: max(16px, env(safe-area-inset-left));
+	align-items: flex-start;
+}
+
+.mrtu-qc.is-hidden,
+.mrtu-qc[data-hidden] {
+	opacity: 0;
+	pointer-events: none;
+	transform: translateY(calc(100% + 24px));
+}
+
+.mrtu-qc__toggle {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	min-width: 52px;
+	min-height: 52px;
+	padding: 0 20px 0 16px;
+	border: 0;
+	border-radius: var(--radius-pill);
+	background: var(--color-action);
+	box-shadow: 0 14px 30px -12px rgb(8 102 255 / 0.65), 0 0 0 1px rgb(255 255 255 / 0.08);
+	color: var(--color-on-action);
+	font-size: 1rem;
+	font-weight: 700;
+	transition: transform var(--dur-fast) var(--ease-out), padding var(--dur-base) var(--ease-out);
+}
+
+.mrtu-qc__toggle:active {
+	transform: scale(0.97);
+}
+
+.mrtu-qc__toggle svg {
+	width: 22px;
+	height: 22px;
+}
+
+.mrtu-qc.is-collapsed .mrtu-qc__toggle {
+	padding: 0;
+	justify-content: center;
+}
+
+.mrtu-qc.is-collapsed .mrtu-qc__label {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip-path: inset(50%);
+}
+
+.mrtu-qc__panel {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	min-width: 228px;
+	padding: 8px;
+	border-radius: var(--radius-lg);
+	background: var(--color-surface-raised);
+	box-shadow: var(--shadow-lg), var(--ring);
+	animation: mrtu-pop var(--dur-base) var(--ease-out);
+}
+
+.mrtu-qc__item {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	min-height: 48px;
+	padding: 0 14px;
+	border-radius: var(--radius-md);
+	color: var(--color-text);
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.mrtu-qc__item:hover {
+	background: var(--color-surface);
+}
+
+.mrtu-qc__item svg {
+	width: 22px;
+	height: 22px;
+	color: var(--color-action-ink);
+}
+
+.mrtu-qc__item--call svg {
+	color: var(--color-action);
+}
+
+.mrtu-qc__item--whatsapp svg,
+.mrtu-qc__item--zalo svg {
+	color: var(--color-text);
+}
+
+@media (min-width: 1024px) {
+	.mrtu-qc {
+		right: max(24px, env(safe-area-inset-right));
+		bottom: calc(24px + env(safe-area-inset-bottom));
+	}
+}

@@ -1,0 +1,163 @@
+/* ==========================================================================
+   01 · Design tokens (docs/design-system.md). Four brand colours + neutrals.
+   Dark mode: [data-theme="dark"], or prefers-color-scheme when no explicit choice.
+   ========================================================================== */
+
+:root {
+	--color-background: #fff;
+	--color-surface: #f4f4f2;
+	--color-surface-raised: #fff;
+	--color-text: #101114;
+	--color-text-muted: #5b5e66;
+	--color-accent: #f56a2a;
+	--color-accent-ink: #b8460f;
+	--color-on-accent: #101114;
+	--color-action: #0866ff;
+	--color-action-ink: #0057e0;
+	--color-on-action: #fff;
+	--color-border: #e3e3e0;
+	--color-border-strong: #c9cac6;
+	--color-focus: #0866ff;
+
+	/* Objects keep their colours in every mode (plates and stones are things, not surfaces). */
+	--color-ink: #101114;
+	--color-paper: #fff;
+
+	/* Derived */
+	--color-header: rgb(255 255 255 / 0.8);
+	--color-grid: #e7e7e3;
+	--color-band: #101114;
+	--color-band-text: #f4f4f5;
+	--color-band-muted: #b4b7be;
+	--color-band-raised: #1c1e23;
+	--color-band-border: #34373e;
+	--color-hover: rgb(16 17 20 / 0.05);
+	--color-asphalt: #17191d;
+	--glow: 0;
+
+	--shadow-sm: 0 1px 2px rgb(16 17 20 / 0.06);
+	--shadow-md: 0 8px 24px -8px rgb(16 17 20 / 0.14);
+	--shadow-lg: 0 24px 60px -20px rgb(16 17 20 / 0.25);
+	--ring: 0 0 0 1px transparent;
+
+	--font-sans: "Be Vietnam Pro", "Be Vietnam Pro Fallback", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+	--font-plate: "Barlow Condensed", "Barlow Condensed Fallback", "Arial Narrow", Arial, sans-serif;
+
+	--text-hero: clamp(2.6rem, 1.55rem + 4.7vw, 6rem);
+	--text-display: clamp(2.1rem, 1.5rem + 2.7vw, 4rem);
+	--text-h2: clamp(1.65rem, 1.3rem + 1.55vw, 2.6rem);
+	--text-h3: clamp(1.2rem, 1.1rem + 0.45vw, 1.45rem);
+	--text-lead: clamp(1.08rem, 1rem + 0.4vw, 1.3rem);
+	--text-body: 1.0625rem;
+	--text-small: 0.9375rem;
+	--text-plate: clamp(0.8rem, 0.76rem + 0.2vw, 0.95rem);
+
+	--space-1: 4px;
+	--space-2: 8px;
+	--space-3: 12px;
+	--space-4: 16px;
+	--space-5: 24px;
+	--space-6: 32px;
+	--space-7: 48px;
+	--space-8: 64px;
+	--space-9: 96px;
+	--space-10: 128px;
+	--section-y: clamp(64px, 10vw, 128px);
+
+	--container-max: 1320px;
+	--container-prose: 720px;
+	--container-pad: max(clamp(16px, 4vw, 40px), env(safe-area-inset-left), env(safe-area-inset-right));
+	--wrap: min(100% - var(--container-pad) * 2, var(--container-max));
+	--aside-w: 280px;
+	--aside-gap: clamp(48px, 6vw, 104px);
+
+	--radius-sm: 8px;
+	--radius-md: 14px;
+	--radius-lg: 22px;
+	--radius-xl: 32px;
+	--radius-pill: 999px;
+
+	--ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+	--ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+	--dur-fast: 160ms;
+	--dur-base: 280ms;
+	--dur-slow: 640ms;
+	--dur-hero: 900ms;
+
+	--header-h: 64px;
+	--road: repeating-linear-gradient(90deg, currentColor 0 12px, transparent 12px 22px);
+
+	color-scheme: light;
+}
+
+@media (min-width: 1024px) {
+	:root {
+		--header-h: 72px;
+	}
+}
+
+html[data-theme="dark"] {
+	--color-background: #101114;
+	--color-surface: #1a1c21;
+	--color-surface-raised: #23262c;
+	--color-text: #f4f4f5;
+	--color-text-muted: #a3a6ae;
+	--color-accent-ink: #ff8a55;
+	--color-action-ink: #5c9dff;
+	--color-border: #2c2f36;
+	--color-border-strong: #41454e;
+	--color-focus: #5c9dff;
+	--color-header: rgb(16 17 20 / 0.78);
+	--color-grid: #22252b;
+	--color-band: #08090b;
+	--color-band-raised: #17191d;
+	--color-band-border: #2c2f36;
+	--color-hover: rgb(255 255 255 / 0.06);
+	--color-asphalt: #0b0c0e;
+	--glow: 1;
+	--shadow-sm: none;
+	--shadow-md: none;
+	--shadow-lg: 0 24px 60px -20px rgb(0 0 0 / 0.6);
+	--ring: 0 0 0 1px var(--color-border);
+	color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+	html:not([data-theme]) {
+		--color-background: #101114;
+		--color-surface: #1a1c21;
+		--color-surface-raised: #23262c;
+		--color-text: #f4f4f5;
+		--color-text-muted: #a3a6ae;
+		--color-accent-ink: #ff8a55;
+		--color-action-ink: #5c9dff;
+		--color-border: #2c2f36;
+		--color-border-strong: #41454e;
+		--color-focus: #5c9dff;
+		--color-header: rgb(16 17 20 / 0.78);
+		--color-grid: #22252b;
+		--color-band: #08090b;
+		--color-band-raised: #17191d;
+		--color-band-border: #2c2f36;
+		--color-hover: rgb(255 255 255 / 0.06);
+		--color-asphalt: #0b0c0e;
+		--glow: 1;
+		--shadow-sm: none;
+		--shadow-md: none;
+		--shadow-lg: 0 24px 60px -20px rgb(0 0 0 / 0.6);
+		--ring: 0 0 0 1px var(--color-border);
+		color-scheme: dark;
+	}
+}
+
+/* Editor palette presets (theme.json) follow the live tokens, so colours chosen in the editor
+   adapt to dark mode too. `html:root` outranks core's `:root` declarations. */
+html:root {
+	--wp--preset--color--background: var(--color-background);
+	--wp--preset--color--surface: var(--color-surface);
+	--wp--preset--color--text: var(--color-text);
+	--wp--preset--color--text-muted: var(--color-text-muted);
+	--wp--preset--color--accent-ink: var(--color-accent-ink);
+	--wp--preset--color--action-ink: var(--color-action-ink);
+	--wp--preset--color--border: var(--color-border);
+}

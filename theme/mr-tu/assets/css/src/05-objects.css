@@ -1,0 +1,149 @@
+/* ==========================================================================
+   05 · Signature objects — kilometre stone, licence plate, road line.
+   Objects keep their real colours in dark mode.
+   ========================================================================== */
+
+/* Kilometre stone ------------------------------------------------------- */
+.mrtu-stone {
+	--stone-w: 120px;
+	--stone-line: max(2px, calc(var(--stone-w) * 0.022));
+	position: relative;
+	display: inline-flex;
+	flex: none;
+	flex-direction: column;
+	width: var(--stone-w);
+	height: calc(var(--stone-w) * 1.42);
+	overflow: hidden;
+	border: var(--stone-line) solid var(--color-ink);
+	border-radius: calc(var(--stone-w) / 2) calc(var(--stone-w) / 2) calc(var(--stone-w) * 0.06) calc(var(--stone-w) * 0.06);
+	background: var(--color-paper);
+	color: var(--color-ink);
+	font-family: var(--font-plate);
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	line-height: 1;
+	text-align: center;
+	text-transform: uppercase;
+	/* Light: a grounded drop shadow. Dark: the orange "headlight" glow (driven by --glow). */
+	box-shadow:
+		0 calc(var(--stone-w) * 0.16) calc(var(--stone-w) * 0.24) calc(var(--stone-w) * -0.14) rgb(16 17 20 / calc(0.45 - 0.45 * var(--glow))),
+		0 0 calc(var(--stone-w) * 0.5) calc(var(--stone-w) * -0.1) rgb(245 106 42 / calc(0.3 * var(--glow)));
+}
+
+.mrtu-stone__cap {
+	display: flex;
+	flex: 0 0 38%;
+	align-items: flex-end;
+	justify-content: center;
+	padding-bottom: calc(var(--stone-w) * 0.06);
+	border-bottom: var(--stone-line) solid var(--color-ink);
+	background: var(--color-accent);
+}
+
+.mrtu-stone__route {
+	font-size: calc(var(--stone-w) * 0.13);
+	white-space: nowrap;
+}
+
+.mrtu-stone__face {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: calc(var(--stone-w) * 0.04);
+	padding: 0 calc(var(--stone-w) * 0.08);
+}
+
+.mrtu-stone__place {
+	max-width: 100%;
+	font-size: calc(var(--stone-w) * 0.115);
+	line-height: 1.08;
+}
+
+.mrtu-stone__km {
+	display: inline-flex;
+	align-items: baseline;
+	font-size: calc(var(--stone-w) * 0.44);
+	font-variant-numeric: tabular-nums;
+	line-height: 0.92;
+	letter-spacing: -0.01em;
+}
+
+.mrtu-stone__unit {
+	margin-left: 0.06em;
+	font-size: 0.3em;
+	letter-spacing: 0.04em;
+}
+
+.mrtu-stone--mini {
+	--stone-w: 30px;
+	box-shadow: none;
+}
+
+.mrtu-stone--mini .mrtu-stone__route,
+.mrtu-stone--mini .mrtu-stone__place {
+	display: none;
+}
+
+.mrtu-stone--mini .mrtu-stone__km {
+	font-size: 15px;
+}
+
+.mrtu-stone--mini .mrtu-stone__unit {
+	display: none;
+}
+
+/* Licence plate ----------------------------------------------------------- */
+.mrtu-plate {
+	display: inline-grid;
+	justify-items: center;
+	gap: 0.18em;
+	padding: 0.5em 0.8em 0.42em;
+	border: 1.5px solid var(--color-ink);
+	border-radius: 6px;
+	background: var(--color-paper);
+	box-shadow: inset 0 0 0 2px var(--color-paper), inset 0 0 0 3px var(--color-ink);
+	color: var(--color-ink);
+	font-family: var(--font-plate);
+	font-size: var(--text-plate);
+	font-variant-numeric: tabular-nums;
+	font-weight: 600;
+	letter-spacing: 0.05em;
+	line-height: 1;
+	text-transform: uppercase;
+	white-space: nowrap;
+}
+
+.mrtu-plate__top,
+.mrtu-plate__bottom {
+	display: block;
+}
+
+.mrtu-plate__bottom {
+	font-size: 1.32em;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+}
+
+.mrtu-plate--inline {
+	padding: 0.48em 0.72em 0.4em;
+}
+
+a.mrtu-plate {
+	text-decoration: none;
+	transition: transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) ease;
+}
+
+a.mrtu-plate:hover {
+	transform: translateY(-1px);
+	box-shadow: inset 0 0 0 2px var(--color-paper), inset 0 0 0 3px var(--color-ink), 0 6px 14px -8px rgb(16 17 20 / 0.5);
+}
+
+/* Road line ---------------------------------------------------------------- */
+.mrtu-road,
+.page-hero__road {
+	height: 2px;
+	background: var(--road);
+	color: var(--color-border-strong);
+}

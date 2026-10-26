@@ -1,0 +1,782 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Mr Tu 1.0.0\n"
+"Report-Msgid-Bugs-To: https://hanoi.thuexemaynguyentu.com/\n"
+"Last-Translator: Mr Tu\n"
+"Language-Team: Mr Tu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-26T08:00:16+00:00\n"
+"PO-Revision-Date: 2026-10-26T10:20:33+00:00\n"
+"Language: vi\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: mr-tu\n"
+
+#. Theme Name of the theme
+#. Author of the theme
+#: style.css
+#: inc/block-patterns.php:20
+#: inc/icons.php:77
+#: inc/navigation.php:252
+#: parts/components/post-card.php:43
+#: parts/components/stone.php:21
+msgid "Mr Tu"
+msgstr "Mr Tu"
+
+#. Theme URI of the theme
+#. Author URI of the theme
+#: style.css
+msgid "https://hanoi.thuexemaynguyentu.com/"
+msgstr "https://hanoi.thuexemaynguyentu.com/"
+
+#. Description of the theme
+#: style.css
+msgid "Flagship theme for Mr Tu, motorbike and scooter rental near Hanoi's Old Quarter. Concept \"Km 0\": kilometre-stone and licence-plate design language, four brand colours, Be Vietnam Pro + Barlow Condensed, Light/Dark/System colour modes, mobile-first bottom-sheet navigation. Presentation only: languages, SEO, business data and blocks come from the Mr Tu Multilang SEO plugin, and the theme degrades gracefully without it."
+msgstr "Giao diện chủ lực cho Mr Tu, cho thuê xe máy và xe tay ga gần Phố Cổ Hà Nội. Ý tưởng \"Km 0\": ngôn ngữ thiết kế cột mốc cây số và biển số xe, bốn màu thương hiệu, phông Be Vietnam Pro + Barlow Condensed, chế độ màu Sáng/Tối/Hệ thống, menu dạng bảng trượt từ dưới ưu tiên di động. Chỉ lo phần hiển thị: ngôn ngữ, SEO, dữ liệu cửa hàng và các khối đến từ plugin Mr Tu Multilang SEO; không có plugin, giao diện vẫn chạy ở mức cơ bản."
+
+#: 404.php:23
+msgid "Unknown"
+msgstr "Không rõ"
+
+#: 404.php:30
+msgid "Error 404"
+msgstr "Lỗi 404"
+
+#: 404.php:31
+msgid "This road isn’t on our map"
+msgstr "Con đường này không có trên bản đồ"
+
+#: 404.php:32
+msgid "The page may have moved, or the link has a typo. Every trip starts again from Km 0 — search below or take one of the main roads."
+msgstr "Có thể trang đã chuyển đi, hoặc đường dẫn bị gõ sai. Mọi chuyến đi đều bắt đầu lại từ Km 0 — hãy tìm kiếm bên dưới hoặc chọn một trong các trang chính."
+
+#: archive.php:14
+msgid "Category"
+msgstr "Chuyên mục"
+
+#: archive.php:16
+msgid "Tag"
+msgstr "Thẻ"
+
+#: archive.php:18
+msgid "Archive"
+msgstr "Lưu trữ"
+
+#. translators: %d: number of comments.
+#: comments.php:21
+#, php-format
+msgid "%d comment"
+msgid_plural "%d comments"
+msgstr[0] "%d bình luận"
+
+#: comments.php:23
+msgid "Comments"
+msgstr "Bình luận"
+
+#: comments.php:43
+msgid "Older comments"
+msgstr "Bình luận cũ hơn"
+
+#: comments.php:44
+msgid "Newer comments"
+msgstr "Bình luận mới hơn"
+
+#: comments.php:51
+msgid "Comments are closed."
+msgstr "Đã đóng bình luận."
+
+#: header.php:22
+msgid "Skip to content"
+msgstr "Chuyển đến nội dung"
+
+#: inc/block-patterns.php:21
+msgid "Home page sections and inner-page components in the Mr Tu design."
+msgstr "Các phần trang chủ và thành phần trang con theo thiết kế Mr Tu."
+
+#: inc/block-patterns.php:28
+msgid "Callout"
+msgstr "Khung lưu ý"
+
+#: inc/block-patterns.php:32
+msgid "Lead"
+msgstr "Đoạn mở đầu"
+
+#: inc/block-patterns.php:36
+msgid "Checklist"
+msgstr "Danh sách kiểm tra"
+
+#: inc/block-patterns.php:40
+msgid "Road line"
+msgstr "Vạch đường"
+
+#: inc/block-patterns.php:44
+msgid "Call (blue)"
+msgstr "Gọi (xanh dương)"
+
+#: inc/navigation.php:240
+msgid "Links"
+msgstr "Liên kết"
+
+#: inc/navigation.php:250
+msgid "Rent a bike"
+msgstr "Thuê xe"
+
+#: inc/navigation.php:251
+#: patterns/inner-callout.php:17
+msgid "Good to know"
+msgstr "Nên biết"
+
+#: inc/navigation.php:253
+msgid "Legal"
+msgstr "Pháp lý"
+
+#: inc/navigation.php:286
+msgid "Privacy policy"
+msgstr "Chính sách bảo mật"
+
+#: inc/navigation.php:298
+msgid "Pages"
+msgstr "Trang"
+
+#: inc/navigation.php:341
+#: parts/header/menu-sheet.php:51
+msgid "More"
+msgstr "Thêm"
+
+#: inc/plugin-bridge.php:165
+#: parts/components/role-links.php:30
+msgid "Home"
+msgstr "Trang chủ"
+
+#: inc/plugin-bridge.php:176
+#: search.php:26
+#: searchform.php:18
+msgid "Search"
+msgstr "Tìm kiếm"
+
+#: inc/plugin-bridge.php:191
+msgid "Page not found"
+msgstr "Không tìm thấy trang"
+
+#: inc/settings.php:105
+#: inc/settings.php:201
+msgid "Theme appearance"
+msgstr "Giao diện theme"
+
+#: inc/settings.php:106
+#: parts/header/menu-sheet.php:68
+msgid "Appearance"
+msgstr "Giao diện"
+
+#: inc/settings.php:119
+#: inc/settings.php:120
+msgid "Mr Tu theme"
+msgstr "Theme Mr Tu"
+
+#: inc/settings.php:143
+msgid "Choose an image"
+msgstr "Chọn ảnh"
+
+#: inc/settings.php:144
+msgid "Use this image"
+msgstr "Dùng ảnh này"
+
+#: inc/settings.php:168
+msgid "No image — a designed graphic is shown instead."
+msgstr "Chưa có ảnh — sẽ hiển thị hình đồ họa thiết kế sẵn."
+
+#: inc/settings.php:174
+msgid "Choose image"
+msgstr "Chọn ảnh"
+
+#: inc/settings.php:175
+msgid "Remove"
+msgstr "Gỡ bỏ"
+
+#: inc/settings.php:187
+#: inc/settings.php:267
+msgid "You are not allowed to change the theme settings."
+msgstr "Bạn không có quyền thay đổi cài đặt giao diện."
+
+#: inc/settings.php:195
+msgid "Follow the device (System)"
+msgstr "Theo thiết bị (Hệ thống)"
+
+#: inc/settings.php:196
+#: parts/components/theme-toggle.php:17
+msgid "Light"
+msgstr "Sáng"
+
+#: inc/settings.php:197
+#: parts/components/theme-toggle.php:18
+msgid "Dark"
+msgstr "Tối"
+
+#: inc/settings.php:202
+msgid "Photos and motion for the Mr Tu theme. Business details, prices and languages are edited in the Mr Tu plugin screens."
+msgstr "Ảnh và hiệu ứng chuyển động của theme Mr Tu. Thông tin cửa hàng, giá và ngôn ngữ được chỉnh trong các màn hình của plugin Mr Tu."
+
+#: inc/settings.php:204
+msgid "Settings saved."
+msgstr "Đã lưu cài đặt."
+
+#: inc/settings.php:211
+msgid "Photos"
+msgstr "Ảnh"
+
+#: inc/settings.php:215
+msgid "Home hero photo"
+msgstr "Ảnh lớn trang chủ"
+
+#: inc/settings.php:216
+msgid "Landscape, at least 2400 px wide: a real bike against an Old Quarter wall works best. Loaded with high priority, never lazy."
+msgstr "Ảnh ngang, rộng ít nhất 2400 px: ảnh xe thật trước một bức tường Phố Cổ là đẹp nhất. Ảnh được tải ưu tiên cao, không tải trễ."
+
+#: inc/settings.php:221
+msgid "Story photo"
+msgstr "Ảnh câu chuyện"
+
+#: inc/settings.php:222
+msgid "Shown in the \"story\" section of the home page, e.g. the hand-over moment. Without a photo, an abstract Old Quarter map is shown."
+msgstr "Hiển thị ở phần \"câu chuyện\" trên trang chủ, ví dụ khoảnh khắc giao xe. Nếu không có ảnh, sẽ hiển thị bản đồ Phố Cổ cách điệu."
+
+#: inc/settings.php:229
+msgid "Motion"
+msgstr "Chuyển động"
+
+#: inc/settings.php:233
+msgid "Reveal sections softly while scrolling"
+msgstr "Hiện dần các phần khi cuộn trang"
+
+#: inc/settings.php:238
+msgid "Cross-fade between pages (supported browsers only)"
+msgstr "Chuyển trang mờ dần (chỉ trình duyệt hỗ trợ)"
+
+#: inc/settings.php:240
+msgid "Visitors who ask their device for reduced motion never see these effects."
+msgstr "Khách đã bật giảm chuyển động trên thiết bị sẽ không thấy các hiệu ứng này."
+
+#: inc/settings.php:244
+msgid "Default colour mode"
+msgstr "Chế độ màu mặc định"
+
+#: inc/settings.php:253
+msgid "Visitors can still switch between System, Light and Dark; their choice is remembered on their device."
+msgstr "Khách vẫn có thể chuyển giữa Hệ thống, Sáng và Tối; lựa chọn được ghi nhớ trên thiết bị của họ."
+
+#: inc/settings.php:256
+msgid "Save changes"
+msgstr "Lưu thay đổi"
+
+#: inc/setup.php:43
+msgid "Primary navigation"
+msgstr "Điều hướng chính"
+
+#: inc/setup.php:44
+msgid "Footer navigation"
+msgstr "Điều hướng chân trang"
+
+#: inc/setup.php:70
+msgid "Card (3:2)"
+msgstr "Thẻ (3:2)"
+
+#: inc/setup.php:71
+msgid "Wide (16:9)"
+msgstr "Rộng (16:9)"
+
+#: inc/template-tags.php:20
+msgid "Blog"
+msgstr "Blog"
+
+#. translators: 1: opening time (HH:MM), 2: closing time (HH:MM).
+#: inc/template-tags.php:206
+#, php-format
+msgid "Every day, %1$s–%2$s"
+msgstr "Hằng ngày, %1$s–%2$s"
+
+#. translators: 1: opening time (HH:MM), 2: closing time (HH:MM).
+#: inc/template-tags.php:209
+#, php-format
+msgid "Open %1$s–%2$s"
+msgstr "Mở cửa %1$s–%2$s"
+
+#: inc/template-tags.php:299
+msgid "Previous page"
+msgstr "Trang trước"
+
+#: inc/template-tags.php:300
+msgid "Next page"
+msgstr "Trang sau"
+
+#: inc/template-tags.php:301
+msgid "Page"
+msgstr "Trang"
+
+#: inc/template-tags.php:303
+msgid "Posts pages"
+msgstr "Phân trang bài viết"
+
+#. translators: 1: "Old Quarter" (translated), 2: city name in the current language.
+#. translators: Short place name printed on the hero kilometre stone (uppercase in the design, max ~12 characters).
+#: inc/template-tags.php:168
+#: inc/template-tags.php:315
+msgid "Old Quarter"
+msgstr "Phố Cổ"
+
+#: page.php:37
+msgid "Page sections"
+msgstr "Các phần của trang"
+
+#: parts/archive/listing.php:55
+msgid "Nothing has been published here yet."
+msgstr "Chưa có nội dung nào được đăng ở đây."
+
+#: parts/components/breadcrumbs.php:18
+msgid "Breadcrumb"
+msgstr "Đường dẫn"
+
+#: parts/components/cta-band.php:24
+msgid "Ready to ride from Km 0?"
+msgstr "Sẵn sàng lên đường từ Km 0?"
+
+#: parts/components/cta-band.php:25
+msgid "Tell us your dates and the bike you have in mind. Price, deposit and hand-over are confirmed with you before anything is booked."
+msgstr "Cho chúng tôi biết ngày thuê và dòng xe bạn muốn. Giá, tiền cọc và cách giao xe được xác nhận với bạn trước khi chốt."
+
+#: parts/components/cta-band.php:28
+#: parts/footer/site-footer.php:40
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. translators: %s: public phone number.
+#: parts/components/cta-band.php:50
+#: parts/header/menu-sheet.php:84
+#: parts/home/hero.php:49
+#, php-format
+msgid "Call %s"
+msgstr "Gọi %s"
+
+#: parts/components/language-switcher.php:52
+msgid "Home page"
+msgstr "Trang chủ"
+
+#: parts/components/language-switcher.php:52
+msgid "(this page is not translated yet)"
+msgstr "(trang này chưa có bản dịch)"
+
+#: parts/components/language-switcher.php:69
+msgid "Language:"
+msgstr "Ngôn ngữ:"
+
+#. translators: %d: estimated reading time in minutes.
+#: parts/components/page-hero.php:58
+#: parts/components/post-card.php:66
+#, php-format
+msgid "%d min read"
+msgid_plural "%d min read"
+msgstr[0] "Đọc %d phút"
+
+#: parts/components/page-hero.php:63
+#: parts/components/page-hero.php:70
+msgid "Updated"
+msgstr "Cập nhật"
+
+#: parts/components/post-card.php:54
+msgid "(no title)"
+msgstr "(không có tiêu đề)"
+
+#: parts/components/related-pages.php:21
+msgid "Keep exploring"
+msgstr "Khám phá tiếp"
+
+#: parts/components/related-posts.php:20
+msgid "More from the road"
+msgstr "Bài viết liên quan"
+
+#: parts/components/role-links.php:26
+msgid "Popular pages"
+msgstr "Trang phổ biến"
+
+#: parts/components/story-art.php:32
+msgid "Km 0"
+msgstr "Km 0"
+
+#: parts/components/theme-toggle.php:16
+msgid "System"
+msgstr "Hệ thống"
+
+#: parts/components/theme-toggle.php:21
+msgid "Colour mode"
+msgstr "Chế độ màu"
+
+#: parts/components/toc-aside.php:18
+msgid "On this page"
+msgstr "Trong trang này"
+
+#. translators: Brand line. "Km 0" refers to Hanoi's kilometre zero.
+#: parts/footer/site-footer.php:27
+msgid "Km 0 — Hanoi starts here."
+msgstr "Km 0 — Hà Nội bắt đầu từ đây."
+
+#: parts/footer/site-footer.php:37
+msgid "Motorbike and scooter rental near Hanoi’s Old Quarter — by the day, the week or the month."
+msgstr "Cho thuê xe máy và xe tay ga gần Phố Cổ Hà Nội — theo ngày, theo tuần hoặc theo tháng."
+
+#: parts/footer/site-footer.php:63
+msgid "Footer"
+msgstr "Chân trang"
+
+#: parts/footer/site-footer.php:81
+#: parts/header/menu-sheet.php:62
+msgid "Language"
+msgstr "Ngôn ngữ"
+
+#. translators: %s: current year.
+#: parts/footer/site-footer.php:89
+#, php-format
+msgid "© %s Mr Tu"
+msgstr "© %s Mr Tu"
+
+#: parts/header/menu-sheet.php:19
+#: parts/header/site-header.php:62
+#: parts/header/site-header.php:66
+msgid "Menu"
+msgstr "Menu"
+
+#: parts/header/menu-sheet.php:22
+msgid "Close menu"
+msgstr "Đóng menu"
+
+#: parts/header/menu-sheet.php:28
+#: parts/header/site-header.php:39
+msgid "Primary"
+msgstr "Chính"
+
+#: parts/header/site-header.php:55
+msgid "Call"
+msgstr "Gọi"
+
+#: parts/home/hero.php:19
+msgid "Daily · Weekly · Monthly"
+msgstr "Theo ngày · Theo tuần · Theo tháng"
+
+#: parts/home/hero.php:20
+msgid "Scooters & semi-automatics"
+msgstr "Xe tay ga & xe số"
+
+#: parts/home/hero.php:21
+msgid "Help in Vietnamese & English"
+msgstr "Hỗ trợ tiếng Việt & tiếng Anh"
+
+#: parts/home/hero.php:39
+msgid "See prices"
+msgstr "Xem giá"
+
+#: parts/home/hero.php:39
+msgid "See bikes & prices"
+msgstr "Xem xe & giá"
+
+#: parts/home/hero.php:57
+msgid "Key facts"
+msgstr "Thông tin chính"
+
+#: patterns/home-contact.php
+msgctxt "Pattern title"
+msgid "Home · Contact (dark band)"
+msgstr "Trang chủ · Liên hệ (dải tối)"
+
+#: patterns/home-contact.php
+msgctxt "Pattern description"
+msgid "Dark closing band with the Mr Tu contact card and call button (both read the verified business data from the plugin)."
+msgstr "Dải kết tối màu với thẻ liên hệ Mr Tu và nút gọi (cả hai đọc dữ liệu cửa hàng đã xác minh từ plugin)."
+
+#: patterns/home-contact.php:17
+msgid "Ready when you are"
+msgstr "Sẵn sàng khi bạn cần"
+
+#: patterns/home-contact.php:21
+msgid "Call to check availability and arrange the hand-over."
+msgstr "Gọi để kiểm tra xe còn trống và hẹn giao xe."
+
+#: patterns/home-faq.php
+msgctxt "Pattern title"
+msgid "Home · FAQ"
+msgstr "Trang chủ · Câu hỏi thường gặp"
+
+#: patterns/home-faq.php
+msgctxt "Pattern description"
+msgid "Section title + intro and an accordion of questions (core Details blocks)."
+msgstr "Tiêu đề phần + đoạn giới thiệu và danh sách câu hỏi xếp gọn (khối Details của WordPress)."
+
+#: patterns/home-faq.php:17
+msgid "Questions before you ride"
+msgstr "Câu hỏi trước khi lên đường"
+
+#: patterns/home-faq.php:21
+msgid "The answers travellers ask for most often."
+msgstr "Những câu trả lời du khách hay hỏi nhất."
+
+#: patterns/home-faq.php:25
+msgid "Which documents do I need?"
+msgstr "Tôi cần những giấy tờ gì?"
+
+#: patterns/home-faq.php:26
+#: patterns/home-faq.php:32
+msgid "Write the verified answer here."
+msgstr "Viết câu trả lời đã xác minh vào đây."
+
+#: patterns/home-faq.php:31
+msgid "How does the deposit work?"
+msgstr "Tiền cọc hoạt động thế nào?"
+
+#: patterns/home-fleet.php
+msgctxt "Pattern title"
+msgid "Home · Fleet (bikes)"
+msgstr "Trang chủ · Dàn xe"
+
+#: patterns/home-fleet.php
+msgctxt "Pattern description"
+msgid "Section title + intro framing the Mr Tu fleet block (bikes come from the plugin's vehicle list)."
+msgstr "Tiêu đề phần + đoạn giới thiệu bao quanh khối dàn xe Mr Tu (xe lấy từ danh sách xe của plugin)."
+
+#: patterns/home-fleet.php:17
+msgid "Pick your bike"
+msgstr "Chọn xe của bạn"
+
+#: patterns/home-fleet.php:21
+msgid "Automatic scooters for the city, semi-automatics for longer rides."
+msgstr "Xe tay ga để đi trong phố, xe số cho những chuyến đi xa hơn."
+
+#: patterns/home-pricing.php
+msgctxt "Pattern title"
+msgid "Home · Pricing"
+msgstr "Trang chủ · Bảng giá"
+
+#: patterns/home-pricing.php
+msgctxt "Pattern description"
+msgid "Section title + intro framing the Mr Tu pricing table block (prices come from the plugin, one place for the whole site)."
+msgstr "Tiêu đề phần + đoạn giới thiệu bao quanh khối bảng giá Mr Tu (giá lấy từ plugin, một nơi cho cả website)."
+
+#: patterns/home-pricing.php:17
+msgid "Prices by day, week or month"
+msgstr "Giá theo ngày, tuần hoặc tháng"
+
+#: patterns/home-pricing.php:21
+msgid "Rental and deposit are always shown separately."
+msgstr "Giá thuê và tiền cọc luôn được ghi riêng."
+
+#: patterns/home-promise.php
+msgctxt "Pattern title"
+msgid "Home · Promise (why Mr Tu)"
+msgstr "Trang chủ · Cam kết (vì sao chọn Mr Tu)"
+
+#: patterns/home-promise.php
+msgctxt "Pattern description"
+msgid "Section title, short intro and three or four columns (H3 + text) shown with numbered kilometre stones."
+msgstr "Tiêu đề phần, đoạn giới thiệu ngắn và ba hoặc bốn cột (H3 + chữ) hiển thị cùng các cột mốc cây số đánh số."
+
+#: patterns/home-promise.php:17
+msgid "Why ride with Mr Tu"
+msgstr "Vì sao thuê xe ở Mr Tu"
+
+#: patterns/home-promise.php:21
+msgid "One short sentence on what makes renting here simple."
+msgstr "Một câu ngắn về điều làm việc thuê xe ở đây đơn giản."
+
+#: patterns/home-promise.php:27
+msgid "Near the Old Quarter"
+msgstr "Gần Phố Cổ"
+
+#: patterns/home-promise.php:31
+msgid "Explain where and how the hand-over happens."
+msgstr "Giải thích giao xe ở đâu và như thế nào."
+
+#: patterns/home-promise.php:37
+msgid "Clear conditions"
+msgstr "Điều kiện rõ ràng"
+
+#: patterns/home-promise.php:41
+msgid "Documents, deposit and return rules in plain words."
+msgstr "Giấy tờ, tiền cọc và quy định trả xe nói bằng lời dễ hiểu."
+
+#: patterns/home-promise.php:47
+msgid "Help when you need it"
+msgstr "Hỗ trợ khi bạn cần"
+
+#: patterns/home-promise.php:51
+msgid "What happens if the bike has a problem on the road."
+msgstr "Điều gì xảy ra nếu xe gặp sự cố trên đường."
+
+#: patterns/home-steps.php
+msgctxt "Pattern title"
+msgid "Home · Steps (how renting works)"
+msgstr "Trang chủ · Các bước (thuê xe thế nào)"
+
+#: patterns/home-steps.php
+msgctxt "Pattern description"
+msgid "Ordered list rendered as kilometre stones along a dashed road that fills with orange as you scroll. Start each item with a bold title."
+msgstr "Danh sách có thứ tự hiển thị như các cột mốc cây số dọc con đường nét đứt, tô màu cam dần khi cuộn. Bắt đầu mỗi mục bằng một tiêu đề in đậm."
+
+#: patterns/home-steps.php:17
+msgid "How renting works"
+msgstr "Thuê xe thế nào"
+
+#: patterns/home-steps.php:22
+msgid "Get in touch"
+msgstr "Liên hệ"
+
+#: patterns/home-steps.php:22
+msgid "Tell us your dates and the bike you want."
+msgstr "Cho chúng tôi biết ngày thuê và dòng xe bạn muốn."
+
+#: patterns/home-steps.php:26
+msgid "Confirm the details"
+msgstr "Xác nhận chi tiết"
+
+#: patterns/home-steps.php:26
+msgid "Price, deposit and hand-over are agreed in advance."
+msgstr "Giá, tiền cọc và cách giao xe được thống nhất trước."
+
+#: patterns/home-steps.php:30
+msgid "Check and ride"
+msgstr "Kiểm tra và lên đường"
+
+#: patterns/home-steps.php:30
+msgid "Inspect the bike together, take the helmet and go."
+msgstr "Cùng kiểm tra xe, nhận mũ bảo hiểm và đi."
+
+#: patterns/home-steps.php:34
+msgid "Return"
+msgstr "Trả xe"
+
+#: patterns/home-steps.php:34
+msgid "Bring it back, get your deposit back."
+msgstr "Mang xe về, nhận lại tiền cọc."
+
+#: patterns/home-story.php
+msgctxt "Pattern title"
+msgid "Home · Story"
+msgstr "Trang chủ · Câu chuyện"
+
+#: patterns/home-story.php
+msgctxt "Pattern description"
+msgid "Editorial text block; the theme adds the Old Quarter map graphic (or the story photo from Theme settings) beside it."
+msgstr "Khối chữ dạng biên tập; theme thêm hình bản đồ Phố Cổ (hoặc ảnh câu chuyện trong Cài đặt theme) bên cạnh."
+
+#: patterns/home-story.php:17
+msgid "Hanoi starts at Km 0"
+msgstr "Hà Nội bắt đầu từ Km 0"
+
+#: patterns/home-story.php:21
+msgid "A short, true story about Mr Tu and the Old Quarter."
+msgstr "Một câu chuyện ngắn và có thật về Mr Tu và Phố Cổ."
+
+#: patterns/home-story.php:25
+msgid "A second paragraph with practical detail visitors care about."
+msgstr "Đoạn thứ hai với chi tiết thực tế mà khách quan tâm."
+
+#: patterns/home-trust.php
+msgctxt "Pattern title"
+msgid "Home · Trust (facts)"
+msgstr "Trang chủ · Tin cậy (sự thật)"
+
+#: patterns/home-trust.php
+msgctxt "Pattern description"
+msgid "Fact cards from a bulleted list: start each item with a bold statement. Only write facts that are true and verified."
+msgstr "Thẻ thông tin từ danh sách gạch đầu dòng: bắt đầu mỗi mục bằng một câu in đậm. Chỉ viết những điều đúng và đã xác minh."
+
+#: patterns/home-trust.php:17
+msgid "Straight answers, no surprises"
+msgstr "Trả lời thẳng, không bất ngờ"
+
+#: patterns/home-trust.php:22
+msgid "Rental and deposit kept separate"
+msgstr "Giá thuê và tiền cọc tách riêng"
+
+#: patterns/home-trust.php:22
+msgid "You always know what is paid and what comes back."
+msgstr "Bạn luôn biết khoản nào đã trả và khoản nào được hoàn lại."
+
+#: patterns/home-trust.php:26
+msgid "Prices confirmed before booking"
+msgstr "Giá được xác nhận trước khi đặt"
+
+#: patterns/home-trust.php:26
+msgid "Unconfirmed prices are marked, never presented as final."
+msgstr "Giá chưa xác nhận được đánh dấu rõ, không bao giờ ghi như giá cuối."
+
+#: patterns/home-trust.php:30
+msgid "Bike checked together"
+msgstr "Cùng kiểm tra xe"
+
+#: patterns/home-trust.php:30
+msgid "Lights, brakes and tyres are checked at hand-over."
+msgstr "Đèn, phanh và lốp được kiểm tra khi giao xe."
+
+#: patterns/inner-callout.php
+msgctxt "Pattern title"
+msgid "Callout (inner pages)"
+msgstr "Khung lưu ý (trang con)"
+
+#: patterns/inner-callout.php
+msgctxt "Pattern description"
+msgid "Highlighted note for guides and service pages: short heading, one or two sentences and an optional checklist."
+msgstr "Ghi chú nổi bật cho bài hướng dẫn và trang dịch vụ: tiêu đề ngắn, một hai câu và danh sách kiểm tra tùy chọn."
+
+#: patterns/inner-callout.php:21
+msgid "One practical tip that saves the reader time or money."
+msgstr "Một mẹo thực tế giúp người đọc tiết kiệm thời gian hoặc tiền."
+
+#: patterns/inner-callout.php:26
+msgid "A short, checkable point"
+msgstr "Một ý ngắn, dễ kiểm tra"
+
+#: patterns/inner-callout.php:30
+msgid "Another short point"
+msgstr "Một ý ngắn khác"
+
+#. translators: %s: search query.
+#: search.php:24
+#, php-format
+msgid "Results for “%s”"
+msgstr "Kết quả cho “%s”"
+
+#. translators: %d: number of search results.
+#: search.php:34
+#, php-format
+msgid "%d result"
+msgid_plural "%d results"
+msgstr[0] "%d kết quả"
+
+#: search.php:72
+msgid "No road leads there yet"
+msgstr "Chưa có con đường nào dẫn đến đó"
+
+#: search.php:73
+msgid "Try a shorter word, a bike model or a topic like “deposit” or “monthly”."
+msgstr "Thử một từ ngắn hơn, tên dòng xe hoặc chủ đề như “tiền cọc” hay “theo tháng”."
+
+#: searchform.php:14
+msgid "Search this site"
+msgstr "Tìm trên website"
+
+#: searchform.php:17
+msgid "Bikes, prices, documents…"
+msgstr "Xe, giá, giấy tờ…"
+
+#: single.php:47
+msgid "Post sections"
+msgstr "Các phần của bài viết"
+
+#: single.php:56
+msgid "Tags"
+msgstr "Thẻ"
+
+#. translators: 1: "Old Quarter" (translated), 2: city name in the current language.
+#: inc/template-tags.php:168
+#, php-format
+msgctxt "service area"
+msgid "%1$s, %2$s"
+msgstr "%1$s, %2$s"

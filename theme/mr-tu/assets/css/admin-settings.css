@@ -1,0 +1,94 @@
+/* Theme settings screen (works with or without the plugin's admin UI kit). */
+.mr-tu-settings {
+	max-width: 760px;
+}
+
+.mr-tu-settings__intro {
+	max-width: 62ch;
+	color: #50575e;
+	font-size: 14px;
+}
+
+.mr-tu-settings .mr-tu-card {
+	margin: 0 0 16px;
+	padding: 18px 20px;
+	border: 1px solid #e3e3e0;
+	border-radius: 14px;
+	background: #fff;
+}
+
+.mr-tu-settings .mrtu-card__title {
+	margin: 0 0 12px;
+	font-size: 16px;
+}
+
+.mr-tu-field + .mr-tu-field {
+	margin-top: 20px;
+	padding-top: 20px;
+	border-top: 1px dashed #c9cac6;
+}
+
+.mr-tu-field__label {
+	margin: 0 0 8px;
+	font-weight: 600;
+}
+
+.mr-tu-media__preview {
+	display: grid;
+	place-items: center;
+	overflow: hidden;
+	max-width: 360px;
+	min-height: 120px;
+	border-radius: 10px;
+	background: #f4f4f2;
+}
+
+.mr-tu-media__img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.mr-tu-media__empty {
+	padding: 16px;
+	color: #50575e;
+	font-size: 13px;
+	text-align: center;
+}
+
+.mr-tu-media__actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 12px;
+	margin-top: 10px;
+}
+
+.mr-tu-media__actions .button,
+.mr-tu-settings .button-primary {
+	min-height: 44px;
+	padding: 0 16px;
+	border-radius: 10px;
+	line-height: 42px;
+}
+
+.mr-tu-media__remove {
+	min-height: 44px;
+	color: #b32d2e;
+}
+
+.mr-tu-check {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	min-height: 44px;
+	margin: 0;
+}
+
+.mr-tu-check input {
+	margin: 0;
+}
+
+.mr-tu-check label {
+	font-size: 14px;
+}

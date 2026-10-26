@@ -1,0 +1,22 @@
+/*
+Theme Name: Mr Tu
+Theme URI: https://hanoi.thuexemaynguyentu.com/
+Author: Mr Tu
+Author URI: https://hanoi.thuexemaynguyentu.com/
+Description: Flagship theme for Mr Tu, motorbike and scooter rental near Hanoi's Old Quarter. Concept "Km 0": kilometre-stone and licence-plate design language, four brand colours, Be Vietnam Pro + Barlow Condensed, Light/Dark/System colour modes, mobile-first bottom-sheet navigation. Presentation only: languages, SEO, business data and blocks come from the Mr Tu Multilang SEO plugin, and the theme degrades gracefully without it.
+Requires at least: 6.6
+Tested up to: 7.1
+Requires PHP: 7.4
+Version: 1.0.0
+License: GPL-2.0-or-later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: mr-tu
+Domain Path: /languages
+Tags: one-column, two-columns, custom-logo, custom-menu, editor-style, featured-images, threaded-comments, translation-ready, block-patterns, wide-blocks, accessibility-ready
+
+Mr Tu WordPress theme, (C) 2026 Mr Tu.
+Mr Tu is distributed under the terms of the GNU GPL v2 or later.
+
+Front-end styles live in assets/css/src/*.css and are built into assets/css/main.css
+by `node scripts/build-css.mjs`. This file only carries the theme header.
+*/

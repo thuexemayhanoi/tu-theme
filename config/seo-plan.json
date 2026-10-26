@@ -1,0 +1,660 @@
+{
+  "generated": "2026-10-25",
+  "locales": {
+    "vi": {
+      "roles": {
+        "home": {
+          "primary_kw": "mr tu thuê xe máy",
+          "secondary_kws": [
+            "thuê xe máy mr tú",
+            "cho thuê xe máy phố cổ - mr tú"
+          ],
+          "slug": "",
+          "title": "Cho thuê xe máy Hà Nội, Phố Cổ | Mr Tu",
+          "meta": "Mr Tu cho thuê xe số, xe tay ga theo ngày, tuần và tháng gần Phố Cổ Hà Nội. Xem các dòng xe, bảng giá, thủ tục thuê và cách liên hệ nhanh qua điện thoại.",
+          "h1": "Mr Tu – xe máy cho thuê gần Phố Cổ, Hà Nội"
+        },
+        "pillar": {
+          "primary_kw": "thuê xe máy hà nội",
+          "secondary_kws": [
+            "cho thuê xe máy hà nội",
+            "thuê xe máy ở hà nội",
+            "thuê xe máy tại hà nội",
+            "dịch vụ thuê xe máy hà nội",
+            "thuê xe máy tự lái hà nội"
+          ],
+          "slug": "thue-xe-may-ha-noi",
+          "title": "Thuê xe máy Hà Nội: xe số, xe ga, theo ngày, tháng | Mr Tu",
+          "meta": "Dịch vụ thuê xe máy Hà Nội của Mr Tu: xe số, xe tay ga, thuê theo ngày, tuần hoặc tháng. Điều kiện thuê rõ ràng, giấy tờ cần có và cách đặt xe từng bước.",
+          "h1": "Thuê xe máy Hà Nội"
+        },
+        "old-quarter": {
+          "primary_kw": "thuê xe máy phố cổ hà nội",
+          "secondary_kws": [
+            "thuê xe máy hoàn kiếm hà nội",
+            "thuê xe máy hà nội phố cổ",
+            "thuê xe máy hà nội hoàn kiếm",
+            "thuê xe máy gần phố cổ",
+            "cho thuê xe máy phố cổ hà nội"
+          ],
+          "slug": "thue-xe-may-pho-co-ha-noi",
+          "title": "Thuê xe máy Phố Cổ Hà Nội, Hoàn Kiếm | Mr Tu",
+          "meta": "Thuê xe máy gần Phố Cổ, Hoàn Kiếm cùng Mr Tu: khu vực phục vụ, cách nhận và trả xe, chỗ gửi xe và lưu ý khi chạy xe trong phố cổ. Gọi trước để hẹn giờ.",
+          "h1": "Thuê xe máy Phố Cổ Hà Nội và Hoàn Kiếm"
+        },
+        "pricing": {
+          "primary_kw": "giá thuê xe máy hà nội",
+          "secondary_kws": [
+            "bảng giá thuê xe máy hà nội",
+            "thuê xe máy hà nội giá",
+            "thuê xe máy hà nội giá bao nhiêu",
+            "thuê xe máy hà nội giá rẻ",
+            "thuê xe máy cần cọc bao nhiêu"
+          ],
+          "slug": "gia-thue-xe-may-ha-noi",
+          "title": "Giá thuê xe máy Hà Nội theo ngày, tuần, tháng | Mr Tu",
+          "meta": "Bảng giá thuê xe máy Hà Nội của Mr Tu theo ngày, tuần và tháng cho từng dòng xe, kèm tiền cọc, phụ phí và điều kiện áp dụng. Giá được cập nhật tại một nơi.",
+          "h1": "Bảng giá thuê xe máy Hà Nội"
+        },
+        "fleet": {
+          "primary_kw": "thuê xe tay ga hà nội",
+          "secondary_kws": [
+            "thuê xe ga hà nội",
+            "thuê xe số hà nội",
+            "thuê xe vision hà nội",
+            "thuê xe air blade hà nội",
+            "thuê xe wave hà nội"
+          ],
+          "slug": "cac-dong-xe-cho-thue",
+          "title": "Các dòng xe cho thuê: xe tay ga, xe số Hà Nội | Mr Tu",
+          "meta": "Các dòng xe tay ga và xe số Mr Tu cho thuê tại Hà Nội: đặc điểm từng xe, nên chọn xe nào để đi phố hay đi xa, cách kiểm tra xe khi nhận và cách đặt trước.",
+          "h1": "Các dòng xe cho thuê tại Mr Tu"
+        },
+        "short-term": {
+          "primary_kw": "thuê xe máy hà nội theo ngày",
+          "secondary_kws": [
+            "thuê xe máy theo ngày hà nội",
+            "thuê xe máy theo tuần hà nội",
+            "thuê xe máy ngắn ngày hà nội"
+          ],
+          "slug": "thue-xe-may-theo-ngay",
+          "title": "Thuê xe máy theo ngày, theo tuần ở Hà Nội | Mr Tu",
+          "meta": "Thuê xe máy ngắn ngày ở Hà Nội: cách tính ngày thuê, thuê theo tuần, giờ nhận và trả xe, cách gia hạn và những điều cần biết trước khi nhận xe từ Mr Tu.",
+          "h1": "Thuê xe máy theo ngày và theo tuần tại Hà Nội"
+        },
+        "monthly": {
+          "primary_kw": "thuê xe máy theo tháng hà nội",
+          "secondary_kws": [
+            "thuê xe máy hà nội theo tháng",
+            "thuê xe máy tháng hà nội",
+            "cho thuê xe máy hà nội theo tháng",
+            "thuê xe máy dài hạn hà nội",
+            "thuê xe máy theo tháng giá bao nhiêu"
+          ],
+          "slug": "thue-xe-may-theo-thang-ha-noi",
+          "title": "Thuê xe máy theo tháng Hà Nội, thuê dài hạn | Mr Tu",
+          "meta": "Thuê xe máy theo tháng ở Hà Nội cho người đi làm, sinh viên và người nước ngoài đang sống tại Hà Nội: xe phù hợp, tiền cọc, bảo dưỡng và cách gia hạn.",
+          "h1": "Thuê xe máy theo tháng tại Hà Nội"
+        },
+        "guide-faq": {
+          "primary_kw": "thuê xe máy cần giấy tờ gì",
+          "secondary_kws": [
+            "thủ tục thuê xe máy hà nội",
+            "thủ tục thuê xe máy",
+            "thuê xe máy hà nội cần giấy tờ gì",
+            "thuê xe máy cần bằng lái không",
+            "thuê xe máy cần cọc gì",
+            "thuê xe máy cần lưu ý những gì"
+          ],
+          "slug": "thu-tuc-thue-xe-may-ha-noi",
+          "title": "Thuê xe máy cần giấy tờ gì? Thủ tục & hỏi đáp | Mr Tu",
+          "meta": "Thuê xe máy ở Hà Nội cần giấy tờ gì, có cần bằng lái, đặt cọc thế nào và khi trả xe cần lưu ý gì? Hướng dẫn từng bước và câu hỏi thường gặp từ Mr Tu.",
+          "h1": "Thủ tục thuê xe máy ở Hà Nội: giấy tờ, bằng lái, đặt cọc"
+        },
+        "about": {
+          "primary_kw": "giới thiệu mr tu",
+          "secondary_kws": [
+            "về mr tu"
+          ],
+          "slug": "gioi-thieu",
+          "title": "Giới thiệu về chúng tôi | Mr Tu",
+          "meta": "Mr Tu là điểm cho thuê xe máy gần Phố Cổ Hà Nội. Tìm hiểu chúng tôi là ai, cách chuẩn bị xe, cách công bố giá và điều kiện thuê, cùng cách liên hệ với Mr Tu.",
+          "h1": "Giới thiệu Mr Tu"
+        },
+        "contact": {
+          "primary_kw": "liên hệ mr tu",
+          "secondary_kws": [
+            "số điện thoại thuê xe máy mr tu",
+            "địa chỉ mr tu phúc tân"
+          ],
+          "slug": "lien-he",
+          "title": "Liên hệ đặt thuê xe máy | Mr Tu",
+          "meta": "Liên hệ Mr Tu để hỏi xe còn trống, giá thuê và thủ tục: số điện thoại, địa chỉ gần Phố Cổ Hà Nội và giờ làm việc. Hãy gọi trước khi đến để hẹn giờ nhận xe.",
+          "h1": "Liên hệ Mr Tu"
+        }
+      }
+    },
+    "en": {
+      "roles": {
+        "home": {
+          "primary_kw": "mr tu motorbike rental",
+          "secondary_kws": [
+            "mr tu hanoi"
+          ],
+          "slug": "",
+          "title": "Motorbike Rental in Hanoi Old Quarter | Mr Tu",
+          "meta": "Rent an automatic scooter or a semi-automatic motorbike from Mr Tu near Hanoi's Old Quarter. Daily, weekly and monthly rentals, clear rules and easy contact.",
+          "h1": "Mr Tu – scooter and motorbike rental in Hanoi"
+        },
+        "pillar": {
+          "primary_kw": "motorbike rental hanoi",
+          "secondary_kws": [
+            "hanoi motorbike rental",
+            "rent motorbike hanoi",
+            "scooter rental hanoi",
+            "hanoi scooter rental",
+            "motorcycle rental hanoi",
+            "motorbike hire hanoi",
+            "renting a motorbike in hanoi"
+          ],
+          "slug": "motorbike-rental-hanoi",
+          "title": "Motorbike & Scooter Rental Hanoi: Daily to Monthly | Mr Tu",
+          "meta": "Rent a motorbike in Hanoi with Mr Tu: automatic scooters and semi-automatics by the day, week or month. What you need, how booking works and what is included.",
+          "h1": "Motorbike Rental in Hanoi"
+        },
+        "old-quarter": {
+          "primary_kw": "motorbike rental hanoi old quarter",
+          "secondary_kws": [
+            "scooter rental hanoi old quarter",
+            "hanoi old quarter motorbike rental",
+            "scooter rental in hanoi old quarter",
+            "motorbike rental hoan kiem"
+          ],
+          "slug": "motorbike-rental-hanoi-old-quarter",
+          "title": "Old Quarter Motorbike Rental, Hoan Kiem Hanoi | Mr Tu",
+          "meta": "Renting a scooter in Hanoi's Old Quarter: where to meet Mr Tu near Hoan Kiem, how pick-up and return work, parking tips and riding in the narrow old streets.",
+          "h1": "Motorbike Rental in Hanoi's Old Quarter and Hoan Kiem"
+        },
+        "pricing": {
+          "primary_kw": "hanoi motorbike rental cost",
+          "secondary_kws": [
+            "motorbike rental hanoi price",
+            "scooter rental hanoi price",
+            "how much is motorbike rental in hanoi",
+            "how much to rent a motorbike in vietnam"
+          ],
+          "slug": "hanoi-motorbike-rental-prices",
+          "title": "Hanoi Motorbike Rental Prices & Deposit | Mr Tu",
+          "meta": "How much does it cost to rent a motorbike in Hanoi? See Mr Tu's daily, weekly and monthly rates by model, the deposit, extra fees and what each price covers.",
+          "h1": "Hanoi Motorbike Rental Prices"
+        },
+        "fleet": {
+          "primary_kw": "automatic scooter rental hanoi",
+          "secondary_kws": [
+            "honda vision rental hanoi",
+            "semi automatic motorbike rental hanoi"
+          ],
+          "slug": "scooters-and-motorbikes",
+          "title": "Automatic Scooters & Semi-Automatics for Rent | Mr Tu",
+          "meta": "Compare the automatic scooters and semi-automatic motorbikes Mr Tu rents in Hanoi: engine size, comfort in town or on long rides, and which bike suits you.",
+          "h1": "Our Rental Scooters and Motorbikes"
+        },
+        "short-term": {
+          "primary_kw": "daily motorbike rental hanoi",
+          "secondary_kws": [
+            "weekly motorbike rental hanoi",
+            "rent a scooter for a day in hanoi",
+            "short term motorbike rental hanoi"
+          ],
+          "slug": "daily-weekly-motorbike-rental",
+          "title": "Daily & Weekly Motorbike Rental in Hanoi | Mr Tu",
+          "meta": "Need a bike for a day or a week in Hanoi? How Mr Tu counts rental days, pick-up and return times, extending your rental and what to check before you ride off.",
+          "h1": "Daily and Weekly Motorbike Rental in Hanoi"
+        },
+        "monthly": {
+          "primary_kw": "monthly motorbike rental hanoi",
+          "secondary_kws": [
+            "monthly scooter rental hanoi",
+            "long term motorbike rental hanoi",
+            "how much to rent a motorbike in vietnam for a month",
+            "monthly bike rental vietnam"
+          ],
+          "slug": "monthly-motorbike-rental-hanoi",
+          "title": "Monthly Motorbike Rental Hanoi, Long-Term Stays | Mr Tu",
+          "meta": "Living in Hanoi for a while? Rent a scooter by the month from Mr Tu: suitable models, deposit and documents, servicing during the rental and how to renew.",
+          "h1": "Monthly Motorbike Rental in Hanoi"
+        },
+        "guide-faq": {
+          "primary_kw": "do i need a license to rent a motorbike in vietnam",
+          "secondary_kws": [
+            "motorbike license vietnam",
+            "international driving permit vietnam",
+            "can tourists rent motorbikes in vietnam",
+            "what do you need to rent a motorbike in vietnam",
+            "is it safe to rent a motorbike in vietnam"
+          ],
+          "slug": "how-to-rent-a-motorbike-in-hanoi",
+          "title": "Motorbike License in Vietnam & Rental FAQ | Mr Tu",
+          "meta": "Do you need a license to rent a motorbike in Vietnam? Which documents, deposit and helmet rules apply in Hanoi? Clear answers and step-by-step renting tips.",
+          "h1": "How to Rent a Motorbike in Hanoi: License, Documents and FAQ"
+        },
+        "about": {
+          "primary_kw": "about mr tu",
+          "secondary_kws": [
+            "who is mr tu hanoi"
+          ],
+          "slug": "about",
+          "title": "About Us | Mr Tu",
+          "meta": "Mr Tu is a motorbike rental point near Hanoi's Old Quarter. Learn who we are, how we prepare our bikes, how we publish prices and how to reach us.",
+          "h1": "About Mr Tu"
+        },
+        "contact": {
+          "primary_kw": "contact mr tu motorbike rental",
+          "secondary_kws": [
+            "mr tu phone number hanoi"
+          ],
+          "slug": "contact",
+          "title": "Contact & Booking | Mr Tu",
+          "meta": "Contact Mr Tu to check bike availability, prices and documents: phone number, address near Hanoi's Old Quarter and opening hours. Call before you come.",
+          "h1": "Contact Mr Tu"
+        }
+      }
+    },
+    "de": {
+      "roles": {
+        "home": {
+          "primary_kw": "mr tu hanoi",
+          "secondary_kws": [
+            "mr tu rollerverleih hanoi"
+          ],
+          "slug": "",
+          "title": "Motorrad & Roller mieten in Hanoi | Mr Tu",
+          "meta": "Roller und Halbautomatik-Motorräder in Hanoi mieten: Mr Tu nahe der Altstadt. Tages-, Wochen- und Monatsmiete, klare Bedingungen und ein einfacher Kontakt.",
+          "h1": "Mr Tu – Ihr Rollerverleih in Hanoi"
+        },
+        "pillar": {
+          "primary_kw": "motorrad mieten hanoi",
+          "secondary_kws": [
+            "roller mieten hanoi",
+            "motorrad verleih hanoi",
+            "moped mieten hanoi",
+            "motorrad ausleihen hanoi",
+            "motorrad mieten vietnam",
+            "roller mieten vietnam"
+          ],
+          "slug": "motorrad-mieten-hanoi",
+          "title": "Motorrad mieten Hanoi: Roller, Mietdauer, Ablauf | Mr Tu",
+          "meta": "Motorrad oder Roller in Hanoi mieten: welche Modelle es gibt, Tages-, Wochen- und Monatsmiete, nötige Dokumente und wie die Buchung bei Mr Tu abläuft.",
+          "h1": "Motorrad mieten in Hanoi"
+        },
+        "old-quarter": {
+          "primary_kw": "roller mieten hanoi altstadt",
+          "secondary_kws": [
+            "motorrad mieten hanoi altstadt",
+            "rollerverleih hanoi altstadt",
+            "roller mieten hoan kiem"
+          ],
+          "slug": "roller-mieten-hanoi-altstadt",
+          "title": "Roller mieten in Hanois Altstadt (Hoan Kiem) | Mr Tu",
+          "meta": "Roller mieten in der Altstadt von Hanoi: Treffpunkt bei Mr Tu nahe Hoan Kiem, Abholung und Rückgabe, Parken und Tipps für das Fahren in den engen Gassen.",
+          "h1": "Roller mieten in der Altstadt von Hanoi"
+        },
+        "pricing": {
+          "primary_kw": "roller mieten hanoi kosten",
+          "secondary_kws": [
+            "hanoi roller mieten kosten",
+            "roller mieten vietnam preise",
+            "was kostet roller mieten in vietnam",
+            "motorrad mieten vietnam kosten"
+          ],
+          "slug": "roller-mieten-hanoi-preise",
+          "title": "Roller mieten Hanoi: Preise, Kaution & Kosten | Mr Tu",
+          "meta": "Was kostet ein Mietroller in Hanoi? Tages-, Wochen- und Monatspreise je Modell bei Mr Tu, dazu Kaution, mögliche Zusatzkosten und was im Preis enthalten ist.",
+          "h1": "Preise für Roller- und Motorradmiete in Hanoi"
+        },
+        "fleet": {
+          "primary_kw": "automatikroller mieten hanoi",
+          "secondary_kws": [
+            "honda vision mieten hanoi",
+            "halbautomatik roller mieten hanoi"
+          ],
+          "slug": "roller-und-motorraeder",
+          "title": "Automatikroller & Halbautomatik mieten Hanoi | Mr Tu",
+          "meta": "Automatikroller oder Halbautomatik? Vergleichen Sie die Modelle, die Mr Tu in Hanoi vermietet: Hubraum, Komfort in der Stadt und auf längeren Strecken.",
+          "h1": "Unsere Mietroller und Motorräder"
+        },
+        "short-term": {
+          "primary_kw": "roller tagesmiete hanoi",
+          "secondary_kws": [
+            "roller wochenmiete hanoi",
+            "roller für eine woche mieten hanoi"
+          ],
+          "slug": "roller-tagesmiete-wochenmiete",
+          "title": "Roller-Tagesmiete & Wochenmiete in Hanoi | Mr Tu",
+          "meta": "Roller für einen Tag oder eine Woche in Hanoi mieten: wie Miettage gezählt werden, Abhol- und Rückgabezeiten, Verlängerung und was Sie vor der Fahrt prüfen.",
+          "h1": "Roller für einen Tag oder eine Woche mieten"
+        },
+        "monthly": {
+          "primary_kw": "langzeitmiete roller hanoi",
+          "secondary_kws": [
+            "roller monatlich mieten hanoi",
+            "roller langzeitmiete vietnam",
+            "motorrad monatsmiete hanoi"
+          ],
+          "slug": "langzeitmiete-roller-hanoi",
+          "title": "Langzeitmiete: Roller monatlich mieten in Hanoi | Mr Tu",
+          "meta": "Länger in Hanoi? Roller monatlich bei Mr Tu mieten: passende Modelle, Kaution und Dokumente, Wartung während der Miete und wie die Verlängerung funktioniert.",
+          "h1": "Roller monatlich mieten in Hanoi"
+        },
+        "guide-faq": {
+          "primary_kw": "roller mieten vietnam führerschein",
+          "secondary_kws": [
+            "internationaler führerschein vietnam",
+            "führerschein vietnam roller",
+            "roller fahren vietnam",
+            "roller mieten vietnam ohne führerschein",
+            "kann ich mit deutschem führerschein in vietnam fahren"
+          ],
+          "slug": "roller-mieten-vietnam-fuehrerschein",
+          "title": "Roller mieten in Vietnam: Führerschein & FAQ | Mr Tu",
+          "meta": "Welchen Führerschein brauchen Sie, um in Vietnam Roller zu fahren? Internationaler Führerschein, Dokumente, Kaution und Helmpflicht – klar erklärt für Hanoi.",
+          "h1": "Roller mieten in Vietnam: Führerschein, Dokumente und FAQ"
+        },
+        "about": {
+          "primary_kw": "über mr tu",
+          "secondary_kws": [
+            "mr tu hanoi wer wir sind"
+          ],
+          "slug": "ueber-uns",
+          "title": "Über uns | Mr Tu",
+          "meta": "Mr Tu vermietet Roller und Motorräder nahe der Altstadt von Hanoi. Erfahren Sie, wer wir sind, wie wir Preise veröffentlichen und wie Sie uns erreichen.",
+          "h1": "Über Mr Tu"
+        },
+        "contact": {
+          "primary_kw": "kontakt mr tu",
+          "secondary_kws": [
+            "mr tu telefon hanoi"
+          ],
+          "slug": "kontakt",
+          "title": "Kontakt & Reservierung | Mr Tu",
+          "meta": "Kontaktieren Sie Mr Tu, um freie Roller, Preise und nötige Dokumente zu erfragen: Telefon, Adresse nahe der Altstadt von Hanoi und Öffnungszeiten.",
+          "h1": "Kontakt zu Mr Tu"
+        }
+      }
+    },
+    "fr": {
+      "roles": {
+        "home": {
+          "primary_kw": "mr tu hanoi",
+          "secondary_kws": [
+            "mr tu location scooter hanoï"
+          ],
+          "slug": "",
+          "title": "Location de motos et scooters à Hanoï | Mr Tu",
+          "meta": "Louez un scooter ou une moto semi-automatique chez Mr Tu, près du vieux quartier de Hanoï : à la journée, à la semaine ou au mois, conditions claires.",
+          "h1": "Mr Tu, votre loueur de scooters à Hanoï"
+        },
+        "pillar": {
+          "primary_kw": "location moto hanoi",
+          "secondary_kws": [
+            "location scooter hanoi",
+            "location de moto à hanoï",
+            "louer moto hanoi",
+            "location moto hanoi vietnam",
+            "location moto vietnam",
+            "louer une moto au vietnam"
+          ],
+          "slug": "location-moto-hanoi",
+          "title": "Location moto Hanoï : scooters au jour ou au mois | Mr Tu",
+          "meta": "Louer une moto ou un scooter à Hanoï avec Mr Tu : modèles proposés, location à la journée, à la semaine ou au mois, documents requis et réservation simple.",
+          "h1": "Location de moto à Hanoï"
+        },
+        "old-quarter": {
+          "primary_kw": "location moto vieux quartier hanoi",
+          "secondary_kws": [
+            "location scooter vieux quartier hanoï",
+            "location moto hoan kiem"
+          ],
+          "slug": "location-moto-vieux-quartier-hanoi",
+          "title": "Location moto vieux quartier de Hanoï, Hoan Kiem | Mr Tu",
+          "meta": "Louer un scooter dans le vieux quartier de Hanoï : point de rendez-vous Mr Tu près de Hoan Kiem, retrait et retour, stationnement et conseils de conduite.",
+          "h1": "Location de moto dans le vieux quartier de Hanoï"
+        },
+        "pricing": {
+          "primary_kw": "location scooter hanoi prix",
+          "secondary_kws": [
+            "prix location moto hanoi",
+            "location scooter vietnam prix",
+            "louer un scooter au vietnam prix"
+          ],
+          "slug": "prix-location-moto-hanoi",
+          "title": "Prix location scooter Hanoï : tarifs et caution | Mr Tu",
+          "meta": "Combien coûte la location d'un scooter à Hanoï ? Tarifs Mr Tu à la journée, à la semaine et au mois par modèle, caution, frais éventuels et ce qui est inclus.",
+          "h1": "Prix de la location de moto et de scooter à Hanoï"
+        },
+        "fleet": {
+          "primary_kw": "location scooter automatique hanoi",
+          "secondary_kws": [
+            "location moto semi-automatique hanoi",
+            "location honda vision hanoi"
+          ],
+          "slug": "scooters-et-motos",
+          "title": "Scooters automatiques et motos à louer à Hanoï | Mr Tu",
+          "meta": "Scooter automatique ou moto semi-automatique ? Comparez les modèles loués par Mr Tu à Hanoï : cylindrée, confort en ville ou sur route et conseils de choix.",
+          "h1": "Nos scooters et motos de location"
+        },
+        "short-term": {
+          "primary_kw": "location scooter à la journée hanoi",
+          "secondary_kws": [
+            "location moto semaine hanoi",
+            "louer un scooter pour une journée à hanoï"
+          ],
+          "slug": "location-scooter-jour-semaine",
+          "title": "Location de scooter à la journée ou à la semaine | Mr Tu",
+          "meta": "Un scooter pour un jour ou une semaine à Hanoï ? Comment Mr Tu compte les jours, horaires de retrait et de retour, prolongation et vérifications utiles.",
+          "h1": "Location de scooter à la journée et à la semaine à Hanoï"
+        },
+        "monthly": {
+          "primary_kw": "location moto au mois hanoi",
+          "secondary_kws": [
+            "location scooter longue durée hanoi",
+            "location moto longue durée vietnam"
+          ],
+          "slug": "location-moto-au-mois-hanoi",
+          "title": "Location moto au mois à Hanoï, longue durée | Mr Tu",
+          "meta": "Vous vivez à Hanoï quelques mois ? Louez un scooter au mois chez Mr Tu : modèles adaptés, caution, documents, entretien pendant la location et renouvellement.",
+          "h1": "Location de moto au mois à Hanoï"
+        },
+        "guide-faq": {
+          "primary_kw": "permis moto vietnam",
+          "secondary_kws": [
+            "permis international vietnam",
+            "conduire au vietnam",
+            "permis de conduire vietnam",
+            "louer scooter vietnam sans permis",
+            "comment louer un scooter au vietnam",
+            "conditions pour louer un scooter au vietnam"
+          ],
+          "slug": "permis-moto-vietnam-location",
+          "title": "Permis moto au Vietnam : louer un scooter, FAQ | Mr Tu",
+          "meta": "Quel permis faut-il pour conduire un scooter au Vietnam ? Permis international, documents, caution et casque obligatoire : nos réponses pour louer à Hanoï.",
+          "h1": "Louer une moto au Vietnam : permis, documents et FAQ"
+        },
+        "about": {
+          "primary_kw": "à propos de mr tu",
+          "secondary_kws": [
+            "mr tu hanoï qui sommes-nous"
+          ],
+          "slug": "a-propos",
+          "title": "À propos | Mr Tu",
+          "meta": "Mr Tu loue des scooters et des motos près du vieux quartier de Hanoï. Découvrez qui nous sommes, comment nous publions nos prix et comment nous contacter.",
+          "h1": "À propos de Mr Tu"
+        },
+        "contact": {
+          "primary_kw": "contact mr tu hanoi",
+          "secondary_kws": [
+            "mr tu téléphone hanoï"
+          ],
+          "slug": "contact",
+          "title": "Contact et réservation | Mr Tu",
+          "meta": "Contactez Mr Tu pour connaître les scooters disponibles, les prix et les documents requis : téléphone, adresse près du vieux quartier de Hanoï et horaires.",
+          "h1": "Contacter Mr Tu"
+        }
+      }
+    },
+    "es": {
+      "roles": {
+        "home": {
+          "primary_kw": "mr tu hanoi",
+          "secondary_kws": [
+            "mr tu alquiler de motos hanói"
+          ],
+          "slug": "",
+          "title": "Alquiler de motos y scooters en Hanói | Mr Tu",
+          "meta": "Alquila un scooter o una moto semiautomática con Mr Tu, cerca del casco antiguo de Hanói: por días, semanas o meses, con condiciones claras y contacto rápido.",
+          "h1": "Mr Tu, tu alquiler de scooters en Hanói"
+        },
+        "pillar": {
+          "primary_kw": "alquiler moto hanoi",
+          "secondary_kws": [
+            "alquiler de motos en hanói",
+            "alquilar moto en hanoi",
+            "alquiler scooter hanoi",
+            "alquiler de scooters en hanói",
+            "alquiler moto vietnam",
+            "alquilar moto vietnam"
+          ],
+          "slug": "alquiler-motos-hanoi",
+          "title": "Alquiler de motos en Hanói: por día, semana o mes | Mr Tu",
+          "meta": "Alquila una moto o un scooter en Hanói con Mr Tu: modelos disponibles, alquiler por días, semanas o meses, documentos necesarios y cómo reservar paso a paso.",
+          "h1": "Alquiler de motos en Hanói"
+        },
+        "old-quarter": {
+          "primary_kw": "alquiler de motos casco antiguo hanói",
+          "secondary_kws": [
+            "alquiler moto casco antiguo hanoi",
+            "alquiler scooter hoan kiem"
+          ],
+          "slug": "alquiler-motos-casco-antiguo-hanoi",
+          "title": "Alquiler de motos en el casco antiguo de Hanói | Mr Tu",
+          "meta": "Alquila un scooter en el casco antiguo de Hanói: punto de encuentro de Mr Tu cerca de Hoan Kiem, recogida y devolución, aparcamiento y consejos para circular.",
+          "h1": "Alquiler de motos en el casco antiguo de Hanói"
+        },
+        "pricing": {
+          "primary_kw": "precio alquiler moto hanoi",
+          "secondary_kws": [
+            "cuánto cuesta alquilar una moto en vietnam",
+            "precio alquiler scooter hanoi"
+          ],
+          "slug": "precios-alquiler-motos-hanoi",
+          "title": "Precios del alquiler de motos en Hanói y fianza | Mr Tu",
+          "meta": "¿Cuánto cuesta alquilar una moto en Hanói? Tarifas de Mr Tu por día, semana y mes según el modelo, fianza, posibles cargos extra y qué incluye cada precio.",
+          "h1": "Precios del alquiler de motos en Hanói"
+        },
+        "fleet": {
+          "primary_kw": "alquiler de scooter automático hanói",
+          "secondary_kws": [
+            "alquiler moto semiautomática hanoi",
+            "alquiler honda vision hanoi"
+          ],
+          "slug": "scooters-y-motos",
+          "title": "Scooters automáticos y motos de alquiler, Hanói | Mr Tu",
+          "meta": "¿Scooter automático o moto semiautomática? Compara los modelos que Mr Tu alquila en Hanói: cilindrada, comodidad en ciudad o en ruta y cuál te conviene más.",
+          "h1": "Nuestros scooters y motos de alquiler"
+        },
+        "short-term": {
+          "primary_kw": "alquiler de motos por días hanói",
+          "secondary_kws": [
+            "alquiler moto por semana hanoi"
+          ],
+          "slug": "alquiler-moto-por-dias-semanas",
+          "title": "Alquiler de moto por días o semanas en Hanói | Mr Tu",
+          "meta": "¿Necesitas una moto para un día o una semana en Hanói? Cómo cuenta Mr Tu los días de alquiler, horarios de recogida y devolución, prórrogas y qué revisar.",
+          "h1": "Alquiler de moto por días y por semanas en Hanói"
+        },
+        "monthly": {
+          "primary_kw": "alquiler moto mensual hanoi",
+          "secondary_kws": [
+            "alquiler de motos por meses hanói",
+            "alquiler moto larga estancia hanoi"
+          ],
+          "slug": "alquiler-moto-mensual-hanoi",
+          "title": "Alquiler de moto mensual en Hanói, larga estancia | Mr Tu",
+          "meta": "¿Vives en Hanói una temporada? Alquila un scooter por meses con Mr Tu: modelos adecuados, fianza y documentos, mantenimiento durante el alquiler y renovación.",
+          "h1": "Alquiler de moto por meses en Hanói"
+        },
+        "guide-faq": {
+          "primary_kw": "carnet para alquilar moto en vietnam",
+          "secondary_kws": [
+            "conducir moto en vietnam",
+            "carnet de conducir moto vietnam",
+            "permiso internacional de conducir vietnam",
+            "qué se necesita para conducir moto en vietnam"
+          ],
+          "slug": "carnet-alquilar-moto-vietnam",
+          "title": "Carnet para alquilar moto en Vietnam: guía y FAQ | Mr Tu",
+          "meta": "¿Qué carnet necesitas para conducir una moto en Vietnam? Permiso internacional, documentos, fianza y casco obligatorio: respuestas para alquilar en Hanói.",
+          "h1": "Alquilar una moto en Vietnam: carnet, documentos y preguntas frecuentes"
+        },
+        "about": {
+          "primary_kw": "sobre mr tu",
+          "secondary_kws": [
+            "mr tu hanói quiénes somos"
+          ],
+          "slug": "sobre-nosotros",
+          "title": "Sobre nosotros | Mr Tu",
+          "meta": "Mr Tu alquila scooters y motos cerca del casco antiguo de Hanói. Conoce quiénes somos, cómo publicamos nuestros precios y cómo contactarnos antes de alquilar.",
+          "h1": "Sobre Mr Tu"
+        },
+        "contact": {
+          "primary_kw": "contacto mr tu",
+          "secondary_kws": [
+            "mr tu teléfono hanói"
+          ],
+          "slug": "contacto",
+          "title": "Contacto y reservas | Mr Tu",
+          "meta": "Contacta con Mr Tu para consultar motos disponibles, precios y documentos necesarios: teléfono, dirección cerca del casco antiguo de Hanói y horario.",
+          "h1": "Contactar con Mr Tu"
+        }
+      }
+    }
+  },
+  "sources": [
+    {
+      "tool": "OpenSEO get_keyword_metrics",
+      "notes": "2026-10-25. Google search volume / KD / CPC / intent. Markets: Vietnam 2704 vi (33 kw), United States 2840 en (35 kw), Germany 2276 de (25 kw), France 2250 fr (26 kw), Spain 2724 es (24 kw). Many long-tail seeds returned no data (listed in docs/keyword-research.md). Ran inside the account's existing projects as billing scope; no project, tracker or schedule created."
+    },
+    {
+      "tool": "OpenSEO get_serp_results",
+      "notes": "2026-10-25, Google desktop, depth 10, Vietnam/vi: 'thuê xe máy hà nội', 'cho thuê xe máy hà nội', 'thuê xe máy phố cổ', 'giá thuê xe máy hà nội', 'thuê xe máy cần giấy tờ gì', 'thuê xe máy hoàn kiếm', 'thuê xe tay ga hà nội'. OpenSEO credits used in total: 102 (108 -> 6), far below the 2,000 cap; the account balance is now nearly empty."
+    },
+    {
+      "tool": "OpenRush research_keywords / inspect_keyword",
+      "notes": "2026-10-25, search_index source (confidence 0.7), close variants share one grouped volume (do not sum). Vietnam/Vietnamese 'thuê xe máy hà nội' (80 suggestions); Vietnam/English, United States, United Kingdom, Australia for 'motorbike rental hanoi' / 'scooter rental hanoi' / 'motorbike hanoi'; Mexico/Spanish 'moto vietnam' (no demand). About 29 OpenRush credits by its published per-call cost; balance not exposed."
+    },
+    {
+      "tool": "OpenRush inspect_serp",
+      "notes": "2026-10-25 live SERP (features: AI overview, local pack, PAA, related): VN/vi monthly; VN/en 'motorbike rental hanoi', 'monthly motorbike rental hanoi', 'motorbike rental hanoi old quarter'; US/en license question; DE 'motorrad mieten hanoi', 'roller mieten vietnam führerschein'; FR 'location moto hanoi', 'permis moto vietnam'; ES 'alquiler moto hanoi', 'carnet de conducir moto vietnam'. 11 calls, about 22 credits."
+    },
+    {
+      "tool": "Ubersuggest",
+      "notes": "2026-10-25, free plan. keyword_overview refused (HTTP 403, daily report limit 3/3 already used), so no Ubersuggest volumes. google_suggestions (autocomplete, no metrics) worked for vn/vi, us/en, de/de, fr/fr, es/es seeds. No project created."
+    },
+    {
+      "tool": "Nimble nimble_search",
+      "notes": "2026-10-25, country ES, locale es: 'alquiler de motos en Hanói casco antiguo' returned only Tripadvisor pages in PT/IT/FR/EN, no Spanish-language rental page."
+    },
+    {
+      "tool": "TinyFish search",
+      "notes": "2026-10-25, location FR, language fr: 'location moto vieux quartier Hanoï' returned marketplaces (riderly, bikesbooking, rentalmotorbike.com/fr), Tripadvisor and guides, no dedicated French Old Quarter shop page."
+    },
+    {
+      "tool": "WebSearch",
+      "notes": "2026-10-25, US-only: 'scooter rental hanoi old quarter' returned offroadvietnam.com automatic scooters, expat.com forum, bikesbooking, riderly, travelarbitrage guide. Used only as a qualitative check."
+    },
+    {
+      "tool": "Firecrawl",
+      "notes": "Not used (out of credits, per task instructions)."
+    }
+  ]
+}

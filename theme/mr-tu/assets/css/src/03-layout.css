@@ -1,0 +1,56 @@
+/* ==========================================================================
+   03 · Layout — containers, eyebrows, section rhythm.
+   ========================================================================== */
+
+.site-header__inner,
+.page-hero__inner,
+.archive-body,
+.search-body,
+.related__inner,
+.cta-band__inner,
+.site-footer__inner,
+.entry-layout,
+.home-hero__inner,
+.lost__inner,
+.comments__inner,
+.entry-media {
+	width: var(--wrap);
+	margin-inline: auto;
+}
+
+/* Plate-style eyebrow used above section titles. */
+.mrtu-eyebrow {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	color: var(--color-text-muted);
+	font-family: var(--font-plate);
+	font-size: var(--text-plate);
+	font-weight: 600;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+.card-grid {
+	display: grid;
+	gap: var(--space-5);
+	grid-template-columns: minmax(0, 1fr);
+}
+
+@media (min-width: 768px) {
+	.card-grid--3,
+	.card-grid--editorial {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (min-width: 1024px) {
+	.card-grid--3 {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+
+	.card-grid--editorial {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: var(--space-6) var(--space-5);
+	}
+}

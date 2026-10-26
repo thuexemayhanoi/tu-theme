@@ -1,0 +1,18 @@
+# Private assistant source (repo is public — never commit)
+/private/
+/dist-private/
+# Tooling
+node_modules/
+vendor/
+/.cache/
+/tests/e2e/artifacts/
+/tests/lighthouse/reports/
+*.log
+.DS_Store
+/build/
+
+# Agent worktrees (local only)
+/.claude/
+/dist/
+/dist-private/
+/tests/lighthouse/reports/

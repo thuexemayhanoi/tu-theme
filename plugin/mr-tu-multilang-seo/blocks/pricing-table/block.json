@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "mrtu/pricing-table",
+	"version": "1.0.0",
+	"title": "Price table",
+	"category": "mrtu",
+	"icon": "money-alt",
+	"description": "Rental prices per model with daily, weekly and monthly tabs. Prices come from Mr Tu → Prices; unconfirmed prices are never shown as fact.",
+	"keywords": [ "price", "rental", "deposit" ],
+	"textdomain": "mr-tu-multilang-seo",
+	"attributes": {
+		"period": {
+			"type": "string",
+			"enum": [ "day", "week", "month" ],
+			"default": "day"
+		},
+		"showDeposit": {
+			"type": "boolean",
+			"default": true
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"html": false
+	},
+	"example": {
+		"attributes": {
+			"period": "day",
+			"showDeposit": true
+		}
+	},
+	"editorScript": "mrtu-blocks-editor",
+	"editorStyle": "mrtu-blocks",
+	"render": "file:./render.php"
+}

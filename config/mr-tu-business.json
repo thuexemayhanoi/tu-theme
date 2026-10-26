@@ -1,0 +1,145 @@
+{
+  "$schema_version": 1,
+  "_comment": "Mr Tu business facts — seed source for the plugin's Business/NAP + Pricing managers. Every field carries a 'verified' flag. Unverified fields are shown as PENDING VERIFICATION in wp-admin and are NOT presented as facts on the public site. Never copy the NAP of the Long Bien location into this file.",
+  "source": "Owner brief + Google Maps screenshot provided by the owner, 2026-10-25",
+  "business": {
+    "brand": { "value": "Mr Tu", "verified": true },
+    "display_name": {
+      "value": "Cho thuê xe máy Phố Cổ - Mr Tu",
+      "verified": false,
+      "note": "Google Business Profile name was cut off in the screenshot; confirm the full listing name before syncing."
+    },
+    "address": {
+      "street": "17 P. Phúc Tân",
+      "ward": "Hồng Hà",
+      "city": "Hà Nội",
+      "postal_code": "100000",
+      "country": "VN",
+      "verified": false,
+      "note": "Confirm the current address representation and whether customers are received on site before publishing it or LocalBusiness schema."
+    },
+    "phone": {
+      "display": "0816 659 199",
+      "e164": "+84816659199",
+      "verified": true,
+      "note": "Provided by the owner (Google Maps listing)."
+    },
+    "hours": {
+      "days": ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
+      "opens": "08:00",
+      "closes": "17:00",
+      "verified": false,
+      "note": "Google Maps shows 08:00–17:00 daily; confirm the hours when staff actually hand over vehicles."
+    },
+    "service_model": {
+      "value": "appointment",
+      "verified": false,
+      "note": "appointment = hand-over by appointment/meeting point; storefront = staffed shop receiving walk-in customers. Do not describe a sign-only location as a staffed shop."
+    },
+    "service_area": {
+      "value": "Phố Cổ, Hoàn Kiếm (Hà Nội)",
+      "verified": false,
+      "note": "Exact delivery/pick-up radius not confirmed."
+    },
+    "maps_url": { "value": "", "verified": false, "note": "Official Google Maps URL / Place ID not provided yet. Do not guess." },
+    "email": { "value": "", "verified": false, "note": "Public sales email not confirmed." },
+    "website": { "value": "https://hanoi.thuexemaynguyentu.com/", "verified": true },
+    "channels": {
+      "phone": { "enabled": true, "verified": true },
+      "whatsapp": { "enabled": false, "verified": false, "value": "+84816659199", "note": "Confirm WhatsApp is active on this number." },
+      "zalo": { "enabled": false, "verified": false, "value": "0816659199", "note": "Confirm Zalo is active on this number." }
+    }
+  },
+  "pricing": {
+    "currency": "VND",
+    "verified": false,
+    "reviewed_at": "",
+    "reference_source": "Reference price table of the main location (thuexemaynguyentu.com homepage, 2026-10-25). NOT yet confirmed for the Mr Tu location.",
+    "delivery_fee": { "value": "", "verified": false, "note": "Delivery / pick-up fee not confirmed." },
+    "vehicles": [
+      {
+        "id": "honda-wave",
+        "name": "Honda Wave",
+        "brand": "Honda",
+        "category": "manual",
+        "status": "available",
+        "verified": false,
+        "price": { "day": [150000, 150000], "week": [700000, 700000], "month": [900000, 1200000] },
+        "deposit": [2000000, 3000000]
+      },
+      {
+        "id": "honda-vision",
+        "name": "Honda Vision",
+        "brand": "Honda",
+        "category": "scooter",
+        "status": "available",
+        "verified": false,
+        "price": { "day": [200000, 200000], "week": [1000000, 1000000], "month": [1800000, 2000000] },
+        "deposit": [4000000, 5000000]
+      },
+      {
+        "id": "honda-air-blade",
+        "name": "Honda Air Blade",
+        "brand": "Honda",
+        "category": "scooter",
+        "status": "available",
+        "verified": false,
+        "price": { "day": [200000, 200000], "week": [1000000, 1000000], "month": [1500000, 1500000] },
+        "deposit": [3000000, 3000000]
+      },
+      {
+        "id": "honda-click",
+        "name": "Honda Click",
+        "brand": "Honda",
+        "category": "scooter",
+        "status": "available",
+        "verified": false,
+        "price": { "day": [150000, 150000], "week": [700000, 700000], "month": [900000, 1200000] },
+        "deposit": [2000000, 2000000]
+      },
+      {
+        "id": "yamaha-mio",
+        "name": "Yamaha Mio",
+        "brand": "Yamaha",
+        "category": "scooter",
+        "status": "available",
+        "verified": false,
+        "price": { "day": [150000, 150000], "week": [700000, 700000], "month": [900000, 1200000] },
+        "deposit": [2000000, 2000000]
+      },
+      {
+        "id": "scooter-50cc",
+        "name": "Xe tay ga 50cc",
+        "brand": "",
+        "category": "50cc",
+        "status": "hidden",
+        "verified": false,
+        "price": { "day": [200000, 200000], "week": null, "month": null },
+        "deposit": [4000000, 4000000],
+        "note": "Only show once a 50cc vehicle is actually available at the Mr Tu location."
+      },
+      {
+        "id": "yamaha-sirius",
+        "name": "Yamaha Sirius",
+        "brand": "Yamaha",
+        "category": "manual",
+        "status": "hidden",
+        "verified": false,
+        "price": { "day": null, "week": null, "month": null },
+        "deposit": null,
+        "note": "Mentioned in the brief as a possible model; confirm availability and price."
+      },
+      {
+        "id": "electric",
+        "name": "Xe máy điện / xe đạp điện",
+        "brand": "",
+        "category": "electric",
+        "status": "hidden",
+        "verified": false,
+        "price": { "day": null, "week": null, "month": null },
+        "deposit": null,
+        "note": "Not offered by default. Price on request only after confirmation."
+      }
+    ]
+  }
+}

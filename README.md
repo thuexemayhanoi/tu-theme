@@ -6,7 +6,10 @@
 > **Thương hiệu hiển thị:** **Mr Tu**  
 > **Nền tảng:** một WordPress độc lập trên Hostinger, một cơ sở dữ liệu WordPress riêng.  
 > **Mục tiêu:** phát triển website cho dịch vụ thuê xe máy Hà Nội, tập trung khu vực Phố Cổ, với SEO thực chất bằng **5 ngôn ngữ trên cùng một tên miền**.  
-> **Tình trạng:** WordPress và SSL đã được kiểm tra; **theme và plugin đa ngôn ngữ chưa triển khai**. Tài liệu này là đặc tả công việc, không phải tuyên bố tính năng đã hoàn thành.
+> **Tình trạng (26/10/2026):** theme `mr-tu` 1.0.0 và plugin `mr-tu-multilang-seo` 1.0.0 đã xây xong, qua QA và đóng gói
+> (`dist/mr-tu-theme.zip`, `dist/mr-tu-multilang-seo.zip` — artifact `mr-tu-zips` của GitHub Actions), **chưa cài lên
+> production**. Cài đặt: `docs/deployment-hostinger.md` · quay lui: `docs/rollback.md` · vận hành: `docs/admin-guide-vi.md` ·
+> kết quả QA: `docs/qa-report.md`. Phần còn lại của README là đặc tả gốc của dự án (nguồn yêu cầu), không phải mô tả tính năng.
 
 ## 0. Các nguyên tắc bất biến
 
@@ -36,7 +39,7 @@
 | Google Maps / Place ID / CID | **Chưa cung cấp URL/ID chính xác** | Để trống đến khi chủ site xác nhận; không đoán link |
 | Email công khai | **Chưa xác nhận** | Không lấy email admin WordPress làm email bán hàng nếu chưa được phép |
 
-**Phân biệt quan trọng:** NAP của website chính `thuexemaynguyentu.com` (Long Biên, điện thoại 0942 467 674) thuộc địa điểm khác và **KHÔNG** đưa vào header/footer/contact/schema của Mr Tu. Chỉ dùng nếu có trang giới thiệu quan hệ giữa các địa điểm và ghi rõ địa chỉ/tên từng nơi.
+**Phân biệt quan trọng:** NAP của website chính `thuexemaynguyentu.com` thuộc một địa điểm khác (Long Biên) và **KHÔNG** được đưa vào header/footer/contact/schema của Mr Tu. Không ghi lại số điện thoại hay địa chỉ của địa điểm đó trong bất kỳ tài liệu hay tệp nào của dự án này.
 
 **Điều kiện trước khi public LocalBusiness schema hoặc đặt nút “Đến cửa hàng”:** xác minh thực tế địa điểm 17 Phúc Tân có tiếp khách, giao/nhận xe, nhân sự và biển hiệu đúng như khai báo. Nếu đây chỉ là điểm hẹn/giao nhận hoặc treo biển, phải dùng mô tả đúng mô hình hoạt động; không tạo chỉ đường “đến cửa hàng” gây hiểu lầm. Thông tin NAP đang là dữ liệu do chủ site cung cấp qua ảnh, chưa thay thế việc kiểm tra thực địa.
 
@@ -164,7 +167,7 @@ WordPress General Settings: **Site Title = Mr Tu**; tagline toàn cục **để 
 
 ### 5.2. UX admin dành cho chủ website sử dụng iPhone
 
-- Menu admin rõ ràng: **Mr Tu → Ngôn ngữ · Bản dịch · SEO · Thông tin cửa hàng · Bảng giá · Dòng xe · Kiểm tra lỗi**.
+- Menu admin rõ ràng: **Mr Tu → Tổng quan · Cửa hàng · Bảng giá · Xe · Ngôn ngữ · Bản dịch · SEO · Gọi nhanh · Giao diện · Kiểm tra sức khỏe** (như đã xây).
 - Mặc định hiển thị tiếng Việt; các nút lớn, biểu mẫu gọn, có xem trước, báo trạng thái bản dịch.
 - Khi xuất bản: kiểm tra thiếu title/H1/meta, nội dung quá mỏng, trùng canonical, hreflang sai, địa chỉ/giá chưa duyệt, liên kết hỏng — cảnh báo hoặc chặn lỗi nghiêm trọng **nhưng không cản cập nhật hợp lệ một cách vô lý**.
 - Một thao tác cập nhật giá/NAP đúng nơi sẽ đồng bộ cả site và cả 5 bản ngôn ngữ.
@@ -179,7 +182,7 @@ WordPress General Settings: **Site Title = Mr Tu**; tagline toàn cục **để 
 - Test nội dung Unicode tiếng Việt (đ/Đ), tiếng Đức (ä/ö/ü/ß), tiếng Pháp (é/à/ç), tiếng Tây Ban Nha (ñ/á/¿) và slug encoding.
 - Mọi tính năng phải có hướng dẫn cài đặt, sửa 1 nơi đồng bộ toàn site, kiểm tra tương thích với server LiteSpeed và có rollback.
 
-## 6. Theme `tu-theme` — phạm vi phát triển sau, KHÔNG tạo code trong lần viết README này
+## 6. Theme `mr-tu` — đặc tả (đã xây trong `theme/mr-tu/`)
 
 - WordPress theme riêng, tên hiển thị **Mr Tu**, mobile-first, tối ưu iPhone Safari, nhẹ, thân thiện người nước ngoài.
 - Thiết kế linh hoạt, typography/chế độ sáng-tối/spacing/component đồng bộ; header/footer/menu dùng template parts chung — **sửa một chỗ, áp dụng toàn site**.
@@ -189,27 +192,20 @@ WordPress General Settings: **Site Title = Mr Tu**; tagline toàn cục **để 
 - Không dùng theme/page-builder/plugin của bên thứ ba.
 - Khả năng triển khai: đóng gói ZIP cài trong WordPress; sau có thể thiết lập GitHub→Hostinger deploy với backup + kiểm tra + rollback; **repo này không phải GitHub Pages và không cần trỏ DNS vào GitHub**.
 
-### Cấu trúc repository dự kiến (chưa tạo file code)
+### Cấu trúc repository (thực tế)
 
 ```text
 tu-theme/
 ├── README.md                      # Tài liệu này — nguồn yêu cầu
-├── theme/mr-tu/                  # WordPress theme (tạo sau)
-│   ├── style.css
-│   ├── functions.php
-│   ├── templates/
-│   ├── parts/
-│   ├── inc/
-│   └── assets/
-├── plugin/mr-tu-multilang-seo/   # Plugin 5 ngôn ngữ + SEO + Business (tạo sau)
-│   ├── mr-tu-multilang-seo.php
-│   ├── includes/
-│   ├── admin/
-│   ├── public/
-│   └── tests/
-├── config/                       # Business facts, giá, xe (sau xác minh)
-├── docs/                         # Setup, authoring, SEO, QA, rollback
-└── .github/workflows/            # QA; deploy chỉ khi được phê duyệt
+├── AGENTS.md                      # Quy tắc cho người/agent sửa code
+├── theme/mr-tu/                  # WordPress theme (templates, parts/, patterns/, inc/, assets/, languages/)
+├── plugin/mr-tu-multilang-seo/   # Plugin 5 ngôn ngữ + SEO + Business (includes/, includes/admin/, blocks/, assets/, languages/)
+├── content/                      # Nội dung mẫu 5 ngôn ngữ (đóng vào ZIP plugin dưới seed/)
+├── config/                       # Business facts, giá, xe (cờ verified từng trường), kế hoạch SEO
+├── docs/                         # Hợp đồng kiến trúc, thiết kế, triển khai, rollback, hướng dẫn quản trị, QA, bảo mật
+├── tests/                        # Test PHP (WP-CLI), HTTP, e2e (Playwright), Lighthouse
+├── scripts/                      # dev-env, build ZIP, QA gate, clean-install test
+└── .github/workflows/qa.yml      # CI: lint, WPCS + PHPCompat, WordPress integration, build ZIP (không deploy)
 ```
 
 ## 7. Nội dung không được tự suy đoán
@@ -249,4 +245,5 @@ tu-theme/
 
 ---
 
-**Phạm vi commit README này:** chỉ cập nhật định hướng dự án; **chưa tạo theme/plugin, chưa đụng Hostinger, WordPress, DNS hoặc Google Maps**.
+**Phạm vi của repository này:** mã nguồn theme/plugin, nội dung mẫu, tài liệu và kiểm thử. **Không** có bước nào tự động đụng
+Hostinger, WordPress production, DNS hoặc Google Maps — việc cài đặt do chủ site thực hiện theo `docs/deployment-hostinger.md`.

@@ -1,0 +1,201 @@
+/* ==========================================================================
+   02 · Base — reset, document, links, focus, accessibility helpers.
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+	scroll-padding-top: calc(var(--header-h) + env(safe-area-inset-top) + 24px);
+	background: var(--color-background);
+	-webkit-tap-highlight-color: transparent;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	html:focus-within {
+		scroll-behavior: smooth;
+	}
+}
+
+html.is-locked {
+	overflow: hidden;
+	padding-right: var(--sbw, 0px);
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	min-height: 100svh;
+	margin: 0;
+	background: var(--color-background);
+	color: var(--color-text);
+	font-family: var(--font-sans);
+	font-size: var(--text-body);
+	font-weight: 400;
+	line-height: 1.65;
+	overflow-wrap: break-word;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-synthesis-weight: none;
+	transition: background-color var(--dur-base) var(--ease-in-out), color var(--dur-base) var(--ease-in-out);
+}
+
+.site-main {
+	flex: 1 0 auto;
+}
+
+.site-main:focus {
+	outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	color: inherit;
+	font-weight: 800;
+	line-height: 1.12;
+	letter-spacing: -0.02em;
+	text-wrap: balance;
+}
+
+p,
+figure,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+:where(ul, ol)[role="list"] {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+strong,
+b {
+	font-weight: 600;
+}
+
+img,
+video {
+	max-width: 100%;
+	height: auto;
+}
+
+img {
+	vertical-align: middle;
+	border-style: none;
+}
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+a {
+	color: var(--color-action-ink);
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.2em;
+	transition: color var(--dur-fast) ease, text-decoration-color var(--dur-fast) ease;
+}
+
+a:hover {
+	text-decoration-thickness: 2px;
+}
+
+button,
+input,
+select,
+textarea {
+	color: inherit;
+	font: inherit;
+	letter-spacing: inherit;
+}
+
+button {
+	cursor: pointer;
+}
+
+summary {
+	cursor: pointer;
+}
+
+:focus-visible {
+	outline: 3px solid var(--color-focus);
+	outline-offset: 2px;
+}
+
+::selection {
+	background: var(--color-accent);
+	color: var(--color-on-accent);
+}
+
+[hidden] {
+	display: none !important;
+}
+
+.mrtu-icon {
+	flex: none;
+	width: 1.25em;
+	height: 1.25em;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 2;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	transition: transform var(--dur-fast) var(--ease-out);
+}
+
+.mrtu-icon--flip {
+	transform: scaleX(-1);
+}
+
+.screen-reader-text {
+	position: absolute !important;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	border: 0;
+	white-space: nowrap;
+	word-wrap: normal !important;
+}
+
+.skip-link {
+	position: fixed;
+	z-index: 1000;
+	top: calc(10px + env(safe-area-inset-top));
+	left: var(--container-pad);
+	padding: 12px 18px;
+	border-radius: var(--radius-pill);
+	background: var(--color-text);
+	color: var(--color-background);
+	font-weight: 600;
+	text-decoration: none;
+	transform: translateY(-160%);
+	transition: transform var(--dur-fast) var(--ease-out);
+}
+
+.skip-link:focus {
+	transform: none;
+}
+
+/* Things that need JavaScript stay out of the way without it. */
+.no-js .mrtu-mode,
+.no-js [data-mrtu-menu-open],
+.js .site-header__menu-btn--nojs {
+	display: none !important;
+}

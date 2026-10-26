@@ -1,0 +1,548 @@
+/* ==========================================================================
+   21 · Home sections — `.mrtu-section--{promise|fleet|pricing|story|steps|trust|faq|contact}`
+   (core/group, tagName section). Full-bleed bands with a content track; every section title
+   carries a "KM 0n" plate: the home page reads as a road out of Km 0.
+   ========================================================================== */
+
+.home-content {
+	counter-reset: mrtu-km;
+}
+
+.home-content > :not(.mrtu-section) {
+	width: var(--wrap);
+	margin-inline: auto;
+}
+
+.home-content > p:not(.mrtu-section) {
+	max-width: min(var(--container-prose), 100% - var(--container-pad) * 2);
+	margin-block: 1.2em;
+}
+
+.mrtu-section {
+	--sec-bg: var(--color-background);
+	position: relative;
+	display: grid;
+	grid-template-columns:
+		[full-start] minmax(var(--container-pad), 1fr)
+		[content-start] minmax(0, calc(var(--container-max) / 2)) [mid] minmax(0, calc(var(--container-max) / 2))
+		[content-end] minmax(var(--container-pad), 1fr) [full-end];
+	align-content: start;
+	padding-block: var(--section-y);
+	background: var(--sec-bg);
+	counter-increment: mrtu-km;
+}
+
+.mrtu-section > * {
+	grid-column: content;
+	min-width: 0;
+	margin-block: 0;
+}
+
+.mrtu-section > * + * {
+	margin-top: 20px;
+}
+
+.mrtu-section > h2 {
+	max-width: 20ch;
+	font-size: var(--text-h2);
+	line-height: 1.1;
+}
+
+.mrtu-section > h2::before {
+	display: block;
+	width: max-content;
+	margin-bottom: clamp(16px, 2vw, 22px);
+	padding: 0.5em 0.75em 0.42em;
+	border: 1.5px solid var(--color-ink);
+	border-radius: 6px;
+	background: var(--color-paper);
+	box-shadow: inset 0 0 0 2px var(--color-paper), inset 0 0 0 3px var(--color-ink);
+	color: var(--color-ink);
+	content: "KM " counter(mrtu-km, decimal-leading-zero);
+	content: "KM " counter(mrtu-km, decimal-leading-zero) / "";
+	font-family: var(--font-plate);
+	font-size: var(--text-plate);
+	font-weight: 600;
+	letter-spacing: 0.06em;
+	line-height: 1;
+}
+
+.mrtu-section > h2 + p {
+	max-width: 58ch;
+	margin-top: 18px;
+	color: var(--color-text-muted);
+	font-size: var(--text-lead);
+	line-height: 1.55;
+}
+
+.mrtu-section > p {
+	max-width: 64ch;
+}
+
+.mrtu-section--steps .wp-block-list > li + li,
+.mrtu-section--trust .wp-block-list > li + li {
+	margin-top: 0;
+}
+
+.mrtu-section--story > h2 + p {
+	color: var(--color-text);
+}
+
+.mrtu-section > h3 {
+	font-size: var(--text-h3);
+}
+
+.mrtu-section > .wp-block-columns,
+.mrtu-section > .wp-block-list,
+.mrtu-section > .mrtu-fleet,
+.mrtu-section > .mrtu-pricing,
+.mrtu-section > .wp-block-details:first-of-type {
+	margin-top: clamp(32px, 5vw, 56px);
+}
+
+.mrtu-section > .wp-block-buttons {
+	margin-top: clamp(24px, 3vw, 36px);
+}
+
+.mrtu-section .wp-block-columns {
+	display: grid;
+	gap: clamp(24px, 3vw, 40px);
+	grid-template-columns: minmax(0, 1fr);
+	margin-bottom: 0;
+}
+
+.mrtu-section .wp-block-column {
+	min-width: 0;
+}
+
+.mrtu-section .wp-block-column > * + * {
+	margin-top: 10px;
+}
+
+.mrtu-section .wp-block-column h3 {
+	font-size: var(--text-h3);
+	font-weight: 700;
+	letter-spacing: -0.015em;
+	line-height: 1.25;
+}
+
+.mrtu-section .wp-block-column p {
+	color: var(--color-text-muted);
+}
+
+@media (min-width: 768px) {
+	.mrtu-section .wp-block-columns {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (min-width: 1024px) {
+	.mrtu-section .wp-block-columns {
+		grid-auto-columns: minmax(0, 1fr);
+		grid-auto-flow: column;
+		grid-template-columns: none;
+	}
+}
+
+/* Promise — columns with numbered mini stones on a dashed road ----------------- */
+.mrtu-section--promise .wp-block-columns {
+	position: relative;
+	counter-reset: mrtu-promise;
+}
+
+.mrtu-section--promise .wp-block-column {
+	position: relative;
+	padding-top: 74px;
+	counter-increment: mrtu-promise;
+}
+
+.mrtu-section--promise .wp-block-column::before {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	display: grid;
+	place-items: end center;
+	width: 42px;
+	height: 58px;
+	padding-bottom: 6px;
+	border: 2px solid var(--color-ink);
+	border-radius: 21px 21px 5px 5px;
+	background: linear-gradient(var(--color-accent) 0 36%, var(--color-ink) 36% calc(36% + 2px), var(--color-paper) 0);
+	color: var(--color-ink);
+	content: counter(mrtu-promise);
+	content: counter(mrtu-promise) / "";
+	font-family: var(--font-plate);
+	font-size: 1.15rem;
+	font-weight: 700;
+	line-height: 1;
+}
+
+@media (min-width: 1024px) {
+	.mrtu-section--promise .wp-block-columns::before {
+		position: absolute;
+		top: 48px;
+		right: 0;
+		left: 0;
+		height: 2px;
+		background: var(--road);
+		color: var(--color-border-strong);
+		content: "";
+	}
+}
+
+/* Fleet / pricing — frames for the plugin blocks --------------------------------- */
+.mrtu-section--fleet,
+.mrtu-section--story,
+.mrtu-section--trust {
+	--sec-bg: var(--color-surface);
+}
+
+/* Story — editorial two columns + Old Quarter street-grid art ----------------------- */
+.mrtu-section--story > p {
+	font-size: 1.125rem;
+	line-height: 1.7;
+}
+
+.mrtu-story-art {
+	position: relative;
+	overflow: hidden;
+	aspect-ratio: 6 / 5;
+	margin: 0 0 clamp(28px, 5vw, 40px);
+	border-radius: var(--radius-xl);
+	background: var(--color-background);
+	box-shadow: var(--ring);
+}
+
+.mrtu-section > .mrtu-story-art + * {
+	margin-top: 0;
+}
+
+.mrtu-story-art__photo {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.mrtu-story-art__map {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.mrtu-story-art__blocks {
+	fill: var(--color-surface);
+}
+
+.mrtu-story-art__river {
+	fill: none;
+	stroke: var(--color-border);
+	stroke-width: 26;
+	stroke-linecap: round;
+}
+
+.mrtu-story-art__road-base {
+	fill: none;
+	stroke: var(--color-background);
+	stroke-width: 18;
+}
+
+.mrtu-story-art__road {
+	fill: none;
+	stroke: var(--color-accent);
+	stroke-dasharray: 14 10;
+	stroke-linecap: round;
+	stroke-width: 4;
+}
+
+.mrtu-story-art__pin circle {
+	fill: rgb(245 106 42 / 0.22);
+}
+
+.mrtu-story-art__pin .mrtu-story-art__pin-dot {
+	fill: var(--color-accent);
+	stroke: var(--color-paper);
+	stroke-width: 3;
+}
+
+.mrtu-story-art__caption {
+	position: absolute;
+	bottom: clamp(14px, 3vw, 24px);
+	left: clamp(14px, 3vw, 24px);
+	font-size: clamp(0.9rem, 0.8rem + 0.4vw, 1.15rem);
+}
+
+/* Two-column bands (story, contact): the side object spans 20 rows ending in a flexible
+   row, so a tall side object never stretches the rows of the text column. */
+@media (min-width: 1024px) {
+	.mrtu-section--story,
+	.mrtu-section--contact {
+		grid-template-rows: repeat(19, auto) 1fr;
+	}
+
+	.mrtu-section--story > *,
+	.mrtu-section--contact > * {
+		grid-column: content-start / mid;
+		margin-right: clamp(32px, 5vw, 88px);
+	}
+
+	.mrtu-section--story > .mrtu-story-art,
+	.mrtu-section--contact > .mrtu-contact-card {
+		grid-column: mid / content-end;
+		grid-row: 1 / span 20;
+		align-self: start;
+		margin: 0;
+	}
+
+	.mrtu-section--story > .mrtu-story-art + * {
+		margin-top: 0;
+	}
+}
+
+/* Steps — kilometre stones along a dashed road that fills with orange on scroll ------- */
+.mrtu-section--steps ol.wp-block-list {
+	--spine: 27px;
+	position: relative;
+	display: grid;
+	gap: 32px;
+	padding: 0;
+	counter-reset: mrtu-step;
+	list-style: none;
+}
+
+/* ::before = the orange road, ::after = the grey road on an opaque cover that is clipped away
+   as the list scrolls through the viewport (dashes never stretch or move). */
+.mrtu-section--steps ol.wp-block-list::before,
+.mrtu-section--steps ol.wp-block-list::after {
+	position: absolute;
+	top: 40px;
+	bottom: 40px;
+	left: calc(var(--spine) - 1px);
+	width: 2px;
+	background: repeating-linear-gradient(180deg, currentColor 0 12px, transparent 12px 22px);
+	color: var(--color-accent);
+	content: "";
+}
+
+.mrtu-section--steps ol.wp-block-list::after {
+	background:
+		repeating-linear-gradient(180deg, var(--color-border-strong) 0 12px, transparent 12px 22px),
+		var(--sec-bg);
+}
+
+.mrtu-section--steps ol.wp-block-list > li {
+	position: relative;
+	min-height: 76px;
+	padding-left: 84px;
+	color: var(--color-text-muted);
+	counter-increment: mrtu-step;
+}
+
+.mrtu-section--steps ol.wp-block-list > li::before {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	display: grid;
+	place-items: end center;
+	width: 54px;
+	height: 76px;
+	padding-bottom: 9px;
+	border: 2px solid var(--color-ink);
+	border-radius: 27px 27px 6px 6px;
+	background: linear-gradient(var(--color-accent) 0 36%, var(--color-ink) 36% calc(36% + 2px), var(--color-paper) 0);
+	box-shadow: 0 0 0 6px var(--sec-bg);
+	color: var(--color-ink);
+	content: counter(mrtu-step, decimal-leading-zero);
+	content: counter(mrtu-step, decimal-leading-zero) / "";
+	font-family: var(--font-plate);
+	font-size: 1.35rem;
+	font-weight: 700;
+	line-height: 1;
+}
+
+.mrtu-section--steps ol.wp-block-list > li strong {
+	display: block;
+	margin-bottom: 6px;
+	padding-top: 6px;
+	color: var(--color-text);
+	font-size: var(--text-h3);
+	font-weight: 700;
+	letter-spacing: -0.015em;
+	line-height: 1.25;
+}
+
+@media (min-width: 1024px) {
+	.mrtu-section--steps ol.wp-block-list {
+		grid-auto-columns: minmax(0, 1fr);
+		grid-auto-flow: column;
+		gap: clamp(24px, 3vw, 48px);
+	}
+
+	.mrtu-section--steps ol.wp-block-list::before,
+	.mrtu-section--steps ol.wp-block-list::after {
+		top: 38px;
+		right: 0;
+		bottom: auto;
+		left: 0;
+		width: auto;
+		height: 2px;
+		background: var(--road);
+	}
+
+	.mrtu-section--steps ol.wp-block-list::after {
+		background:
+			repeating-linear-gradient(90deg, var(--color-border-strong) 0 12px, transparent 12px 22px),
+			var(--sec-bg);
+	}
+
+	.mrtu-section--steps ol.wp-block-list > li {
+		padding-top: 104px;
+		padding-left: 0;
+	}
+}
+
+/* Static fallback: the grey cover stays in place (no orange). */
+@supports (animation-timeline: view()) {
+	@media (prefers-reduced-motion: no-preference) {
+		.mrtu-section--steps ol.wp-block-list::after {
+			animation: mrtu-fill-y linear both;
+			animation-range: entry 30% cover 55%;
+			animation-timeline: view();
+		}
+
+		@media (min-width: 1024px) {
+			.mrtu-section--steps ol.wp-block-list::after {
+				animation-name: mrtu-fill-x;
+			}
+		}
+	}
+}
+
+@keyframes mrtu-fill-y {
+	to {
+		clip-path: inset(100% 0 0 0);
+	}
+}
+
+@keyframes mrtu-fill-x {
+	to {
+		clip-path: inset(0 0 0 100%);
+	}
+}
+
+/* Trust — fact cards ------------------------------------------------------------- */
+.mrtu-section--trust ul.wp-block-list {
+	display: grid;
+	gap: 16px;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+	padding: 0;
+	list-style: none;
+}
+
+.mrtu-section--trust ul.wp-block-list > li,
+.mrtu-section--trust .wp-block-column {
+	position: relative;
+	padding: 24px 24px 26px;
+	border-radius: var(--radius-lg);
+	background: var(--color-surface-raised);
+	box-shadow: var(--shadow-sm), var(--ring);
+	color: var(--color-text-muted);
+}
+
+.mrtu-section--trust ul.wp-block-list > li::before,
+.mrtu-section--trust .wp-block-column::before {
+	position: static;
+	display: block;
+	width: 36px;
+	height: 36px;
+	margin-bottom: 18px;
+	border-radius: 50%;
+	background:
+		url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 12.5 4 4L18 8'/%3E%3C/svg%3E") center / 20px no-repeat,
+		var(--color-action);
+	content: "";
+}
+
+.mrtu-section--trust ul.wp-block-list > li strong,
+.mrtu-section--trust .wp-block-column h3 {
+	display: block;
+	margin-bottom: 6px;
+	color: var(--color-text);
+	font-size: 1.125rem;
+	font-weight: 700;
+	line-height: 1.3;
+}
+
+/* FAQ — details accordion -------------------------------------------------------- */
+.mrtu-section--faq > .wp-block-details {
+	margin-top: 0;
+	border-bottom: 1px solid var(--color-border);
+}
+
+.mrtu-section--faq > h2 + p + .wp-block-details,
+.mrtu-section--faq > h2 + .wp-block-details {
+	margin-top: clamp(28px, 4vw, 48px);
+	border-top: 1px solid var(--color-border);
+}
+
+/* Desktop: title + intro float left, questions run down the right column. */
+@media (min-width: 1024px) {
+	.mrtu-section--faq {
+		display: flow-root;
+		padding-inline: max(var(--container-pad), (100% - var(--container-max)) / 2);
+	}
+
+	.mrtu-section--faq > h2,
+	.mrtu-section--faq > h2 + p {
+		float: left;
+		clear: left;
+		width: 38%;
+	}
+
+	.mrtu-section--faq > :not(h2):not(h2 + p) {
+		margin-left: 46%;
+	}
+
+	.mrtu-section--faq > h2 + p + .wp-block-details,
+	.mrtu-section--faq > h2 + .wp-block-details {
+		margin-top: 0;
+	}
+}
+
+/* Contact — dark band ---------------------------------------------------------- */
+.mrtu-section--contact {
+	--sec-bg: var(--color-band);
+	background:
+		radial-gradient(60% 80% at 92% 0%, rgb(245 106 42 / 0.2), transparent 70%),
+		var(--color-band);
+	color: var(--color-band-text);
+}
+
+.mrtu-section--contact > h2 {
+	color: #fff;
+}
+
+.mrtu-section--contact > p,
+.mrtu-section--contact > h2 + p {
+	color: var(--color-band-muted);
+}
+
+.mrtu-section--contact a:not([class]) {
+	color: #fff;
+}
+
+.mrtu-section--contact .mrtu-btn--ghost,
+.mrtu-section--contact .is-style-outline .wp-block-button__link {
+	border-color: rgb(255 255 255 / 0.4);
+	color: #fff;
+}
+
+.mrtu-section--contact .mrtu-btn--ghost:hover,
+.mrtu-section--contact .is-style-outline .wp-block-button__link:hover {
+	border-color: #fff;
+	background: rgb(255 255 255 / 0.08);
+}
+

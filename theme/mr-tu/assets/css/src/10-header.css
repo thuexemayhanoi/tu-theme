@@ -1,0 +1,354 @@
+/* ==========================================================================
+   10 · Header — sticky, translucent, 64 px mobile / 72 px desktop.
+   ========================================================================== */
+
+.site-header {
+	position: sticky;
+	z-index: 50;
+	top: 0;
+	padding-top: env(safe-area-inset-top);
+	border-bottom: 1px solid transparent;
+	background: var(--color-header);
+	-webkit-backdrop-filter: saturate(180%) blur(16px);
+	backdrop-filter: saturate(180%) blur(16px);
+	transition: border-color var(--dur-base) ease, box-shadow var(--dur-base) ease;
+}
+
+.site-header.is-scrolled {
+	border-bottom-color: var(--color-border);
+	box-shadow: 0 10px 30px -22px rgb(16 17 20 / 0.45);
+}
+
+.site-header__inner {
+	display: flex;
+	align-items: center;
+	gap: var(--space-2);
+	height: var(--header-h);
+}
+
+.site-brand {
+	display: inline-flex;
+	flex: none;
+	align-items: center;
+	min-height: 44px;
+	margin-right: auto;
+	color: var(--color-text);
+	text-decoration: none;
+}
+
+.site-brand__mark {
+	display: block;
+	width: auto;
+	height: 28px;
+}
+
+.site-brand__logo {
+	display: block;
+	width: auto;
+	max-height: 40px;
+}
+
+.site-brand:hover .mrtu-wordmark__cap {
+	fill: #ff7a3c;
+}
+
+/* Desktop navigation -------------------------------------------------------- */
+.site-nav {
+	display: none;
+}
+
+.site-nav__list {
+	display: flex;
+	align-items: center;
+}
+
+.site-nav__item[hidden] {
+	display: none;
+}
+
+/* Without JavaScript the bar cannot collapse into "More": clip it instead of overlapping the tools. */
+.no-js .site-nav {
+	overflow-x: clip;
+	overflow-y: visible;
+}
+
+.no-js .site-nav__panel {
+	left: 0;
+}
+
+.no-js .site-nav__item--more .site-nav__panel {
+	right: 0;
+	left: auto;
+}
+
+.site-nav__link {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	min-height: 44px;
+	padding: 0 10px;
+	border-radius: var(--radius-pill);
+	color: var(--color-text);
+	font-size: 0.9375rem;
+	font-weight: 600;
+	letter-spacing: -0.005em;
+	text-decoration: none;
+	white-space: nowrap;
+	list-style: none;
+	transition: background-color var(--dur-fast) ease;
+}
+
+.site-nav__link::-webkit-details-marker {
+	display: none;
+}
+
+.site-nav__link:hover {
+	background: var(--color-hover);
+}
+
+.site-nav__link.is-current::after,
+.site-nav__link.is-current-parent::after {
+	position: absolute;
+	bottom: 6px;
+	left: 50%;
+	width: 16px;
+	height: 3px;
+	margin-left: -8px;
+	border-radius: 2px;
+	background: var(--color-accent);
+	content: "";
+}
+
+.site-nav__summary .mrtu-icon {
+	width: 16px;
+	height: 16px;
+	color: var(--color-text-muted);
+}
+
+.site-nav__group[open] .site-nav__summary .mrtu-icon,
+.mrtu-lang[open] .mrtu-lang__toggle .mrtu-icon--chevron {
+	transform: rotate(180deg);
+}
+
+.site-nav__item--group,
+.mrtu-lang--popover {
+	position: relative;
+}
+
+.site-nav__panel,
+.mrtu-lang__panel {
+	position: absolute;
+	z-index: 60;
+	top: calc(100% + 10px);
+	min-width: 232px;
+	padding: 8px;
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-md);
+	background: var(--color-surface-raised);
+	box-shadow: var(--shadow-lg);
+	animation: mrtu-pop var(--dur-base) var(--ease-out);
+}
+
+.site-nav__panel {
+	left: -8px;
+}
+
+.site-nav__panel-link {
+	display: flex;
+	align-items: center;
+	min-height: 44px;
+	padding: 0 12px;
+	border-radius: var(--radius-sm);
+	color: var(--color-text);
+	font-size: 0.9375rem;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.site-nav__panel-link:hover,
+.site-nav__panel-link.is-current {
+	background: var(--color-surface);
+}
+
+.site-nav__panel-link.is-current {
+	box-shadow: inset 3px 0 0 var(--color-accent);
+}
+
+/* A dropdown group that overflowed into "More" renders as a labelled sub-list. */
+.site-nav__panel .site-nav__group {
+	position: static;
+}
+
+.site-nav__panel .site-nav__summary {
+	display: flex;
+	width: 100%;
+	padding: 0 12px;
+	border-radius: var(--radius-sm);
+}
+
+.site-nav__panel .site-nav__panel {
+	position: static;
+	min-width: 0;
+	margin: 0 0 4px;
+	padding: 0 0 0 10px;
+	border: 0;
+	box-shadow: none;
+	animation: none;
+}
+
+@keyframes mrtu-pop {
+	from {
+		opacity: 0;
+		transform: translateY(-6px);
+	}
+}
+
+/* Tools ------------------------------------------------------------------- */
+.site-header__tools {
+	display: flex;
+	flex: none;
+	align-items: center;
+	gap: var(--space-2);
+}
+
+.site-header__tools > .mrtu-lang,
+.site-header__tools > .mrtu-mode,
+.site-header__contact {
+	display: none;
+}
+
+.site-header__call {
+	width: 44px;
+	padding: 0;
+}
+
+.site-header__call-label,
+.site-header__call-number {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip-path: inset(50%);
+	white-space: nowrap;
+}
+
+.site-header__menu-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	min-width: 44px;
+	min-height: 44px;
+	padding: 0 14px 0 12px;
+	border: 1.5px solid var(--color-border-strong);
+	border-radius: var(--radius-pill);
+	background: transparent;
+	color: var(--color-text);
+	font-size: 0.9375rem;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.site-header__menu-btn:hover {
+	border-color: var(--color-text);
+}
+
+@media (max-width: 359.98px) {
+	.site-header__menu-label {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip-path: inset(50%);
+	}
+
+	.site-header__menu-btn {
+		padding: 0;
+		justify-content: center;
+	}
+}
+
+@media (min-width: 1024px) {
+	.site-brand {
+		margin-right: var(--space-4);
+	}
+
+	.site-brand__mark {
+		height: 30px;
+	}
+
+	.site-nav {
+		display: block;
+		flex: 1 1 auto;
+		min-width: 0;
+	}
+
+	.site-header__tools > .mrtu-lang,
+	.site-header__contact {
+		display: inline-flex;
+	}
+
+	.site-header__menu-btn {
+		display: none !important;
+	}
+}
+
+/* Tools stay compact so five primary links fit beside them in every language (the number itself is
+   in the hero, the contact card, Quick Contact and the footer; the colour mode is also in the footer). */
+@media (min-width: 1280px) {
+	.site-header__call {
+		width: auto;
+		padding: 0.6rem 1.1rem 0.6rem 0.95rem;
+	}
+
+	.site-header__call-label {
+		position: static;
+		width: auto;
+		height: auto;
+		overflow: visible;
+		clip-path: none;
+	}
+}
+
+@media (min-width: 1440px) {
+	.site-header__tools > .mrtu-mode {
+		display: inline-flex;
+	}
+}
+
+/* Reading progress (posts and long pages): plugin custom property, or a scroll timeline. */
+.reading-progress {
+	position: absolute;
+	right: 0;
+	bottom: -1px;
+	left: 0;
+	display: none;
+	height: 2px;
+	background: var(--color-accent);
+	transform: scaleX(clamp(0, var(--mrtu-read-progress, 0), 1));
+	transform-origin: 0 50%;
+}
+
+.single .reading-progress,
+.has-sticky-toc .reading-progress {
+	display: block;
+}
+
+@supports (animation-timeline: scroll()) {
+	@media (prefers-reduced-motion: no-preference) {
+		.reading-progress {
+			animation: mrtu-progress linear both;
+			animation-timeline: scroll(root);
+		}
+	}
+}
+
+@keyframes mrtu-progress {
+	from {
+		transform: scaleX(0);
+	}
+
+	to {
+		transform: scaleX(1);
+	}
+}

@@ -1,0 +1,106 @@
+/* ==========================================================================
+   Editor canvas — the same tokens, fonts and block skins as the front end
+   (00-fonts, 01-tokens, 04-buttons, 05-objects, 22-plugin-blocks and 30-page-prose are
+   bundled in front of this file by scripts/build-css.mjs).
+   ========================================================================== */
+
+.editor-styles-wrapper {
+	background: var(--color-background);
+	color: var(--color-text);
+	font-family: var(--font-sans);
+	font-size: var(--text-body);
+	line-height: 1.7;
+	-webkit-font-smoothing: antialiased;
+}
+
+.editor-styles-wrapper .wp-block-post-title {
+	font-size: var(--text-display);
+	font-weight: 800;
+	letter-spacing: -0.03em;
+	line-height: 1.06;
+}
+
+.editor-styles-wrapper :is(h1, h2, h3, h4) {
+	font-weight: 800;
+	letter-spacing: -0.02em;
+	line-height: 1.14;
+	text-wrap: balance;
+}
+
+.editor-styles-wrapper h2 {
+	font-size: var(--text-h2);
+}
+
+.editor-styles-wrapper h3 {
+	font-size: var(--text-h3);
+	font-weight: 700;
+}
+
+.editor-styles-wrapper a {
+	color: var(--color-action-ink);
+}
+
+.editor-styles-wrapper strong {
+	font-weight: 600;
+}
+
+/* Home sections: show each band as it will read on the site. */
+.editor-styles-wrapper .mrtu-section {
+	position: relative;
+	margin-block: 28px;
+	padding: 56px clamp(20px, 4vw, 48px) 40px;
+	border-radius: var(--radius-lg);
+	background: var(--color-background);
+	box-shadow: inset 0 0 0 1.5px var(--color-border-strong);
+}
+
+.editor-styles-wrapper .mrtu-section::before {
+	position: absolute;
+	top: 16px;
+	left: clamp(20px, 4vw, 48px);
+	padding: 4px 8px;
+	border: 1.5px solid var(--color-ink);
+	border-radius: 5px;
+	background: var(--color-paper);
+	color: var(--color-ink);
+	font-family: var(--font-plate);
+	font-size: 0.8rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	content: "Section";
+}
+
+.editor-styles-wrapper .mrtu-section--promise::before { content: "Promise"; }
+.editor-styles-wrapper .mrtu-section--fleet::before { content: "Fleet"; }
+.editor-styles-wrapper .mrtu-section--pricing::before { content: "Pricing"; }
+.editor-styles-wrapper .mrtu-section--story::before { content: "Story"; }
+.editor-styles-wrapper .mrtu-section--steps::before { content: "Steps"; }
+.editor-styles-wrapper .mrtu-section--trust::before { content: "Trust"; }
+.editor-styles-wrapper .mrtu-section--faq::before { content: "FAQ"; }
+.editor-styles-wrapper .mrtu-section--contact::before { content: "Contact"; }
+
+.editor-styles-wrapper .mrtu-section--fleet,
+.editor-styles-wrapper .mrtu-section--story,
+.editor-styles-wrapper .mrtu-section--trust {
+	background: var(--color-surface);
+}
+
+.editor-styles-wrapper .mrtu-section--contact {
+	background: var(--color-band);
+	color: var(--color-band-text);
+}
+
+.editor-styles-wrapper .mrtu-section--contact :is(h2, h3) {
+	color: #fff;
+}
+
+.editor-styles-wrapper .mrtu-section--steps ol {
+	padding-left: 1.6em;
+}
+
+.editor-styles-wrapper .mrtu-section--steps ol > li::marker {
+	color: var(--color-accent-ink);
+	font-family: var(--font-plate);
+	font-weight: 700;
+}

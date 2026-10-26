@@ -1,0 +1,81 @@
+name: QA
+
+on:
+  push:
+    branches: [ "claude/**", "main" ]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: PHP lint ${{ matrix.php }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php: [ "7.4", "8.1", "8.3" ]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          tools: none
+      - name: php -l
+        run: find theme plugin -name '*.php' -print0 | xargs -0 -n1 php -l > /dev/null
+
+  standards:
+    name: WPCS + PHPCompatibilityWP
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.3"
+          tools: composer
+      - name: Install PHPCS rulesets
+        run: |
+          mkdir -p "$RUNNER_TEMP/qa" && cd "$RUNNER_TEMP/qa"
+          composer init -n --name mrtu/qa >/dev/null
+          composer config allow-plugins.dealerdirect/phpcodesniffer-composer-installer true
+          composer require -n --dev wp-coding-standards/wpcs:^3 phpcompatibility/phpcompatibility-wp:"*" dealerdirect/phpcodesniffer-composer-installer:^1.2
+      - name: WordPress Coding Standards (errors)
+        run: "$RUNNER_TEMP/qa/vendor/bin/phpcs --standard=phpcs.xml.dist -n theme/mr-tu plugin/mr-tu-multilang-seo"
+      - name: PHP 7.4+ compatibility
+        run: "$RUNNER_TEMP/qa/vendor/bin/phpcs --standard=PHPCompatibilityWP --runtime-set testVersion 7.4- -n --extensions=php theme/mr-tu plugin/mr-tu-multilang-seo"
+
+  integration:
+    name: WordPress integration (SQLite)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.3"
+          extensions: pdo_sqlite, intl
+      - name: Install WordPress + SQLite
+        run: WP_ENV_DIR="$RUNNER_TEMP/wpenv" bash scripts/dev-env.sh install
+      - name: Activate project code
+        run: |
+          WP="php $RUNNER_TEMP/wpenv/bin/wp-cli.phar --allow-root --path=$RUNNER_TEMP/wpenv/wordpress"
+          $WP plugin activate mr-tu-multilang-seo
+          $WP theme activate mr-tu
+      - name: Integration tests
+        run: |
+          if [ -x tests/run-php.sh ]; then tests/run-php.sh "$RUNNER_TEMP/wpenv"; else echo "no tests"; fi
+
+  package:
+    name: Build ZIPs
+    runs-on: ubuntu-latest
+    needs: [ lint ]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci
+      - run: bash scripts/build.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mr-tu-zips
+          path: dist/*.zip

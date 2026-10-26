@@ -1,0 +1,62 @@
+/* ==========================================================================
+   90 · Motion preferences, view transitions, print.
+   ========================================================================== */
+
+/* Cross-document view transition (enabled by an inline rule when the theme setting is on). */
+::view-transition-old(root),
+::view-transition-new(root) {
+	animation-duration: 180ms;
+}
+
+/* Reveal — only elements below the fold at load are hidden, by JS (see theme.js). Site-wide: post
+   cards, CTA bands and search results use [data-reveal] too, not only the home sections. */
+.mrtu-reveal .is-reveal-pending {
+	opacity: 0;
+	transform: translateY(14px);
+}
+
+.mrtu-reveal .is-revealed {
+	transition: opacity var(--dur-slow) var(--ease-out), transform var(--dur-slow) var(--ease-out);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 1ms !important;
+		animation-delay: 0ms !important;
+		animation-iteration-count: 1 !important;
+		scroll-behavior: auto !important;
+		transition-duration: 120ms !important;
+		transition-property: opacity, color, background-color, border-color !important;
+	}
+
+	.mrtu-reveal .is-reveal-pending {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@media print {
+	.site-header,
+	.menu-sheet,
+	.mrtu-qc,
+	.cta-band,
+	.related,
+	.toc-aside,
+	.site-footer__bottom,
+	.skip-link {
+		display: none !important;
+	}
+
+	body {
+		background: #fff;
+		color: #000;
+	}
+
+	.prose a[href^="http"]::after {
+		content: " (" attr(href) ")";
+		font-size: 0.8em;
+		word-break: break-all;
+	}
+}

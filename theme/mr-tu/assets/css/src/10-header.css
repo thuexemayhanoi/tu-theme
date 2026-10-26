@@ -60,7 +60,25 @@
 .site-nav__list {
 	display: flex;
 	align-items: center;
-	gap: 2px;
+}
+
+.site-nav__item[hidden] {
+	display: none;
+}
+
+/* Without JavaScript the bar cannot collapse into "More": clip it instead of overlapping the tools. */
+.no-js .site-nav {
+	overflow-x: clip;
+	overflow-y: visible;
+}
+
+.no-js .site-nav__panel {
+	left: 0;
+}
+
+.no-js .site-nav__item--more .site-nav__panel {
+	right: 0;
+	left: auto;
 }
 
 .site-nav__link {
@@ -69,7 +87,7 @@
 	align-items: center;
 	gap: 4px;
 	min-height: 44px;
-	padding: 0 11px;
+	padding: 0 10px;
 	border-radius: var(--radius-pill);
 	color: var(--color-text);
 	font-size: 0.9375rem;
@@ -155,6 +173,28 @@
 
 .site-nav__panel-link.is-current {
 	box-shadow: inset 3px 0 0 var(--color-accent);
+}
+
+/* A dropdown group that overflowed into "More" renders as a labelled sub-list. */
+.site-nav__panel .site-nav__group {
+	position: static;
+}
+
+.site-nav__panel .site-nav__summary {
+	display: flex;
+	width: 100%;
+	padding: 0 12px;
+	border-radius: var(--radius-sm);
+}
+
+.site-nav__panel .site-nav__panel {
+	position: static;
+	min-width: 0;
+	margin: 0 0 4px;
+	padding: 0 0 0 10px;
+	border: 0;
+	box-shadow: none;
+	animation: none;
 }
 
 @keyframes mrtu-pop {
@@ -253,11 +293,9 @@
 	}
 }
 
+/* Tools stay compact so five primary links fit beside them in every language (the number itself is
+   in the hero, the contact card, Quick Contact and the footer; the colour mode is also in the footer). */
 @media (min-width: 1280px) {
-	.site-header__tools > .mrtu-mode {
-		display: inline-flex;
-	}
-
 	.site-header__call {
 		width: auto;
 		padding: 0.6rem 1.1rem 0.6rem 0.95rem;
@@ -273,21 +311,8 @@
 }
 
 @media (min-width: 1440px) {
-	.site-header__call-number {
-		position: static;
-		width: auto;
-		height: auto;
-		overflow: visible;
-		clip-path: none;
-		font-variant-numeric: tabular-nums;
-	}
-
-	.site-header__call-label {
-		position: absolute;
-		width: 1px;
-		height: 1px;
-		overflow: hidden;
-		clip-path: inset(50%);
+	.site-header__tools > .mrtu-mode {
+		display: inline-flex;
 	}
 }
 

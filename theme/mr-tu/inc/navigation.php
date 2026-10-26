@@ -337,8 +337,10 @@ function mr_tu_render_header_nav( $nav ) {
 		mr_tu_nav_link( $item, 'site-nav__link' );
 		echo '</li>';
 	}
-	if ( ! empty( $nav['more'] ) ) {
-		mr_tu_render_nav_group( __( 'More', 'mr-tu' ), $nav['more'], false );
+	// The "More" group is always rendered (hidden while empty): theme.js moves trailing items into it when the
+	// bar does not fit between the brand and the header tools (long Vietnamese/French labels, narrow desktops).
+	if ( ! empty( $nav['more'] ) || count( $nav['primary'] ) > 1 ) {
+		mr_tu_render_nav_group( __( 'More', 'mr-tu' ), $nav['more'], false, 'site-nav__item--more' );
 	}
 	echo '</ul>';
 }
@@ -349,13 +351,14 @@ function mr_tu_render_header_nav( $nav ) {
  * @param string $label    Group label.
  * @param array  $children Items.
  * @param bool   $current  Whether the parent is current.
+ * @param string $class    Extra class for the list item.
  */
-function mr_tu_render_nav_group( $label, $children, $current ) {
+function mr_tu_render_nav_group( $label, $children, $current, $class = '' ) {
 	$has_current = $current;
 	foreach ( $children as $child ) {
 		$has_current = $has_current || $child['current'];
 	}
-	echo '<li class="site-nav__item site-nav__item--group">';
+	echo '<li class="' . esc_attr( trim( 'site-nav__item site-nav__item--group ' . $class ) ) . '"' . ( empty( $children ) ? ' hidden' : '' ) . '>';
 	echo '<details class="site-nav__group" data-mrtu-popover>';
 	echo '<summary class="site-nav__link site-nav__summary' . ( $has_current ? ' is-current-parent' : '' ) . '">' . esc_html( $label ) . mr_tu_icon( 'chevron' ) . '</summary>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Static SVG.
 	echo '<ul class="site-nav__panel" role="list">';

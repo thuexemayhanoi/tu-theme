@@ -25,7 +25,7 @@ $mr_tu_facts = array(
 	<div class="home-hero__inner">
 		<div class="home-hero__copy">
 			<p class="home-hero__eyebrow">
-				<span class="mrtu-plate mrtu-plate--inline"><span class="mrtu-plate__top"><?php esc_html_e( 'Mr Tu · Hà Nội', 'mr-tu' ); ?></span></span>
+				<span class="mrtu-plate mrtu-plate--inline"><span class="mrtu-plate__top"><?php echo esc_html( 'Mr Tu · ' . mr_tu_city() ); ?></span></span>
 			</p>
 			<h1 class="home-hero__title" id="mrtu-home-title"><?php echo esc_html( get_the_title() ); ?></h1>
 			<?php if ( '' !== $mr_tu_lead ) : ?>
@@ -88,7 +88,7 @@ $mr_tu_facts = array(
 			?>
 			<span class="mrtu-plate home-hero__plate" aria-hidden="true">
 				<span class="mrtu-plate__top">29-MT</span>
-				<span class="mrtu-plate__bottom"><?php esc_html_e( 'Hà Nội', 'mr-tu' ); ?></span>
+				<span class="mrtu-plate__bottom"><?php echo esc_html( mr_tu_city() ); ?></span>
 			</span>
 		</div>
 	</div>

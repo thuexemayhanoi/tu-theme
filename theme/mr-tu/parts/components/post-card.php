@@ -41,7 +41,7 @@ $mr_tu_title   = get_the_title( $mr_tu_post );
 			<div class="post-card__art" aria-hidden="true">
 				<span class="mrtu-plate">
 					<span class="mrtu-plate__top"><?php echo esc_html( '' !== $mr_tu_eyebrow ? $mr_tu_eyebrow : __( 'Mr Tu', 'mr-tu' ) ); ?></span>
-					<span class="mrtu-plate__bottom"><?php echo esc_html( $mr_tu_is_post ? get_the_date( 'd.m.y', $mr_tu_post ) : __( 'Hà Nội', 'mr-tu' ) ); ?></span>
+					<span class="mrtu-plate__bottom"><?php echo esc_html( $mr_tu_is_post ? get_the_date( 'd.m.y', $mr_tu_post ) : mr_tu_city() ); ?></span>
 				</span>
 			</div>
 		<?php endif; ?>

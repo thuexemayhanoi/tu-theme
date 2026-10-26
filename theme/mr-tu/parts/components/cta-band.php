@@ -65,7 +65,7 @@ if ( $mr_tu_contact_id ) {
 			null,
 			array(
 				'variant' => 'band',
-				'place'   => __( 'Hà Nội', 'mr-tu' ),
+				'place'   => mr_tu_city(),
 				'km'      => '0',
 			)
 		);

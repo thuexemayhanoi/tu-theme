@@ -140,13 +140,32 @@ function mr_tu_contact_targets() {
 }
 
 /**
+ * City name in the language of the current page (a proper noun that must never leak Vietnamese
+ * diacritics into other languages, independent of translation files).
+ *
+ * @return string
+ */
+function mr_tu_city() {
+	$lang  = function_exists( 'mrtu_current_language' ) ? (string) mrtu_current_language() : substr( (string) get_locale(), 0, 2 );
+	$names = array(
+		'vi' => 'Hà Nội',
+		'en' => 'Hanoi',
+		'de' => 'Hanoi',
+		'fr' => 'Hanoï',
+		'es' => 'Hanói',
+	);
+	$names = apply_filters( 'mr_tu_city_names', $names );
+	return isset( $names[ $lang ] ) ? $names[ $lang ] : $names['en'];
+}
+
+/**
  * Area text shown when the street address is not public.
  *
  * @return string
  */
 function mr_tu_area_text() {
-	/* translators: Service area shown when the street address is not published. Keep the Vietnamese place names recognisable. */
-	return __( 'Old Quarter, Hà Nội', 'mr-tu' );
+	/* translators: 1: "Old Quarter" (translated), 2: city name in the current language. */
+	return sprintf( _x( '%1$s, %2$s', 'service area', 'mr-tu' ), __( 'Old Quarter', 'mr-tu' ), mr_tu_city() );
 }
 
 /**

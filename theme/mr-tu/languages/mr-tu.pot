@@ -3,13 +3,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mr Tu 1.0.0\n"
-"Report-Msgid-Bugs-To: https://hanoi.thuexemaynguyentu.com/\n"
-"Last-Translator: Mr Tu\n"
-"Language-Team: Mr Tu\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/mr-tu\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-26T08:00:16+00:00\n"
+"POT-Creation-Date: 2026-10-26T16:23:38+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: mr-tu\n"
@@ -291,42 +291,46 @@ msgstr ""
 msgid "Blog"
 msgstr ""
 
-#. translators: Service area shown when the street address is not published. Keep the Vietnamese place names recognisable.
-#: inc/template-tags.php:149
-msgid "Old Quarter, Hà Nội"
+#. translators: 1: "Old Quarter" (translated), 2: city name in the current language.
+#: inc/template-tags.php:168
+#, php-format
+msgctxt "service area"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#. translators: 1: "Old Quarter" (translated), 2: city name in the current language.
+#. translators: Short place name printed on the hero kilometre stone (uppercase in the design, max ~12 characters).
+#: inc/template-tags.php:168
+#: inc/template-tags.php:315
+msgid "Old Quarter"
 msgstr ""
 
 #. translators: 1: opening time (HH:MM), 2: closing time (HH:MM).
-#: inc/template-tags.php:187
+#: inc/template-tags.php:206
 #, php-format
 msgid "Every day, %1$s–%2$s"
 msgstr ""
 
 #. translators: 1: opening time (HH:MM), 2: closing time (HH:MM).
-#: inc/template-tags.php:190
+#: inc/template-tags.php:209
 #, php-format
 msgid "Open %1$s–%2$s"
 msgstr ""
 
-#: inc/template-tags.php:280
+#: inc/template-tags.php:299
 msgid "Previous page"
 msgstr ""
 
-#: inc/template-tags.php:281
+#: inc/template-tags.php:300
 msgid "Next page"
 msgstr ""
 
-#: inc/template-tags.php:282
+#: inc/template-tags.php:301
 msgid "Page"
 msgstr ""
 
-#: inc/template-tags.php:284
+#: inc/template-tags.php:303
 msgid "Posts pages"
-msgstr ""
-
-#. translators: Short place name printed on the hero kilometre stone (uppercase in the design, max ~12 characters).
-#: inc/template-tags.php:296
-msgid "Old Quarter"
 msgstr ""
 
 #: page.php:37
@@ -360,12 +364,6 @@ msgstr ""
 #: parts/home/hero.php:49
 #, php-format
 msgid "Call %s"
-msgstr ""
-
-#: parts/components/cta-band.php:68
-#: parts/components/post-card.php:44
-#: parts/home/hero.php:91
-msgid "Hà Nội"
 msgstr ""
 
 #: parts/components/language-switcher.php:52
@@ -479,10 +477,6 @@ msgstr ""
 
 #: parts/home/hero.php:21
 msgid "Help in Vietnamese & English"
-msgstr ""
-
-#: parts/home/hero.php:28
-msgid "Mr Tu · Hà Nội"
 msgstr ""
 
 #: parts/home/hero.php:39

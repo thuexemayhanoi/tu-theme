@@ -3,13 +3,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mr Tu Multilang SEO 1.0.0\n"
-"Report-Msgid-Bugs-To: https://hanoi.thuexemaynguyentu.com/\n"
-"Last-Translator: Mr Tu\n"
-"Language-Team: Mr Tu\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/mr-tu-multilang-seo\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-26T08:00:16+00:00\n"
+"POT-Creation-Date: 2026-10-26T16:23:38+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: mr-tu-multilang-seo\n"
@@ -34,16 +34,18 @@ msgstr ""
 #: includes/admin/class-admin.php:72
 #: includes/admin/class-admin.php:73
 #: includes/admin/class-admin.php:97
-#: includes/class-blocks.php:101
+#: includes/class-blocks.php:102
 msgid "Mr Tu"
 msgstr ""
 
 #: includes/admin/class-admin-business.php:47
 #: includes/admin/class-admin-business.php:243
+#: includes/admin/class-admin-dashboard.php:131
 msgid "Store information"
 msgstr ""
 
 #: includes/admin/class-admin-business.php:48
+#: includes/admin/class-admin-dashboard.php:162
 msgid "Store info"
 msgstr ""
 
@@ -78,9 +80,12 @@ msgid "Only verified details appear on the website."
 msgstr ""
 
 #: includes/admin/class-admin-business.php:230
+#: includes/admin/class-admin-dashboard.php:62
+#: includes/admin/class-admin-health.php:81
 #: includes/admin/class-admin-languages.php:55
 #: includes/admin/class-admin-pricing.php:77
 #: includes/admin/class-admin-quick-contact.php:69
+#: includes/admin/class-admin-seo.php:109
 #: includes/admin/class-admin-translations.php:488
 #: includes/admin/class-admin-translations.php:727
 #: includes/admin/class-admin-translations.php:792
@@ -107,6 +112,7 @@ msgstr ""
 #: includes/admin/class-admin-business.php:252
 #: includes/admin/class-admin-business.php:256
 #: includes/admin/class-admin-business.php:483
+#: includes/admin/class-admin-dashboard.php:135
 #: includes/admin/class-admin-vehicles.php:203
 msgid "Brand"
 msgstr ""
@@ -123,7 +129,9 @@ msgstr ""
 #: includes/admin/class-admin-business.php:277
 #: includes/admin/class-admin-business.php:278
 #: includes/admin/class-admin-business.php:485
-#: includes/class-blocks.php:530
+#: includes/admin/class-admin-dashboard.php:137
+#: includes/admin/class-admin-seo.php:416
+#: includes/class-blocks.php:531
 msgid "Address"
 msgstr ""
 
@@ -156,7 +164,8 @@ msgid "While off, the website shows only “Old Quarter, Hanoi” and asks visit
 msgstr ""
 
 #: includes/admin/class-admin-business.php:314
-#: includes/class-blocks.php:515
+#: includes/admin/class-admin-dashboard.php:138
+#: includes/class-blocks.php:516
 msgid "Phone"
 msgstr ""
 
@@ -204,6 +213,7 @@ msgstr ""
 #: includes/admin/class-admin-business.php:356
 #: includes/admin/class-admin-business.php:357
 #: includes/admin/class-admin-business.php:487
+#: includes/admin/class-admin-dashboard.php:139
 msgid "Opening hours"
 msgstr ""
 
@@ -234,6 +244,7 @@ msgstr ""
 #: includes/admin/class-admin-business.php:393
 #: includes/admin/class-admin-business.php:398
 #: includes/admin/class-admin-business.php:488
+#: includes/admin/class-admin-dashboard.php:140
 msgid "Service model"
 msgstr ""
 
@@ -260,6 +271,8 @@ msgstr ""
 
 #: includes/admin/class-admin-business.php:422
 #: includes/admin/class-admin-business.php:490
+#: includes/admin/class-admin-dashboard.php:141
+#: includes/class-health.php:838
 msgid "Google Maps link"
 msgstr ""
 
@@ -324,6 +337,7 @@ msgid "Mark all verified"
 msgstr ""
 
 #: includes/admin/class-admin-business.php:516
+#: includes/admin/class-admin-dashboard.php:325
 msgid "Backup & restore"
 msgstr ""
 
@@ -332,6 +346,7 @@ msgid "A backup of store information and prices is made automatically before eve
 msgstr ""
 
 #: includes/admin/class-admin-business.php:521
+#: includes/admin/class-admin-dashboard.php:324
 msgid "Download backup (JSON)"
 msgstr ""
 
@@ -426,6 +441,450 @@ msgstr ""
 msgid "Backup restored. The data before the restore was saved in the history."
 msgstr ""
 
+#: includes/admin/class-admin-dashboard.php:48
+#: includes/admin/class-admin-dashboard.php:49
+msgid "Overview"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:65
+msgid "Mr Tu — Overview"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:66
+msgid "One place to see the state of the five language versions, the business data and the SEO setup. Nothing here changes the website until you press a button."
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:100
+msgid "Published pages per language"
+msgstr ""
+
+#. translators: 1: published count, 2: total count.
+#: includes/admin/class-admin-dashboard.php:102
+#, php-format
+msgid "Core pages translated (%1$d of %2$d published)"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:103
+msgid "Published blog posts (all languages)"
+msgstr ""
+
+#. translators: 1: number of warnings, 2: number of errors.
+#: includes/admin/class-admin-dashboard.php:106
+#, php-format
+msgid "Health warnings / errors (checked %s)"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:108
+msgid "Health check not run yet — open Health Check"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:132
+msgid "Only verified facts appear on the website. Everything else shows “PENDING VERIFICATION” here and stays hidden from visitors."
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:136
+msgid "Listing name"
+msgstr ""
+
+#. translators: 1: verified vehicles, 2: public vehicles.
+#: includes/admin/class-admin-dashboard.php:159
+msgid "Not confirmed — prices show “on request”"
+msgstr ""
+
+#. translators: 1: verified vehicles, 2: public vehicles.
+#: includes/admin/class-admin-dashboard.php:159
+#, php-format
+msgid "Confirmed (%1$d of %2$d vehicles)"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:160
+#: includes/admin/class-admin-pricing.php:95
+msgid "Price list"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:162
+#: includes/admin/class-admin-pricing.php:43
+#: includes/admin/class-admin-pricing.php:44
+#: includes/admin/class-admin-pricing.php:88
+#: includes/class-roles.php:72
+msgid "Prices"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:172
+msgid "Automatic"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:173
+#: includes/class-health.php:964
+msgid "Yoast compatibility"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:174
+msgid "Standalone"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:177
+#: includes/class-health.php:961
+msgid "SEO mode"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:178
+msgid "Standalone: the plugin prints title, description, canonical, hreflang, Open Graph, schema and sitemaps. Yoast compatibility: Yoast keeps its output and the plugin only adds hreflang."
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:181
+msgid "Setting"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:182
+msgid "Running now"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:183
+msgid "Yoast SEO"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:183
+msgid "Active"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:183
+msgid "Not active"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:185
+msgid "SEO module"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:185
+msgid "Not loaded"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:188
+msgid "SEO settings"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:197
+#: includes/class-health.php:890
+msgid "Quick Contact"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:198
+msgid "The floating contact button on the website. An item only appears when it is switched on and its data is verified."
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:201
+#: includes/class-health.php:892
+msgid "The Quick Contact module is not available."
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:207
+msgid "Switched on"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:207
+#: includes/admin/class-admin-quick-contact.php:90
+msgid "Switched off"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:212
+#: includes/admin/class-admin-languages.php:166
+msgid "Off"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:214
+msgid "Showing"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:216
+#: includes/admin/class-admin-quick-contact.php:92
+msgid "Hidden"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:221
+msgid "Quick Contact settings"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:232
+msgid "Seed content"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:233
+msgid "Creates the core pages, blog posts and categories of every language from the content bundled with the plugin, links them as translations and assigns their roles. Safe to run again: pages that already exist are skipped, and pages you edited are never overwritten."
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:236
+msgid "Source folder:"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:238
+msgid "No seed content found"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:238
+msgid "The folder has no {lang}/pages.json files. Install the plugin ZIP built with scripts/build.sh."
+msgstr ""
+
+#. translators: 1: language code, 2: number of pages, 3: number of posts.
+#: includes/admin/class-admin-dashboard.php:243
+#, php-format
+msgid "%1$s: %2$d pages, %3$d posts"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:245
+msgid "Available:"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:248
+msgid "Set reading settings (front page / posts page)"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:248
+msgid "Makes the Vietnamese home page the front page and the Vietnamese blog page the posts page; the other languages follow through their translations. Also sets the timezone (if empty) and the date format d/m/Y."
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:249
+msgid "Refresh unchanged pages from the files"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:249
+msgid "Only pages whose content is still exactly as seeded are rewritten. Pages edited on the website are reported as “customized” and kept."
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:250
+msgid "Dry run (report only, change nothing)"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:253
+msgid "Seed the content now? Existing pages are kept; new pages are created in every language that has content."
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:253
+msgid "Seed now"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:266
+msgid "Not seeded yet."
+msgstr ""
+
+#. translators: 1: date and time, 2: user display name.
+#: includes/admin/class-admin-dashboard.php:272
+#, php-format
+msgid "Last run %1$s by %2$s"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:276
+msgid "Last report"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:277
+msgid "Dry run"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:277
+msgid "Update mode"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:279
+#: includes/admin/class-admin-seo.php:416
+#: includes/admin/class-admin-translations.php:900
+#: includes/admin/class-admin-translations.php:924
+#: includes/admin/class-admin-translations.php:1074
+#: includes/class-languages.php:553
+msgid "Language"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:279
+#: includes/admin/class-admin-seo.php:335
+msgid "Created"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:279
+msgid "Updated"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:279
+msgid "Skipped"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:279
+msgid "Customized"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:279
+#: includes/admin/class-admin-health.php:92
+#: includes/admin/class-admin-health.php:109
+msgid "Errors"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:287
+msgid "No content"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:318
+msgid "Export configuration"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:319
+msgid "Downloads the store information and prices as a JSON backup. Import and restore live under Store info → Backup & restore; WP-CLI: wp mrtu export / wp mrtu import."
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:349
+msgid "No seed content found in the source folder."
+msgstr ""
+
+#. translators: 1: created, 2: updated, 3: skipped, 4: customized, 5: errors.
+#: includes/admin/class-admin-dashboard.php:355
+#, php-format
+msgid "%1$d created, %2$d updated, %3$d skipped, %4$d customized, %5$d errors."
+msgstr ""
+
+#. translators: %s: counts summary.
+#: includes/admin/class-admin-dashboard.php:364
+#, php-format
+msgid "Dry run finished (nothing changed): %s"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:367
+msgid "Reading settings applied."
+msgstr ""
+
+#. translators: %s: counts summary.
+#: includes/admin/class-admin-dashboard.php:371
+#, php-format
+msgid "Seeding finished with errors: %s See the report below."
+msgstr ""
+
+#. translators: %s: counts summary.
+#: includes/admin/class-admin-dashboard.php:374
+#, php-format
+msgid "Content seeded: %s"
+msgstr ""
+
+#: includes/admin/class-admin-health.php:52
+#: includes/admin/class-admin-health.php:53
+#: includes/admin/class-admin-health.php:87
+msgid "Health Check"
+msgstr ""
+
+#: includes/admin/class-admin-health.php:88
+msgid "Checks the five language versions, SEO metadata, internal links, business data and the live pages. Results are kept for 10 minutes; press “Run again” after changes."
+msgstr ""
+
+#: includes/admin/class-admin-health.php:93
+#: includes/admin/class-admin-health.php:110
+msgid "Warnings"
+msgstr ""
+
+#: includes/admin/class-admin-health.php:94
+#: includes/admin/class-admin-health.php:111
+#: includes/admin/class-admin-health.php:183
+#: includes/admin/class-admin-seo.php:429
+msgid "OK"
+msgstr ""
+
+#: includes/admin/class-admin-health.php:95
+msgid "Last run"
+msgstr ""
+
+#: includes/admin/class-admin-health.php:95
+msgid "without live page fetch"
+msgstr ""
+
+#: includes/admin/class-admin-health.php:99
+#: includes/admin/class-admin-seo.php:405
+msgid "Run again"
+msgstr ""
+
+#: includes/admin/class-admin-health.php:100
+#: includes/admin/class-admin-translations.php:674
+msgid "Rebuild translation maps"
+msgstr ""
+
+#: includes/admin/class-admin-health.php:100
+msgid "Rebuild every translation map from the stored relationships?"
+msgstr ""
+
+#: includes/admin/class-admin-health.php:101
+msgid "Flush rewrite rules"
+msgstr ""
+
+#: includes/admin/class-admin-health.php:103
+msgid "Flush sitemap cache"
+msgstr ""
+
+#: includes/admin/class-admin-health.php:105
+msgid "Download JSON"
+msgstr ""
+
+#. translators: 1: severity label, 2: number of checks.
+#: includes/admin/class-admin-health.php:118
+#, php-format
+msgid "%1$s (%2$d)"
+msgstr ""
+
+#: includes/admin/class-admin-health.php:184
+msgid "Warning"
+msgstr ""
+
+#: includes/admin/class-admin-health.php:185
+msgid "Error"
+msgstr ""
+
+#: includes/admin/class-admin-health.php:192
+msgid "Open"
+msgstr ""
+
+#: includes/admin/class-admin-health.php:208
+msgid "Core pages × languages"
+msgstr ""
+
+#: includes/admin/class-admin-health.php:209
+msgid "✅ published · ✏️ draft or other status · ➕ missing. Create missing versions from the Translations screen or by seeding."
+msgstr ""
+
+#: includes/admin/class-admin-health.php:212
+#: includes/admin/class-admin-translations.php:627
+msgid "Role"
+msgstr ""
+
+#: includes/admin/class-admin-health.php:222
+msgid "Published — edit"
+msgstr ""
+
+#: includes/admin/class-admin-health.php:224
+msgid "Not published — edit"
+msgstr ""
+
+#: includes/admin/class-admin-health.php:226
+msgid "Missing — create"
+msgstr ""
+
+#: includes/admin/class-admin-health.php:247
+msgid "Health checks refreshed."
+msgstr ""
+
+#. translators: %s: number of translation groups.
+#: includes/admin/class-admin-health.php:257
+#: includes/admin/class-admin-translations.php:882
+#, php-format
+msgid "%s translation map rebuilt."
+msgid_plural "%s translation maps rebuilt."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/class-admin-health.php:266
+msgid "Rewrite rules flushed."
+msgstr ""
+
+#: includes/admin/class-admin-health.php:275
+msgid "The sitemap module is not available; nothing to flush."
+msgstr ""
+
+#: includes/admin/class-admin-health.php:277
+msgid "Sitemap cache flushed."
+msgstr ""
+
 #: includes/admin/class-admin-languages.php:41
 #: includes/admin/class-admin-languages.php:42
 #: includes/admin/class-admin-languages.php:62
@@ -503,10 +962,6 @@ msgstr ""
 msgid "None (do not output x-default)"
 msgstr ""
 
-#: includes/admin/class-admin-languages.php:166
-msgid "Off"
-msgstr ""
-
 #: includes/admin/class-admin-languages.php:170
 msgid "Home page published"
 msgstr ""
@@ -533,19 +988,8 @@ msgstr ""
 msgid "Language settings saved."
 msgstr ""
 
-#: includes/admin/class-admin-pricing.php:43
-#: includes/admin/class-admin-pricing.php:44
-#: includes/admin/class-admin-pricing.php:88
-#: includes/class-roles.php:72
-msgid "Prices"
-msgstr ""
-
 #: includes/admin/class-admin-pricing.php:88
 msgid "Rental prices and deposits per model. Unconfirmed prices never appear as fact: visitors see “Price on request” and a call button instead."
-msgstr ""
-
-#: includes/admin/class-admin-pricing.php:95
-msgid "Price list"
 msgstr ""
 
 #: includes/admin/class-admin-pricing.php:95
@@ -627,7 +1071,7 @@ msgid "Per month"
 msgstr ""
 
 #: includes/admin/class-admin-pricing.php:157
-#: includes/class-blocks.php:260
+#: includes/class-blocks.php:261
 msgid "Deposit"
 msgstr ""
 
@@ -679,7 +1123,7 @@ msgstr ""
 
 #: includes/admin/class-admin-quick-contact.php:55
 #: includes/class-business.php:657
-#: includes/class-quick-contact.php:155
+#: includes/class-quick-contact.php:156
 msgid "Call"
 msgstr ""
 
@@ -692,9 +1136,9 @@ msgid "Ask a question (Mr Tu assistant)"
 msgstr ""
 
 #: includes/admin/class-admin-quick-contact.php:60
-#: includes/class-blocks.php:586
+#: includes/class-blocks.php:587
 #: includes/class-business.php:718
-#: includes/class-quick-contact.php:160
+#: includes/class-quick-contact.php:161
 msgid "Contact page"
 msgstr ""
 
@@ -704,14 +1148,6 @@ msgstr ""
 
 #: includes/admin/class-admin-quick-contact.php:88
 msgid "On the website now"
-msgstr ""
-
-#: includes/admin/class-admin-quick-contact.php:90
-msgid "Switched off"
-msgstr ""
-
-#: includes/admin/class-admin-quick-contact.php:92
-msgid "Hidden"
 msgstr ""
 
 #: includes/admin/class-admin-quick-contact.php:92
@@ -783,6 +1219,331 @@ msgstr ""
 
 #: includes/admin/class-admin-quick-contact.php:148
 msgid "Quick Call settings saved."
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:67
+#: includes/admin/class-admin-seo.php:68
+#: includes/admin/class-admin-seo.php:112
+msgid "SEO"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:113
+msgid "Titles, descriptions, hreflang, sitemaps and structured data for every language. Nothing unverified is published as a fact."
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:139
+msgid "Mode"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:140
+msgid "Who prints the SEO head: Yoast SEO (compat) or this plugin (standalone)."
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:145
+msgid "Yoast SEO is active"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:147
+msgid "Yoast prints title, description, canonical, Open Graph, schema and its sitemap. Mr Tu adds hreflang and og:locale:alternate and hands the seeded SEO texts to Yoast wherever Yoast’s own field is empty."
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:149
+msgid "Yoast’s head output and schema are switched off through Yoast’s own filters; Mr Tu prints everything. Yoast’s XML sitemap cannot be disabled this way: turn it off in Yoast › Settings › APIs › XML sitemaps so only one sitemap is advertised."
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:153
+msgid "Yoast SEO is not active"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:154
+msgid "Mr Tu prints the whole head: title, description, robots, canonical, hreflang, Open Graph, Twitter Card, JSON-LD and sitemaps."
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:163
+msgid "Automatic: compat while Yoast SEO is active, standalone otherwise (recommended)"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:164
+msgid "Compat: let Yoast SEO print the head; Mr Tu only adds the language tags (needs Yoast active)"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:165
+msgid "Standalone: Mr Tu prints the whole head even while Yoast SEO is active"
+msgstr ""
+
+#. translators: %s: effective mode name.
+#: includes/admin/class-admin-seo.php:169
+#, php-format
+msgid "Effective mode right now: %s"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:178
+#: includes/class-health.php:1095
+msgid "XML sitemap"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:179
+msgid "One index with a sitemap per language; every address lists its translations. Only published, indexable pages are included."
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:186
+msgid "Automatic: on in standalone mode, off while Yoast prints its own sitemap (recommended)"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:187
+msgid "Always on"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:188
+msgid "Always off"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:196
+msgid "Served at:"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:197
+msgid "robots.txt advertises the index; the WordPress core sitemap (/wp-sitemap.xml) is switched off in standalone mode."
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:199
+msgid "Off: Yoast SEO serves its sitemap (/sitemap_index.xml) with the language alternates added by Mr Tu."
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:199
+msgid "Off."
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:209
+msgid "Structured data (JSON-LD)"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:210
+msgid "Organization, WebSite, WebPage and breadcrumbs are always printed in standalone mode. Reviews and ratings are never generated."
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:218
+#: includes/admin/class-admin-seo.php:225
+msgid "Print the AutoRental (local business) node with address, phone and opening hours"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:220
+msgid "Address, phone and hours are verified in Business data, so the node may be published."
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:226
+msgid "Not available: the address, phone number and opening hours must all be marked “verified” on the Business data screen first. Until then no local-business node is printed, whatever this setting says."
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:230
+msgid "Print FAQPage data on the guide/FAQ page"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:232
+msgid "Built from the question/answer blocks visible on the page with the “guide-faq” role. Google no longer shows FAQ rich results for businesses; this only describes the page."
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:242
+msgid "Robots"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:243
+msgid "Search results, “not found” pages, attachments and empty archives are always noindex. Archives below are thin pages for a small business site."
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:246
+msgid "noindex author archives"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:247
+msgid "noindex date archives"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:257
+#: includes/class-toc.php:783
+msgid "Table of contents"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:258
+msgid "Automatic “On this page” box for long articles; headings get stable anchors."
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:261
+msgid "Insert the table of contents automatically"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:265
+msgid "Minimum number of headings"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:279
+msgid "Minimum number of words"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:290
+msgid "Position"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:293
+msgid "After the first heading"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:294
+msgid "Before the first heading"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:301
+msgid "Content types"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:320
+msgid "Redirects"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:321
+msgid "Old addresses that must keep working. Applied only when the address would otherwise be “not found”. Changing the slug of a published page adds its redirect automatically."
+msgstr ""
+
+#. translators: 1: number of redirects, 2: maximum.
+#: includes/admin/class-admin-seo.php:325
+#, php-format
+msgid "%1$s of %2$s redirects used."
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:335
+msgid "From"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:335
+msgid "To"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:335
+msgid "Code"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:335
+msgid "Hits"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:346
+msgid "Delete this redirect?"
+msgstr ""
+
+#. translators: %s: vehicle name.
+#: includes/admin/class-admin-seo.php:346
+#: includes/admin/class-admin-vehicles.php:133
+msgid "Delete"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:355
+msgid "Old address (path)"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:367
+msgid "New address (path or link on this website)"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:380
+msgid "301 permanent (search engines move the ranking)"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:381
+msgid "302 temporary"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:384
+msgid "Add redirect"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:394
+msgid "Live head audit"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:395
+msgid "Fetches every language home page like a visitor and counts the SEO tags. Exactly one canonical, one description and one robots tag is correct; hreflang needs one line per language plus x-default."
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:405
+msgid "Run audit"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:416
+msgid "Result"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:422
+msgid "Could not fetch"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:429
+msgid "Check"
+msgstr ""
+
+#. translators: %s: error message.
+#: includes/admin/class-admin-seo.php:465
+#, php-format
+msgid "This server could not call itself (%s). Some hosts block loopback requests; open the address in a browser and view the page source instead."
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:526
+msgid "SEO settings saved."
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:544
+msgid "Redirect added."
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:555
+msgid "Redirect deleted."
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:557
+msgid "That redirect no longer exists."
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:573
+#: includes/admin/class-admin-seo.php:722
+#: includes/admin/class-admin-seo.php:752
+msgid "SEO Mr Tu"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:614
+msgid "Preview of the search result. Empty fields fall back to the title / excerpt shown here."
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:619
+msgid "SEO title"
+msgstr ""
+
+#. translators: %s: site name appended to the title.
+#: includes/admin/class-admin-seo.php:622
+#, php-format
+msgid "Up to 60 characters; “| %s” is added automatically."
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:634
+msgid "Meta description"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:637
+msgid "One or two plain sentences, up to 158 characters. No phone numbers or prices that are not verified."
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:648
+msgid "Focus keyword"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:650
+msgid "The one search phrase this page is written for (editorial note; not printed)."
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:656
+msgid "Hide from search engines (noindex)"
+msgstr ""
+
+#: includes/admin/class-admin-seo.php:658
+msgid "Also removes the page from the sitemap and from hreflang links of its translations."
 msgstr ""
 
 #: includes/admin/class-admin-translations.php:86
@@ -939,10 +1700,6 @@ msgstr ""
 msgid "Content"
 msgstr ""
 
-#: includes/admin/class-admin-translations.php:627
-msgid "Role"
-msgstr ""
-
 #: includes/admin/class-admin-translations.php:639
 #: includes/admin/class-admin-translations.php:641
 #: includes/admin/class-admin-translations.php:759
@@ -955,10 +1712,6 @@ msgstr ""
 
 #: includes/admin/class-admin-translations.php:670
 msgid "Rebuilds every translation map from the saved relationships. Safe to run at any time."
-msgstr ""
-
-#: includes/admin/class-admin-translations.php:674
-msgid "Rebuild translation maps"
 msgstr ""
 
 #: includes/admin/class-admin-translations.php:689
@@ -1053,21 +1806,6 @@ msgstr ""
 msgid "Removed from its translation group."
 msgstr ""
 
-#. translators: %s: number of translation groups.
-#: includes/admin/class-admin-translations.php:882
-#, php-format
-msgid "%s translation map rebuilt."
-msgid_plural "%s translation maps rebuilt."
-msgstr[0] ""
-msgstr[1] ""
-
-#: includes/admin/class-admin-translations.php:900
-#: includes/admin/class-admin-translations.php:924
-#: includes/admin/class-admin-translations.php:1074
-#: includes/class-languages.php:553
-msgid "Language"
-msgstr ""
-
 #. translators: %s: term name.
 #: includes/admin/class-admin-translations.php:906
 #, php-format
@@ -1135,11 +1873,6 @@ msgid "Delete %s? You can undo this in Store information → Backup & restore."
 msgstr ""
 
 #. translators: %s: vehicle name.
-#: includes/admin/class-admin-vehicles.php:133
-msgid "Delete"
-msgstr ""
-
-#. translators: %s: vehicle name.
 #: includes/admin/class-admin-vehicles.php:138
 #: includes/admin/class-admin-vehicles.php:179
 msgid "Add vehicle"
@@ -1162,7 +1895,7 @@ msgid "Edit %s"
 msgstr ""
 
 #: includes/admin/class-admin-vehicles.php:188
-#: includes/class-blocks.php:271
+#: includes/class-blocks.php:272
 msgid "Model"
 msgstr ""
 
@@ -1282,103 +2015,103 @@ msgstr ""
 msgid "Last updated %1$s by %2$s"
 msgstr ""
 
-#: includes/class-blocks.php:233
+#: includes/class-blocks.php:234
 msgid "Rental prices"
 msgstr ""
 
-#: includes/class-blocks.php:240
+#: includes/class-blocks.php:241
 msgid "Our price list is being updated. Please contact Mr Tu for current prices."
 msgstr ""
 
-#: includes/class-blocks.php:244
+#: includes/class-blocks.php:245
 msgid "Rental period"
 msgstr ""
 
-#: includes/class-blocks.php:297
+#: includes/class-blocks.php:298
 msgid "Reference price: please confirm it with Mr Tu before booking."
 msgstr ""
 
 #. translators: %s: delivery fee description entered by the owner.
-#: includes/class-blocks.php:301
+#: includes/class-blocks.php:302
 #, php-format
 msgid "Delivery: %s"
 msgstr ""
 
-#: includes/class-blocks.php:304
+#: includes/class-blocks.php:305
 msgid "The deposit is separate from the rental price. Please confirm the price, deposit and documents with Mr Tu before you rent."
 msgstr ""
 
-#: includes/class-blocks.php:305
+#: includes/class-blocks.php:306
 msgid "Please confirm the price and documents with Mr Tu before you rent."
 msgstr ""
 
-#: includes/class-blocks.php:319
+#: includes/class-blocks.php:320
 msgid "Confirmed prices"
 msgstr ""
 
-#: includes/class-blocks.php:322
+#: includes/class-blocks.php:323
 msgid "Reference prices"
 msgstr ""
 
-#: includes/class-blocks.php:324
+#: includes/class-blocks.php:325
 msgid "Prices on request"
 msgstr ""
 
 #. translators: %s: date the prices were last checked.
-#: includes/class-blocks.php:348
+#: includes/class-blocks.php:349
 #, php-format
 msgid "Updated %s"
 msgstr ""
 
 #. translators: %d: number of vehicle models shown after filtering.
-#: includes/class-blocks.php:387
+#: includes/class-blocks.php:388
 #, php-format
 msgid "Models shown: %d"
 msgstr ""
 
-#: includes/class-blocks.php:398
+#: includes/class-blocks.php:399
 msgid "Our list of motorbikes is being updated. Please contact Mr Tu."
 msgstr ""
 
-#: includes/class-blocks.php:403
+#: includes/class-blocks.php:404
 msgid "Vehicle type"
 msgstr ""
 
-#: includes/class-blocks.php:404
+#: includes/class-blocks.php:405
 msgid "All"
 msgstr ""
 
-#: includes/class-blocks.php:419
+#: includes/class-blocks.php:420
 msgid "All prices and deposits"
 msgstr ""
 
-#: includes/class-blocks.php:461
+#: includes/class-blocks.php:462
 #: includes/class-pricing.php:576
 msgid "Ask for availability"
 msgstr ""
 
-#: includes/class-blocks.php:477
+#: includes/class-blocks.php:478
 msgid "Price"
 msgstr ""
 
-#: includes/class-blocks.php:523
+#: includes/class-blocks.php:524
 msgid "Email"
 msgstr ""
 
-#: includes/class-blocks.php:533
+#: includes/class-blocks.php:534
 msgid "Area"
 msgstr ""
 
-#: includes/class-blocks.php:536
+#: includes/class-blocks.php:537
 msgid "Hours"
 msgstr ""
 
-#: includes/class-blocks.php:550
+#: includes/class-blocks.php:551
 msgid "Please call ahead to arrange the hand-over time and place."
 msgstr ""
 
 #. translators: %s: phone number.
-#: includes/class-blocks.php:579
+#: includes/class-blocks.php:580
 #, php-format
 msgid "Call %s"
 msgstr ""
@@ -1494,7 +2227,7 @@ msgid "The address is not verified yet."
 msgstr ""
 
 #: includes/class-business.php:706
-#: includes/class-quick-contact.php:158
+#: includes/class-quick-contact.php:159
 msgid "Directions"
 msgstr ""
 
@@ -1636,6 +2369,408 @@ msgstr ""
 #: includes/class-business.php:1415
 #, php-format
 msgid "%1$s, %2$s"
+msgstr ""
+
+#. translators: %d: number of further items.
+#: includes/class-health.php:232
+#, php-format
+msgid "… and %d more"
+msgstr ""
+
+#. translators: %s: comma-separated language codes.
+#: includes/class-health.php:379
+#, php-format
+msgid "missing: %s"
+msgstr ""
+
+#. translators: %s: comma-separated language codes.
+#: includes/class-health.php:383
+#, php-format
+msgid "not published: %s"
+msgstr ""
+
+#. translators: 1: percentage, 2: published count, 3: total count.
+#: includes/class-health.php:389
+#, php-format
+msgid "%1$d%% complete (%2$d of %3$d language versions published)."
+msgstr ""
+
+#: includes/class-health.php:397
+msgid "Translation completeness (core pages × languages)"
+msgstr ""
+
+#: includes/class-health.php:420
+#: includes/class-health.php:425
+msgid "Pages without a role"
+msgstr ""
+
+#: includes/class-health.php:420
+msgid "Every top-level page has a role, so menus and footers can place it."
+msgstr ""
+
+#. translators: 1: number of pages, 2: examples.
+#: includes/class-health.php:427
+#, php-format
+msgid "%1$d top-level page has no role and does not appear in the generated menus: %2$s"
+msgid_plural "%1$d top-level pages have no role and do not appear in the generated menus: %2$s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-health.php:465
+msgid "Duplicate SEO titles within a language"
+msgstr ""
+
+#: includes/class-health.php:465
+msgid "Duplicate meta descriptions within a language"
+msgstr ""
+
+#: includes/class-health.php:467
+msgid "No duplicates."
+msgstr ""
+
+#: includes/class-health.php:486
+msgid "SEO title length (≤ 60 characters)"
+msgstr ""
+
+#: includes/class-health.php:488
+msgid "Every title fits."
+msgstr ""
+
+#. translators: 1: number of pages, 2: examples with character counts.
+#: includes/class-health.php:491
+#, php-format
+msgid "%1$d title is longer than 60 characters: %2$s"
+msgid_plural "%1$d titles are longer than 60 characters: %2$s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-health.php:513
+msgid "Meta description length (120–160 characters)"
+msgstr ""
+
+#. translators: 1: number of pages, 2: examples with character counts.
+#: includes/class-health.php:517
+#, php-format
+msgid "%1$d description is outside 120–160 characters: %2$s"
+msgid_plural "%1$d descriptions are outside 120–160 characters: %2$s"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: number of pages.
+#: includes/class-health.php:521
+#, php-format
+msgid "%d published page/post has no meta description (the excerpt or content is used instead)."
+msgid_plural "%d published pages/posts have no meta description (the excerpt or content is used instead)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-health.php:524
+msgid "Every description is within range."
+msgstr ""
+
+#: includes/class-health.php:553
+msgid "Focus keyword cannibalization"
+msgstr ""
+
+#: includes/class-health.php:555
+msgid "Each focus keyword is used by one page per language."
+msgstr ""
+
+#: includes/class-health.php:557
+msgid "Several pages of one language target the same keyword and compete with each other:"
+msgstr ""
+
+#: includes/class-health.php:745
+msgid "Orphan pages and posts (no internal links)"
+msgstr ""
+
+#: includes/class-health.php:747
+msgid "Every page and post is linked from same-language content or placed by its role."
+msgstr ""
+
+#. translators: 1: number of items, 2: examples.
+#: includes/class-health.php:750
+#, php-format
+msgid "%1$d item has no internal link from content in its language: %2$s"
+msgid_plural "%1$d items have no internal link from content in their language: %2$s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-health.php:760
+msgid "Internal links"
+msgstr ""
+
+#. translators: 1: number of links, 2: examples.
+#: includes/class-health.php:772
+#, php-format
+msgid "%1$d link points to a page that is not published in that language: %2$s"
+msgid_plural "%1$d links point to pages that are not published in that language: %2$s"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of links, 2: examples.
+#: includes/class-health.php:776
+#, php-format
+msgid "%1$d link leaves the language of its page: %2$s"
+msgid_plural "%1$d links leave the language of their page: %2$s"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: number of links checked.
+#: includes/class-health.php:780
+#, php-format
+msgid "%d internal link checked, all resolve to published same-language content."
+msgid_plural "%d internal links checked, all resolve to published same-language content."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-health.php:809
+msgid "Images without alt text"
+msgstr ""
+
+#. translators: %d: number of images.
+#: includes/class-health.php:812
+#, php-format
+msgid "%d image in content, every one has an alt attribute."
+msgid_plural "%d images in content, every one has an alt attribute."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-health.php:814
+msgid "Images without an alt attribute (count per page):"
+msgstr ""
+
+#: includes/class-health.php:831
+msgid "brand"
+msgstr ""
+
+#: includes/class-health.php:832
+msgid "listing name"
+msgstr ""
+
+#: includes/class-health.php:833
+msgid "address"
+msgstr ""
+
+#: includes/class-health.php:834
+msgid "phone"
+msgstr ""
+
+#: includes/class-health.php:835
+msgid "opening hours"
+msgstr ""
+
+#: includes/class-health.php:836
+msgid "service model"
+msgstr ""
+
+#: includes/class-health.php:837
+msgid "service area"
+msgstr ""
+
+#. translators: %s: comma-separated field names.
+#: includes/class-health.php:865
+#, php-format
+msgid "Pending verification: %s."
+msgstr ""
+
+#: includes/class-health.php:868
+msgid "The price list is not confirmed yet (prices show as “on request”)."
+msgstr ""
+
+#. translators: 1: unverified vehicles, 2: public vehicles.
+#: includes/class-health.php:871
+#, php-format
+msgid "%1$d of %2$d public vehicles have unconfirmed prices."
+msgstr ""
+
+#: includes/class-health.php:873
+msgid "Business data verification"
+msgstr ""
+
+#: includes/class-health.php:875
+msgid "Store information and prices are verified."
+msgstr ""
+
+#: includes/class-health.php:879
+msgid "The phone number is not verified, so the website shows no call button."
+msgstr ""
+
+#: includes/class-health.php:896
+msgid "Switched off."
+msgstr ""
+
+#. translators: %s: comma-separated item names.
+#: includes/class-health.php:913
+#, php-format
+msgid "Showing: %s."
+msgstr ""
+
+#. translators: %s: comma-separated item names.
+#: includes/class-health.php:913
+msgid "No item can be shown right now."
+msgstr ""
+
+#. translators: %s: comma-separated item names with reasons.
+#: includes/class-health.php:916
+#, php-format
+msgid "Switched on but hidden: %s."
+msgstr ""
+
+#: includes/class-health.php:963
+msgid "automatic"
+msgstr ""
+
+#: includes/class-health.php:965
+msgid "standalone"
+msgstr ""
+
+#. translators: 1: configured mode, 2: effective mode, 3: "active" or "not active".
+#: includes/class-health.php:969
+#, php-format
+msgid "Setting: %1$s · running: %2$s · Yoast SEO: %3$s."
+msgstr ""
+
+#: includes/class-health.php:972
+msgid "active"
+msgstr ""
+
+#: includes/class-health.php:972
+msgid "not active"
+msgstr ""
+
+#: includes/class-health.php:975
+msgid "The SEO module is not loaded: no canonical, hreflang or sitemap output."
+msgstr ""
+
+#: includes/class-health.php:978
+msgid "Standalone mode with Yoast active: Yoast head output is switched off by the plugin; make sure only one canonical appears (see the head audit)."
+msgstr ""
+
+#: includes/class-health.php:994
+msgid "Front page and posts page per language"
+msgstr ""
+
+#: includes/class-health.php:996
+msgid "The site shows the latest posts on the front page. Set a static front page (seed with “Set reading settings”) so every language gets its own home page."
+msgstr ""
+
+#. translators: %s: comma-separated language codes.
+#: includes/class-health.php:1013
+#, php-format
+msgid "No published home page in: %s (their home address returns “not found”)."
+msgstr ""
+
+#. translators: %s: comma-separated language codes.
+#: includes/class-health.php:1017
+#, php-format
+msgid "No published posts page in: %s."
+msgstr ""
+
+#: includes/class-health.php:1020
+msgid "Every enabled language has a published home page and posts page."
+msgstr ""
+
+#: includes/class-health.php:1032
+msgid "Disabled languages"
+msgstr ""
+
+#: includes/class-health.php:1040
+msgid "All five languages are enabled."
+msgstr ""
+
+#. translators: 1: language code, 2: number of published pages/posts.
+#: includes/class-health.php:1053
+#, php-format
+msgid "%1$s (%2$d published pages/posts are unreachable)"
+msgstr ""
+
+#. translators: %s: comma-separated language codes.
+#: includes/class-health.php:1059
+#, php-format
+msgid "Switched off: %s."
+msgstr ""
+
+#: includes/class-health.php:1098
+msgid "The sitemap module is not available."
+msgstr ""
+
+#: includes/class-health.php:1101
+msgid "Yoast compatibility mode: Yoast publishes the sitemap; the plugin adds its hreflang alternates."
+msgstr ""
+
+#. translators: %s: sitemap URL.
+#: includes/class-health.php:1106
+#, php-format
+msgid "Not fetched in this run. Index: %s"
+msgstr ""
+
+#. translators: 1: sitemap URL, 2: error message.
+#: includes/class-health.php:1111
+#, php-format
+msgid "Could not fetch %1$s from the server itself (%2$s). Open it in a browser to verify."
+msgstr ""
+
+#. translators: 1: sitemap URL, 2: HTTP status code.
+#: includes/class-health.php:1115
+#, php-format
+msgid "%1$s does not return a sitemap index (HTTP %2$d). Try “Flush rewrite rules”."
+msgstr ""
+
+#. translators: 1: sitemap URL, 2: number of child sitemaps.
+#: includes/class-health.php:1119
+#, php-format
+msgid "%1$s is reachable with %2$d language sitemaps."
+msgstr ""
+
+#: includes/class-health.php:1130
+msgid "Live head audit of the language home pages"
+msgstr ""
+
+#: includes/class-health.php:1132
+msgid "Not fetched in this run."
+msgstr ""
+
+#: includes/class-health.php:1142
+msgid "No language has a published home page."
+msgstr ""
+
+#. translators: %d: number of canonical tags.
+#: includes/class-health.php:1168
+#, php-format
+msgid "%d canonical"
+msgid_plural "%d canonicals"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: number of description tags.
+#: includes/class-health.php:1173
+#, php-format
+msgid "%d descriptions"
+msgstr ""
+
+#: includes/class-health.php:1176
+msgid "no description"
+msgstr ""
+
+#. translators: %d: number of robots tags.
+#: includes/class-health.php:1181
+#, php-format
+msgid "%d robots tags"
+msgstr ""
+
+#: includes/class-health.php:1185
+msgid "no hreflang alternates"
+msgstr ""
+
+#. translators: 1: language code, 2: canonical count, 3: description count, 4: robots count, 5: hreflang count, 6: issues.
+#: includes/class-health.php:1189
+#, php-format
+msgid "%1$s: canonical %2$d · description %3$d · robots %4$d · hreflang %5$d%6$s"
+msgstr ""
+
+#: includes/class-health.php:1199
+msgid "The server could not fetch its own pages (loopback blocked). Check the head tags in a browser."
 msgstr ""
 
 #. translators: %s: language name.
@@ -1890,17 +3025,29 @@ msgctxt "rental period"
 msgid "Month"
 msgstr ""
 
-#: includes/class-quick-contact.php:159
+#: includes/class-quick-contact.php:160
 msgid "Ask a question"
 msgstr ""
 
-#: includes/class-quick-contact.php:176
+#: includes/class-quick-contact.php:177
 msgid "The Mr Tu assistant plugin is not active."
 msgstr ""
 
-#: includes/class-quick-contact.php:301
+#: includes/class-quick-contact.php:302
 #: includes/class-roles.php:108
 msgid "Contact"
+msgstr ""
+
+#: includes/class-redirects.php:98
+msgid "Enter the old address as a path such as /old-page/."
+msgstr ""
+
+#: includes/class-redirects.php:102
+msgid "Enter the new address as a path or a full https:// link on this website."
+msgstr ""
+
+#: includes/class-redirects.php:118
+msgid "That redirect would point to itself."
 msgstr ""
 
 #: includes/class-roles.php:54
@@ -1951,8 +3098,145 @@ msgstr ""
 msgid "Limit results to one language code, or \"all\"."
 msgstr ""
 
-#: includes/class-toc.php:783
-msgid "Table of contents"
+#. translators: %s: file name.
+#: includes/class-seeder.php:152
+#, php-format
+msgid "File not found: %s"
+msgstr ""
+
+#. translators: %s: file name.
+#: includes/class-seeder.php:158
+#, php-format
+msgid "File not readable: %s"
+msgstr ""
+
+#. translators: 1: file name, 2: JSON error message.
+#: includes/class-seeder.php:167
+#, php-format
+msgid "%1$s is not valid JSON (%2$s)."
+msgstr ""
+
+#. translators: 1: language code, 2: reason.
+#: includes/class-seeder.php:239
+#, php-format
+msgid "%1$s: no seed content (%2$s). Nothing was changed for this language."
+msgstr ""
+
+#: includes/class-seeder.php:292
+msgid "Dry run: the Reading settings were not changed."
+msgstr ""
+
+#. translators: %s: language code.
+#: includes/class-seeder.php:365
+#, php-format
+msgid "Unknown language code “%s” was ignored."
+msgstr ""
+
+#: includes/class-seeder.php:483
+msgid "Entry without a valid seed_id."
+msgstr ""
+
+#. translators: %s: seed id.
+#: includes/class-seeder.php:487
+#, php-format
+msgid "%s: the title is missing."
+msgstr ""
+
+#. translators: %s: seed id.
+#: includes/class-seeder.php:491
+#, php-format
+msgid "%s: the content file must be an .html file."
+msgstr ""
+
+#. translators: 1: seed id, 2: role key.
+#: includes/class-seeder.php:495
+#, php-format
+msgid "%1$s: unknown page role “%2$s”."
+msgstr ""
+
+#. translators: %s: file name.
+#: includes/class-seeder.php:552
+#, php-format
+msgid "Content file missing: %s"
+msgstr ""
+
+#. translators: %s: file name.
+#: includes/class-seeder.php:557
+#, php-format
+msgid "Content file is empty: %s"
+msgstr ""
+
+#: includes/class-seeder.php:565
+#: includes/class-seeder.php:869
+msgid "Would be created."
+msgstr ""
+
+#: includes/class-seeder.php:581
+msgid "Already exists (use update to refresh unchanged content)."
+msgstr ""
+
+#: includes/class-seeder.php:589
+msgid "Edited on the website after seeding; left unchanged."
+msgstr ""
+
+#: includes/class-seeder.php:597
+msgid "Up to date."
+msgstr ""
+
+#. translators: %s: comma-separated list of fields.
+#: includes/class-seeder.php:601
+#, php-format
+msgid "Would update: %s"
+msgstr ""
+
+#. translators: %s: comma-separated list of fields.
+#: includes/class-seeder.php:613
+#, php-format
+msgid "Updated: %s"
+msgstr ""
+
+#: includes/class-seeder.php:848
+msgid "Category entry needs a slug and a name."
+msgstr ""
+
+#: includes/class-seeder.php:863
+msgid "Category already exists."
+msgstr ""
+
+#. translators: %s: seed id.
+#: includes/class-seeder.php:964
+#, php-format
+msgid "Could not link the language versions of category %s."
+msgstr ""
+
+#. translators: %s: seed id.
+#: includes/class-seeder.php:1007
+#, php-format
+msgid "Could not link the language versions of %s into one translation group (another post may already hold one of the languages)."
+msgstr ""
+
+#. translators: 1: role key, 2: seed id.
+#: includes/class-seeder.php:1033
+#, php-format
+msgid "The role “%1$s” already belongs to another page group; %2$s was left without a role."
+msgstr ""
+
+#. translators: 1: role key, 2: seed id.
+#: includes/class-seeder.php:1041
+#, php-format
+msgid "Could not assign the role “%1$s” to %2$s."
+msgstr ""
+
+#: includes/class-seeder.php:1081
+msgid "Reading settings not changed: there is no published home page in the default language yet."
+msgstr ""
+
+#: includes/class-seeder.php:1098
+msgid "No published blog page in the default language: the posts page was not set."
+msgstr ""
+
+#: includes/class-seeder.php:1102
+msgid "Timezone set to Asia/Ho_Chi_Minh."
 msgstr ""
 
 #: includes/class-translations.php:193

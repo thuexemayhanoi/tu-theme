@@ -123,7 +123,7 @@ final class Sitemaps {
 		}
 		$which = sanitize_key( (string) $wp->query_vars[ self::QUERY_VAR ] );
 		$path  = isset( $_SERVER['REQUEST_URI'] ) ? Router::relative_path( wp_unslash( $_SERVER['REQUEST_URI'] ) ) : null; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- compared, never output.
-		if ( $path !== self::PREFIX . $which . '.xml' ) {
+		if ( self::PREFIX . $which . '.xml' !== $path ) {
 			unset( $wp->query_vars[ self::QUERY_VAR ] ); // Not a sitemap URL: the var is noise.
 			return;
 		}

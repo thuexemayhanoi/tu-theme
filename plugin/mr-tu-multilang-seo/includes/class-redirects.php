@@ -121,7 +121,7 @@ final class Redirects {
 		// The old address is dead: anything that still redirected to it goes to the new target.
 		foreach ( $map as $other_from => $other ) {
 			if ( self::normalize_path( $other['to'] ) === $path ) {
-				if ( $other_from === self::normalize_path( $target ) ) {
+				if ( self::normalize_path( $target ) === $other_from ) {
 					unset( $map[ $other_from ] ); // Would loop back.
 				} else {
 					$map[ $other_from ]['to'] = $target;

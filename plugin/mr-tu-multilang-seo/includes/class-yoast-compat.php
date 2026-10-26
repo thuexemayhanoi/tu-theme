@@ -330,25 +330,25 @@ final class Yoast_Compat {
 	/**
 	 * `wpseo_sitemap_entry`: drops non-indexable posts/terms and remembers the rest for the alternates.
 	 *
-	 * @param array|false $url    Entry [ loc, mod, … ].
-	 * @param string      $type   post | term | user.
-	 * @param mixed       $object Post / term / user object.
+	 * @param array|false $url  Entry [ loc, mod, … ].
+	 * @param string      $type post | term | user.
+	 * @param mixed       $item Post / term / user object.
 	 * @return array|false
 	 */
-	public static function sitemap_entry( $url, $type, $object = null ) {
+	public static function sitemap_entry( $url, $type, $item = null ) {
 		if ( ! self::is_compat() || ! is_array( $url ) || empty( $url['loc'] ) ) {
 			return $url;
 		}
-		if ( 'post' === $type && $object instanceof \WP_Post && Translations::is_translatable_post_type( $object->post_type ) ) {
-			if ( ! Seo::post_is_indexable( $object ) ) {
+		if ( 'post' === $type && $item instanceof \WP_Post && Translations::is_translatable_post_type( $item->post_type ) ) {
+			if ( ! Seo::post_is_indexable( $item ) ) {
 				return false;
 			}
-			self::$entries[ (string) $url['loc'] ] = array( 'post', (int) $object->ID );
-		} elseif ( 'term' === $type && $object instanceof \WP_Term && Translations::is_translatable_taxonomy( $object->taxonomy ) ) {
-			if ( ! Seo::term_is_indexable( $object ) ) {
+			self::$entries[ (string) $url['loc'] ] = array( 'post', (int) $item->ID );
+		} elseif ( 'term' === $type && $item instanceof \WP_Term && Translations::is_translatable_taxonomy( $item->taxonomy ) ) {
+			if ( ! Seo::term_is_indexable( $item ) ) {
 				return false;
 			}
-			self::$entries[ (string) $url['loc'] ] = array( 'term', (int) $object->term_id );
+			self::$entries[ (string) $url['loc'] ] = array( 'term', (int) $item->term_id );
 		}
 		return $url;
 	}

@@ -139,7 +139,7 @@ final class Yoast_Compat {
 	}
 
 	/**
-	 * Whether Yoast's own per-object field is empty.
+	 * Whether Yoast's own per-object field is empty (no presentation at all counts as empty).
 	 *
 	 * @param mixed  $presentation Presentation.
 	 * @param string $field        Model property (title, description, is_robots_noindex).
@@ -147,7 +147,7 @@ final class Yoast_Compat {
 	 */
 	private static function model_empty( $presentation, $field ) {
 		if ( ! is_object( $presentation ) || ! isset( $presentation->model ) || ! is_object( $presentation->model ) ) {
-			return false;
+			return true;
 		}
 		return empty( $presentation->model->{$field} );
 	}

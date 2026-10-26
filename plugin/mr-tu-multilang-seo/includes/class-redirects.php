@@ -261,7 +261,7 @@ final class Redirects {
 		if ( '' !== $query && false === strpos( $target, '?' ) ) {
 			$target .= '?' . $query;
 		}
-		self::count_hit( $entry['from'] );
+		self::hit( $entry['from'] );
 		wp_safe_redirect( $target, $entry['code'], 'Mr Tu Multilang' );
 		exit;
 	}
@@ -270,13 +270,17 @@ final class Redirects {
 	 * Increments the hit counter of an entry.
 	 *
 	 * @param string $from Path.
+	 * @return bool Whether the entry exists.
 	 */
-	private static function count_hit( $from ) {
-		$map = self::all();
-		if ( isset( $map[ $from ] ) ) {
-			++$map[ $from ]['hits'];
-			update_option( self::OPTION, $map, true );
+	public static function hit( $from ) {
+		$map  = self::all();
+		$from = self::normalize_path( (string) $from );
+		if ( ! isset( $map[ $from ] ) ) {
+			return false;
 		}
+		++$map[ $from ]['hits'];
+		update_option( self::OPTION, $map, true );
+		return true;
 	}
 
 	/*

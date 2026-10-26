@@ -73,7 +73,8 @@ const EN_UI = /\b(Table of contents|Price on request|Contact page|Read more|Keep
 					const status = resp ? resp.status() : 0;
 					const data = await page.evaluate( () => {
 						const q = ( s ) => document.querySelectorAll( s ).length;
-						const chrome = [ ...document.querySelectorAll( 'header, footer, nav, .mrtu-qc, .mrtu-toc, .mrtu-pricing, .mrtu-fleet, .mrtu-contact-card, .mrtu-cta' ) ].map( ( el ) => el.innerText ).join( ' ' );
+						// UI chrome only: the TOC mirrors the article's own headings (a German guide may quote „gửi xe“), so it is not chrome.
+						const chrome = [ ...document.querySelectorAll( 'header, footer, nav:not(.mrtu-toc__nav), .mrtu-qc, .mrtu-pricing, .mrtu-fleet, .mrtu-contact-card, .mrtu-cta' ) ].map( ( el ) => el.innerText ).join( ' ' );
 						return {
 							lang: document.documentElement.lang,
 							h1: q( 'h1' ),

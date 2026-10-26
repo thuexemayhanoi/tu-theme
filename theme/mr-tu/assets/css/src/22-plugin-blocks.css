@@ -489,12 +489,6 @@
 	color: var(--color-text);
 }
 
-.mrtu-contact-card__title {
-	margin: 0;
-	font-size: var(--text-h3);
-	font-weight: 800;
-	letter-spacing: -0.015em;
-}
 
 .mrtu-contact-card__list {
 	display: grid;
@@ -502,7 +496,7 @@
 	margin: 16px 0 20px;
 }
 
-.mrtu-contact-card__row {
+.mrtu-contact-card__item {
 	display: grid;
 	grid-template-columns: minmax(84px, 0.4fr) minmax(0, 1fr);
 	gap: 4px 16px;
@@ -510,7 +504,7 @@
 	border-bottom: 1px dashed var(--color-border-strong);
 }
 
-.mrtu-contact-card__row dt {
+.mrtu-contact-card__item dt {
 	color: var(--color-text-muted);
 	font-family: var(--font-plate);
 	font-size: 0.875rem;
@@ -520,25 +514,17 @@
 	text-transform: uppercase;
 }
 
-.mrtu-contact-card__row dd {
+.mrtu-contact-card__item dd {
 	margin: 0;
 	font-weight: 600;
 }
 
-.mrtu-contact-card__row dd a {
+.mrtu-contact-card__item dd a {
 	color: inherit;
 	font-variant-numeric: tabular-nums;
 }
 
-.mrtu-contact-card__actions {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 10px;
-}
 
-.mrtu-contact-card__actions > * {
-	flex: 1 1 auto;
-}
 
 .mrtu-contact-card__note {
 	margin-top: 14px;
@@ -553,11 +539,11 @@
 	color: var(--color-band-text);
 }
 
-.mrtu-section--contact .mrtu-contact-card__row {
+.mrtu-section--contact .mrtu-contact-card__item {
 	border-bottom-color: var(--color-band-border);
 }
 
-.mrtu-section--contact .mrtu-contact-card__row dt,
+.mrtu-section--contact .mrtu-contact-card__item dt,
 .mrtu-section--contact .mrtu-contact-card__note {
 	color: var(--color-band-muted);
 }

@@ -62,7 +62,8 @@ link_repo() {
 
 serve() {
 	pkill -f "php -d memory_limit=512M -S 127.0.0.1:$PORT" 2>/dev/null || true
-	nohup php -d memory_limit=512M -S 127.0.0.1:$PORT -t "$WP_DIR" "$REPO/scripts/router.php" > "$WP_ENV_DIR/server.log" 2>&1 &
+	# Several workers: browsers (and Lighthouse) open parallel connections that a single-threaded server would stall.
+	PHP_CLI_SERVER_WORKERS=8 nohup php -d memory_limit=512M -S 127.0.0.1:$PORT -t "$WP_DIR" "$REPO/scripts/router.php" > "$WP_ENV_DIR/server.log" 2>&1 &
 	disown || true
 	sleep 1 && echo "Serving $URL (log: $WP_ENV_DIR/server.log)"
 }

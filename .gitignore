@@ -15,3 +15,4 @@ vendor/
 /.claude/
 /dist/
 /dist-private/
+/tests/lighthouse/reports/

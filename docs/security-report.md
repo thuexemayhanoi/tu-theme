@@ -25,9 +25,9 @@
 | Languages settings | `manage_options` | ✅ | `Languages::validate` (prefix `[a-z]{2,5}`, unique, reserved names, hreflang pattern) | ✅ |
 | Translations: create / link / unlink / change language | `edit_posts` + `current_user_can('edit_post', $id)` per post, post-type match | ✅ (nonce action includes post id) | `absint`, `sanitize_key`; identical-content publish guard | ✅ |
 | Theme settings (`mr_tu_save_settings`) | `edit_theme_options` | ✅ | `absint` media ids, booleans, enum mode | ✅ |
-| SEO settings, redirects, meta box, term fields | `manage_options` / `edit_post` / `edit_term` | ✅ | `sanitize_text_field`, `esc_url_raw` redirect targets (same-host or absolute https), status enum 301/302 | ⏳ verify after merge |
-| Dashboard "Seed now", Health actions | `manage_options` | ✅ | booleans; seeder reads only bundled/seed dir files | ⏳ verify after merge |
-| Assistant settings, Q&A pairs, log clear, reindex | `manage_options` | ✅ | `sanitize_textarea_field`, `esc_url_raw` | ⏳ |
+| SEO settings, redirects, meta box, term fields | `manage_options` / `edit_post` / `edit_term` | ✅ | `sanitize_text_field`, `esc_url_raw` redirect targets (same-host or absolute https), status enum 301/302; loops/chains refused | ✅ (release review 2026-10-26) |
+| Dashboard "Seed now", Health actions | `manage_options` | ✅ | booleans; seeder reads only bundled/seed dir files (`basename()`, `.html` only, fixed language codes) | ✅ (release review) |
+| Assistant settings, Q&A pairs, log clear, reindex | `manage_options` | ✅ | `sanitize_textarea_field`, `esc_url_raw` | ⏳ not part of this release |
 
 Every handler ends with `wp_safe_redirect()` to an admin URL built by `Admin::url()` (no user-controlled destination).
 
@@ -81,8 +81,25 @@ Every handler ends with `wp_safe_redirect()` to an admin URL built by `Admin::ur
 - PHPCompatibilityWP 7.4+ and PHPCompatibility 10 (modern-syntax detection): 0 errors.
 - Integration tests on a clean install: see `docs/qa-report.md`.
 
-## 8. Open items
+## 8. Release review (2026-10-26) and open items
 
-- ⏳ Re-run §2/§5 checks on the SEO module and the assistant once merged (update this file).
-- ⚠️ Real Yoast coexistence must be verified on staging (the local env cannot run Yoast); the compat mode is tested
-  against a stub that replays Yoast's filters.
+An independent read-only review of every plugin file (24 `admin_post_*` handlers, router, redirects, sitemaps, head,
+schema, seeder, CLI, admin JS) and every theme file was run before packaging. Candidates for open redirect, redirect
+loops, import XSS, path traversal, SQL injection, transient-key abuse, CSRF and REST `lang` abuse were traced and
+refuted. Findings that survived were fixed in the release build:
+
+| Finding | Severity | Fix |
+|---|---|---|
+| Redirect hit counter rewrote the autoloaded `mrtu_redirects` map on every public hit (DB write per request, lost updates against the owner's edits) | medium | Counters moved to the non-autoloaded `mrtu_redirect_hits` option; the map is only written from the admin screen. A visitor still causes one small option write per *redirected 404* — accepted. |
+| Translations screen (`edit_posts`) listed other authors' drafts/private items | low | `perm => readable` on both queries. |
+| `_mrtu_seed_id` / `_mrtu_seed_hash` were REST-writable by authors (could hijack a seeded role) | low | `show_in_rest => false`; only the seeder writes them. |
+| Private taxonomies granted `assign_terms` to `edit_posts` (`tax_input` bypass of the nonce-guarded language UI) | info | `assign_terms => do_not_allow`; the plugin assigns terms itself via `wp_set_object_terms()`. |
+| Head audit loopback hard-coded `sslverify => false` | info | Uses the core `https_local_ssl_verify` filter like the health check. |
+| Theme: nested nav group inside "More" could not open; menu "current" detection ignored object type; `theme.json` v3 needs WP 6.6; `rtl-language-support` tag without RTL styles; no-JS menu link to a conditional anchor | low/info | All fixed (toggle handler skips ancestors, core `_wp_menu_item_classes_by_context()`, `Requires at least: 6.6`, tag removed, link → `#site-footer`). |
+
+Still open:
+
+- ⚠️ Real Yoast coexistence must be verified on **staging** (the local env cannot reach wordpress.org); the compat mode is
+  tested against a stub that replays Yoast's filters. Checklist: `docs/deployment-hostinger.md` §2.7.
+- ⏳ The private assistant plugin is not part of this release; review its REST endpoint again before it ships.
+- Tooling after the fixes: WPCS 0 errors, PHPCompatibilityWP 7.4- 0 errors (theme + plugin), PHP suite 898/898.

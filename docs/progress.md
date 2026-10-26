@@ -2,6 +2,45 @@
 
 > Read this first when resuming. Update it whenever work stops. Newest entry on top.
 
+## 2026-10-26 — Session 3 (FINAL RELEASE pass)
+
+**Branch:** `claude/mr-tu-flagship`. Production untouched; nothing merged to `main`; no DNS/hosting changes.
+Scope frozen: no new features, no SEO article workflow (separate project later), chatbot optional and not blocking.
+
+### Done this session
+- **Interface translations complete in 5 languages.** POTs regenerated after the SEO/seeder/health merge (theme 173,
+  plugin 707 strings). vi / de_DE / fr_FR / es_ES catalogues completed for theme and plugin, compiled to `.mo` +
+  `.l10n.php`, checked for placeholders/HTML/NAP (0 problems), and verified in wp-admin by switching the admin user's
+  locale (menu, screen titles and buttons render in each language). Spanish keeps the informal register already used by
+  WordPress es_ES and by the existing catalogue.
+- **Bugs fixed:** desktop navigation overlapped the header tools in VI/FR/ES at 1024–1600 px (Lighthouse `target-size`)
+  → priority+ "More" group in theme.js + compact tools; admin screens at 375 px (grid shrink, badge wrap, save bar,
+  duplicate switch/radio controls, translations matrix widening the page); contact card labels on the dark home band
+  (theme styled `__row`, plugin prints `__item` → 2.57:1 contrast) → 8.5:1.
+- **Independent release review** (security + theme, read-only agents): 10 findings, all fixed in `d4c2d1f` — redirect
+  hit counters out of the autoloaded map, `perm=readable` on the translations screen, seeder meta not REST-writable,
+  `assign_terms=do_not_allow`, `https_local_ssl_verify`, nested "More" groups, core current-menu detection,
+  `Requires at least: 6.6`, RTL tag removed, no-JS menu anchor. Details in `docs/security-report.md` §8.
+- **QA (all local, see `docs/qa-report.md`):** PHP suite 898/898; HTTP routing 40/40, SEO 90/90, seeded site 52/52;
+  front-end matrix 240 pages × axe; Lighthouse mobile 93/100/100/100 (home, pillar, guide), desktop 100/100/100/100;
+  WPCS 0 errors, PHPCompatibilityWP 7.4- clean, php -l clean; admin at 375 px clean; CI green.
+- **Packaging:** `bash scripts/build.sh` → `dist/mr-tu-theme.zip`, `dist/mr-tu-multilang-seo.zip` (git-ignored; CI
+  uploads them as the `mr-tu-zips` artifact). New `scripts/zip-install-test.sh` proves a clean install from the ZIPs on a
+  reset WordPress (install → activate → seed from bundled content → smoke → rollback path): 37/37.
+- **Docs:** `docs/deployment-hostinger.md` (backup first, staging mandatory, Yoast staging checklist §2.7, assistant
+  deferred), `docs/rollback.md` (level 0 pre-install safeguards), `docs/qa-report.md` (new), `docs/security-report.md` §8.
+
+### Not in this release (deliberately)
+- Private assistant plugin (`private/`, never committed): M1 core exists; UI/REST/admin unfinished. Deliver later.
+- Real Yoast coexistence check: the local container is offline (wordpress.org unreachable) — must be done on Hostinger
+  **staging** with the checklist in `docs/deployment-hostinger.md` §2.7 before production.
+- Business facts (address representation, hours, prices, deposits, Zalo/WhatsApp) stay *pending verification* until the
+  owner confirms them on the Store information / Prices screens.
+
+### Local environments (all symlink the main checkout; worktree envs were re-linked)
+- `wpenv-business` → :8083 (seeded; QA matrix, PHP suite), `wpenv-toc` → :8084 (seeded; HTTP suites, Lighthouse),
+  `wpenv-theme` → :8081 (reset by `scripts/zip-install-test.sh`, holds the ZIP-installed copy).
+
 ## 2026-10-26 — Session 2 (resume)
 
 **Branch:** `claude/mr-tu-flagship` — CI run #5 green (lint 7.4/8.1/8.3 · WPCS · WordPress integration · ZIP build).

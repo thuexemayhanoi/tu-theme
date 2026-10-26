@@ -1,6 +1,6 @@
 {
   "$schema_version": 1,
-  "_comment": "Mr Tu business facts — seed source for the plugin's Business/NAP + Pricing managers. Every field carries a 'verified' flag. Unverified fields are shown as PENDING VERIFICATION in wp-admin and are NOT presented as facts on the public site. Never copy the Nguyen Tu Long Bien NAP (112 Nguyen Van Cu / 0942 467 674) into this file.",
+  "_comment": "Mr Tu business facts — seed source for the plugin's Business/NAP + Pricing managers. Every field carries a 'verified' flag. Unverified fields are shown as PENDING VERIFICATION in wp-admin and are NOT presented as facts on the public site. Never copy the NAP of the Long Bien location into this file.",
   "source": "Owner brief + Google Maps screenshot provided by the owner, 2026-10-25",
   "business": {
     "brand": { "value": "Mr Tu", "verified": true },

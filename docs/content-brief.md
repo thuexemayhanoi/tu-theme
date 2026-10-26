@@ -56,7 +56,7 @@ uses the same facts and the same page roles; emphasis follows each locale's sear
   / walk-in counter, opening hours. When the reader needs any of these, write "Mr Tu confirms … when you contact us" and rely on the
   data blocks, which show verified values automatically.
 - No testimonials, ratings, awards, statistics, "best", "#1", "cheapest", "guaranteed".
-- Never mention Nguyễn Tú, Long Biên, 112 Nguyễn Văn Cừ or 0942 467 674.
+- Never mention the Nguyễn Tú Long Biên location, its street address or its phone number.
 - No passports/ID cards held as collateral claims. Say: identity documents are checked for the rental agreement; the deposit form is
   agreed lawfully before booking. (Vietnamese law prohibits pledging citizen ID cards — you may mention that ID cards are only checked,
   not pledged, as a legal fact for VI.)

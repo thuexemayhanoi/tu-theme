@@ -165,8 +165,12 @@ final class Admin_Seo {
 				'standalone' => __( 'Standalone: Mr Tu prints the whole head even while Yoast SEO is active', 'mr-tu-multilang-seo' ),
 			)
 		);
+		$mode_labels = array(
+			'compat'     => __( 'Yoast compatibility', 'mr-tu-multilang-seo' ),
+			'standalone' => __( 'Standalone', 'mr-tu-multilang-seo' ),
+		);
 		/* translators: %s: effective mode name. */
-		echo '<p class="mrtu-meta">' . esc_html( sprintf( __( 'Effective mode right now: %s', 'mr-tu-multilang-seo' ), $effective ) ) . '</p>';
+		echo '<p class="mrtu-meta">' . esc_html( sprintf( __( 'Effective mode right now: %s', 'mr-tu-multilang-seo' ), isset( $mode_labels[ $effective ] ) ? $mode_labels[ $effective ] : $effective ) ) . '</p>';
 		Admin::card_close();
 	}
 

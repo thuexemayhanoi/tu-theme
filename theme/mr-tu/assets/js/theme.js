@@ -244,8 +244,19 @@
 			moreSummary.classList.toggle( 'is-current-parent', !! morePanel.querySelector( '.is-current' ) );
 		}
 
+		// Width the visible bar items occupy (scrollWidth equals the container once nothing overflows, so it
+		// cannot tell how much room is left for an item to move back).
+		function usedWidth() {
+			var first = navList.firstElementChild;
+			var last = moreItem.hidden ? moreItem.previousElementSibling : moreItem;
+			if ( ! first || ! last ) {
+				return 0;
+			}
+			return last.getBoundingClientRect().right - first.getBoundingClientRect().left;
+		}
+
 		function overflows() {
-			return navList.scrollWidth > navList.clientWidth + 1;
+			return usedWidth() > navList.clientWidth + 1;
 		}
 
 		function moveIn() {
@@ -289,7 +300,7 @@
 				if ( 1 === overflowed.length && 1 === morePanel.children.length ) {
 					need -= moreItem.getBoundingClientRect().width; // "More" disappears with its last item.
 				}
-				if ( navList.scrollWidth + need > navList.clientWidth + 1 ) {
+				if ( usedWidth() + need > navList.clientWidth + 1 ) {
 					break;
 				}
 				moveOut();

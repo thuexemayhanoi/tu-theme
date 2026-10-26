@@ -18,12 +18,20 @@ Production untouched; nothing merged to `main`.
   plugin + theme active; screenshots of home/pricing/guide/404 × light/dark × 390/1280 reviewed.
 - 5-language seed content (16 entries each) committed; validator 0 errors (1 ES warning: idiom "mejor encaja", kept).
 - POT catalogues generated for theme (`mr-tu`) and plugin (`mr-tu-multilang-seo`).
+- Merged Seeder + WP-CLI + Health + Dashboard (74 + 38 assertions); fresh-env suite 624/624; `wp mrtu seed --set-front`
+  created 85 posts/pages (5 languages); HTTP seeded-site checks 52/52.
+- Performance pass: home-only CSS split, small plugin CSS inlined, forced reflow removed — Lighthouse mobile home 86 → 94,
+  LCP 2.7 s, CLS 0 (real-browser layout-shift probe: 0 on home/guide/pricing).
+- Docs: deployment (Hostinger), rollback, Vietnamese admin guide, security review; QA matrix runner
+  (`tests/e2e/qa-matrix.cjs`).
 
-### In progress (background agents, isolated worktrees)
-- Wave 2: SEO module (head/schema/sitemaps/Yoast compat/redirects/admin), Seeder + WP-CLI + Health + Dashboard,
-  private assistant (source in git-ignored `private/`, ZIP in `dist-private/`).
-- Native editorial pass per language → `docs/content-review-<lang>.md`.
-- i18n: translating the POTs to vi / de_DE / fr_FR / es_ES (.po/.mo/.l10n.php + editor JSON).
+### In progress (background agents)
+- SEO module in worktree `wf_e1c4a9b4-da7-1` (6 commits: core, head, schema, sitemaps, redirects, Yoast compat, admin;
+  tests being written) — merge when green.
+- i18n translators (vi / de_DE / fr_FR / es_ES) in fresh worktrees `wf_cc719a3f-2ab-*`.
+- Queued after them: private assistant (nothing on disk yet — must be rebuilt), native editorial pass per language.
+- Full QA matrix (5 languages × 12 roles × 2 viewports × 2 modes + axe) running on the seeded env; results →
+  `tests/e2e/artifacts/qa-matrix/summary.json` and `docs/qa-report.md`.
 
 ### Known gaps (to close before release)
 - UI strings render in English on non-English pages until the translation files land.

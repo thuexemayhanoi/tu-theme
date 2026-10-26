@@ -1,17 +1,15 @@
-# Copyright (C) 2026 Mr Tu
-# This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
 "Project-Id-Version: Mr Tu Multilang SEO 1.0.0\n"
 "Report-Msgid-Bugs-To: https://hanoi.thuexemaynguyentu.com/\n"
 "Last-Translator: Mr Tu\n"
 "Language-Team: Mr Tu\n"
-"Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2026-10-26T08:00:16+00:00\n"
 "PO-Revision-Date: 2026-10-26T10:23:27+00:00\n"
+"Language: vi\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: mr-tu-multilang-seo\n"
@@ -36,16 +34,18 @@ msgstr "Định tuyến năm ngôn ngữ (VI · EN · DE · FR · ES), nhóm b�
 #: includes/admin/class-admin.php:72
 #: includes/admin/class-admin.php:73
 #: includes/admin/class-admin.php:97
-#: includes/class-blocks.php:101
+#: includes/class-blocks.php:102
 msgid "Mr Tu"
 msgstr "Mr Tu"
 
 #: includes/admin/class-admin-business.php:47
 #: includes/admin/class-admin-business.php:243
+#: includes/admin/class-admin-dashboard.php:131
 msgid "Store information"
 msgstr "Thông tin cửa hàng"
 
 #: includes/admin/class-admin-business.php:48
+#: includes/admin/class-admin-dashboard.php:162
 msgid "Store info"
 msgstr "Cửa hàng"
 
@@ -80,9 +80,12 @@ msgid "Only verified details appear on the website."
 msgstr "Chỉ thông tin đã xác minh mới hiện trên website."
 
 #: includes/admin/class-admin-business.php:230
+#: includes/admin/class-admin-dashboard.php:62
+#: includes/admin/class-admin-health.php:81
 #: includes/admin/class-admin-languages.php:55
 #: includes/admin/class-admin-pricing.php:77
 #: includes/admin/class-admin-quick-contact.php:69
+#: includes/admin/class-admin-seo.php:109
 #: includes/admin/class-admin-translations.php:488
 #: includes/admin/class-admin-translations.php:727
 #: includes/admin/class-admin-translations.php:792
@@ -109,6 +112,7 @@ msgstr "Tên thương hiệu ngắn hiện ở đầu trang; tên cửa hàng đ
 #: includes/admin/class-admin-business.php:252
 #: includes/admin/class-admin-business.php:256
 #: includes/admin/class-admin-business.php:483
+#: includes/admin/class-admin-dashboard.php:135
 #: includes/admin/class-admin-vehicles.php:203
 msgid "Brand"
 msgstr "Thương hiệu"
@@ -125,7 +129,9 @@ msgstr "Tên cửa hàng đầy đủ (như trên Google Maps)"
 #: includes/admin/class-admin-business.php:277
 #: includes/admin/class-admin-business.php:278
 #: includes/admin/class-admin-business.php:485
-#: includes/class-blocks.php:530
+#: includes/admin/class-admin-dashboard.php:137
+#: includes/admin/class-admin-seo.php:416
+#: includes/class-blocks.php:531
 msgid "Address"
 msgstr "Địa chỉ"
 
@@ -158,7 +164,8 @@ msgid "While off, the website shows only “Old Quarter, Hanoi” and asks visit
 msgstr "Khi tắt, website chỉ hiện “Phố Cổ, Hà Nội” và mời khách gọi điện."
 
 #: includes/admin/class-admin-business.php:314
-#: includes/class-blocks.php:515
+#: includes/admin/class-admin-dashboard.php:138
+#: includes/class-blocks.php:516
 msgid "Phone"
 msgstr "Điện thoại"
 
@@ -206,6 +213,7 @@ msgstr "Nút gọi chỉ hiện khi mục này bật và số đã được xác
 #: includes/admin/class-admin-business.php:356
 #: includes/admin/class-admin-business.php:357
 #: includes/admin/class-admin-business.php:487
+#: includes/admin/class-admin-dashboard.php:139
 msgid "Opening hours"
 msgstr "Giờ mở cửa"
 
@@ -236,6 +244,7 @@ msgstr "Hãy trung thực: nơi chỉ có biển hiệu không được mô tả
 #: includes/admin/class-admin-business.php:393
 #: includes/admin/class-admin-business.php:398
 #: includes/admin/class-admin-business.php:488
+#: includes/admin/class-admin-dashboard.php:140
 msgid "Service model"
 msgstr "Hình thức phục vụ"
 
@@ -262,6 +271,8 @@ msgstr "Bản đồ, email và website"
 
 #: includes/admin/class-admin-business.php:422
 #: includes/admin/class-admin-business.php:490
+#: includes/admin/class-admin-dashboard.php:141
+#: includes/class-health.php:838
 msgid "Google Maps link"
 msgstr "Liên kết Google Maps"
 
@@ -326,6 +337,7 @@ msgid "Mark all verified"
 msgstr "Xác minh tất cả"
 
 #: includes/admin/class-admin-business.php:516
+#: includes/admin/class-admin-dashboard.php:325
 msgid "Backup & restore"
 msgstr "Sao lưu & khôi phục"
 
@@ -334,6 +346,7 @@ msgid "A backup of store information and prices is made automatically before eve
 msgstr "Thông tin cửa hàng và giá được tự động sao lưu trước mỗi lần thay đổi. Hãy tải một bản về trước những thay đổi lớn."
 
 #: includes/admin/class-admin-business.php:521
+#: includes/admin/class-admin-dashboard.php:324
 msgid "Download backup (JSON)"
 msgstr "Tải bản sao lưu (JSON)"
 
@@ -505,6 +518,7 @@ msgstr "Ngôn ngữ x-default"
 msgid "None (do not output x-default)"
 msgstr "Không (không xuất x-default)"
 
+#: includes/admin/class-admin-dashboard.php:212
 #: includes/admin/class-admin-languages.php:166
 msgid "Off"
 msgstr "Tắt"
@@ -534,6 +548,7 @@ msgstr "Đã lưu, trừ: %s"
 msgid "Language settings saved."
 msgstr "Đã lưu cài đặt ngôn ngữ."
 
+#: includes/admin/class-admin-dashboard.php:162
 #: includes/admin/class-admin-pricing.php:43
 #: includes/admin/class-admin-pricing.php:44
 #: includes/admin/class-admin-pricing.php:88
@@ -545,6 +560,7 @@ msgstr "Bảng giá"
 msgid "Rental prices and deposits per model. Unconfirmed prices never appear as fact: visitors see “Price on request” and a call button instead."
 msgstr "Giá thuê và tiền cọc theo từng dòng xe. Giá chưa xác nhận không bao giờ hiện như thông tin chắc chắn: khách sẽ thấy “Liên hệ báo giá” và nút gọi."
 
+#: includes/admin/class-admin-dashboard.php:160
 #: includes/admin/class-admin-pricing.php:95
 msgid "Price list"
 msgstr "Bảng giá"
@@ -628,7 +644,7 @@ msgid "Per month"
 msgstr "Theo tháng"
 
 #: includes/admin/class-admin-pricing.php:157
-#: includes/class-blocks.php:260
+#: includes/class-blocks.php:261
 msgid "Deposit"
 msgstr "Tiền cọc"
 
@@ -680,7 +696,7 @@ msgstr "Gọi nhanh"
 
 #: includes/admin/class-admin-quick-contact.php:55
 #: includes/class-business.php:657
-#: includes/class-quick-contact.php:155
+#: includes/class-quick-contact.php:156
 msgid "Call"
 msgstr "Gọi"
 
@@ -693,9 +709,9 @@ msgid "Ask a question (Mr Tu assistant)"
 msgstr "Đặt câu hỏi (trợ lý Mr Tu)"
 
 #: includes/admin/class-admin-quick-contact.php:60
-#: includes/class-blocks.php:586
+#: includes/class-blocks.php:587
 #: includes/class-business.php:718
-#: includes/class-quick-contact.php:160
+#: includes/class-quick-contact.php:161
 msgid "Contact page"
 msgstr "Trang liên hệ"
 
@@ -707,10 +723,12 @@ msgstr "Nút liên hệ tròn ở góc dưới mọi trang. Mỗi nút bên tron
 msgid "On the website now"
 msgstr "Đang hiện trên website"
 
+#: includes/admin/class-admin-dashboard.php:207
 #: includes/admin/class-admin-quick-contact.php:90
 msgid "Switched off"
 msgstr "Đã tắt"
 
+#: includes/admin/class-admin-dashboard.php:216
 #: includes/admin/class-admin-quick-contact.php:92
 msgid "Hidden"
 msgstr "Đang ẩn"
@@ -940,6 +958,7 @@ msgstr "Phiên bản ngôn ngữ của từng nội dung"
 msgid "Content"
 msgstr "Nội dung"
 
+#: includes/admin/class-admin-health.php:212
 #: includes/admin/class-admin-translations.php:627
 msgid "Role"
 msgstr "Vai trò"
@@ -958,6 +977,7 @@ msgstr "Bảo trì"
 msgid "Rebuilds every translation map from the saved relationships. Safe to run at any time."
 msgstr "Dựng lại mọi bản đồ bản dịch từ các liên kết đã lưu. Chạy lúc nào cũng an toàn."
 
+#: includes/admin/class-admin-health.php:100
 #: includes/admin/class-admin-translations.php:674
 msgid "Rebuild translation maps"
 msgstr "Dựng lại bản đồ bản dịch"
@@ -1055,12 +1075,15 @@ msgid "Removed from its translation group."
 msgstr "Đã gỡ khỏi nhóm bản dịch."
 
 #. translators: %s: number of translation groups.
+#: includes/admin/class-admin-health.php:257
 #: includes/admin/class-admin-translations.php:882
 #, php-format
 msgid "%s translation map rebuilt."
 msgid_plural "%s translation maps rebuilt."
 msgstr[0] "Đã dựng lại %s bản đồ bản dịch."
 
+#: includes/admin/class-admin-dashboard.php:279
+#: includes/admin/class-admin-seo.php:416
 #: includes/admin/class-admin-translations.php:900
 #: includes/admin/class-admin-translations.php:924
 #: includes/admin/class-admin-translations.php:1074
@@ -1135,6 +1158,7 @@ msgid "Delete %s? You can undo this in Store information → Backup & restore."
 msgstr "Xóa %s? Bạn có thể hoàn tác trong Thông tin cửa hàng → Sao lưu & khôi phục."
 
 #. translators: %s: vehicle name.
+#: includes/admin/class-admin-seo.php:346
 #: includes/admin/class-admin-vehicles.php:133
 msgid "Delete"
 msgstr "Xóa"
@@ -1162,7 +1186,7 @@ msgid "Edit %s"
 msgstr "Sửa %s"
 
 #: includes/admin/class-admin-vehicles.php:188
-#: includes/class-blocks.php:271
+#: includes/class-blocks.php:272
 msgid "Model"
 msgstr "Dòng xe"
 
@@ -1282,103 +1306,103 @@ msgstr "Chưa chỉnh sửa."
 msgid "Last updated %1$s by %2$s"
 msgstr "Cập nhật lần cuối %1$s bởi %2$s"
 
-#: includes/class-blocks.php:233
+#: includes/class-blocks.php:234
 msgid "Rental prices"
 msgstr "Giá thuê xe"
 
-#: includes/class-blocks.php:240
+#: includes/class-blocks.php:241
 msgid "Our price list is being updated. Please contact Mr Tu for current prices."
 msgstr "Bảng giá đang được cập nhật. Vui lòng liên hệ Mr Tu để biết giá hiện tại."
 
-#: includes/class-blocks.php:244
+#: includes/class-blocks.php:245
 msgid "Rental period"
 msgstr "Kỳ thuê"
 
-#: includes/class-blocks.php:297
+#: includes/class-blocks.php:298
 msgid "Reference price: please confirm it with Mr Tu before booking."
 msgstr "Giá tham khảo: vui lòng xác nhận với Mr Tu trước khi đặt."
 
 #. translators: %s: delivery fee description entered by the owner.
-#: includes/class-blocks.php:301
+#: includes/class-blocks.php:302
 #, php-format
 msgid "Delivery: %s"
 msgstr "Giao xe: %s"
 
-#: includes/class-blocks.php:304
+#: includes/class-blocks.php:305
 msgid "The deposit is separate from the rental price. Please confirm the price, deposit and documents with Mr Tu before you rent."
 msgstr "Tiền cọc là khoản riêng, không nằm trong giá thuê. Vui lòng xác nhận giá, tiền cọc và giấy tờ với Mr Tu trước khi thuê."
 
-#: includes/class-blocks.php:305
+#: includes/class-blocks.php:306
 msgid "Please confirm the price and documents with Mr Tu before you rent."
 msgstr "Vui lòng xác nhận giá và giấy tờ với Mr Tu trước khi thuê."
 
-#: includes/class-blocks.php:319
+#: includes/class-blocks.php:320
 msgid "Confirmed prices"
 msgstr "Giá đã xác nhận"
 
-#: includes/class-blocks.php:322
+#: includes/class-blocks.php:323
 msgid "Reference prices"
 msgstr "Giá tham khảo"
 
-#: includes/class-blocks.php:324
+#: includes/class-blocks.php:325
 msgid "Prices on request"
 msgstr "Liên hệ báo giá"
 
 #. translators: %s: date the prices were last checked.
-#: includes/class-blocks.php:348
+#: includes/class-blocks.php:349
 #, php-format
 msgid "Updated %s"
 msgstr "Cập nhật %s"
 
 #. translators: %d: number of vehicle models shown after filtering.
-#: includes/class-blocks.php:387
+#: includes/class-blocks.php:388
 #, php-format
 msgid "Models shown: %d"
 msgstr "Số dòng xe đang hiện: %d"
 
-#: includes/class-blocks.php:398
+#: includes/class-blocks.php:399
 msgid "Our list of motorbikes is being updated. Please contact Mr Tu."
 msgstr "Danh sách xe đang được cập nhật. Vui lòng liên hệ Mr Tu."
 
-#: includes/class-blocks.php:403
+#: includes/class-blocks.php:404
 msgid "Vehicle type"
 msgstr "Loại xe"
 
-#: includes/class-blocks.php:404
+#: includes/class-blocks.php:405
 msgid "All"
 msgstr "Tất cả"
 
-#: includes/class-blocks.php:419
+#: includes/class-blocks.php:420
 msgid "All prices and deposits"
 msgstr "Tất cả giá và tiền cọc"
 
-#: includes/class-blocks.php:461
+#: includes/class-blocks.php:462
 #: includes/class-pricing.php:576
 msgid "Ask for availability"
 msgstr "Liên hệ hỏi xe"
 
-#: includes/class-blocks.php:477
+#: includes/class-blocks.php:478
 msgid "Price"
 msgstr "Giá"
 
-#: includes/class-blocks.php:523
+#: includes/class-blocks.php:524
 msgid "Email"
 msgstr "Email"
 
-#: includes/class-blocks.php:533
+#: includes/class-blocks.php:534
 msgid "Area"
 msgstr "Khu vực"
 
-#: includes/class-blocks.php:536
+#: includes/class-blocks.php:537
 msgid "Hours"
 msgstr "Giờ mở cửa"
 
-#: includes/class-blocks.php:550
+#: includes/class-blocks.php:551
 msgid "Please call ahead to arrange the hand-over time and place."
 msgstr "Vui lòng gọi trước để hẹn giờ và địa điểm giao xe."
 
 #. translators: %s: phone number.
-#: includes/class-blocks.php:579
+#: includes/class-blocks.php:580
 #, php-format
 msgid "Call %s"
 msgstr "Gọi %s"
@@ -1494,7 +1518,7 @@ msgid "The address is not verified yet."
 msgstr "Địa chỉ chưa được xác minh."
 
 #: includes/class-business.php:706
-#: includes/class-quick-contact.php:158
+#: includes/class-quick-contact.php:159
 msgid "Directions"
 msgstr "Chỉ đường"
 
@@ -1890,15 +1914,15 @@ msgctxt "rental period"
 msgid "Month"
 msgstr "Tháng"
 
-#: includes/class-quick-contact.php:159
+#: includes/class-quick-contact.php:160
 msgid "Ask a question"
 msgstr "Đặt câu hỏi"
 
-#: includes/class-quick-contact.php:176
+#: includes/class-quick-contact.php:177
 msgid "The Mr Tu assistant plugin is not active."
 msgstr "Plugin trợ lý Mr Tu chưa được kích hoạt."
 
-#: includes/class-quick-contact.php:301
+#: includes/class-quick-contact.php:302
 #: includes/class-roles.php:108
 msgid "Contact"
 msgstr "Liên hệ"
@@ -1951,6 +1975,7 @@ msgstr "Quy định thuê xe"
 msgid "Limit results to one language code, or \"all\"."
 msgstr "Giới hạn kết quả theo một mã ngôn ngữ, hoặc \"all\"."
 
+#: includes/admin/class-admin-seo.php:257
 #: includes/class-toc.php:783
 msgid "Table of contents"
 msgstr "Mục lục"
@@ -1976,3 +2001,1250 @@ msgstr "Không thể liên kết bản dịch với bản gốc."
 #, php-format
 msgid "Not published: the content is identical to the %s version. Translate it first; it was saved as a draft."
 msgstr "Chưa đăng: nội dung giống hệt bản %s. Hãy dịch trước; nội dung đã được lưu thành bản nháp."
+
+#: includes/admin/class-admin-dashboard.php:48
+#: includes/admin/class-admin-dashboard.php:49
+msgid "Overview"
+msgstr "Tổng quan"
+
+#: includes/admin/class-admin-dashboard.php:65
+msgid "Mr Tu — Overview"
+msgstr "Mr Tu — Tổng quan"
+
+#: includes/admin/class-admin-dashboard.php:66
+msgid "One place to see the state of the five language versions, the business data and the SEO setup. Nothing here changes the website until you press a button."
+msgstr "Một nơi để xem tình trạng của năm phiên bản ngôn ngữ, dữ liệu cửa hàng và thiết lập SEO. Không có gì ở đây thay đổi website cho đến khi bạn bấm nút."
+
+#: includes/admin/class-admin-dashboard.php:100
+msgid "Published pages per language"
+msgstr "Số trang đã đăng theo ngôn ngữ"
+
+#. translators: 1: published count, 2: total count.
+#: includes/admin/class-admin-dashboard.php:102
+#, php-format
+msgid "Core pages translated (%1$d of %2$d published)"
+msgstr "Trang chính đã dịch (%1$d/%2$d đã đăng)"
+
+#: includes/admin/class-admin-dashboard.php:103
+msgid "Published blog posts (all languages)"
+msgstr "Bài viết blog đã đăng (mọi ngôn ngữ)"
+
+#. translators: 1: number of warnings, 2: number of errors.
+#: includes/admin/class-admin-dashboard.php:106
+#, php-format
+msgid "Health warnings / errors (checked %s)"
+msgstr "Cảnh báo / lỗi sức khỏe (kiểm tra lúc %s)"
+
+#: includes/admin/class-admin-dashboard.php:108
+msgid "Health check not run yet — open Health Check"
+msgstr "Chưa chạy kiểm tra sức khỏe — mở Kiểm tra sức khỏe"
+
+#: includes/admin/class-admin-dashboard.php:132
+msgid "Only verified facts appear on the website. Everything else shows “PENDING VERIFICATION” here and stays hidden from visitors."
+msgstr "Chỉ thông tin đã xác minh mới hiện trên website. Mọi thứ khác hiện “CHỜ XÁC MINH” ở đây và vẫn ẩn với khách."
+
+#: includes/admin/class-admin-dashboard.php:136
+msgid "Listing name"
+msgstr "Tên cửa hàng đầy đủ"
+
+#. translators: 1: verified vehicles, 2: public vehicles.
+#: includes/admin/class-admin-dashboard.php:159
+msgid "Not confirmed — prices show “on request”"
+msgstr "Chưa xác nhận — giá hiện là “Liên hệ báo giá”"
+
+#. translators: 1: verified vehicles, 2: public vehicles.
+#: includes/admin/class-admin-dashboard.php:159
+#, php-format
+msgid "Confirmed (%1$d of %2$d vehicles)"
+msgstr "Đã xác nhận (%1$d/%2$d xe)"
+
+#: includes/admin/class-admin-dashboard.php:172
+msgid "Automatic"
+msgstr "Tự động"
+
+#: includes/admin/class-admin-dashboard.php:173
+#: includes/class-health.php:964
+msgid "Yoast compatibility"
+msgstr "Tương thích Yoast"
+
+#: includes/admin/class-admin-dashboard.php:174
+msgid "Standalone"
+msgstr "Độc lập"
+
+#: includes/admin/class-admin-dashboard.php:177
+#: includes/class-health.php:961
+msgid "SEO mode"
+msgstr "Chế độ SEO"
+
+#: includes/admin/class-admin-dashboard.php:178
+msgid "Standalone: the plugin prints title, description, canonical, hreflang, Open Graph, schema and sitemaps. Yoast compatibility: Yoast keeps its output and the plugin only adds hreflang."
+msgstr "Độc lập: plugin xuất tiêu đề, mô tả, canonical, hreflang, Open Graph, schema và sitemap. Tương thích Yoast: Yoast giữ phần xuất của mình và plugin chỉ thêm hreflang."
+
+#: includes/admin/class-admin-dashboard.php:181
+msgid "Setting"
+msgstr "Cài đặt"
+
+#: includes/admin/class-admin-dashboard.php:182
+msgid "Running now"
+msgstr "Đang chạy"
+
+#: includes/admin/class-admin-dashboard.php:183
+msgid "Yoast SEO"
+msgstr "Yoast SEO"
+
+#: includes/admin/class-admin-dashboard.php:183
+msgid "Active"
+msgstr "Đang kích hoạt"
+
+#: includes/admin/class-admin-dashboard.php:183
+msgid "Not active"
+msgstr "Chưa kích hoạt"
+
+#: includes/admin/class-admin-dashboard.php:185
+msgid "SEO module"
+msgstr "Mô-đun SEO"
+
+#: includes/admin/class-admin-dashboard.php:185
+msgid "Not loaded"
+msgstr "Chưa nạp"
+
+#: includes/admin/class-admin-dashboard.php:188
+msgid "SEO settings"
+msgstr "Cài đặt SEO"
+
+#: includes/admin/class-admin-dashboard.php:197
+#: includes/class-health.php:890
+msgid "Quick Contact"
+msgstr "Gọi nhanh"
+
+#: includes/admin/class-admin-dashboard.php:198
+msgid "The floating contact button on the website. An item only appears when it is switched on and its data is verified."
+msgstr "Nút liên hệ nổi trên website. Mỗi mục chỉ hiện khi đã bật và dữ liệu của nó đã được xác minh."
+
+#: includes/admin/class-admin-dashboard.php:201
+#: includes/class-health.php:892
+msgid "The Quick Contact module is not available."
+msgstr "Mô-đun Gọi nhanh không khả dụng."
+
+#: includes/admin/class-admin-dashboard.php:207
+msgid "Switched on"
+msgstr "Đã bật"
+
+#: includes/admin/class-admin-dashboard.php:214
+msgid "Showing"
+msgstr "Đang hiện"
+
+#: includes/admin/class-admin-dashboard.php:221
+msgid "Quick Contact settings"
+msgstr "Cài đặt Gọi nhanh"
+
+#: includes/admin/class-admin-dashboard.php:232
+msgid "Seed content"
+msgstr "Nội dung mẫu"
+
+#: includes/admin/class-admin-dashboard.php:233
+msgid "Creates the core pages, blog posts and categories of every language from the content bundled with the plugin, links them as translations and assigns their roles. Safe to run again: pages that already exist are skipped, and pages you edited are never overwritten."
+msgstr "Tạo các trang chính, bài viết blog và chuyên mục của mọi ngôn ngữ từ nội dung đi kèm plugin, liên kết chúng thành bản dịch và gán vai trò. Chạy lại vẫn an toàn: trang đã tồn tại sẽ được bỏ qua, và trang bạn đã sửa không bao giờ bị ghi đè."
+
+#: includes/admin/class-admin-dashboard.php:236
+msgid "Source folder:"
+msgstr "Thư mục nguồn:"
+
+#: includes/admin/class-admin-dashboard.php:238
+msgid "No seed content found"
+msgstr "Không tìm thấy nội dung mẫu"
+
+#: includes/admin/class-admin-dashboard.php:238
+msgid "The folder has no {lang}/pages.json files. Install the plugin ZIP built with scripts/build.sh."
+msgstr "Thư mục không có tệp {lang}/pages.json nào. Hãy cài bản ZIP của plugin được dựng bằng scripts/build.sh."
+
+#. translators: 1: language code, 2: number of pages, 3: number of posts.
+#: includes/admin/class-admin-dashboard.php:243
+#, php-format
+msgid "%1$s: %2$d pages, %3$d posts"
+msgstr "%1$s: %2$d trang, %3$d bài viết"
+
+#: includes/admin/class-admin-dashboard.php:245
+msgid "Available:"
+msgstr "Có sẵn:"
+
+#: includes/admin/class-admin-dashboard.php:248
+msgid "Set reading settings (front page / posts page)"
+msgstr "Thiết lập trang chủ / trang bài viết (cài đặt Đọc)"
+
+#: includes/admin/class-admin-dashboard.php:248
+msgid "Makes the Vietnamese home page the front page and the Vietnamese blog page the posts page; the other languages follow through their translations. Also sets the timezone (if empty) and the date format d/m/Y."
+msgstr "Đặt trang chủ tiếng Việt làm trang chủ của website và trang blog tiếng Việt làm trang bài viết; các ngôn ngữ khác theo bản dịch tương ứng. Đồng thời đặt múi giờ (nếu đang trống) và định dạng ngày d/m/Y."
+
+#: includes/admin/class-admin-dashboard.php:249
+msgid "Refresh unchanged pages from the files"
+msgstr "Làm mới các trang chưa chỉnh sửa từ tệp"
+
+#: includes/admin/class-admin-dashboard.php:249
+msgid "Only pages whose content is still exactly as seeded are rewritten. Pages edited on the website are reported as “customized” and kept."
+msgstr "Chỉ những trang có nội dung vẫn y nguyên như lúc tạo mẫu mới được ghi lại. Trang đã sửa trên website được báo là “đã tùy chỉnh” và được giữ nguyên."
+
+#: includes/admin/class-admin-dashboard.php:250
+msgid "Dry run (report only, change nothing)"
+msgstr "Chạy thử (dry run) — chỉ báo cáo, không thay đổi gì"
+
+#: includes/admin/class-admin-dashboard.php:253
+msgid "Seed the content now? Existing pages are kept; new pages are created in every language that has content."
+msgstr "Tạo nội dung mẫu ngay? Trang hiện có được giữ nguyên; trang mới được tạo ở mọi ngôn ngữ có nội dung."
+
+#: includes/admin/class-admin-dashboard.php:253
+msgid "Seed now"
+msgstr "Tạo nội dung"
+
+#: includes/admin/class-admin-dashboard.php:266
+msgid "Not seeded yet."
+msgstr "Chưa tạo nội dung mẫu."
+
+#. translators: 1: date and time, 2: user display name.
+#: includes/admin/class-admin-dashboard.php:272
+#, php-format
+msgid "Last run %1$s by %2$s"
+msgstr "Chạy lần cuối %1$s bởi %2$s"
+
+#: includes/admin/class-admin-dashboard.php:276
+msgid "Last report"
+msgstr "Báo cáo gần nhất"
+
+#: includes/admin/class-admin-dashboard.php:277
+msgid "Dry run"
+msgstr "Chạy thử (dry run)"
+
+#: includes/admin/class-admin-dashboard.php:277
+msgid "Update mode"
+msgstr "Chế độ cập nhật"
+
+#: includes/admin/class-admin-dashboard.php:279
+#: includes/admin/class-admin-seo.php:335
+msgid "Created"
+msgstr "Đã tạo"
+
+#: includes/admin/class-admin-dashboard.php:279
+msgid "Updated"
+msgstr "Đã cập nhật"
+
+#: includes/admin/class-admin-dashboard.php:279
+msgid "Skipped"
+msgstr "Bỏ qua"
+
+#: includes/admin/class-admin-dashboard.php:279
+msgid "Customized"
+msgstr "Đã tùy chỉnh"
+
+#: includes/admin/class-admin-dashboard.php:279
+#: includes/admin/class-admin-health.php:92
+#: includes/admin/class-admin-health.php:109
+msgid "Errors"
+msgstr "Lỗi"
+
+#: includes/admin/class-admin-dashboard.php:287
+msgid "No content"
+msgstr "Không có nội dung"
+
+#: includes/admin/class-admin-dashboard.php:318
+msgid "Export configuration"
+msgstr "Xuất cấu hình"
+
+#: includes/admin/class-admin-dashboard.php:319
+msgid "Downloads the store information and prices as a JSON backup. Import and restore live under Store info → Backup & restore; WP-CLI: wp mrtu export / wp mrtu import."
+msgstr "Tải thông tin cửa hàng và giá về dưới dạng bản sao lưu JSON. Nhập và khôi phục nằm ở Thông tin cửa hàng → Sao lưu & khôi phục; WP-CLI: wp mrtu export / wp mrtu import."
+
+#: includes/admin/class-admin-dashboard.php:349
+msgid "No seed content found in the source folder."
+msgstr "Không tìm thấy nội dung mẫu trong thư mục nguồn."
+
+#. translators: 1: created, 2: updated, 3: skipped, 4: customized, 5: errors.
+#: includes/admin/class-admin-dashboard.php:355
+#, php-format
+msgid "%1$d created, %2$d updated, %3$d skipped, %4$d customized, %5$d errors."
+msgstr "%1$d đã tạo, %2$d đã cập nhật, %3$d bỏ qua, %4$d đã tùy chỉnh, %5$d lỗi."
+
+#. translators: %s: counts summary.
+#: includes/admin/class-admin-dashboard.php:364
+#, php-format
+msgid "Dry run finished (nothing changed): %s"
+msgstr "Chạy thử xong (không thay đổi gì): %s"
+
+#: includes/admin/class-admin-dashboard.php:367
+msgid "Reading settings applied."
+msgstr "Đã áp dụng cài đặt Đọc (trang chủ / trang bài viết)."
+
+#. translators: %s: counts summary.
+#: includes/admin/class-admin-dashboard.php:371
+#, php-format
+msgid "Seeding finished with errors: %s See the report below."
+msgstr "Tạo nội dung mẫu xong nhưng có lỗi: %s Xem báo cáo bên dưới."
+
+#. translators: %s: counts summary.
+#: includes/admin/class-admin-dashboard.php:374
+#, php-format
+msgid "Content seeded: %s"
+msgstr "Đã tạo nội dung mẫu: %s"
+
+#: includes/admin/class-admin-health.php:52
+#: includes/admin/class-admin-health.php:53
+#: includes/admin/class-admin-health.php:87
+msgid "Health Check"
+msgstr "Kiểm tra sức khỏe"
+
+#: includes/admin/class-admin-health.php:88
+msgid "Checks the five language versions, SEO metadata, internal links, business data and the live pages. Results are kept for 10 minutes; press “Run again” after changes."
+msgstr "Kiểm tra năm phiên bản ngôn ngữ, metadata SEO, liên kết nội bộ, dữ liệu cửa hàng và các trang đang chạy thật. Kết quả được giữ trong 10 phút; bấm “Chạy lại” sau khi thay đổi."
+
+#: includes/admin/class-admin-health.php:93
+#: includes/admin/class-admin-health.php:110
+msgid "Warnings"
+msgstr "Cảnh báo"
+
+#: includes/admin/class-admin-health.php:94
+#: includes/admin/class-admin-health.php:111
+#: includes/admin/class-admin-health.php:183
+#: includes/admin/class-admin-seo.php:429
+msgid "OK"
+msgstr "OK"
+
+#: includes/admin/class-admin-health.php:95
+msgid "Last run"
+msgstr "Lần chạy cuối"
+
+#: includes/admin/class-admin-health.php:95
+msgid "without live page fetch"
+msgstr "không tải trang trực tiếp"
+
+#: includes/admin/class-admin-health.php:99
+#: includes/admin/class-admin-seo.php:405
+msgid "Run again"
+msgstr "Chạy lại"
+
+#: includes/admin/class-admin-health.php:100
+msgid "Rebuild every translation map from the stored relationships?"
+msgstr "Dựng lại mọi bản đồ bản dịch từ các liên kết đã lưu?"
+
+#: includes/admin/class-admin-health.php:101
+msgid "Flush rewrite rules"
+msgstr "Làm mới rewrite rules"
+
+#: includes/admin/class-admin-health.php:103
+msgid "Flush sitemap cache"
+msgstr "Xóa cache sitemap"
+
+#: includes/admin/class-admin-health.php:105
+msgid "Download JSON"
+msgstr "Tải JSON"
+
+#. translators: 1: severity label, 2: number of checks.
+#: includes/admin/class-admin-health.php:118
+#, php-format
+msgid "%1$s (%2$d)"
+msgstr "%1$s (%2$d)"
+
+#: includes/admin/class-admin-health.php:184
+msgid "Warning"
+msgstr "Cảnh báo"
+
+#: includes/admin/class-admin-health.php:185
+msgid "Error"
+msgstr "Lỗi"
+
+#: includes/admin/class-admin-health.php:192
+msgid "Open"
+msgstr "Mở"
+
+#: includes/admin/class-admin-health.php:208
+msgid "Core pages × languages"
+msgstr "Trang chính × ngôn ngữ"
+
+#: includes/admin/class-admin-health.php:209
+msgid "✅ published · ✏️ draft or other status · ➕ missing. Create missing versions from the Translations screen or by seeding."
+msgstr "✅ đã đăng · ✏️ nháp hoặc trạng thái khác · ➕ còn thiếu. Tạo bản còn thiếu từ màn hình Bản dịch hoặc bằng cách tạo nội dung mẫu."
+
+#: includes/admin/class-admin-health.php:222
+msgid "Published — edit"
+msgstr "Đã đăng — sửa"
+
+#: includes/admin/class-admin-health.php:224
+msgid "Not published — edit"
+msgstr "Chưa đăng — sửa"
+
+#: includes/admin/class-admin-health.php:226
+msgid "Missing — create"
+msgstr "Còn thiếu — tạo"
+
+#: includes/admin/class-admin-health.php:247
+msgid "Health checks refreshed."
+msgstr "Đã làm mới kết quả kiểm tra sức khỏe."
+
+#: includes/admin/class-admin-health.php:266
+msgid "Rewrite rules flushed."
+msgstr "Đã làm mới rewrite rules."
+
+#: includes/admin/class-admin-health.php:275
+msgid "The sitemap module is not available; nothing to flush."
+msgstr "Mô-đun sitemap không khả dụng; không có gì để xóa."
+
+#: includes/admin/class-admin-health.php:277
+msgid "Sitemap cache flushed."
+msgstr "Đã xóa cache sitemap."
+
+#: includes/admin/class-admin-seo.php:67
+#: includes/admin/class-admin-seo.php:68
+#: includes/admin/class-admin-seo.php:112
+msgid "SEO"
+msgstr "SEO"
+
+#: includes/admin/class-admin-seo.php:113
+msgid "Titles, descriptions, hreflang, sitemaps and structured data for every language. Nothing unverified is published as a fact."
+msgstr "Tiêu đề, mô tả, hreflang, sitemap và dữ liệu có cấu trúc cho mọi ngôn ngữ. Không có thông tin chưa xác minh nào được đăng như sự thật."
+
+#: includes/admin/class-admin-seo.php:139
+msgid "Mode"
+msgstr "Chế độ"
+
+#: includes/admin/class-admin-seo.php:140
+msgid "Who prints the SEO head: Yoast SEO (compat) or this plugin (standalone)."
+msgstr "Bên nào xuất phần head SEO: Yoast SEO (tương thích Yoast) hay plugin này (độc lập)."
+
+#: includes/admin/class-admin-seo.php:145
+msgid "Yoast SEO is active"
+msgstr "Yoast SEO đang kích hoạt"
+
+#: includes/admin/class-admin-seo.php:147
+msgid "Yoast prints title, description, canonical, Open Graph, schema and its sitemap. Mr Tu adds hreflang and og:locale:alternate and hands the seeded SEO texts to Yoast wherever Yoast’s own field is empty."
+msgstr "Yoast xuất tiêu đề, mô tả, canonical, Open Graph, schema và sitemap của Yoast. Mr Tu thêm hreflang và og:locale:alternate, đồng thời chuyển các văn bản SEO mẫu cho Yoast ở những chỗ ô riêng của Yoast còn trống."
+
+#: includes/admin/class-admin-seo.php:149
+msgid "Yoast’s head output and schema are switched off through Yoast’s own filters; Mr Tu prints everything. Yoast’s XML sitemap cannot be disabled this way: turn it off in Yoast › Settings › APIs › XML sitemaps so only one sitemap is advertised."
+msgstr "Phần head và schema của Yoast được tắt qua chính các filter của Yoast; Mr Tu xuất toàn bộ. Sitemap XML của Yoast không tắt được theo cách này: hãy tắt trong Yoast › Settings › APIs › XML sitemaps để chỉ một sitemap được công bố."
+
+#: includes/admin/class-admin-seo.php:153
+msgid "Yoast SEO is not active"
+msgstr "Yoast SEO chưa kích hoạt"
+
+#: includes/admin/class-admin-seo.php:154
+msgid "Mr Tu prints the whole head: title, description, robots, canonical, hreflang, Open Graph, Twitter Card, JSON-LD and sitemaps."
+msgstr "Mr Tu xuất toàn bộ phần head: tiêu đề, mô tả, robots, canonical, hreflang, Open Graph, Twitter Card, JSON-LD và sitemap."
+
+#: includes/admin/class-admin-seo.php:163
+msgid "Automatic: compat while Yoast SEO is active, standalone otherwise (recommended)"
+msgstr "Tự động: tương thích Yoast khi Yoast SEO đang kích hoạt, ngược lại thì độc lập (khuyên dùng)"
+
+#: includes/admin/class-admin-seo.php:164
+msgid "Compat: let Yoast SEO print the head; Mr Tu only adds the language tags (needs Yoast active)"
+msgstr "Tương thích Yoast: để Yoast SEO xuất phần head; Mr Tu chỉ thêm thẻ ngôn ngữ (cần Yoast đang kích hoạt)"
+
+#: includes/admin/class-admin-seo.php:165
+msgid "Standalone: Mr Tu prints the whole head even while Yoast SEO is active"
+msgstr "Độc lập: Mr Tu xuất toàn bộ phần head ngay cả khi Yoast SEO đang kích hoạt"
+
+#. translators: %s: effective mode name.
+#: includes/admin/class-admin-seo.php:169
+#, php-format
+msgid "Effective mode right now: %s"
+msgstr "Chế độ đang chạy hiện tại: %s"
+
+#: includes/admin/class-admin-seo.php:178
+#: includes/class-health.php:1095
+msgid "XML sitemap"
+msgstr "Sitemap XML"
+
+#: includes/admin/class-admin-seo.php:179
+msgid "One index with a sitemap per language; every address lists its translations. Only published, indexable pages are included."
+msgstr "Một chỉ mục với một sitemap cho mỗi ngôn ngữ; mỗi địa chỉ liệt kê các bản dịch của nó. Chỉ gồm các trang đã đăng và cho phép lập chỉ mục."
+
+#: includes/admin/class-admin-seo.php:186
+msgid "Automatic: on in standalone mode, off while Yoast prints its own sitemap (recommended)"
+msgstr "Tự động: bật ở chế độ độc lập, tắt khi Yoast xuất sitemap riêng (khuyên dùng)"
+
+#: includes/admin/class-admin-seo.php:187
+msgid "Always on"
+msgstr "Luôn bật"
+
+#: includes/admin/class-admin-seo.php:188
+msgid "Always off"
+msgstr "Luôn tắt"
+
+#: includes/admin/class-admin-seo.php:196
+msgid "Served at:"
+msgstr "Phục vụ tại:"
+
+#: includes/admin/class-admin-seo.php:197
+msgid "robots.txt advertises the index; the WordPress core sitemap (/wp-sitemap.xml) is switched off in standalone mode."
+msgstr "robots.txt công bố chỉ mục này; sitemap lõi của WordPress (/wp-sitemap.xml) được tắt ở chế độ độc lập."
+
+#: includes/admin/class-admin-seo.php:199
+msgid "Off: Yoast SEO serves its sitemap (/sitemap_index.xml) with the language alternates added by Mr Tu."
+msgstr "Tắt: Yoast SEO phục vụ sitemap của mình (/sitemap_index.xml) kèm các phiên bản ngôn ngữ do Mr Tu thêm vào."
+
+#: includes/admin/class-admin-seo.php:199
+msgid "Off."
+msgstr "Tắt."
+
+#: includes/admin/class-admin-seo.php:209
+msgid "Structured data (JSON-LD)"
+msgstr "Dữ liệu có cấu trúc (JSON-LD)"
+
+#: includes/admin/class-admin-seo.php:210
+msgid "Organization, WebSite, WebPage and breadcrumbs are always printed in standalone mode. Reviews and ratings are never generated."
+msgstr "Organization, WebSite, WebPage và breadcrumb luôn được xuất ở chế độ độc lập. Không bao giờ tạo đánh giá hay xếp hạng."
+
+#: includes/admin/class-admin-seo.php:218
+#: includes/admin/class-admin-seo.php:225
+msgid "Print the AutoRental (local business) node with address, phone and opening hours"
+msgstr "Xuất nút AutoRental (doanh nghiệp địa phương) với địa chỉ, số điện thoại và giờ mở cửa"
+
+#: includes/admin/class-admin-seo.php:220
+msgid "Address, phone and hours are verified in Business data, so the node may be published."
+msgstr "Địa chỉ, số điện thoại và giờ mở cửa đã được xác minh trong Thông tin cửa hàng, nên nút này có thể được đăng."
+
+#: includes/admin/class-admin-seo.php:226
+msgid "Not available: the address, phone number and opening hours must all be marked “verified” on the Business data screen first. Until then no local-business node is printed, whatever this setting says."
+msgstr "Chưa khả dụng: địa chỉ, số điện thoại và giờ mở cửa đều phải được đánh dấu “đã xác minh” ở màn hình Thông tin cửa hàng trước. Trước đó, không nút doanh nghiệp địa phương nào được xuất, bất kể cài đặt này."
+
+#: includes/admin/class-admin-seo.php:230
+msgid "Print FAQPage data on the guide/FAQ page"
+msgstr "Xuất dữ liệu FAQPage trên trang hướng dẫn/FAQ"
+
+#: includes/admin/class-admin-seo.php:232
+msgid "Built from the question/answer blocks visible on the page with the “guide-faq” role. Google no longer shows FAQ rich results for businesses; this only describes the page."
+msgstr "Dựng từ các khối hỏi/đáp hiển thị trên trang có vai trò “guide-faq”. Google không còn hiện kết quả nổi bật FAQ cho doanh nghiệp; mục này chỉ mô tả trang."
+
+#: includes/admin/class-admin-seo.php:242
+msgid "Robots"
+msgstr "Robots"
+
+#: includes/admin/class-admin-seo.php:243
+msgid "Search results, “not found” pages, attachments and empty archives are always noindex. Archives below are thin pages for a small business site."
+msgstr "Kết quả tìm kiếm, trang “không tìm thấy”, tệp đính kèm và lưu trữ trống luôn là noindex. Các lưu trữ bên dưới là trang mỏng đối với website doanh nghiệp nhỏ."
+
+#: includes/admin/class-admin-seo.php:246
+msgid "noindex author archives"
+msgstr "noindex lưu trữ theo tác giả"
+
+#: includes/admin/class-admin-seo.php:247
+msgid "noindex date archives"
+msgstr "noindex lưu trữ theo ngày"
+
+#: includes/admin/class-admin-seo.php:258
+msgid "Automatic “On this page” box for long articles; headings get stable anchors."
+msgstr "Hộp “Trong trang này” tự động cho bài dài; các tiêu đề được gắn neo cố định."
+
+#: includes/admin/class-admin-seo.php:261
+msgid "Insert the table of contents automatically"
+msgstr "Tự động chèn mục lục"
+
+#: includes/admin/class-admin-seo.php:265
+msgid "Minimum number of headings"
+msgstr "Số tiêu đề tối thiểu"
+
+#: includes/admin/class-admin-seo.php:279
+msgid "Minimum number of words"
+msgstr "Số từ tối thiểu"
+
+#: includes/admin/class-admin-seo.php:290
+msgid "Position"
+msgstr "Vị trí"
+
+#: includes/admin/class-admin-seo.php:293
+msgid "After the first heading"
+msgstr "Sau tiêu đề đầu tiên"
+
+#: includes/admin/class-admin-seo.php:294
+msgid "Before the first heading"
+msgstr "Trước tiêu đề đầu tiên"
+
+#: includes/admin/class-admin-seo.php:301
+msgid "Content types"
+msgstr "Loại nội dung"
+
+#: includes/admin/class-admin-seo.php:320
+msgid "Redirects"
+msgstr "Chuyển hướng"
+
+#: includes/admin/class-admin-seo.php:321
+msgid "Old addresses that must keep working. Applied only when the address would otherwise be “not found”. Changing the slug of a published page adds its redirect automatically."
+msgstr "Các địa chỉ cũ cần tiếp tục hoạt động. Chỉ áp dụng khi địa chỉ đó lẽ ra sẽ “không tìm thấy”. Đổi slug của trang đã đăng sẽ tự động thêm chuyển hướng."
+
+#. translators: 1: number of redirects, 2: maximum.
+#: includes/admin/class-admin-seo.php:325
+#, php-format
+msgid "%1$s of %2$s redirects used."
+msgstr "Đã dùng %1$s/%2$s chuyển hướng."
+
+#: includes/admin/class-admin-seo.php:335
+msgid "From"
+msgstr "Từ"
+
+#: includes/admin/class-admin-seo.php:335
+msgid "To"
+msgstr "Đến"
+
+#: includes/admin/class-admin-seo.php:335
+msgid "Code"
+msgstr "Mã"
+
+#: includes/admin/class-admin-seo.php:335
+msgid "Hits"
+msgstr "Lượt"
+
+#: includes/admin/class-admin-seo.php:346
+msgid "Delete this redirect?"
+msgstr "Xóa chuyển hướng này?"
+
+#: includes/admin/class-admin-seo.php:355
+msgid "Old address (path)"
+msgstr "Địa chỉ cũ (đường dẫn)"
+
+#: includes/admin/class-admin-seo.php:367
+msgid "New address (path or link on this website)"
+msgstr "Địa chỉ mới (đường dẫn hoặc liên kết trên website này)"
+
+#: includes/admin/class-admin-seo.php:380
+msgid "301 permanent (search engines move the ranking)"
+msgstr "301 vĩnh viễn (công cụ tìm kiếm chuyển thứ hạng sang địa chỉ mới)"
+
+#: includes/admin/class-admin-seo.php:381
+msgid "302 temporary"
+msgstr "302 tạm thời"
+
+#: includes/admin/class-admin-seo.php:384
+msgid "Add redirect"
+msgstr "Thêm chuyển hướng"
+
+#: includes/admin/class-admin-seo.php:394
+msgid "Live head audit"
+msgstr "Kiểm tra head trực tiếp"
+
+#: includes/admin/class-admin-seo.php:395
+msgid "Fetches every language home page like a visitor and counts the SEO tags. Exactly one canonical, one description and one robots tag is correct; hreflang needs one line per language plus x-default."
+msgstr "Tải trang chủ của mỗi ngôn ngữ như một khách truy cập và đếm các thẻ SEO. Chuẩn là đúng một canonical, một description và một thẻ robots; hreflang cần một dòng cho mỗi ngôn ngữ cộng thêm x-default."
+
+#: includes/admin/class-admin-seo.php:405
+msgid "Run audit"
+msgstr "Chạy kiểm tra"
+
+#: includes/admin/class-admin-seo.php:416
+msgid "Result"
+msgstr "Kết quả"
+
+#: includes/admin/class-admin-seo.php:422
+msgid "Could not fetch"
+msgstr "Không tải được"
+
+#: includes/admin/class-admin-seo.php:429
+msgid "Check"
+msgstr "Cần kiểm tra"
+
+#. translators: %s: error message.
+#: includes/admin/class-admin-seo.php:465
+#, php-format
+msgid "This server could not call itself (%s). Some hosts block loopback requests; open the address in a browser and view the page source instead."
+msgstr "Máy chủ này không tự gọi được chính mình (%s). Một số nhà cung cấp hosting chặn yêu cầu loopback; hãy mở địa chỉ trong trình duyệt và xem mã nguồn trang thay thế."
+
+#: includes/admin/class-admin-seo.php:526
+msgid "SEO settings saved."
+msgstr "Đã lưu cài đặt SEO."
+
+#: includes/admin/class-admin-seo.php:544
+msgid "Redirect added."
+msgstr "Đã thêm chuyển hướng."
+
+#: includes/admin/class-admin-seo.php:555
+msgid "Redirect deleted."
+msgstr "Đã xóa chuyển hướng."
+
+#: includes/admin/class-admin-seo.php:557
+msgid "That redirect no longer exists."
+msgstr "Chuyển hướng đó không còn tồn tại."
+
+#: includes/admin/class-admin-seo.php:573
+#: includes/admin/class-admin-seo.php:722
+#: includes/admin/class-admin-seo.php:752
+msgid "SEO Mr Tu"
+msgstr "SEO Mr Tu"
+
+#: includes/admin/class-admin-seo.php:614
+msgid "Preview of the search result. Empty fields fall back to the title / excerpt shown here."
+msgstr "Xem trước kết quả tìm kiếm. Ô để trống sẽ dùng tiêu đề / tóm tắt hiện ở đây."
+
+#: includes/admin/class-admin-seo.php:619
+msgid "SEO title"
+msgstr "Tiêu đề SEO"
+
+#. translators: %s: site name appended to the title.
+#: includes/admin/class-admin-seo.php:622
+#, php-format
+msgid "Up to 60 characters; “| %s” is added automatically."
+msgstr "Tối đa 60 ký tự; “| %s” được thêm tự động."
+
+#: includes/admin/class-admin-seo.php:634
+msgid "Meta description"
+msgstr "Mô tả meta"
+
+#: includes/admin/class-admin-seo.php:637
+msgid "One or two plain sentences, up to 158 characters. No phone numbers or prices that are not verified."
+msgstr "Một hai câu đơn giản, tối đa 158 ký tự. Không ghi số điện thoại hay giá chưa được xác minh."
+
+#: includes/admin/class-admin-seo.php:648
+msgid "Focus keyword"
+msgstr "Từ khóa chính"
+
+#: includes/admin/class-admin-seo.php:650
+msgid "The one search phrase this page is written for (editorial note; not printed)."
+msgstr "Cụm từ tìm kiếm duy nhất mà trang này được viết cho (ghi chú biên tập; không xuất ra)."
+
+#: includes/admin/class-admin-seo.php:656
+msgid "Hide from search engines (noindex)"
+msgstr "Ẩn khỏi công cụ tìm kiếm (noindex)"
+
+#: includes/admin/class-admin-seo.php:658
+msgid "Also removes the page from the sitemap and from hreflang links of its translations."
+msgstr "Đồng thời gỡ trang khỏi sitemap và khỏi liên kết hreflang của các bản dịch."
+
+#. translators: %d: number of further items.
+#: includes/class-health.php:232
+#, php-format
+msgid "… and %d more"
+msgstr "… và %d mục nữa"
+
+#. translators: %s: comma-separated language codes.
+#: includes/class-health.php:379
+#, php-format
+msgid "missing: %s"
+msgstr "thiếu: %s"
+
+#. translators: %s: comma-separated language codes.
+#: includes/class-health.php:383
+#, php-format
+msgid "not published: %s"
+msgstr "chưa đăng: %s"
+
+#. translators: 1: percentage, 2: published count, 3: total count.
+#: includes/class-health.php:389
+#, php-format
+msgid "%1$d%% complete (%2$d of %3$d language versions published)."
+msgstr "Hoàn thành %1$d%% (đã đăng %2$d/%3$d phiên bản ngôn ngữ)."
+
+#: includes/class-health.php:397
+msgid "Translation completeness (core pages × languages)"
+msgstr "Mức hoàn thành bản dịch (trang chính × ngôn ngữ)"
+
+#: includes/class-health.php:420
+#: includes/class-health.php:425
+msgid "Pages without a role"
+msgstr "Trang chưa có vai trò"
+
+#: includes/class-health.php:420
+msgid "Every top-level page has a role, so menus and footers can place it."
+msgstr "Mọi trang cấp cao nhất đều có vai trò, nên menu và chân trang có thể đặt chúng."
+
+#. translators: 1: number of pages, 2: examples.
+#: includes/class-health.php:427
+#, php-format
+msgid "%1$d top-level page has no role and does not appear in the generated menus: %2$s"
+msgid_plural "%1$d top-level pages have no role and do not appear in the generated menus: %2$s"
+msgstr[0] "%1$d trang cấp cao nhất chưa có vai trò và không hiện trong menu tự tạo: %2$s"
+
+#: includes/class-health.php:465
+msgid "Duplicate SEO titles within a language"
+msgstr "Tiêu đề SEO trùng nhau trong cùng ngôn ngữ"
+
+#: includes/class-health.php:465
+msgid "Duplicate meta descriptions within a language"
+msgstr "Mô tả meta trùng nhau trong cùng ngôn ngữ"
+
+#: includes/class-health.php:467
+msgid "No duplicates."
+msgstr "Không có trùng lặp."
+
+#: includes/class-health.php:486
+msgid "SEO title length (≤ 60 characters)"
+msgstr "Độ dài tiêu đề SEO (≤ 60 ký tự)"
+
+#: includes/class-health.php:488
+msgid "Every title fits."
+msgstr "Mọi tiêu đề đều vừa."
+
+#. translators: 1: number of pages, 2: examples with character counts.
+#: includes/class-health.php:491
+#, php-format
+msgid "%1$d title is longer than 60 characters: %2$s"
+msgid_plural "%1$d titles are longer than 60 characters: %2$s"
+msgstr[0] "%1$d tiêu đề dài hơn 60 ký tự: %2$s"
+
+#: includes/class-health.php:513
+msgid "Meta description length (120–160 characters)"
+msgstr "Độ dài mô tả meta (120–160 ký tự)"
+
+#. translators: 1: number of pages, 2: examples with character counts.
+#: includes/class-health.php:517
+#, php-format
+msgid "%1$d description is outside 120–160 characters: %2$s"
+msgid_plural "%1$d descriptions are outside 120–160 characters: %2$s"
+msgstr[0] "%1$d mô tả nằm ngoài khoảng 120–160 ký tự: %2$s"
+
+#. translators: %d: number of pages.
+#: includes/class-health.php:521
+#, php-format
+msgid "%d published page/post has no meta description (the excerpt or content is used instead)."
+msgid_plural "%d published pages/posts have no meta description (the excerpt or content is used instead)."
+msgstr[0] "%d trang/bài đã đăng chưa có mô tả meta (sẽ dùng tóm tắt hoặc nội dung thay thế)."
+
+#: includes/class-health.php:524
+msgid "Every description is within range."
+msgstr "Mọi mô tả đều trong khoảng cho phép."
+
+#: includes/class-health.php:553
+msgid "Focus keyword cannibalization"
+msgstr "Trùng từ khóa chính (cannibalization)"
+
+#: includes/class-health.php:555
+msgid "Each focus keyword is used by one page per language."
+msgstr "Mỗi từ khóa chính chỉ được một trang dùng trong mỗi ngôn ngữ."
+
+#: includes/class-health.php:557
+msgid "Several pages of one language target the same keyword and compete with each other:"
+msgstr "Nhiều trang cùng ngôn ngữ nhắm cùng một từ khóa và cạnh tranh lẫn nhau:"
+
+#: includes/class-health.php:745
+msgid "Orphan pages and posts (no internal links)"
+msgstr "Trang và bài mồ côi (không có liên kết nội bộ)"
+
+#: includes/class-health.php:747
+msgid "Every page and post is linked from same-language content or placed by its role."
+msgstr "Mọi trang và bài đều được liên kết từ nội dung cùng ngôn ngữ hoặc được đặt theo vai trò."
+
+#. translators: 1: number of items, 2: examples.
+#: includes/class-health.php:750
+#, php-format
+msgid "%1$d item has no internal link from content in its language: %2$s"
+msgid_plural "%1$d items have no internal link from content in their language: %2$s"
+msgstr[0] "%1$d mục không có liên kết nội bộ từ nội dung cùng ngôn ngữ: %2$s"
+
+#: includes/class-health.php:760
+msgid "Internal links"
+msgstr "Liên kết nội bộ"
+
+#. translators: 1: number of links, 2: examples.
+#: includes/class-health.php:772
+#, php-format
+msgid "%1$d link points to a page that is not published in that language: %2$s"
+msgid_plural "%1$d links point to pages that are not published in that language: %2$s"
+msgstr[0] "%1$d liên kết trỏ đến trang chưa đăng ở ngôn ngữ đó: %2$s"
+
+#. translators: 1: number of links, 2: examples.
+#: includes/class-health.php:776
+#, php-format
+msgid "%1$d link leaves the language of its page: %2$s"
+msgid_plural "%1$d links leave the language of their page: %2$s"
+msgstr[0] "%1$d liên kết rời khỏi ngôn ngữ của trang chứa nó: %2$s"
+
+#. translators: %d: number of links checked.
+#: includes/class-health.php:780
+#, php-format
+msgid "%d internal link checked, all resolve to published same-language content."
+msgid_plural "%d internal links checked, all resolve to published same-language content."
+msgstr[0] "Đã kiểm tra %d liên kết nội bộ, tất cả đều dẫn đến nội dung đã đăng cùng ngôn ngữ."
+
+#: includes/class-health.php:809
+msgid "Images without alt text"
+msgstr "Ảnh thiếu văn bản alt"
+
+#. translators: %d: number of images.
+#: includes/class-health.php:812
+#, php-format
+msgid "%d image in content, every one has an alt attribute."
+msgid_plural "%d images in content, every one has an alt attribute."
+msgstr[0] "%d ảnh trong nội dung, tất cả đều có thuộc tính alt."
+
+#: includes/class-health.php:814
+msgid "Images without an alt attribute (count per page):"
+msgstr "Ảnh thiếu thuộc tính alt (số lượng theo trang):"
+
+#: includes/class-health.php:831
+msgid "brand"
+msgstr "thương hiệu"
+
+#: includes/class-health.php:832
+msgid "listing name"
+msgstr "tên cửa hàng đầy đủ"
+
+#: includes/class-health.php:833
+msgid "address"
+msgstr "địa chỉ"
+
+#: includes/class-health.php:834
+msgid "phone"
+msgstr "điện thoại"
+
+#: includes/class-health.php:835
+msgid "opening hours"
+msgstr "giờ mở cửa"
+
+#: includes/class-health.php:836
+msgid "service model"
+msgstr "hình thức phục vụ"
+
+#: includes/class-health.php:837
+msgid "service area"
+msgstr "khu vực phục vụ"
+
+#. translators: %s: comma-separated field names.
+#: includes/class-health.php:865
+#, php-format
+msgid "Pending verification: %s."
+msgstr "Chờ xác minh: %s."
+
+#: includes/class-health.php:868
+msgid "The price list is not confirmed yet (prices show as “on request”)."
+msgstr "Bảng giá chưa được xác nhận (giá hiện là “Liên hệ báo giá”)."
+
+#. translators: 1: unverified vehicles, 2: public vehicles.
+#: includes/class-health.php:871
+#, php-format
+msgid "%1$d of %2$d public vehicles have unconfirmed prices."
+msgstr "%1$d/%2$d xe công khai có giá chưa xác nhận."
+
+#: includes/class-health.php:873
+msgid "Business data verification"
+msgstr "Xác minh dữ liệu cửa hàng"
+
+#: includes/class-health.php:875
+msgid "Store information and prices are verified."
+msgstr "Thông tin cửa hàng và giá đã được xác minh."
+
+#: includes/class-health.php:879
+msgid "The phone number is not verified, so the website shows no call button."
+msgstr "Số điện thoại chưa được xác minh nên website không hiện nút gọi."
+
+#: includes/class-health.php:896
+msgid "Switched off."
+msgstr "Đã tắt."
+
+#. translators: %s: comma-separated item names.
+#: includes/class-health.php:913
+#, php-format
+msgid "Showing: %s."
+msgstr "Đang hiện: %s."
+
+#. translators: %s: comma-separated item names.
+#: includes/class-health.php:913
+msgid "No item can be shown right now."
+msgstr "Hiện chưa có mục nào hiện được."
+
+#. translators: %s: comma-separated item names with reasons.
+#: includes/class-health.php:916
+#, php-format
+msgid "Switched on but hidden: %s."
+msgstr "Đã bật nhưng đang ẩn: %s."
+
+#: includes/class-health.php:963
+msgid "automatic"
+msgstr "tự động"
+
+#: includes/class-health.php:965
+msgid "standalone"
+msgstr "độc lập"
+
+#. translators: 1: configured mode, 2: effective mode, 3: "active" or "not active".
+#: includes/class-health.php:969
+#, php-format
+msgid "Setting: %1$s · running: %2$s · Yoast SEO: %3$s."
+msgstr "Cài đặt: %1$s · đang chạy: %2$s · Yoast SEO: %3$s."
+
+#: includes/class-health.php:972
+msgid "active"
+msgstr "đang kích hoạt"
+
+#: includes/class-health.php:972
+msgid "not active"
+msgstr "chưa kích hoạt"
+
+#: includes/class-health.php:975
+msgid "The SEO module is not loaded: no canonical, hreflang or sitemap output."
+msgstr "Mô-đun SEO chưa được nạp: không xuất canonical, hreflang hay sitemap."
+
+#: includes/class-health.php:978
+msgid "Standalone mode with Yoast active: Yoast head output is switched off by the plugin; make sure only one canonical appears (see the head audit)."
+msgstr "Chế độ độc lập khi Yoast đang kích hoạt: phần head của Yoast bị plugin tắt; hãy chắc chắn chỉ có một canonical xuất hiện (xem Kiểm tra head trực tiếp)."
+
+#: includes/class-health.php:994
+msgid "Front page and posts page per language"
+msgstr "Trang chủ và trang bài viết theo ngôn ngữ"
+
+#: includes/class-health.php:996
+msgid "The site shows the latest posts on the front page. Set a static front page (seed with “Set reading settings”) so every language gets its own home page."
+msgstr "Website đang hiện bài viết mới nhất ở trang chủ. Hãy đặt trang chủ tĩnh (tạo nội dung mẫu với “Thiết lập trang chủ / trang bài viết”) để mỗi ngôn ngữ có trang chủ riêng."
+
+#. translators: %s: comma-separated language codes.
+#: includes/class-health.php:1013
+#, php-format
+msgid "No published home page in: %s (their home address returns “not found”)."
+msgstr "Chưa đăng trang chủ ở: %s (địa chỉ trang chủ của các ngôn ngữ này trả về “không tìm thấy”)."
+
+#. translators: %s: comma-separated language codes.
+#: includes/class-health.php:1017
+#, php-format
+msgid "No published posts page in: %s."
+msgstr "Chưa đăng trang bài viết ở: %s."
+
+#: includes/class-health.php:1020
+msgid "Every enabled language has a published home page and posts page."
+msgstr "Mọi ngôn ngữ đang bật đều có trang chủ và trang bài viết đã đăng."
+
+#: includes/class-health.php:1032
+msgid "Disabled languages"
+msgstr "Ngôn ngữ đang tắt"
+
+#: includes/class-health.php:1040
+msgid "All five languages are enabled."
+msgstr "Cả năm ngôn ngữ đều đang bật."
+
+#. translators: 1: language code, 2: number of published pages/posts.
+#: includes/class-health.php:1053
+#, php-format
+msgid "%1$s (%2$d published pages/posts are unreachable)"
+msgstr "%1$s (%2$d trang/bài đã đăng không truy cập được)"
+
+#. translators: %s: comma-separated language codes.
+#: includes/class-health.php:1059
+#, php-format
+msgid "Switched off: %s."
+msgstr "Đang tắt: %s."
+
+#: includes/class-health.php:1098
+msgid "The sitemap module is not available."
+msgstr "Mô-đun sitemap không khả dụng."
+
+#: includes/class-health.php:1101
+msgid "Yoast compatibility mode: Yoast publishes the sitemap; the plugin adds its hreflang alternates."
+msgstr "Chế độ tương thích Yoast: Yoast đăng sitemap; plugin thêm các phiên bản hreflang."
+
+#. translators: %s: sitemap URL.
+#: includes/class-health.php:1106
+#, php-format
+msgid "Not fetched in this run. Index: %s"
+msgstr "Chưa tải trong lần chạy này. Chỉ mục: %s"
+
+#. translators: 1: sitemap URL, 2: error message.
+#: includes/class-health.php:1111
+#, php-format
+msgid "Could not fetch %1$s from the server itself (%2$s). Open it in a browser to verify."
+msgstr "Không tải được %1$s từ chính máy chủ (%2$s). Hãy mở trong trình duyệt để kiểm tra."
+
+#. translators: 1: sitemap URL, 2: HTTP status code.
+#: includes/class-health.php:1115
+#, php-format
+msgid "%1$s does not return a sitemap index (HTTP %2$d). Try “Flush rewrite rules”."
+msgstr "%1$s không trả về chỉ mục sitemap (HTTP %2$d). Hãy thử “Làm mới rewrite rules”."
+
+#. translators: 1: sitemap URL, 2: number of child sitemaps.
+#: includes/class-health.php:1119
+#, php-format
+msgid "%1$s is reachable with %2$d language sitemaps."
+msgstr "%1$s truy cập được, có %2$d sitemap ngôn ngữ."
+
+#: includes/class-health.php:1130
+msgid "Live head audit of the language home pages"
+msgstr "Kiểm tra head trực tiếp các trang chủ ngôn ngữ"
+
+#: includes/class-health.php:1132
+msgid "Not fetched in this run."
+msgstr "Chưa tải trong lần chạy này."
+
+#: includes/class-health.php:1142
+msgid "No language has a published home page."
+msgstr "Chưa ngôn ngữ nào có trang chủ đã đăng."
+
+#. translators: %d: number of canonical tags.
+#: includes/class-health.php:1168
+#, php-format
+msgid "%d canonical"
+msgid_plural "%d canonicals"
+msgstr[0] "%d canonical"
+
+#. translators: %d: number of description tags.
+#: includes/class-health.php:1173
+#, php-format
+msgid "%d descriptions"
+msgstr "%d description"
+
+#: includes/class-health.php:1176
+msgid "no description"
+msgstr "không có description"
+
+#. translators: %d: number of robots tags.
+#: includes/class-health.php:1181
+#, php-format
+msgid "%d robots tags"
+msgstr "%d thẻ robots"
+
+#: includes/class-health.php:1185
+msgid "no hreflang alternates"
+msgstr "không có hreflang"
+
+#. translators: 1: language code, 2: canonical count, 3: description count, 4: robots count, 5: hreflang count, 6: issues.
+#: includes/class-health.php:1189
+#, php-format
+msgid "%1$s: canonical %2$d · description %3$d · robots %4$d · hreflang %5$d%6$s"
+msgstr "%1$s: canonical %2$d · description %3$d · robots %4$d · hreflang %5$d%6$s"
+
+#: includes/class-health.php:1199
+msgid "The server could not fetch its own pages (loopback blocked). Check the head tags in a browser."
+msgstr "Máy chủ không tải được chính các trang của mình (loopback bị chặn). Hãy kiểm tra các thẻ head trong trình duyệt."
+
+#: includes/class-redirects.php:98
+msgid "Enter the old address as a path such as /old-page/."
+msgstr "Nhập địa chỉ cũ dưới dạng đường dẫn, ví dụ /old-page/."
+
+#: includes/class-redirects.php:102
+msgid "Enter the new address as a path or a full https:// link on this website."
+msgstr "Nhập địa chỉ mới dưới dạng đường dẫn hoặc liên kết https:// đầy đủ trên website này."
+
+#: includes/class-redirects.php:118
+msgid "That redirect would point to itself."
+msgstr "Chuyển hướng đó sẽ trỏ về chính nó."
+
+#. translators: %s: file name.
+#: includes/class-seeder.php:152
+#, php-format
+msgid "File not found: %s"
+msgstr "Không tìm thấy tệp: %s"
+
+#. translators: %s: file name.
+#: includes/class-seeder.php:158
+#, php-format
+msgid "File not readable: %s"
+msgstr "Không đọc được tệp: %s"
+
+#. translators: 1: file name, 2: JSON error message.
+#: includes/class-seeder.php:167
+#, php-format
+msgid "%1$s is not valid JSON (%2$s)."
+msgstr "%1$s không phải JSON hợp lệ (%2$s)."
+
+#. translators: 1: language code, 2: reason.
+#: includes/class-seeder.php:239
+#, php-format
+msgid "%1$s: no seed content (%2$s). Nothing was changed for this language."
+msgstr "%1$s: không có nội dung mẫu (%2$s). Không thay đổi gì cho ngôn ngữ này."
+
+#: includes/class-seeder.php:292
+msgid "Dry run: the Reading settings were not changed."
+msgstr "Chạy thử: cài đặt Đọc không bị thay đổi."
+
+#. translators: %s: language code.
+#: includes/class-seeder.php:365
+#, php-format
+msgid "Unknown language code “%s” was ignored."
+msgstr "Mã ngôn ngữ không xác định “%s” đã bị bỏ qua."
+
+#: includes/class-seeder.php:483
+msgid "Entry without a valid seed_id."
+msgstr "Mục không có seed_id hợp lệ."
+
+#. translators: %s: seed id.
+#: includes/class-seeder.php:487
+#, php-format
+msgid "%s: the title is missing."
+msgstr "%s: thiếu tiêu đề."
+
+#. translators: %s: seed id.
+#: includes/class-seeder.php:491
+#, php-format
+msgid "%s: the content file must be an .html file."
+msgstr "%s: tệp nội dung phải là tệp .html."
+
+#. translators: 1: seed id, 2: role key.
+#: includes/class-seeder.php:495
+#, php-format
+msgid "%1$s: unknown page role “%2$s”."
+msgstr "%1$s: vai trò trang không xác định “%2$s”."
+
+#. translators: %s: file name.
+#: includes/class-seeder.php:552
+#, php-format
+msgid "Content file missing: %s"
+msgstr "Thiếu tệp nội dung: %s"
+
+#. translators: %s: file name.
+#: includes/class-seeder.php:557
+#, php-format
+msgid "Content file is empty: %s"
+msgstr "Tệp nội dung trống: %s"
+
+#: includes/class-seeder.php:565
+#: includes/class-seeder.php:869
+msgid "Would be created."
+msgstr "Sẽ được tạo."
+
+#: includes/class-seeder.php:581
+msgid "Already exists (use update to refresh unchanged content)."
+msgstr "Đã tồn tại (dùng chế độ cập nhật để làm mới nội dung chưa chỉnh sửa)."
+
+#: includes/class-seeder.php:589
+msgid "Edited on the website after seeding; left unchanged."
+msgstr "Đã được sửa trên website sau khi tạo mẫu; giữ nguyên."
+
+#: includes/class-seeder.php:597
+msgid "Up to date."
+msgstr "Đã mới nhất."
+
+#. translators: %s: comma-separated list of fields.
+#: includes/class-seeder.php:601
+#, php-format
+msgid "Would update: %s"
+msgstr "Sẽ cập nhật: %s"
+
+#. translators: %s: comma-separated list of fields.
+#: includes/class-seeder.php:613
+#, php-format
+msgid "Updated: %s"
+msgstr "Đã cập nhật: %s"
+
+#: includes/class-seeder.php:848
+msgid "Category entry needs a slug and a name."
+msgstr "Mục chuyên mục cần có slug và tên."
+
+#: includes/class-seeder.php:863
+msgid "Category already exists."
+msgstr "Chuyên mục đã tồn tại."
+
+#. translators: %s: seed id.
+#: includes/class-seeder.php:964
+#, php-format
+msgid "Could not link the language versions of category %s."
+msgstr "Không thể liên kết các phiên bản ngôn ngữ của chuyên mục %s."
+
+#. translators: %s: seed id.
+#: includes/class-seeder.php:1007
+#, php-format
+msgid "Could not link the language versions of %s into one translation group (another post may already hold one of the languages)."
+msgstr "Không thể liên kết các phiên bản ngôn ngữ của %s vào một nhóm bản dịch (có thể một bài khác đã giữ một trong các ngôn ngữ đó)."
+
+#. translators: 1: role key, 2: seed id.
+#: includes/class-seeder.php:1033
+#, php-format
+msgid "The role “%1$s” already belongs to another page group; %2$s was left without a role."
+msgstr "Vai trò “%1$s” đã thuộc về một nhóm trang khác; %2$s được để không có vai trò."
+
+#. translators: 1: role key, 2: seed id.
+#: includes/class-seeder.php:1041
+#, php-format
+msgid "Could not assign the role “%1$s” to %2$s."
+msgstr "Không thể gán vai trò “%1$s” cho %2$s."
+
+#: includes/class-seeder.php:1081
+msgid "Reading settings not changed: there is no published home page in the default language yet."
+msgstr "Cài đặt Đọc không thay đổi: chưa có trang chủ đã đăng ở ngôn ngữ mặc định."
+
+#: includes/class-seeder.php:1098
+msgid "No published blog page in the default language: the posts page was not set."
+msgstr "Chưa có trang blog đã đăng ở ngôn ngữ mặc định: chưa đặt trang bài viết."
+
+#: includes/class-seeder.php:1102
+msgid "Timezone set to Asia/Ho_Chi_Minh."
+msgstr "Đã đặt múi giờ là Asia/Ho_Chi_Minh."

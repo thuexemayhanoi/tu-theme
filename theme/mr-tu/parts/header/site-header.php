@@ -61,7 +61,7 @@ $mr_tu_logo_id = (int) get_theme_mod( 'custom_logo' );
 				<?php mr_tu_the_icon( 'menu' ); ?>
 				<span class="site-header__menu-label"><?php esc_html_e( 'Menu', 'mr-tu' ); ?></span>
 			</button>
-			<a class="site-header__menu-btn site-header__menu-btn--nojs" href="#site-footer-nav">
+			<a class="site-header__menu-btn site-header__menu-btn--nojs" href="#site-footer">
 				<?php mr_tu_the_icon( 'menu' ); ?>
 				<span class="site-header__menu-label"><?php esc_html_e( 'Menu', 'mr-tu' ); ?></span>
 			</a>

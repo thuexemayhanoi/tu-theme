@@ -515,6 +515,7 @@ final class Admin_Translations {
 			array(
 				'post_type'        => $post_type,
 				'post_status'      => array_values( get_post_stati( array( 'show_in_admin_all_list' => true ) ) ),
+				'perm'             => 'readable', // Contributors never see other authors' drafts/private items here.
 				'fields'           => 'ids',
 				'numberposts'      => 2000, // phpcs:ignore WordPress.WP.PostsPerPage.posts_per_page_numberposts -- ids only; groups are deduplicated and sorted in PHP (site has a few hundred posts at most).
 				'orderby'          => 'ID',
@@ -743,6 +744,7 @@ final class Admin_Translations {
 				array(
 					'post_type'        => $post->post_type,
 					'post_status'      => array( 'publish', 'draft', 'pending', 'future', 'private' ),
+					'perm'             => 'readable',
 					'numberposts'      => 300,
 					'orderby'          => 'title',
 					'order'            => 'ASC',

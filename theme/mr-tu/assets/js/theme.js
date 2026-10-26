@@ -196,7 +196,8 @@
 		details.addEventListener( 'toggle', function () {
 			if ( details.open ) {
 				popovers.forEach( function ( other ) {
-					if ( other !== details ) {
+					// A group moved into "More" is nested: never close its ancestor (or its own children).
+					if ( other !== details && ! other.contains( details ) && ! details.contains( other ) ) {
 						other.open = false;
 					}
 				} );

@@ -106,15 +106,16 @@ function mr_tu_menu_items( $location ) {
 	if ( empty( $menu_items ) ) {
 		return null;
 	}
-	$queried = get_queried_object_id();
-	$items   = array();
-	$by_id   = array();
+	// Let core decide which item is current (object type aware: a page and a term may share an ID).
+	_wp_menu_item_classes_by_context( $menu_items );
+	$items = array();
+	$by_id = array();
 
 	foreach ( $menu_items as $menu_item ) {
 		$item = array(
 			'label'    => $menu_item->title,
 			'url'      => $menu_item->url,
-			'current'  => ( $queried && (int) $menu_item->object_id === $queried && 'custom' !== $menu_item->type ),
+			'current'  => in_array( 'current-menu-item', (array) $menu_item->classes, true ),
 			'role'     => in_array( 'menu-cta', (array) $menu_item->classes, true ) ? 'contact' : '',
 			'children' => array(),
 		);

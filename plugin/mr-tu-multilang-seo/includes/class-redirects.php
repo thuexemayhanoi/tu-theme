@@ -20,6 +20,12 @@ defined( 'ABSPATH' ) || exit;
 final class Redirects {
 
 	const OPTION = 'mrtu_redirects';
+
+	/**
+	 * Hit counters live in their own non-autoloaded option: a visitor hitting a redirect must never rewrite the
+	 * map itself (which would race with the owner's edits and bloat the autoloaded options).
+	 */
+	const HITS_OPTION = 'mrtu_redirect_hits';
 	const MAX    = 500;
 	const CODES  = array( 301, 302 );
 
@@ -51,19 +57,35 @@ final class Redirects {
 		if ( ! is_array( $raw ) ) {
 			return $out;
 		}
+		$hits = self::hits();
 		foreach ( $raw as $from => $entry ) {
 			$path = self::normalize_path( (string) $from );
 			if ( '' === $path || ! is_array( $entry ) || empty( $entry['to'] ) ) {
 				continue;
 			}
+			if ( isset( $hits[ $path ] ) ) {
+				$count = $hits[ $path ];
+			} else {
+				$count = isset( $entry['hits'] ) ? max( 0, (int) $entry['hits'] ) : 0; // Maps saved before 1.0.0 kept hits inline.
+			}
 			$out[ $path ] = array(
 				'to'      => (string) $entry['to'],
 				'code'    => isset( $entry['code'] ) && in_array( (int) $entry['code'], self::CODES, true ) ? (int) $entry['code'] : 301,
-				'hits'    => isset( $entry['hits'] ) ? max( 0, (int) $entry['hits'] ) : 0,
+				'hits'    => $count,
 				'created' => isset( $entry['created'] ) ? (int) $entry['created'] : 0,
 			);
 		}
 		return $out;
+	}
+
+	/**
+	 * Hit counters (path => int).
+	 *
+	 * @return int[]
+	 */
+	private static function hits() {
+		$hits = get_option( self::HITS_OPTION, array() );
+		return is_array( $hits ) ? array_map( 'intval', $hits ) : array();
 	}
 
 	/**
@@ -81,6 +103,17 @@ final class Redirects {
 			);
 			$map = array_slice( $map, 0, self::MAX, true );
 		}
+		// Counters move out of the map (legacy inline values are carried over once) and follow its entries.
+		$hits = self::hits();
+		foreach ( $map as $from => $entry ) {
+			if ( isset( $entry['hits'] ) ) {
+				if ( ! isset( $hits[ $from ] ) && (int) $entry['hits'] > 0 ) {
+					$hits[ $from ] = (int) $entry['hits'];
+				}
+				unset( $map[ $from ]['hits'] );
+			}
+		}
+		update_option( self::HITS_OPTION, array_intersect_key( $hits, $map ), false );
 		update_option( self::OPTION, $map, true );
 	}
 
@@ -278,8 +311,9 @@ final class Redirects {
 		if ( ! isset( $map[ $from ] ) ) {
 			return false;
 		}
-		++$map[ $from ]['hits'];
-		update_option( self::OPTION, $map, true );
+		$hits          = self::hits();
+		$hits[ $from ] = ( isset( $hits[ $from ] ) ? $hits[ $from ] : $map[ $from ]['hits'] ) + 1;
+		update_option( self::HITS_OPTION, $hits, false );
 		return true;
 	}
 

@@ -64,7 +64,7 @@ final class Seeder {
 						'type'              => 'string',
 						'single'            => true,
 						'default'           => '',
-						'show_in_rest'      => true,
+						'show_in_rest'      => false, // Bookkeeping written by the seeder itself; authors must not stamp seed ids through the editor/REST.
 						'sanitize_callback' => 'sanitize_text_field',
 						'auth_callback'     => array( __CLASS__, 'can_edit_meta' ),
 					)

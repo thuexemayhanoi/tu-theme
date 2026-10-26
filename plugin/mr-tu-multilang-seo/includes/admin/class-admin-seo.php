@@ -456,7 +456,7 @@ final class Admin_Seo {
 				array(
 					'timeout'     => 10,
 					'redirection' => 2,
-					'sslverify'   => false,
+					'sslverify'   => apply_filters( 'https_local_ssl_verify', false ), // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- core filter.
 					'user-agent'  => 'MrTu-Head-Audit/' . MRTU_ML_VERSION,
 				)
 			);

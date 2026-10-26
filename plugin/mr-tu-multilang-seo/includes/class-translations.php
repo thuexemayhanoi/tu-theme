@@ -169,7 +169,7 @@ final class Translations {
 				'manage_terms' => 'manage_options',
 				'edit_terms'   => 'manage_options',
 				'delete_terms' => 'manage_options',
-				'assign_terms' => 'edit_posts',
+				'assign_terms' => 'do_not_allow', // Only the plugin assigns language/group terms (wp_set_object_terms), never tax_input.
 			),
 		);
 

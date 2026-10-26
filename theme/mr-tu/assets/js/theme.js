@@ -331,5 +331,17 @@
 				observer.observe( el );
 			}
 		} );
+		// Safety net: nothing may stay hidden if the observer never fires (printing, tall render
+		// viewports, full-page captures, odd scroll containers). Elements still pending after the
+		// grace period, or when printing starts, become visible without animation.
+		var revealAll = function () {
+			observer.disconnect();
+			targets.forEach( function ( el ) {
+				el.classList.remove( 'is-reveal-pending', 'is-revealed' );
+				el.style.transitionDelay = '';
+			} );
+		};
+		window.setTimeout( revealAll, 3000 );
+		window.addEventListener( 'beforeprint', revealAll );
 	}
 } )();

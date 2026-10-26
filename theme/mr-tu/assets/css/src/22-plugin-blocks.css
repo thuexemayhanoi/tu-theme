@@ -566,8 +566,25 @@
 .mrtu-cta {
 	display: flex;
 	flex-direction: column;
+	/* The plugin's base rule wraps rows; a wrapping column overflows sideways when the block sits in a
+	   stretched grid cell (definite height), so stack without wrapping on small screens. */
+	flex-wrap: nowrap;
 	align-items: flex-start;
 	gap: 10px;
+}
+
+.mrtu-cta > .mrtu-button,
+.mrtu-cta__button {
+	max-width: 100%;
+}
+
+@media (min-width: 640px) {
+	.mrtu-cta {
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 12px;
+	}
 }
 
 .mrtu-cta__button {

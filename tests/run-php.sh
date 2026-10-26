@@ -20,11 +20,22 @@ total_pass=0
 total_fail=0
 broken=0
 
+# test-seo-yoast.php needs WPSEO_VERSION defined before plugins_loaded: the stub is installed as a
+# must-use plugin for that single run and removed again (also on abort).
+YOAST_STUB="$ROOT/tests/php/yoast-stub.php"
+MU_STUB="$ENV_DIR/wordpress/wp-content/mu-plugins/zz-mrtu-yoast-stub.php"
+trap 'rm -f "$MU_STUB"' EXIT
+
 for file in "$ROOT"/tests/php/test-*.php; do
 	[ -e "$file" ] || continue
 	name="$(basename "$file")"
+	if [ "$name" = "test-seo-yoast.php" ]; then
+		mkdir -p "$(dirname "$MU_STUB")"
+		cp "$YOAST_STUB" "$MU_STUB"
+	fi
 	output="$("${WP[@]}" eval-file "$file" 2>&1)"
 	status=$?
+	rm -f "$MU_STUB"
 	echo "$output"
 
 	pass=$(printf '%s\n' "$output" | grep -cE '^[[:space:]]*PASS:')

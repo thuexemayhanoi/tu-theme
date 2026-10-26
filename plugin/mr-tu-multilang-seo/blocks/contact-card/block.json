@@ -1,0 +1,35 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "mrtu/contact-card",
+	"version": "1.0.0",
+	"title": "Contact card",
+	"category": "mrtu",
+	"icon": "id-alt",
+	"description": "Phone, address and opening hours from Mr Tu → Store information. Only verified details are shown.",
+	"keywords": [ "contact", "phone", "address", "hours" ],
+	"textdomain": "mr-tu-multilang-seo",
+	"attributes": {
+		"showHours": {
+			"type": "boolean",
+			"default": true
+		},
+		"showAddress": {
+			"type": "boolean",
+			"default": true
+		}
+	},
+	"supports": {
+		"align": [ "wide" ],
+		"html": false
+	},
+	"example": {
+		"attributes": {
+			"showHours": true,
+			"showAddress": true
+		}
+	},
+	"editorScript": "mrtu-blocks-editor",
+	"editorStyle": "mrtu-blocks",
+	"render": "file:./render.php"
+}

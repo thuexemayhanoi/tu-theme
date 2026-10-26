@@ -1,0 +1,331 @@
+/*
+ * Mr Tu business admin screens — additions to the shared admin UI kit (admin.css).
+ * Mobile-first: one column on the iPhone, 44px touch targets, 16px inputs.
+ */
+
+/* The save bar closes a multi-card form here (not a single card): no negative card margins. */
+.mrtu-form > .mrtu-savebar {
+	margin: 16px 0 0;
+	border: 1px solid var(--mrtu-a-border, #e3e3e0);
+	border-radius: 14px;
+}
+
+.mrtu-group {
+	min-width: 0;
+	margin: 0 0 18px;
+	padding: 0 0 4px;
+	border: 0;
+	border-bottom: 1px solid var(--mrtu-a-border, #e3e3e0);
+}
+
+.mrtu-group:last-child {
+	margin-bottom: 0;
+	border-bottom: 0;
+}
+
+.mrtu-group__title {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+	margin: 0 0 10px;
+	padding: 0;
+	font-size: 15px;
+	font-weight: 700;
+}
+
+.mrtu-group__note {
+	margin: -4px 0 12px;
+	padding: 8px 10px;
+	border-radius: 10px;
+	background: #fff8ec;
+	color: var(--mrtu-a-warn, #8a5300);
+	font-size: 13px;
+	line-height: 1.5;
+}
+
+.mrtu-has-error .mrtu-input,
+.mrtu-has-error input[type="number"],
+.mrtu-has-error select {
+	border-color: var(--mrtu-a-error, #b42318);
+	box-shadow: 0 0 0 1px var(--mrtu-a-error, #b42318);
+}
+
+.mrtu-field__error {
+	margin: -8px 0 14px;
+	color: var(--mrtu-a-error, #b42318);
+	font-size: 13px;
+	font-weight: 600;
+}
+
+.mrtu-error-summary {
+	margin: 0 0 16px;
+	padding: 12px 16px;
+	border: 1px solid #f3c4bf;
+	border-left: 4px solid var(--mrtu-a-error, #b42318);
+	border-radius: 10px;
+	background: #fdf1f0;
+}
+
+.mrtu-error-summary p {
+	margin: 0 0 6px;
+}
+
+.mrtu-error-summary ul {
+	margin: 0 0 0 18px;
+	list-style: disc;
+}
+
+.mrtu-days,
+.mrtu-choices {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	min-width: 0;
+	margin: 0 0 14px;
+	padding: 0;
+	border: 0;
+}
+
+.mrtu-days > legend,
+.mrtu-choices > legend {
+	width: 100%;
+	margin-bottom: 6px;
+}
+
+.mrtu-chip,
+.mrtu-choice {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	min-height: 44px;
+	padding: 6px 12px;
+	border: 1px solid #c9cac6;
+	border-radius: 10px;
+	background: #fff;
+	cursor: pointer;
+}
+
+.mrtu-choice {
+	flex: 1 1 100%;
+	line-height: 1.4;
+}
+
+.mrtu-chip input,
+.mrtu-choice input {
+	margin: 0;
+}
+
+.mrtu-has-error.mrtu-days .mrtu-chip {
+	border-color: var(--mrtu-a-error, #b42318);
+}
+
+.mrtu-suggest {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+	margin: -6px 0 14px;
+	padding: 8px 10px;
+	border-radius: 10px;
+	background: #e6efff;
+}
+
+.mrtu-suggest[hidden] {
+	display: none;
+}
+
+.mrtu-summary {
+	margin: 0 0 6px;
+	font-size: 16px;
+}
+
+.mrtu-subtitle {
+	margin: 20px 0 8px;
+	font-size: 15px;
+}
+
+.mrtu-import {
+	margin-top: 16px;
+}
+
+.mrtu-history,
+.mrtu-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.mrtu-history__item,
+.mrtu-list__item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+	margin: 0;
+	padding: 12px 0;
+	border-bottom: 1px solid var(--mrtu-a-border, #e3e3e0);
+}
+
+.mrtu-history__text,
+.mrtu-list__main {
+	display: flex;
+	flex: 1 1 220px;
+	gap: 12px;
+	align-items: center;
+	min-width: 0;
+}
+
+.mrtu-history__text {
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 2px;
+}
+
+.mrtu-history__text span,
+.mrtu-list__meta {
+	display: block;
+	color: var(--mrtu-a-muted, #5b5e66);
+	font-size: 13px;
+}
+
+.mrtu-list__title {
+	display: block;
+	font-size: 15px;
+}
+
+.mrtu-list__badges {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+	margin-top: 4px;
+}
+
+.mrtu-list__thumb {
+	flex: none;
+	width: 56px;
+	height: 56px;
+	border-radius: 10px;
+	object-fit: cover;
+}
+
+.mrtu-admin .mrtu-delete {
+	color: var(--mrtu-a-error, #b42318);
+}
+
+.mrtu-model {
+	margin: 0 0 16px;
+	padding: 14px 0 4px;
+	border-top: 1px solid var(--mrtu-a-border, #e3e3e0);
+}
+
+.mrtu-model__title {
+	margin: 0 0 4px;
+	font-size: 16px;
+}
+
+.mrtu-model__meta {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 6px;
+	margin: 0 0 12px;
+}
+
+.mrtu-model__meta .mrtu-meta {
+	margin: 0;
+}
+
+.mrtu-range {
+	min-width: 0;
+	margin: 0 0 6px;
+	padding: 0;
+	border: 0;
+}
+
+.mrtu-range__inputs {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 0 10px;
+}
+
+.mrtu-range .mrtu-field__label {
+	font-size: 13px;
+	font-weight: 600;
+}
+
+.mrtu-range .mrtu-field .mrtu-field__label {
+	color: var(--mrtu-a-muted, #5b5e66);
+	font-weight: 400;
+}
+
+.mrtu-preview {
+	overflow-x: auto;
+	padding: 16px;
+	border: 1px dashed #c9cac6;
+	border-radius: 14px;
+	background: #fff;
+	font-size: 15px;
+}
+
+.mrtu-preview .mrtu-pricing__table th,
+.mrtu-preview .mrtu-pricing__table td {
+	padding: 10px 8px;
+}
+
+.mrtu-media__preview img {
+	display: block;
+	max-width: 220px;
+	height: auto;
+	margin: 0 0 12px;
+	border-radius: 10px;
+}
+
+.mrtu-lang {
+	margin: 0 0 8px;
+	border: 1px solid var(--mrtu-a-border, #e3e3e0);
+	border-radius: 10px;
+}
+
+.mrtu-lang__summary {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 8px;
+	min-height: 44px;
+	padding: 0 12px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.mrtu-lang > .mrtu-field {
+	margin: 0;
+	padding: 0 12px 12px;
+}
+
+.mrtu-qc-item {
+	padding: 10px 0 2px;
+	border-bottom: 1px solid var(--mrtu-a-border, #e3e3e0);
+}
+
+.mrtu-qc-item:last-child {
+	border-bottom: 0;
+}
+
+.mrtu-qc-item .mrtu-toggle {
+	margin-bottom: 6px;
+}
+
+.mrtu-qc-item__status {
+	margin: 0 0 10px;
+	font-size: 13px;
+	line-height: 1.6;
+}
+
+@media (min-width: 783px) {
+
+	.mrtu-choice {
+		flex: 0 1 auto;
+	}
+}

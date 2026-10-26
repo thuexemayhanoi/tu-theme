@@ -25,7 +25,7 @@ esac
 
 TMP="$(mktemp -d)"
 STAMP="$(date +%s)"
-trap 'rm -rf "$TMP"; "${WP[@]}" eval "\MrTu\Multilang\Redirects::remove( \"/fx-seo-old-'"$STAMP"'/\" );" >/dev/null 2>&1 || true' EXIT
+trap 'rm -rf "$TMP"; "${WP[@]}" eval "\MrTu\Multilang\Redirects::remove( \"/fx-seo-old-'"$STAMP"'/\" );" >/dev/null 2>&1 || true; "${WP[@]}" eval-file "$ROOT/tests/php/fixtures-seo.php" cleanup >/dev/null 2>&1 || true' EXIT
 
 passed=0
 failed=0

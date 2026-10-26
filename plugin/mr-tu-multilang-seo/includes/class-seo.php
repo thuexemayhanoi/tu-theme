@@ -283,7 +283,8 @@ final class Seo {
 		if ( ! is_scalar( $value ) ) {
 			return '';
 		}
-		$text = preg_replace( '/\s+/u', ' ', sanitize_textarea_field( (string) $value ) );
+		// Collapse ASCII whitespace only: French typography relies on U+00A0 / U+202F before « : ; ? ! ».
+		$text = preg_replace( '/[ \t\r\n\f\v]+/', ' ', sanitize_textarea_field( (string) $value ) );
 		$text = trim( (string) $text );
 		return mb_strlen( $text ) > 400 ? mb_substr( $text, 0, 400 ) : $text;
 	}

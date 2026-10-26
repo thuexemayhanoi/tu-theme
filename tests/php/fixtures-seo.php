@@ -20,6 +20,58 @@ if ( ! defined( 'ABSPATH' ) || ! function_exists( 'mrtu_languages' ) ) {
 	exit( 1 );
 }
 
+/*
+ * `wp eval-file tests/php/fixtures-seo.php cleanup` — removes every fixture post and restores the
+ * Reading settings + roles map saved when the fixtures were first created, so a shared test env
+ * (e.g. one that also holds seeded content) is left exactly as before.
+ */
+if ( isset( $args ) && is_array( $args ) && in_array( 'cleanup', $args, true ) ) {
+	$mrtu_fxseo_posts = get_posts(
+		array(
+			'post_type'        => 'any',
+			'post_status'      => 'any',
+			'numberposts'      => -1,
+			'meta_key'         => '_mrtu_fixture',
+			'suppress_filters' => true,
+			'fields'           => 'ids',
+		)
+	);
+	foreach ( $mrtu_fxseo_posts as $mrtu_fxseo_pid ) {
+		wp_delete_post( $mrtu_fxseo_pid, true );
+	}
+	$mrtu_fxseo_backup = get_option( 'mrtu_fx_seo_backup' );
+	if ( is_array( $mrtu_fxseo_backup ) ) {
+		foreach ( array( 'show_on_front', 'page_on_front', 'mrtu_roles_map' ) as $mrtu_fxseo_opt ) {
+			if ( array_key_exists( $mrtu_fxseo_opt, $mrtu_fxseo_backup ) ) {
+				update_option( $mrtu_fxseo_opt, $mrtu_fxseo_backup[ $mrtu_fxseo_opt ] );
+			}
+		}
+		// Re-mirror `_mrtu_role` onto the members of the restored groups.
+		foreach ( (array) get_option( 'mrtu_roles_map', array() ) as $mrtu_fxseo_role => $mrtu_fxseo_group ) {
+			\MrTu\Multilang\Roles::sync_group( (int) $mrtu_fxseo_group, \MrTu\Multilang\Translations::group_map( (int) $mrtu_fxseo_group ) );
+		}
+		delete_option( 'mrtu_fx_seo_backup' );
+	}
+	if ( function_exists( 'mrtu_sitemap_flush' ) ) {
+		mrtu_sitemap_flush();
+	}
+	echo 'FX_SEO_CLEANUP=' . count( $mrtu_fxseo_posts ) . "\n";
+	return;
+}
+
+if ( false === get_option( 'mrtu_fx_seo_backup' ) ) {
+	add_option(
+		'mrtu_fx_seo_backup',
+		array(
+			'show_on_front'  => get_option( 'show_on_front' ),
+			'page_on_front'  => get_option( 'page_on_front' ),
+			'mrtu_roles_map' => get_option( 'mrtu_roles_map', array() ),
+		),
+		'',
+		false
+	);
+}
+
 if ( ! function_exists( 'mrtu_fxseo_seed' ) ) {
 	/**
 	 * Reads one seed page (by role) of a language from content/<lang>/pages.json.

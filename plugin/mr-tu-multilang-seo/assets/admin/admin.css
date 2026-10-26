@@ -15,6 +15,7 @@
 	--mrtu-a-warn: #8a5300;
 	--mrtu-a-error: #b42318;
 	max-width: 1080px;
+	overflow-x: clip; /* never let a wide table/badge push the admin page sideways on a phone (clip keeps sticky bars working) */
 	color: var(--mrtu-a-text);
 	font-size: 15px;
 }
@@ -78,7 +79,33 @@
 .mrtu-grid {
 	display: grid;
 	gap: 12px 16px;
-	grid-template-columns: 1fr;
+	grid-template-columns: minmax(0, 1fr);
+}
+
+/* Grid items must shrink below their content's min size (tables, long badges) on phones. */
+.mrtu-grid > *,
+.mrtu-card {
+	min-width: 0;
+}
+
+/* Plain radio / checkbox rows (not switches): native control + label, 44px tall. */
+.mrtu-choice {
+	display: flex;
+	align-items: flex-start;
+	gap: 10px;
+	min-height: 44px;
+	margin: 0 0 6px;
+	padding: 6px 0;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.mrtu-choice input[type="radio"],
+.mrtu-choice input[type="checkbox"] {
+	flex: 0 0 auto;
+	width: 22px;
+	height: 22px;
+	margin: 2px 0 0;
 }
 
 .mrtu-field {
@@ -191,7 +218,7 @@
 	font-weight: 700;
 	line-height: 1.4;
 	letter-spacing: 0.02em;
-	white-space: nowrap;
+	white-space: normal; /* status sentences may be long on a phone */
 	vertical-align: middle;
 }
 
@@ -220,8 +247,8 @@
 	position: sticky;
 	bottom: 0;
 	z-index: 10;
-	margin: 18px -16px -18px;
-	padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+	margin: 18px 0 -18px; /* no horizontal bleed on phones (it pushed the page 4 px wider) */
+	padding: 12px 0 calc(12px + env(safe-area-inset-bottom));
 	background: rgb(255 255 255 / 0.94);
 	border-top: 1px solid var(--mrtu-a-border);
 	backdrop-filter: blur(8px);
@@ -289,6 +316,7 @@
 }
 
 .mrtu-scroll {
+	position: relative; /* contains the absolutely positioned .screen-reader-text spans of the cells, so they scroll with the table instead of widening the page */
 	overflow-x: auto;
 	-webkit-overflow-scrolling: touch;
 }

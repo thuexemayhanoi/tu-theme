@@ -305,7 +305,7 @@ final class Admin_Seo {
 				continue;
 			}
 			$id = 'mrtu-toc-type-' . sanitize_html_class( $type->name );
-			echo '<label class="mrtu-toggle__label" for="' . esc_attr( $id ) . '" style="display:block"><input type="checkbox" id="' . esc_attr( $id ) . '" name="toc[post_types][]" value="' . esc_attr( $type->name ) . '"' . checked( in_array( $type->name, (array) $toc['post_types'], true ), true, false ) . '> ' . esc_html( $type->labels->name ) . '</label>';
+			echo '<label class="mrtu-choice" for="' . esc_attr( $id ) . '"><input type="checkbox" id="' . esc_attr( $id ) . '" name="toc[post_types][]" value="' . esc_attr( $type->name ) . '"' . checked( in_array( $type->name, (array) $toc['post_types'], true ), true, false ) . '> ' . esc_html( $type->labels->name ) . '</label>';
 		}
 		echo '</div>';
 		Admin::card_close();
@@ -504,7 +504,7 @@ final class Admin_Seo {
 		echo '<div class="mrtu-field">';
 		foreach ( $options as $value => $label ) {
 			$id = 'mrtu-' . sanitize_html_class( str_replace( array( '[', ']' ), '-', $name ) . '-' . $value );
-			echo '<label class="mrtu-toggle__label" for="' . esc_attr( $id ) . '" style="display:block"><input type="radio" id="' . esc_attr( $id ) . '" name="' . esc_attr( $name ) . '" value="' . esc_attr( $value ) . '"' . checked( (string) $value, (string) $current, false ) . '> ' . esc_html( $label ) . '</label>';
+			echo '<label class="mrtu-choice" for="' . esc_attr( $id ) . '"><input type="radio" id="' . esc_attr( $id ) . '" name="' . esc_attr( $name ) . '" value="' . esc_attr( $value ) . '"' . checked( (string) $value, (string) $current, false ) . '> ' . esc_html( $label ) . '</label>';
 		}
 		echo '</div>';
 	}

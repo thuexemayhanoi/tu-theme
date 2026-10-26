@@ -48,6 +48,7 @@ final class Quick_Contact {
 	 */
 	public static function register_assets() {
 		wp_register_style( 'mrtu-quick-contact', MRTU_ML_URL . 'assets/css/quick-contact.css', array(), MRTU_ML_VERSION );
+		wp_style_add_data( 'mrtu-quick-contact', 'path', MRTU_ML_DIR . 'assets/css/quick-contact.css' ); // Small file: core inlines it.
 		wp_register_script(
 			'mrtu-quick-contact',
 			MRTU_ML_URL . 'assets/js/quick-contact.js',

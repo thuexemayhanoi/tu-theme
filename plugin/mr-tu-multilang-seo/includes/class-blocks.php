@@ -45,6 +45,7 @@ final class Blocks {
 		$url = MRTU_ML_URL;
 		$ver = MRTU_ML_VERSION;
 		wp_register_style( 'mrtu-blocks', $url . 'assets/css/blocks.css', array(), $ver );
+		wp_style_add_data( 'mrtu-blocks', 'path', MRTU_ML_DIR . 'assets/css/blocks.css' ); // Small file: core inlines it (one render-blocking request less).
 		wp_register_script(
 			'mrtu-pricing',
 			$url . 'assets/js/pricing.js',

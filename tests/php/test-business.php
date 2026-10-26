@@ -3,7 +3,7 @@
  * Integration tests — business data module (NAP, pricing, vehicles, blocks, Quick Contact).
  *
  * Run:   wp eval-file tests/php/test-business.php
- * HTTP:  the last group fetches a test page from MRTU_TEST_URL (default http://localhost:8083);
+ * HTTP:  the last group fetches a test page from MRTU_TEST_URL (default: this site's home_url());
  *        it is reported as SKIP when the dev server is not reachable.
  *
  * Self-contained (no shared bootstrap). Every option it touches is backed up and restored.
@@ -694,7 +694,8 @@ try {
 			'post_content' => "<!-- wp:mrtu/pricing-table {\"period\":\"day\"} /-->\n\n<!-- wp:mrtu/fleet /-->\n\n<!-- wp:mrtu/contact-card /-->\n\n<!-- wp:mrtu/cta {\"variant\":\"call\"} /-->",
 		)
 	);
-	$base_url = getenv( 'MRTU_TEST_URL' ) ? rtrim( getenv( 'MRTU_TEST_URL' ), '/' ) : 'http://localhost:8083';
+	// Default to this install's own URL: several local envs run on different ports (8080–8085).
+	$base_url = getenv( 'MRTU_TEST_URL' ) ? rtrim( getenv( 'MRTU_TEST_URL' ), '/' ) : rtrim( home_url(), '/' );
 	$url      = $base_url . '/?page_id=' . (int) $mrtu_bt_page;
 	$response = wp_remote_get( $url, array( 'timeout' => 30 ) );
 	if ( is_wp_error( $response ) ) {

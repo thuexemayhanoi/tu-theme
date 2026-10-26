@@ -22,10 +22,31 @@ function mr_tu_asset_version( $relative ) {
 }
 
 /**
+ * Whether the request renders the home hero / home sections (front page, or any singular content
+ * built from the home section patterns), so the home-only stylesheet is loaded only where used.
+ *
+ * @return bool
+ */
+function mr_tu_needs_home_styles() {
+	if ( is_front_page() ) {
+		return true;
+	}
+	if ( is_singular() ) {
+		$post = get_post();
+		return $post && false !== strpos( $post->post_content, 'mrtu-section' );
+	}
+	return false;
+}
+
+/**
  * Enqueues the theme stylesheet and script.
  */
 function mr_tu_enqueue_assets() {
 	wp_enqueue_style( 'mr-tu', MR_TU_URI . '/assets/css/main.css', array(), mr_tu_asset_version( 'assets/css/main.css' ) );
+
+	if ( mr_tu_needs_home_styles() ) {
+		wp_enqueue_style( 'mr-tu-home', MR_TU_URI . '/assets/css/home.css', array( 'mr-tu' ), mr_tu_asset_version( 'assets/css/home.css' ) );
+	}
 
 	if ( mr_tu_setting( 'view_transitions' ) ) {
 		wp_add_inline_style( 'mr-tu', '@media (prefers-reduced-motion:no-preference){@view-transition{navigation:auto}}' );

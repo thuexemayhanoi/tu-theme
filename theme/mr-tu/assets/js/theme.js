@@ -325,11 +325,14 @@
 			{ threshold: 0.12, rootMargin: '0px 0px -4% 0px' }
 		);
 		var fold = window.innerHeight;
-		targets.forEach( function ( el ) {
-			if ( el.getBoundingClientRect().top > fold ) {
-				el.classList.add( 'is-reveal-pending' );
-				observer.observe( el );
-			}
+		// Read every position first, then write classes: interleaving reads and writes forces layout
+		// recalculation for each element (Lighthouse "forced reflow").
+		var below = targets.filter( function ( el ) {
+			return el.getBoundingClientRect().top > fold;
+		} );
+		below.forEach( function ( el ) {
+			el.classList.add( 'is-reveal-pending' );
+			observer.observe( el );
 		} );
 		// Safety net: nothing may stay hidden if the observer never fires (printing, tall render
 		// viewports, full-page captures, odd scroll containers). Elements still pending after the

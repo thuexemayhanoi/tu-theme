@@ -546,12 +546,3 @@
 	background: rgb(255 255 255 / 0.08);
 }
 
-/* Reveal — only elements below the fold at load are hidden, by JS (see theme.js). */
-.mrtu-reveal .is-reveal-pending {
-	opacity: 0;
-	transform: translateY(14px);
-}
-
-.mrtu-reveal .is-revealed {
-	transition: opacity var(--dur-slow) var(--ease-out), transform var(--dur-slow) var(--ease-out);
-}

@@ -31,8 +31,13 @@ const editorShared = [ '00-fonts.css', '01-tokens.css', '04-buttons.css', '05-ob
 	( f ) => `${ src }/${ f }`
 );
 
+// Home-page-only files ship as a second stylesheet (inc/assets.php enqueues it on the front page and
+// on pages that use the home sections) so inner pages do not download ~19 KB of unused CSS.
+const homeOnly = ( f ) => /\/2[01]-home-/.test( f );
+
 const bundles = [
-	{ out: 'assets/css/main.css', files: list( src ) },
+	{ out: 'assets/css/main.css', files: list( src ).filter( ( f ) => ! homeOnly( f ) ) },
+	{ out: 'assets/css/home.css', files: list( src ).filter( homeOnly ) },
 	{ out: 'assets/css/editor.css', files: [ ...editorShared, ...list( editorSrc ) ] },
 ];
 

@@ -8,6 +8,17 @@
 	animation-duration: 180ms;
 }
 
+/* Reveal — only elements below the fold at load are hidden, by JS (see theme.js). Site-wide: post
+   cards, CTA bands and search results use [data-reveal] too, not only the home sections. */
+.mrtu-reveal .is-reveal-pending {
+	opacity: 0;
+	transform: translateY(14px);
+}
+
+.mrtu-reveal .is-revealed {
+	transition: opacity var(--dur-slow) var(--ease-out), transform var(--dur-slow) var(--ease-out);
+}
+
 @media (prefers-reduced-motion: reduce) {
 	*,
 	*::before,

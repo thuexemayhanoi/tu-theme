@@ -1,0 +1,793 @@
+# Copyright (C) 2026 Mr Tu
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Mr Tu 1.0.0\n"
+"Report-Msgid-Bugs-To: https://hanoi.thuexemaynguyentu.com/\n"
+"Last-Translator: Mr Tu\n"
+"Language-Team: Mr Tu\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-26T08:00:16+00:00\n"
+"PO-Revision-Date: 2026-10-26T10:39:05+00:00\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: mr-tu\n"
+
+#. Theme Name of the theme
+#. Author of the theme
+#: style.css
+#: inc/block-patterns.php:20
+#: inc/icons.php:77
+#: inc/navigation.php:252
+#: parts/components/post-card.php:43
+#: parts/components/stone.php:21
+msgid "Mr Tu"
+msgstr "Mr Tu"
+
+#. Theme URI of the theme
+#. Author URI of the theme
+#: style.css
+msgid "https://hanoi.thuexemaynguyentu.com/"
+msgstr "https://hanoi.thuexemaynguyentu.com/"
+
+#. Description of the theme
+#: style.css
+msgid "Flagship theme for Mr Tu, motorbike and scooter rental near Hanoi's Old Quarter. Concept \"Km 0\": kilometre-stone and licence-plate design language, four brand colours, Be Vietnam Pro + Barlow Condensed, Light/Dark/System colour modes, mobile-first bottom-sheet navigation. Presentation only: languages, SEO, business data and blocks come from the Mr Tu Multilang SEO plugin, and the theme degrades gracefully without it."
+msgstr "Tema principal de Mr Tu, alquiler de motos y scooters cerca del Casco Antiguo de Hanói. Concepto «Km 0»: lenguaje visual de hito kilométrico y matrícula, cuatro colores de marca, Be Vietnam Pro + Barlow Condensed, modos de color Claro/Oscuro/Sistema, navegación mobile-first en panel inferior. Solo presentación: los idiomas, el SEO, los datos del negocio y los bloques vienen del plugin Mr Tu Multilang SEO, y el tema sigue funcionando de forma reducida sin él."
+
+#: 404.php:23
+msgid "Unknown"
+msgstr "Desconocido"
+
+#: 404.php:30
+msgid "Error 404"
+msgstr "Error 404"
+
+#: 404.php:31
+msgid "This road isn’t on our map"
+msgstr "Esta carretera no está en nuestro mapa"
+
+#: 404.php:32
+msgid "The page may have moved, or the link has a typo. Every trip starts again from Km 0 — search below or take one of the main roads."
+msgstr "Puede que la página se haya movido o que el enlace tenga una errata. Cada viaje vuelve a empezar en el Km 0: busca abajo o toma una de las carreteras principales."
+
+#: archive.php:14
+msgid "Category"
+msgstr "Categoría"
+
+#: archive.php:16
+msgid "Tag"
+msgstr "Etiqueta"
+
+#: archive.php:18
+msgid "Archive"
+msgstr "Archivo"
+
+#. translators: %d: number of comments.
+#: comments.php:21
+#, php-format
+msgid "%d comment"
+msgid_plural "%d comments"
+msgstr[0] "%d comentario"
+msgstr[1] "%d comentarios"
+
+#: comments.php:23
+msgid "Comments"
+msgstr "Comentarios"
+
+#: comments.php:43
+msgid "Older comments"
+msgstr "Comentarios anteriores"
+
+#: comments.php:44
+msgid "Newer comments"
+msgstr "Comentarios más recientes"
+
+#: comments.php:51
+msgid "Comments are closed."
+msgstr "Los comentarios están cerrados."
+
+#: header.php:22
+msgid "Skip to content"
+msgstr "Saltar al contenido"
+
+#: inc/block-patterns.php:21
+msgid "Home page sections and inner-page components in the Mr Tu design."
+msgstr "Secciones de la página de inicio y componentes de páginas interiores con el diseño de Mr Tu."
+
+#: inc/block-patterns.php:28
+msgid "Callout"
+msgstr "Destacado"
+
+#: inc/block-patterns.php:32
+msgid "Lead"
+msgstr "Entradilla"
+
+#: inc/block-patterns.php:36
+msgid "Checklist"
+msgstr "Lista de comprobación"
+
+#: inc/block-patterns.php:40
+msgid "Road line"
+msgstr "Línea de carretera"
+
+#: inc/block-patterns.php:44
+msgid "Call (blue)"
+msgstr "Llamar (azul)"
+
+#: inc/navigation.php:240
+msgid "Links"
+msgstr "Enlaces"
+
+#: inc/navigation.php:250
+msgid "Rent a bike"
+msgstr "Alquiler"
+
+#: inc/navigation.php:251
+#: patterns/inner-callout.php:17
+msgid "Good to know"
+msgstr "Conviene saber"
+
+#: inc/navigation.php:253
+msgid "Legal"
+msgstr "Legal"
+
+#: inc/navigation.php:286
+msgid "Privacy policy"
+msgstr "Política de privacidad"
+
+#: inc/navigation.php:298
+msgid "Pages"
+msgstr "Páginas"
+
+#: inc/navigation.php:341
+#: parts/header/menu-sheet.php:51
+msgid "More"
+msgstr "Más"
+
+#: inc/plugin-bridge.php:165
+#: parts/components/role-links.php:30
+msgid "Home"
+msgstr "Inicio"
+
+#: inc/plugin-bridge.php:176
+#: search.php:26
+#: searchform.php:18
+msgid "Search"
+msgstr "Buscar"
+
+#: inc/plugin-bridge.php:191
+msgid "Page not found"
+msgstr "Página no encontrada"
+
+#: inc/settings.php:105
+#: inc/settings.php:201
+msgid "Theme appearance"
+msgstr "Apariencia del tema"
+
+#: inc/settings.php:106
+#: parts/header/menu-sheet.php:68
+msgid "Appearance"
+msgstr "Apariencia"
+
+#: inc/settings.php:119
+#: inc/settings.php:120
+msgid "Mr Tu theme"
+msgstr "Tema Mr Tu"
+
+#: inc/settings.php:143
+msgid "Choose an image"
+msgstr "Elegir una imagen"
+
+#: inc/settings.php:144
+msgid "Use this image"
+msgstr "Usar esta imagen"
+
+#: inc/settings.php:168
+msgid "No image — a designed graphic is shown instead."
+msgstr "Sin imagen: en su lugar se muestra un gráfico diseñado."
+
+#: inc/settings.php:174
+msgid "Choose image"
+msgstr "Elegir imagen"
+
+#: inc/settings.php:175
+msgid "Remove"
+msgstr "Quitar"
+
+#: inc/settings.php:187
+#: inc/settings.php:267
+msgid "You are not allowed to change the theme settings."
+msgstr "No tienes permiso para cambiar los ajustes del tema."
+
+#: inc/settings.php:195
+msgid "Follow the device (System)"
+msgstr "Según el dispositivo (Sistema)"
+
+#: inc/settings.php:196
+#: parts/components/theme-toggle.php:17
+msgid "Light"
+msgstr "Claro"
+
+#: inc/settings.php:197
+#: parts/components/theme-toggle.php:18
+msgid "Dark"
+msgstr "Oscuro"
+
+#: inc/settings.php:202
+msgid "Photos and motion for the Mr Tu theme. Business details, prices and languages are edited in the Mr Tu plugin screens."
+msgstr "Fotos y animación del tema Mr Tu. Los datos del negocio, los precios y los idiomas se editan en las pantallas del plugin Mr Tu."
+
+#: inc/settings.php:204
+msgid "Settings saved."
+msgstr "Ajustes guardados."
+
+#: inc/settings.php:211
+msgid "Photos"
+msgstr "Fotos"
+
+#: inc/settings.php:215
+msgid "Home hero photo"
+msgstr "Foto principal de la portada"
+
+#: inc/settings.php:216
+msgid "Landscape, at least 2400 px wide: a real bike against an Old Quarter wall works best. Loaded with high priority, never lazy."
+msgstr "Horizontal, de al menos 2400 px de ancho: lo que mejor funciona es una moto real delante de una pared del Casco Antiguo. Se carga con prioridad alta, nunca en diferido."
+
+#: inc/settings.php:221
+msgid "Story photo"
+msgstr "Foto de la historia"
+
+#: inc/settings.php:222
+msgid "Shown in the \"story\" section of the home page, e.g. the hand-over moment. Without a photo, an abstract Old Quarter map is shown."
+msgstr "Se muestra en la sección «historia» de la página de inicio, p. ej. el momento de la entrega. Sin foto, se muestra un mapa abstracto del Casco Antiguo."
+
+#: inc/settings.php:229
+msgid "Motion"
+msgstr "Animación"
+
+#: inc/settings.php:233
+msgid "Reveal sections softly while scrolling"
+msgstr "Mostrar las secciones suavemente al desplazarse"
+
+#: inc/settings.php:238
+msgid "Cross-fade between pages (supported browsers only)"
+msgstr "Fundido entre páginas (solo en navegadores compatibles)"
+
+#: inc/settings.php:240
+msgid "Visitors who ask their device for reduced motion never see these effects."
+msgstr "Los visitantes que piden a su dispositivo reducir el movimiento nunca ven estos efectos."
+
+#: inc/settings.php:244
+msgid "Default colour mode"
+msgstr "Modo de color predeterminado"
+
+#: inc/settings.php:253
+msgid "Visitors can still switch between System, Light and Dark; their choice is remembered on their device."
+msgstr "Los visitantes pueden seguir cambiando entre Sistema, Claro y Oscuro; su elección se recuerda en su dispositivo."
+
+#: inc/settings.php:256
+msgid "Save changes"
+msgstr "Guardar cambios"
+
+#: inc/setup.php:43
+msgid "Primary navigation"
+msgstr "Navegación principal"
+
+#: inc/setup.php:44
+msgid "Footer navigation"
+msgstr "Navegación del pie de página"
+
+#: inc/setup.php:70
+msgid "Card (3:2)"
+msgstr "Tarjeta (3:2)"
+
+#: inc/setup.php:71
+msgid "Wide (16:9)"
+msgstr "Ancha (16:9)"
+
+#: inc/template-tags.php:20
+msgid "Blog"
+msgstr "Blog"
+
+#. translators: Service area shown when the street address is not published. Keep the Vietnamese place names recognisable.
+#: inc/template-tags.php:149
+msgid "Old Quarter, Hà Nội"
+msgstr "Casco Antiguo, Hanói"
+
+#. translators: 1: opening time (HH:MM), 2: closing time (HH:MM).
+#: inc/template-tags.php:187
+#, php-format
+msgid "Every day, %1$s–%2$s"
+msgstr "Todos los días, %1$s–%2$s"
+
+#. translators: 1: opening time (HH:MM), 2: closing time (HH:MM).
+#: inc/template-tags.php:190
+#, php-format
+msgid "Open %1$s–%2$s"
+msgstr "Abierto %1$s–%2$s"
+
+#: inc/template-tags.php:280
+msgid "Previous page"
+msgstr "Página anterior"
+
+#: inc/template-tags.php:281
+msgid "Next page"
+msgstr "Página siguiente"
+
+#: inc/template-tags.php:282
+msgid "Page"
+msgstr "Página"
+
+#: inc/template-tags.php:284
+msgid "Posts pages"
+msgstr "Páginas de entradas"
+
+#. translators: Short place name printed on the hero kilometre stone (uppercase in the design, max ~12 characters).
+#: inc/template-tags.php:296
+msgid "Old Quarter"
+msgstr "Casco Antiguo"
+
+#: page.php:37
+msgid "Page sections"
+msgstr "Secciones de la página"
+
+#: parts/archive/listing.php:55
+msgid "Nothing has been published here yet."
+msgstr "Aquí todavía no se ha publicado nada."
+
+#: parts/components/breadcrumbs.php:18
+msgid "Breadcrumb"
+msgstr "Migas de pan"
+
+#: parts/components/cta-band.php:24
+msgid "Ready to ride from Km 0?"
+msgstr "¿Todo listo para rodar desde el Km 0?"
+
+#: parts/components/cta-band.php:25
+msgid "Tell us your dates and the bike you have in mind. Price, deposit and hand-over are confirmed with you before anything is booked."
+msgstr "Dinos tus fechas y la moto que tienes en mente. El precio, la fianza y la entrega se confirman contigo antes de reservar nada."
+
+#: parts/components/cta-band.php:28
+#: parts/footer/site-footer.php:40
+msgid "Contact"
+msgstr "Contacto"
+
+#. translators: %s: public phone number.
+#: parts/components/cta-band.php:50
+#: parts/header/menu-sheet.php:84
+#: parts/home/hero.php:49
+#, php-format
+msgid "Call %s"
+msgstr "Llamar al %s"
+
+#: parts/components/cta-band.php:68
+#: parts/components/post-card.php:44
+#: parts/home/hero.php:91
+msgid "Hà Nội"
+msgstr "Hanói"
+
+#: parts/components/language-switcher.php:52
+msgid "Home page"
+msgstr "Página de inicio"
+
+#: parts/components/language-switcher.php:52
+msgid "(this page is not translated yet)"
+msgstr "(esta página aún no está traducida)"
+
+#: parts/components/language-switcher.php:69
+msgid "Language:"
+msgstr "Idioma:"
+
+#. translators: %d: estimated reading time in minutes.
+#: parts/components/page-hero.php:58
+#: parts/components/post-card.php:66
+#, php-format
+msgid "%d min read"
+msgid_plural "%d min read"
+msgstr[0] "%d min de lectura"
+msgstr[1] "%d min de lectura"
+
+#: parts/components/page-hero.php:63
+#: parts/components/page-hero.php:70
+msgid "Updated"
+msgstr "Actualizado"
+
+#: parts/components/post-card.php:54
+msgid "(no title)"
+msgstr "(sin título)"
+
+#: parts/components/related-pages.php:21
+msgid "Keep exploring"
+msgstr "Sigue explorando"
+
+#: parts/components/related-posts.php:20
+msgid "More from the road"
+msgstr "Más desde la carretera"
+
+#: parts/components/role-links.php:26
+msgid "Popular pages"
+msgstr "Páginas populares"
+
+#: parts/components/story-art.php:32
+msgid "Km 0"
+msgstr "Km 0"
+
+#: parts/components/theme-toggle.php:16
+msgid "System"
+msgstr "Sistema"
+
+#: parts/components/theme-toggle.php:21
+msgid "Colour mode"
+msgstr "Modo de color"
+
+#: parts/components/toc-aside.php:18
+msgid "On this page"
+msgstr "En esta página"
+
+#. translators: Brand line. "Km 0" refers to Hanoi's kilometre zero.
+#: parts/footer/site-footer.php:27
+msgid "Km 0 — Hanoi starts here."
+msgstr "Km 0: Hanói empieza aquí."
+
+#: parts/footer/site-footer.php:37
+msgid "Motorbike and scooter rental near Hanoi’s Old Quarter — by the day, the week or the month."
+msgstr "Alquiler de motos y scooters cerca del Casco Antiguo de Hanói: por día, por semana o por mes."
+
+#: parts/footer/site-footer.php:63
+msgid "Footer"
+msgstr "Pie de página"
+
+#: parts/footer/site-footer.php:81
+#: parts/header/menu-sheet.php:62
+msgid "Language"
+msgstr "Idioma"
+
+#. translators: %s: current year.
+#: parts/footer/site-footer.php:89
+#, php-format
+msgid "© %s Mr Tu"
+msgstr "© %s Mr Tu"
+
+#: parts/header/menu-sheet.php:19
+#: parts/header/site-header.php:62
+#: parts/header/site-header.php:66
+msgid "Menu"
+msgstr "Menú"
+
+#: parts/header/menu-sheet.php:22
+msgid "Close menu"
+msgstr "Cerrar menú"
+
+#: parts/header/menu-sheet.php:28
+#: parts/header/site-header.php:39
+msgid "Primary"
+msgstr "Principal"
+
+#: parts/header/site-header.php:55
+msgid "Call"
+msgstr "Llamar"
+
+#: parts/home/hero.php:19
+msgid "Daily · Weekly · Monthly"
+msgstr "Diario · Semanal · Mensual"
+
+#: parts/home/hero.php:20
+msgid "Scooters & semi-automatics"
+msgstr "Scooters y semiautomáticas"
+
+#: parts/home/hero.php:21
+msgid "Help in Vietnamese & English"
+msgstr "Atención en vietnamita e inglés"
+
+#: parts/home/hero.php:28
+msgid "Mr Tu · Hà Nội"
+msgstr "Mr Tu · Hanói"
+
+#: parts/home/hero.php:39
+msgid "See prices"
+msgstr "Ver precios"
+
+#: parts/home/hero.php:39
+msgid "See bikes & prices"
+msgstr "Ver motos y precios"
+
+#: parts/home/hero.php:57
+msgid "Key facts"
+msgstr "Datos clave"
+
+#: patterns/home-contact.php
+msgctxt "Pattern title"
+msgid "Home · Contact (dark band)"
+msgstr "Inicio · Contacto (banda oscura)"
+
+#: patterns/home-contact.php
+msgctxt "Pattern description"
+msgid "Dark closing band with the Mr Tu contact card and call button (both read the verified business data from the plugin)."
+msgstr "Banda oscura de cierre con la tarjeta de contacto de Mr Tu y el botón de llamada (ambos leen del plugin los datos verificados del negocio)."
+
+#: patterns/home-contact.php:17
+msgid "Ready when you are"
+msgstr "Cuando tú quieras"
+
+#: patterns/home-contact.php:21
+msgid "Call to check availability and arrange the hand-over."
+msgstr "Llama para consultar la disponibilidad y acordar la entrega."
+
+#: patterns/home-faq.php
+msgctxt "Pattern title"
+msgid "Home · FAQ"
+msgstr "Inicio · Preguntas frecuentes"
+
+#: patterns/home-faq.php
+msgctxt "Pattern description"
+msgid "Section title + intro and an accordion of questions (core Details blocks)."
+msgstr "Título de sección + intro y un acordeón de preguntas (bloques Detalles del núcleo)."
+
+#: patterns/home-faq.php:17
+msgid "Questions before you ride"
+msgstr "Preguntas antes de salir"
+
+#: patterns/home-faq.php:21
+msgid "The answers travellers ask for most often."
+msgstr "Las respuestas que más piden los viajeros."
+
+#: patterns/home-faq.php:25
+msgid "Which documents do I need?"
+msgstr "¿Qué documentos necesito?"
+
+#: patterns/home-faq.php:26
+#: patterns/home-faq.php:32
+msgid "Write the verified answer here."
+msgstr "Escribe aquí la respuesta verificada."
+
+#: patterns/home-faq.php:31
+msgid "How does the deposit work?"
+msgstr "¿Cómo funciona la fianza?"
+
+#: patterns/home-fleet.php
+msgctxt "Pattern title"
+msgid "Home · Fleet (bikes)"
+msgstr "Inicio · Flota (motos)"
+
+#: patterns/home-fleet.php
+msgctxt "Pattern description"
+msgid "Section title + intro framing the Mr Tu fleet block (bikes come from the plugin's vehicle list)."
+msgstr "Título de sección + intro que enmarcan el bloque de flota de Mr Tu (las motos vienen de la lista de vehículos del plugin)."
+
+#: patterns/home-fleet.php:17
+msgid "Pick your bike"
+msgstr "Elige tu moto"
+
+#: patterns/home-fleet.php:21
+msgid "Automatic scooters for the city, semi-automatics for longer rides."
+msgstr "Scooters automáticos para la ciudad, semiautomáticas para rutas más largas."
+
+#: patterns/home-pricing.php
+msgctxt "Pattern title"
+msgid "Home · Pricing"
+msgstr "Inicio · Precios"
+
+#: patterns/home-pricing.php
+msgctxt "Pattern description"
+msgid "Section title + intro framing the Mr Tu pricing table block (prices come from the plugin, one place for the whole site)."
+msgstr "Título de sección + intro que enmarcan el bloque de tabla de precios de Mr Tu (los precios vienen del plugin, un único lugar para todo el sitio)."
+
+#: patterns/home-pricing.php:17
+msgid "Prices by day, week or month"
+msgstr "Precios por día, semana o mes"
+
+#: patterns/home-pricing.php:21
+msgid "Rental and deposit are always shown separately."
+msgstr "El alquiler y la fianza se muestran siempre por separado."
+
+#: patterns/home-promise.php
+msgctxt "Pattern title"
+msgid "Home · Promise (why Mr Tu)"
+msgstr "Inicio · Promesa (por qué Mr Tu)"
+
+#: patterns/home-promise.php
+msgctxt "Pattern description"
+msgid "Section title, short intro and three or four columns (H3 + text) shown with numbered kilometre stones."
+msgstr "Título de sección, intro corta y tres o cuatro columnas (H3 + texto) mostradas con hitos kilométricos numerados."
+
+#: patterns/home-promise.php:17
+msgid "Why ride with Mr Tu"
+msgstr "Por qué alquilar con Mr Tu"
+
+#: patterns/home-promise.php:21
+msgid "One short sentence on what makes renting here simple."
+msgstr "Una frase corta sobre lo que hace sencillo alquilar aquí."
+
+#: patterns/home-promise.php:27
+msgid "Near the Old Quarter"
+msgstr "Cerca del Casco Antiguo"
+
+#: patterns/home-promise.php:31
+msgid "Explain where and how the hand-over happens."
+msgstr "Explica dónde y cómo se hace la entrega."
+
+#: patterns/home-promise.php:37
+msgid "Clear conditions"
+msgstr "Condiciones claras"
+
+#: patterns/home-promise.php:41
+msgid "Documents, deposit and return rules in plain words."
+msgstr "Documentos, fianza y normas de devolución en palabras sencillas."
+
+#: patterns/home-promise.php:47
+msgid "Help when you need it"
+msgstr "Ayuda cuando la necesitas"
+
+#: patterns/home-promise.php:51
+msgid "What happens if the bike has a problem on the road."
+msgstr "Qué pasa si la moto tiene un problema en la carretera."
+
+#: patterns/home-steps.php
+msgctxt "Pattern title"
+msgid "Home · Steps (how renting works)"
+msgstr "Inicio · Pasos (cómo funciona el alquiler)"
+
+#: patterns/home-steps.php
+msgctxt "Pattern description"
+msgid "Ordered list rendered as kilometre stones along a dashed road that fills with orange as you scroll. Start each item with a bold title."
+msgstr "Lista ordenada mostrada como hitos kilométricos a lo largo de una carretera discontinua que se va rellenando de naranja al desplazarse. Empieza cada elemento con un título en negrita."
+
+#: patterns/home-steps.php:17
+msgid "How renting works"
+msgstr "Cómo funciona el alquiler"
+
+#: patterns/home-steps.php:22
+msgid "Get in touch"
+msgstr "Contacta"
+
+#: patterns/home-steps.php:22
+msgid "Tell us your dates and the bike you want."
+msgstr "Dinos tus fechas y la moto que quieres."
+
+#: patterns/home-steps.php:26
+msgid "Confirm the details"
+msgstr "Confirma los detalles"
+
+#: patterns/home-steps.php:26
+msgid "Price, deposit and hand-over are agreed in advance."
+msgstr "El precio, la fianza y la entrega se acuerdan de antemano."
+
+#: patterns/home-steps.php:30
+msgid "Check and ride"
+msgstr "Revisa y arranca"
+
+#: patterns/home-steps.php:30
+msgid "Inspect the bike together, take the helmet and go."
+msgstr "Revisa la moto con nosotros, ponte el casco y en marcha."
+
+#: patterns/home-steps.php:34
+msgid "Return"
+msgstr "Devolución"
+
+#: patterns/home-steps.php:34
+msgid "Bring it back, get your deposit back."
+msgstr "Devuélvela y recupera tu fianza."
+
+#: patterns/home-story.php
+msgctxt "Pattern title"
+msgid "Home · Story"
+msgstr "Inicio · Historia"
+
+#: patterns/home-story.php
+msgctxt "Pattern description"
+msgid "Editorial text block; the theme adds the Old Quarter map graphic (or the story photo from Theme settings) beside it."
+msgstr "Bloque de texto editorial; el tema añade al lado el gráfico del mapa del Casco Antiguo (o la foto de la historia de los ajustes del tema)."
+
+#: patterns/home-story.php:17
+msgid "Hanoi starts at Km 0"
+msgstr "Hanói empieza en el Km 0"
+
+#: patterns/home-story.php:21
+msgid "A short, true story about Mr Tu and the Old Quarter."
+msgstr "Una historia corta y verdadera sobre Mr Tu y el Casco Antiguo."
+
+#: patterns/home-story.php:25
+msgid "A second paragraph with practical detail visitors care about."
+msgstr "Un segundo párrafo con detalles prácticos que importan a los visitantes."
+
+#: patterns/home-trust.php
+msgctxt "Pattern title"
+msgid "Home · Trust (facts)"
+msgstr "Inicio · Confianza (datos)"
+
+#: patterns/home-trust.php
+msgctxt "Pattern description"
+msgid "Fact cards from a bulleted list: start each item with a bold statement. Only write facts that are true and verified."
+msgstr "Tarjetas de datos a partir de una lista con viñetas: empieza cada elemento con una afirmación en negrita. Escribe solo datos verdaderos y verificados."
+
+#: patterns/home-trust.php:17
+msgid "Straight answers, no surprises"
+msgstr "Respuestas claras, sin sorpresas"
+
+#: patterns/home-trust.php:22
+msgid "Rental and deposit kept separate"
+msgstr "Alquiler y fianza por separado"
+
+#: patterns/home-trust.php:22
+msgid "You always know what is paid and what comes back."
+msgstr "Siempre sabes qué se paga y qué se devuelve."
+
+#: patterns/home-trust.php:26
+msgid "Prices confirmed before booking"
+msgstr "Precios confirmados antes de reservar"
+
+#: patterns/home-trust.php:26
+msgid "Unconfirmed prices are marked, never presented as final."
+msgstr "Los precios sin confirmar se marcan, nunca se presentan como definitivos."
+
+#: patterns/home-trust.php:30
+msgid "Bike checked together"
+msgstr "Moto revisada juntos"
+
+#: patterns/home-trust.php:30
+msgid "Lights, brakes and tyres are checked at hand-over."
+msgstr "Luces, frenos y neumáticos se revisan en la entrega."
+
+#: patterns/inner-callout.php
+msgctxt "Pattern title"
+msgid "Callout (inner pages)"
+msgstr "Destacado (páginas interiores)"
+
+#: patterns/inner-callout.php
+msgctxt "Pattern description"
+msgid "Highlighted note for guides and service pages: short heading, one or two sentences and an optional checklist."
+msgstr "Nota destacada para guías y páginas de servicio: encabezado corto, una o dos frases y una lista de comprobación opcional."
+
+#: patterns/inner-callout.php:21
+msgid "One practical tip that saves the reader time or money."
+msgstr "Un consejo práctico que ahorra tiempo o dinero al lector."
+
+#: patterns/inner-callout.php:26
+msgid "A short, checkable point"
+msgstr "Un punto corto y comprobable"
+
+#: patterns/inner-callout.php:30
+msgid "Another short point"
+msgstr "Otro punto corto"
+
+#. translators: %s: search query.
+#: search.php:24
+#, php-format
+msgid "Results for “%s”"
+msgstr "Resultados de «%s»"
+
+#. translators: %d: number of search results.
+#: search.php:34
+#, php-format
+msgid "%d result"
+msgid_plural "%d results"
+msgstr[0] "%d resultado"
+msgstr[1] "%d resultados"
+
+#: search.php:72
+msgid "No road leads there yet"
+msgstr "Todavía no hay ninguna carretera hasta ahí"
+
+#: search.php:73
+msgid "Try a shorter word, a bike model or a topic like “deposit” or “monthly”."
+msgstr "Prueba con una palabra más corta, un modelo de moto o un tema como «fianza» o «mensual»."
+
+#: searchform.php:14
+msgid "Search this site"
+msgstr "Buscar en este sitio"
+
+#: searchform.php:17
+msgid "Bikes, prices, documents…"
+msgstr "Motos, precios, documentos…"
+
+#: single.php:47
+msgid "Post sections"
+msgstr "Secciones de la entrada"
+
+#: single.php:56
+msgid "Tags"
+msgstr "Etiquetas"

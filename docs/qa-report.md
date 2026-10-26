@@ -12,7 +12,7 @@
 | HTTP routing (prefixes, 301, 404, previews, switcher) | **40 / 40** | `bash tests/http/test-routing.sh http://localhost:8084 /home/user/wpenv-toc` |
 | HTTP SEO (head, hreflang, JSON-LD, sitemaps, redirects) | **90 / 90** | `bash tests/http/test-seo.sh http://localhost:8084 /home/user/wpenv-toc` |
 | HTTP seeded site (5 languages × roles, archives, 404s) | **52 / 52** | `bash tests/http/test-seeded-site.sh http://localhost:8084 /home/user/wpenv-toc` |
-| Front-end QA matrix (5 languages × 12 roles × mobile/desktop × light/dark + axe) | see §3 | `BASE=http://localhost:8083 node tests/e2e/qa-matrix.cjs --shots` |
+| Front-end QA matrix (5 languages × 12 roles × mobile/desktop × light/dark + axe) | **240 / 240, 0 axe violations** (§3) | `BASE=http://localhost:8083 node tests/e2e/qa-matrix.cjs --shots` |
 | Lighthouse | see §4 | `node /home/user/qa-tools/lh-median.mjs <url> 3 <outDir> [--desktop]` |
 | WordPress Coding Standards (`phpcs.xml.dist`, incl. security sniffs) | **0 errors** (theme + plugin) | `phpcs --standard=phpcs.xml.dist -n theme/mr-tu plugin/mr-tu-multilang-seo` |
 | PHPCompatibilityWP 7.4+ (rulesets 9 and 10) | **0 errors** | `phpcs --standard=PHPCompatibilityWP --runtime-set testVersion 7.4- -n …` |
@@ -48,7 +48,14 @@
 
 ## 3. Front-end QA matrix
 
-_Filled in §3 of the final run (see below)._
+`tests/e2e/qa-matrix.cjs` opens every role page (home, pillar, old-quarter, pricing, fleet, short-term, monthly,
+guide-faq, about, contact, blog, legal) in the five languages, on a 390 × 844 phone and a 1280 × 900 desktop, in light and
+dark mode, and for each page checks: HTTP 200, `<html lang>`, one `<h1>`, no horizontal overflow, no Vietnamese text in
+the UI chrome of non-Vietnamese pages, no English fallbacks in the Vietnamese chrome, working language switcher links,
+and an axe-core scan (serious/critical violations fail the page). The five 404 pages are checked separately.
+
+Final run (after every fix in §2): **240 pages checked, 0 failed, 0 axe violations**, five 404 pages correct.
+Screenshots: `tests/e2e/artifacts/qa-matrix/` (git-ignored, 240 files).
 
 ## 4. Lighthouse (median of 3 runs, Playwright Chromium, local server with 8 PHP workers)
 

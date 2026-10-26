@@ -1,0 +1,1978 @@
+# Copyright (C) 2026 Mr Tu
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Mr Tu Multilang SEO 1.0.0\n"
+"Report-Msgid-Bugs-To: https://hanoi.thuexemaynguyentu.com/\n"
+"Last-Translator: Mr Tu\n"
+"Language-Team: Mr Tu\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-26T08:00:16+00:00\n"
+"PO-Revision-Date: 2026-10-26T10:23:27+00:00\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: mr-tu-multilang-seo\n"
+
+#. Plugin Name of the plugin
+#: mr-tu-multilang-seo.php
+msgid "Mr Tu Multilang SEO"
+msgstr "Mr Tu Multilang SEO"
+
+#. Plugin URI of the plugin
+#: mr-tu-multilang-seo.php
+msgid "https://hanoi.thuexemaynguyentu.com/"
+msgstr "https://hanoi.thuexemaynguyentu.com/"
+
+#. Description of the plugin
+#: mr-tu-multilang-seo.php
+msgid "Five-language (VI · EN · DE · FR · ES) routing, translation groups, SEO (canonical, hreflang, sitemaps, schema), business data (NAP, prices, vehicles), table of contents and quick contact for the Mr Tu website. One WordPress, one domain, no external services."
+msgstr "Định tuyến năm ngôn ngữ (VI · EN · DE · FR · ES), nhóm bản dịch, SEO (canonical, hreflang, sitemap, schema), dữ liệu cửa hàng (NAP, giá, xe), mục lục và gọi nhanh cho website Mr Tu. Một WordPress, một tên miền, không dịch vụ bên ngoài."
+
+#. Author of the plugin
+#: mr-tu-multilang-seo.php
+#: includes/admin/class-admin.php:72
+#: includes/admin/class-admin.php:73
+#: includes/admin/class-admin.php:97
+#: includes/class-blocks.php:101
+msgid "Mr Tu"
+msgstr "Mr Tu"
+
+#: includes/admin/class-admin-business.php:47
+#: includes/admin/class-admin-business.php:243
+msgid "Store information"
+msgstr "Thông tin cửa hàng"
+
+#: includes/admin/class-admin-business.php:48
+msgid "Store info"
+msgstr "Cửa hàng"
+
+#: includes/admin/class-admin-business.php:168
+msgid "Please fix these fields:"
+msgstr "Vui lòng sửa các ô sau:"
+
+#: includes/admin/class-admin-business.php:182
+#: includes/admin/class-admin-business.php:183
+#: includes/admin/class-admin.php:210
+msgid "Verified"
+msgstr "Đã xác minh"
+
+#: includes/admin/class-admin-business.php:182
+#: includes/admin/class-admin-business.php:183
+#: includes/admin/class-admin.php:213
+msgid "PENDING VERIFICATION"
+msgstr "CHỜ XÁC MINH"
+
+#. translators: %s: reminder about what still has to be checked.
+#: includes/admin/class-admin-business.php:198
+#, php-format
+msgid "To check: %s"
+msgstr "Cần kiểm tra: %s"
+
+#: includes/admin/class-admin-business.php:217
+msgid "Verified — I checked this myself"
+msgstr "Đã xác minh — tôi đã tự kiểm tra"
+
+#: includes/admin/class-admin-business.php:217
+msgid "Only verified details appear on the website."
+msgstr "Chỉ thông tin đã xác minh mới hiện trên website."
+
+#: includes/admin/class-admin-business.php:230
+#: includes/admin/class-admin-languages.php:55
+#: includes/admin/class-admin-pricing.php:77
+#: includes/admin/class-admin-quick-contact.php:69
+#: includes/admin/class-admin-translations.php:488
+#: includes/admin/class-admin-translations.php:727
+#: includes/admin/class-admin-translations.php:792
+#: includes/admin/class-admin-translations.php:819
+#: includes/admin/class-admin-translations.php:829
+#: includes/admin/class-admin-translations.php:869
+#: includes/admin/class-admin-vehicles.php:89
+#: includes/admin/class-admin.php:306
+msgid "You are not allowed to do this."
+msgstr "Bạn không có quyền làm việc này."
+
+#: includes/admin/class-admin-business.php:243
+msgid "Name, address, phone and opening hours of Mr Tu. Only details marked as verified appear on the website, in all five languages."
+msgstr "Tên, địa chỉ, số điện thoại và giờ mở cửa của Mr Tu. Chỉ thông tin được đánh dấu đã xác minh mới hiện trên website, ở cả năm ngôn ngữ."
+
+#: includes/admin/class-admin-business.php:251
+msgid "Name"
+msgstr "Tên"
+
+#: includes/admin/class-admin-business.php:251
+msgid "The short brand appears in the header; the full shop name is used for Google and the contact page."
+msgstr "Tên thương hiệu ngắn hiện ở đầu trang; tên cửa hàng đầy đủ dùng cho Google và trang liên hệ."
+
+#: includes/admin/class-admin-business.php:252
+#: includes/admin/class-admin-business.php:256
+#: includes/admin/class-admin-business.php:483
+#: includes/admin/class-admin-vehicles.php:203
+msgid "Brand"
+msgstr "Thương hiệu"
+
+#: includes/admin/class-admin-business.php:263
+#: includes/admin/class-admin-business.php:484
+msgid "Full shop name"
+msgstr "Tên cửa hàng đầy đủ"
+
+#: includes/admin/class-admin-business.php:267
+msgid "Full shop name (as on Google Maps)"
+msgstr "Tên cửa hàng đầy đủ (như trên Google Maps)"
+
+#: includes/admin/class-admin-business.php:277
+#: includes/admin/class-admin-business.php:278
+#: includes/admin/class-admin-business.php:485
+#: includes/class-blocks.php:530
+msgid "Address"
+msgstr "Địa chỉ"
+
+#: includes/admin/class-admin-business.php:277
+msgid "Shown on the website only after you have checked that customers are really received at this address."
+msgstr "Chỉ hiện trên website sau khi bạn đã kiểm tra rằng khách thật sự được đón tiếp tại địa chỉ này."
+
+#: includes/admin/class-admin-business.php:281
+msgid "Street and number"
+msgstr "Số nhà và đường"
+
+#: includes/admin/class-admin-business.php:282
+msgid "Ward"
+msgstr "Phường"
+
+#: includes/admin/class-admin-business.php:283
+msgid "City"
+msgstr "Thành phố"
+
+#: includes/admin/class-admin-business.php:284
+msgid "Postal code"
+msgstr "Mã bưu chính"
+
+#: includes/admin/class-admin-business.php:299
+msgid "Country code"
+msgstr "Mã quốc gia"
+
+#: includes/admin/class-admin-business.php:309
+msgid "While off, the website shows only “Old Quarter, Hanoi” and asks visitors to call."
+msgstr "Khi tắt, website chỉ hiện “Phố Cổ, Hà Nội” và mời khách gọi điện."
+
+#: includes/admin/class-admin-business.php:314
+#: includes/class-blocks.php:515
+msgid "Phone"
+msgstr "Điện thoại"
+
+#: includes/admin/class-admin-business.php:314
+msgid "Used for every call button on the website."
+msgstr "Dùng cho mọi nút gọi trên website."
+
+#: includes/admin/class-admin-business.php:315
+#: includes/admin/class-admin-business.php:486
+msgid "Phone number"
+msgstr "Số điện thoại"
+
+#: includes/admin/class-admin-business.php:320
+msgid "Number as shown to visitors"
+msgstr "Số hiển thị cho khách"
+
+#: includes/admin/class-admin-business.php:323
+msgid "Maximum 20 characters, for example 0816 659 199."
+msgstr "Tối đa 20 ký tự, ví dụ 0816 659 199."
+
+#: includes/admin/class-admin-business.php:335
+msgid "International format (for call links)"
+msgstr "Định dạng quốc tế (cho liên kết gọi)"
+
+#: includes/admin/class-admin-business.php:339
+msgid "Leave empty to fill it in automatically from the number above."
+msgstr "Để trống để tự điền từ số ở trên."
+
+#: includes/admin/class-admin-business.php:349
+msgid "Suggested:"
+msgstr "Gợi ý:"
+
+#: includes/admin/class-admin-business.php:349
+msgid "Use this number"
+msgstr "Dùng số này"
+
+#: includes/admin/class-admin-business.php:351
+msgid "Show call buttons on the website"
+msgstr "Hiện nút gọi trên website"
+
+#: includes/admin/class-admin-business.php:351
+msgid "Call buttons appear only when this is on and the number is verified."
+msgstr "Nút gọi chỉ hiện khi mục này bật và số đã được xác minh."
+
+#: includes/admin/class-admin-business.php:356
+#: includes/admin/class-admin-business.php:357
+#: includes/admin/class-admin-business.php:487
+msgid "Opening hours"
+msgstr "Giờ mở cửa"
+
+#: includes/admin/class-admin-business.php:356
+msgid "The hours when staff really hand over and take back motorbikes."
+msgstr "Khung giờ nhân viên thật sự giao xe và nhận lại xe."
+
+#: includes/admin/class-admin-business.php:359
+msgid "Open on"
+msgstr "Mở cửa các ngày"
+
+#: includes/admin/class-admin-business.php:370
+msgid "Opens"
+msgstr "Mở cửa"
+
+#: includes/admin/class-admin-business.php:379
+msgid "Closes"
+msgstr "Đóng cửa"
+
+#: includes/admin/class-admin-business.php:392
+msgid "How customers meet you"
+msgstr "Cách khách gặp bạn"
+
+#: includes/admin/class-admin-business.php:392
+msgid "Be honest: a sign-only place must not be described as a staffed shop."
+msgstr "Hãy trung thực: nơi chỉ có biển hiệu không được mô tả là cửa hàng có nhân viên."
+
+#: includes/admin/class-admin-business.php:393
+#: includes/admin/class-admin-business.php:398
+#: includes/admin/class-admin-business.php:488
+msgid "Service model"
+msgstr "Hình thức phục vụ"
+
+#: includes/admin/class-admin-business.php:395
+msgid "By appointment (hand-over at an agreed place and time)"
+msgstr "Theo hẹn (giao xe tại địa điểm và giờ đã hẹn)"
+
+#: includes/admin/class-admin-business.php:396
+msgid "Staffed shop (customers can walk in during opening hours)"
+msgstr "Cửa hàng có nhân viên (khách có thể đến trực tiếp trong giờ mở cửa)"
+
+#: includes/admin/class-admin-business.php:406
+#: includes/admin/class-admin-business.php:489
+msgid "Service area"
+msgstr "Khu vực phục vụ"
+
+#: includes/admin/class-admin-business.php:410
+msgid "Area you serve"
+msgstr "Khu vực bạn phục vụ"
+
+#: includes/admin/class-admin-business.php:420
+msgid "Map, email and website"
+msgstr "Bản đồ, email và website"
+
+#: includes/admin/class-admin-business.php:422
+#: includes/admin/class-admin-business.php:490
+msgid "Google Maps link"
+msgstr "Liên kết Google Maps"
+
+#: includes/admin/class-admin-business.php:422
+msgid "Copy the “Share” link of the Mr Tu listing. It must start with https://. The Directions button needs this link and a verified address."
+msgstr "Sao chép liên kết “Chia sẻ” của địa điểm Mr Tu. Liên kết phải bắt đầu bằng https://. Nút Chỉ đường cần liên kết này và địa chỉ đã xác minh."
+
+#: includes/admin/class-admin-business.php:423
+#: includes/admin/class-admin-business.php:491
+msgid "Public email"
+msgstr "Email công khai"
+
+#: includes/admin/class-admin-business.php:423
+msgid "Only an address customers may write to."
+msgstr "Chỉ dùng địa chỉ khách có thể gửi thư đến."
+
+#: includes/admin/class-admin-business.php:424
+#: includes/admin/class-admin-business.php:492
+msgid "Website"
+msgstr "Website"
+
+#: includes/admin/class-admin-business.php:444
+msgid "Chat apps"
+msgstr "Ứng dụng chat"
+
+#: includes/admin/class-admin-business.php:444
+msgid "Switch a channel on only after you have checked that the app works on this number."
+msgstr "Chỉ bật một kênh sau khi bạn đã kiểm tra ứng dụng hoạt động với số này."
+
+#. translators: %s: chat app name.
+#: includes/admin/class-admin-business.php:452
+#, php-format
+msgid "Show %s on the website"
+msgstr "Hiện %s trên website"
+
+#. translators: %s: chat app name.
+#: includes/admin/class-admin-business.php:456
+#, php-format
+msgid "%s number"
+msgstr "Số %s"
+
+#: includes/admin/class-admin-business.php:501
+msgid "Verification"
+msgstr "Xác minh"
+
+#. translators: 1: number of verified details, 2: total number of details.
+#: includes/admin/class-admin-business.php:503
+#, php-format
+msgid "%1$d of %2$d details verified"
+msgstr "%1$d/%2$d thông tin đã xác minh"
+
+#: includes/admin/class-admin-business.php:505
+msgid "Still PENDING VERIFICATION (hidden on the website):"
+msgstr "Vẫn CHỜ XÁC MINH (đang ẩn trên website):"
+
+#: includes/admin/class-admin-business.php:506
+msgid "Mark every filled-in detail as verified? They will appear on the website. Only do this after checking each one yourself."
+msgstr "Đánh dấu mọi thông tin đã điền là đã xác minh? Chúng sẽ hiện trên website. Chỉ làm vậy sau khi bạn đã tự kiểm tra từng mục."
+
+#: includes/admin/class-admin-business.php:506
+msgid "Mark all verified"
+msgstr "Xác minh tất cả"
+
+#: includes/admin/class-admin-business.php:516
+msgid "Backup & restore"
+msgstr "Sao lưu & khôi phục"
+
+#: includes/admin/class-admin-business.php:516
+msgid "A backup of store information and prices is made automatically before every change. Download a copy before big changes."
+msgstr "Thông tin cửa hàng và giá được tự động sao lưu trước mỗi lần thay đổi. Hãy tải một bản về trước những thay đổi lớn."
+
+#: includes/admin/class-admin-business.php:521
+msgid "Download backup (JSON)"
+msgstr "Tải bản sao lưu (JSON)"
+
+#: includes/admin/class-admin-business.php:527
+msgid "Import a backup file"
+msgstr "Nhập tệp sao lưu"
+
+#: includes/admin/class-admin-business.php:529
+msgid "JSON file, maximum 200 KB. The current data is backed up first, so you can undo the import below."
+msgstr "Tệp JSON, tối đa 200 KB. Dữ liệu hiện tại được sao lưu trước, nên bạn có thể hoàn tác việc nhập ở bên dưới."
+
+#: includes/admin/class-admin-business.php:530
+msgid "Replace the store information and prices with the content of this file?"
+msgstr "Thay thông tin cửa hàng và giá bằng nội dung của tệp này?"
+
+#: includes/admin/class-admin-business.php:530
+msgid "Import"
+msgstr "Nhập"
+
+#: includes/admin/class-admin-business.php:534
+msgid "History"
+msgstr "Lịch sử"
+
+#: includes/admin/class-admin-business.php:536
+msgid "No backups yet. One is made automatically at the next change."
+msgstr "Chưa có bản sao lưu. Một bản sẽ được tạo tự động ở lần thay đổi tiếp theo."
+
+#: includes/admin/class-admin-business.php:541
+msgid "Before a store information change"
+msgstr "Trước khi đổi thông tin cửa hàng"
+
+#: includes/admin/class-admin-business.php:542
+msgid "Before a price or vehicle change"
+msgstr "Trước khi đổi giá hoặc xe"
+
+#: includes/admin/class-admin-business.php:543
+msgid "Before an import"
+msgstr "Trước khi nhập"
+
+#: includes/admin/class-admin-business.php:544
+msgid "Before a restore"
+msgstr "Trước khi khôi phục"
+
+#: includes/admin/class-admin-business.php:555
+msgid "Restore this backup? The current data is backed up first."
+msgstr "Khôi phục bản sao lưu này? Dữ liệu hiện tại sẽ được sao lưu trước."
+
+#: includes/admin/class-admin-business.php:555
+msgid "Restore"
+msgstr "Khôi phục"
+
+#: includes/admin/class-admin-business.php:588
+#: includes/admin/class-admin-pricing.php:286
+#: includes/admin/class-admin-vehicles.php:395
+msgid "Nothing was saved. Please fix the highlighted fields."
+msgstr "Chưa lưu gì cả. Vui lòng sửa các ô được đánh dấu."
+
+#: includes/admin/class-admin-business.php:591
+#: includes/admin/class-admin-pricing.php:290
+#: includes/admin/class-admin-quick-contact.php:146
+#: includes/admin/class-admin-vehicles.php:398
+#: includes/admin/class-admin-vehicles.php:431
+msgid "No changes to save."
+msgstr "Không có thay đổi để lưu."
+
+#: includes/admin/class-admin-business.php:593
+msgid "Saved. Every filled-in detail is now marked as verified."
+msgstr "Đã lưu. Mọi thông tin đã điền giờ được đánh dấu đã xác minh."
+
+#: includes/admin/class-admin-business.php:593
+msgid "Store information saved. The website is updated in all languages."
+msgstr "Đã lưu thông tin cửa hàng. Website được cập nhật ở mọi ngôn ngữ."
+
+#: includes/admin/class-admin-business.php:648
+msgid "Please choose a backup file to import."
+msgstr "Vui lòng chọn tệp sao lưu để nhập."
+
+#: includes/admin/class-admin-business.php:651
+#: includes/class-business.php:1117
+msgid "The file is larger than 200 KB."
+msgstr "Tệp lớn hơn 200 KB."
+
+#: includes/admin/class-admin-business.php:654
+msgid "Please choose a .json backup file."
+msgstr "Vui lòng chọn tệp sao lưu .json."
+
+#: includes/admin/class-admin-business.php:667
+msgid "Backup imported. The previous data was saved in the history below."
+msgstr "Đã nhập bản sao lưu. Dữ liệu trước đó được lưu trong lịch sử bên dưới."
+
+#: includes/admin/class-admin-business.php:681
+msgid "Backup restored. The data before the restore was saved in the history."
+msgstr "Đã khôi phục bản sao lưu. Dữ liệu trước khi khôi phục được lưu trong lịch sử."
+
+#: includes/admin/class-admin-languages.php:41
+#: includes/admin/class-admin-languages.php:42
+#: includes/admin/class-admin-languages.php:62
+#: includes/class-translations.php:182
+msgid "Languages"
+msgstr "Ngôn ngữ"
+
+#: includes/admin/class-admin-languages.php:63
+msgid "Vietnamese is the default language at “/”. Other languages live under their own prefix, for example “/en/”. Turning a language off hides it everywhere but keeps its content."
+msgstr "Tiếng Việt là ngôn ngữ mặc định tại “/”. Các ngôn ngữ khác nằm dưới tiền tố riêng, ví dụ “/en/”. Tắt một ngôn ngữ sẽ ẩn nó ở mọi nơi nhưng vẫn giữ nội dung."
+
+#. translators: 1: native language name, 2: language code.
+#: includes/admin/class-admin-languages.php:70
+#, php-format
+msgid "%1$s (%2$s)"
+msgstr "%1$s (%2$s)"
+
+#: includes/admin/class-admin-languages.php:75
+msgid "Default language: always on, served at the site root without a prefix."
+msgstr "Ngôn ngữ mặc định: luôn bật, phục vụ tại gốc website, không có tiền tố."
+
+#: includes/admin/class-admin-languages.php:79
+msgid "Show this language on the website"
+msgstr "Hiện ngôn ngữ này trên website"
+
+#: includes/admin/class-admin-languages.php:81
+msgid "When off, its addresses return “not found” and it disappears from the language switcher, hreflang and sitemaps. Nothing is deleted."
+msgstr "Khi tắt, các địa chỉ của nó trả về “không tìm thấy” và nó biến mất khỏi bộ chuyển ngôn ngữ, hreflang và sitemap. Không có gì bị xóa."
+
+#: includes/admin/class-admin-languages.php:86
+msgid "URL prefix"
+msgstr "Tiền tố URL"
+
+#. translators: %s: example address.
+#: includes/admin/class-admin-languages.php:89
+#, php-format
+msgid "2–5 lowercase letters. Addresses look like %s"
+msgstr "2–5 chữ cái thường. Địa chỉ sẽ có dạng %s"
+
+#: includes/admin/class-admin-languages.php:104
+msgid "hreflang code"
+msgstr "Mã hreflang"
+
+#. translators: %s: language code.
+#: includes/admin/class-admin-languages.php:107
+#, php-format
+msgid "Tells search engines the language (and optionally the region) of these pages, e.g. “%s”. Also used for <html lang>."
+msgstr "Cho công cụ tìm kiếm biết ngôn ngữ (và tùy chọn vùng) của các trang này, ví dụ “%s”. Cũng dùng cho <html lang>."
+
+#: includes/admin/class-admin-languages.php:119
+msgid "Tagline"
+msgstr "Khẩu hiệu"
+
+#: includes/admin/class-admin-languages.php:122
+msgid "Short slogan in this language. Empty = the WordPress tagline (Settings › General)."
+msgstr "Khẩu hiệu ngắn bằng ngôn ngữ này. Để trống = khẩu hiệu của WordPress (Cài đặt › Tổng quan)."
+
+#: includes/admin/class-admin-languages.php:123
+msgid "Short slogan in this language. Leave empty rather than showing a Vietnamese tagline on foreign pages."
+msgstr "Khẩu hiệu ngắn bằng ngôn ngữ này. Thà để trống còn hơn hiện khẩu hiệu tiếng Việt trên trang ngoại ngữ."
+
+#: includes/admin/class-admin-languages.php:135
+msgid "Fallback language for other visitors (x-default)"
+msgstr "Ngôn ngữ dự phòng cho khách khác (x-default)"
+
+#: includes/admin/class-admin-languages.php:136
+msgid "Search engines send visitors whose language is not offered to this version."
+msgstr "Công cụ tìm kiếm sẽ đưa khách dùng ngôn ngữ chưa được hỗ trợ đến phiên bản này."
+
+#: includes/admin/class-admin-languages.php:139
+msgid "x-default language"
+msgstr "Ngôn ngữ x-default"
+
+#: includes/admin/class-admin-languages.php:141
+msgid "None (do not output x-default)"
+msgstr "Không (không xuất x-default)"
+
+#: includes/admin/class-admin-languages.php:166
+msgid "Off"
+msgstr "Tắt"
+
+#: includes/admin/class-admin-languages.php:170
+msgid "Home page published"
+msgstr "Trang chủ đã đăng"
+
+#: includes/admin/class-admin-languages.php:171
+msgid "No published home page: its home address returns “not found”"
+msgstr "Chưa đăng trang chủ: địa chỉ trang chủ trả về “không tìm thấy”"
+
+#. translators: %s: number of published pages and posts.
+#: includes/admin/class-admin-languages.php:175
+#, php-format
+msgid "%s published page/post"
+msgid_plural "%s published pages/posts"
+msgstr[0] "%s trang/bài đã đăng"
+
+#. translators: %s: list of validation errors.
+#: includes/admin/class-admin-languages.php:224
+#, php-format
+msgid "Saved, except: %s"
+msgstr "Đã lưu, trừ: %s"
+
+#: includes/admin/class-admin-languages.php:226
+msgid "Language settings saved."
+msgstr "Đã lưu cài đặt ngôn ngữ."
+
+#: includes/admin/class-admin-pricing.php:43
+#: includes/admin/class-admin-pricing.php:44
+#: includes/admin/class-admin-pricing.php:88
+#: includes/class-roles.php:72
+msgid "Prices"
+msgstr "Bảng giá"
+
+#: includes/admin/class-admin-pricing.php:88
+msgid "Rental prices and deposits per model. Unconfirmed prices never appear as fact: visitors see “Price on request” and a call button instead."
+msgstr "Giá thuê và tiền cọc theo từng dòng xe. Giá chưa xác nhận không bao giờ hiện như thông tin chắc chắn: khách sẽ thấy “Liên hệ báo giá” và nút gọi."
+
+#: includes/admin/class-admin-pricing.php:95
+msgid "Price list"
+msgstr "Bảng giá"
+
+#: includes/admin/class-admin-pricing.php:95
+msgid "Confirm the price list only after checking the real prices at the Mr Tu location."
+msgstr "Chỉ xác nhận bảng giá sau khi đã kiểm tra giá thật tại điểm Mr Tu."
+
+#: includes/admin/class-admin-pricing.php:96
+msgid "Price list confirmed"
+msgstr "Bảng giá đã xác nhận"
+
+#: includes/admin/class-admin-pricing.php:97
+msgid "Prices confirmed for Mr Tu"
+msgstr "Giá đã xác nhận cho Mr Tu"
+
+#: includes/admin/class-admin-pricing.php:97
+msgid "A model’s price is shown on the website only when this switch AND the model’s own switch below are on."
+msgstr "Giá của một dòng xe chỉ hiện trên website khi công tắc này VÀ công tắc riêng của dòng xe bên dưới đều bật."
+
+#: includes/admin/class-admin-pricing.php:101
+msgid "Date you last checked the prices"
+msgstr "Ngày bạn kiểm tra giá lần cuối"
+
+#: includes/admin/class-admin-pricing.php:104
+msgid "Shown as “Updated …” above the price table."
+msgstr "Hiện dưới dạng “Cập nhật …” phía trên bảng giá."
+
+#: includes/admin/class-admin-pricing.php:109
+msgid "Show reference prices while not confirmed"
+msgstr "Hiện giá tham khảo khi chưa xác nhận"
+
+#: includes/admin/class-admin-pricing.php:109
+msgid "On: unconfirmed prices appear with the label “reference price, confirm before booking”. Off: they appear as “Price on request”."
+msgstr "Bật: giá chưa xác nhận hiện kèm nhãn “giá tham khảo, xác nhận trước khi đặt”. Tắt: hiện là “Liên hệ báo giá”."
+
+#: includes/admin/class-admin-pricing.php:113
+msgid "Where the reference prices come from (only visible here)"
+msgstr "Nguồn giá tham khảo (chỉ hiện ở đây)"
+
+#: includes/admin/class-admin-pricing.php:121
+msgid "Delivery fee"
+msgstr "Phí giao xe"
+
+#: includes/admin/class-admin-pricing.php:122
+#: includes/admin/class-admin-pricing.php:126
+msgid "Delivery / pick-up fee"
+msgstr "Phí giao / nhận xe"
+
+#: includes/admin/class-admin-pricing.php:128
+msgid "Short text, for example: free delivery inside the Old Quarter."
+msgstr "Văn bản ngắn, ví dụ: miễn phí giao xe trong Phố Cổ."
+
+#: includes/admin/class-admin-pricing.php:137
+msgid "Prices per model"
+msgstr "Giá theo dòng xe"
+
+#: includes/admin/class-admin-pricing.php:137
+msgid "Amounts in VND without dots, for example 150000. Leave “to” empty for a single price, and both empty when there is no price."
+msgstr "Số tiền bằng VND, không có dấu chấm, ví dụ 150000. Để trống “đến” nếu chỉ có một mức giá, để trống cả hai khi chưa có giá."
+
+#: includes/admin/class-admin-pricing.php:139
+#: includes/admin/class-admin-vehicles.php:113
+msgid "No vehicles yet."
+msgstr "Chưa có xe nào."
+
+#: includes/admin/class-admin-pricing.php:139
+msgid "Add a vehicle"
+msgstr "Thêm xe"
+
+#: includes/admin/class-admin-pricing.php:142
+msgid "Per day"
+msgstr "Theo ngày"
+
+#: includes/admin/class-admin-pricing.php:143
+msgid "Per week"
+msgstr "Theo tuần"
+
+#: includes/admin/class-admin-pricing.php:144
+msgid "Per month"
+msgstr "Theo tháng"
+
+#: includes/admin/class-admin-pricing.php:157
+#: includes/class-blocks.php:260
+msgid "Deposit"
+msgstr "Tiền cọc"
+
+#: includes/admin/class-admin-pricing.php:159
+msgid "Price confirmed for this model"
+msgstr "Giá đã xác nhận cho dòng xe này"
+
+#: includes/admin/class-admin-pricing.php:167
+msgid "Preview on the website"
+msgstr "Xem trước trên website"
+
+#: includes/admin/class-admin-pricing.php:167
+msgid "This is how the saved prices look on the website right now (Vietnamese number format). Save first to see your changes here."
+msgstr "Đây là cách giá đã lưu đang hiện trên website (định dạng số kiểu Việt Nam). Hãy lưu trước để thấy thay đổi của bạn ở đây."
+
+#: includes/admin/class-admin-pricing.php:193
+msgid "Not on the website."
+msgstr "Không hiện trên website."
+
+#: includes/admin/class-admin-pricing.php:197
+msgid "Website: price shown."
+msgstr "Website: hiện giá."
+
+#: includes/admin/class-admin-pricing.php:200
+msgid "Website: reference price with a “confirm before booking” label."
+msgstr "Website: giá tham khảo kèm nhãn “xác nhận trước khi đặt”."
+
+#: includes/admin/class-admin-pricing.php:202
+msgid "Website: “Price on request”."
+msgstr "Website: “Liên hệ báo giá”."
+
+#: includes/admin/class-admin-pricing.php:240
+msgid "From (VND)"
+msgstr "Từ (VND)"
+
+#: includes/admin/class-admin-pricing.php:249
+msgid "To (optional)"
+msgstr "Đến (tùy chọn)"
+
+#: includes/admin/class-admin-pricing.php:292
+msgid "Prices saved. The website is updated in all languages."
+msgstr "Đã lưu giá. Website được cập nhật ở mọi ngôn ngữ."
+
+#: includes/admin/class-admin-quick-contact.php:39
+#: includes/admin/class-admin-quick-contact.php:40
+#: includes/admin/class-admin-quick-contact.php:76
+msgid "Quick Call"
+msgstr "Gọi nhanh"
+
+#: includes/admin/class-admin-quick-contact.php:55
+#: includes/class-business.php:657
+#: includes/class-quick-contact.php:155
+msgid "Call"
+msgstr "Gọi"
+
+#: includes/admin/class-admin-quick-contact.php:58
+msgid "Directions (Google Maps)"
+msgstr "Chỉ đường (Google Maps)"
+
+#: includes/admin/class-admin-quick-contact.php:59
+msgid "Ask a question (Mr Tu assistant)"
+msgstr "Đặt câu hỏi (trợ lý Mr Tu)"
+
+#: includes/admin/class-admin-quick-contact.php:60
+#: includes/class-blocks.php:586
+#: includes/class-business.php:718
+#: includes/class-quick-contact.php:160
+msgid "Contact page"
+msgstr "Trang liên hệ"
+
+#: includes/admin/class-admin-quick-contact.php:76
+msgid "The round contact button in the bottom corner of every page. Each button inside appears only when its channel is verified in Store information."
+msgstr "Nút liên hệ tròn ở góc dưới mọi trang. Mỗi nút bên trong chỉ hiện khi kênh của nó đã được xác minh trong Thông tin cửa hàng."
+
+#: includes/admin/class-admin-quick-contact.php:88
+msgid "On the website now"
+msgstr "Đang hiện trên website"
+
+#: includes/admin/class-admin-quick-contact.php:90
+msgid "Switched off"
+msgstr "Đã tắt"
+
+#: includes/admin/class-admin-quick-contact.php:92
+msgid "Hidden"
+msgstr "Đang ẩn"
+
+#: includes/admin/class-admin-quick-contact.php:92
+msgid "No button is ready yet, so the dock is not shown. Verify the phone number in Store information."
+msgstr "Chưa có nút nào sẵn sàng nên thanh gọi nhanh không hiện. Hãy xác minh số điện thoại trong Thông tin cửa hàng."
+
+#. translators: %s: comma-separated list of buttons.
+#: includes/admin/class-admin-quick-contact.php:95
+msgid "Shown"
+msgstr "Đang hiện"
+
+#. translators: %s: comma-separated list of buttons.
+#: includes/admin/class-admin-quick-contact.php:95
+#, php-format
+msgid "Buttons: %s"
+msgstr "Các nút: %s"
+
+#: includes/admin/class-admin-quick-contact.php:101
+msgid "Dock"
+msgstr "Thanh gọi nhanh"
+
+#: includes/admin/class-admin-quick-contact.php:102
+msgid "Show the Quick Call button"
+msgstr "Hiện nút Gọi nhanh"
+
+#: includes/admin/class-admin-quick-contact.php:103
+msgid "Side of the screen"
+msgstr "Phía màn hình"
+
+#: includes/admin/class-admin-quick-contact.php:105
+msgid "Right"
+msgstr "Phải"
+
+#: includes/admin/class-admin-quick-contact.php:106
+msgid "Left"
+msgstr "Trái"
+
+#: includes/admin/class-admin-quick-contact.php:111
+msgid "Make it smaller while scrolling"
+msgstr "Thu nhỏ khi cuộn trang"
+
+#: includes/admin/class-admin-quick-contact.php:111
+msgid "After scrolling down, only the icon stays visible."
+msgstr "Sau khi cuộn xuống, chỉ còn biểu tượng hiện ra."
+
+#: includes/admin/class-admin-quick-contact.php:114
+msgid "Buttons inside"
+msgstr "Các nút bên trong"
+
+#: includes/admin/class-admin-quick-contact.php:114
+msgid "Switch on the buttons you want. A button switched on but not ready stays hidden until its channel is verified."
+msgstr "Bật các nút bạn muốn. Nút đã bật nhưng chưa sẵn sàng vẫn ẩn cho đến khi kênh của nó được xác minh."
+
+#: includes/admin/class-admin-quick-contact.php:120
+msgid "Ready — shown on the website"
+msgstr "Sẵn sàng — đang hiện trên website"
+
+#: includes/admin/class-admin-quick-contact.php:120
+msgid "Ready, but switched off"
+msgstr "Sẵn sàng, nhưng đang tắt"
+
+#: includes/admin/class-admin-quick-contact.php:122
+msgid "Not shown"
+msgstr "Không hiện"
+
+#: includes/admin/class-admin-quick-contact.php:124
+msgid "Open Store information"
+msgstr "Mở Thông tin cửa hàng"
+
+#: includes/admin/class-admin-quick-contact.php:148
+msgid "Quick Call settings saved."
+msgstr "Đã lưu cài đặt Gọi nhanh."
+
+#: includes/admin/class-admin-translations.php:86
+#: includes/admin/class-admin-translations.php:87
+#: includes/admin/class-admin-translations.php:593
+#: includes/admin/class-admin-translations.php:928
+msgid "Translations"
+msgstr "Bản dịch"
+
+#. translators: 1: language name, 2: post status label.
+#: includes/admin/class-admin-translations.php:161
+#, php-format
+msgid "%1$s: %2$s – edit"
+msgstr "%1$s: %2$s – sửa"
+
+#. translators: %s: language name.
+#: includes/admin/class-admin-translations.php:171
+#, php-format
+msgid "%s: no translation yet – create"
+msgstr "%s: chưa có bản dịch – tạo"
+
+#. translators: %s: language name.
+#: includes/admin/class-admin-translations.php:221
+#, php-format
+msgid "%s – currently off"
+msgstr "%s – đang tắt"
+
+#: includes/admin/class-admin-translations.php:304
+msgid "Filter by language"
+msgstr "Lọc theo ngôn ngữ"
+
+#: includes/admin/class-admin-translations.php:306
+msgid "All languages"
+msgstr "Mọi ngôn ngữ"
+
+#: includes/admin/class-admin-translations.php:326
+msgid "Language & translations"
+msgstr "Ngôn ngữ & bản dịch"
+
+#: includes/admin/class-admin-translations.php:346
+msgid "Language of this content"
+msgstr "Ngôn ngữ của nội dung này"
+
+#. translators: %s: language name.
+#: includes/admin/class-admin-translations.php:351
+#, php-format
+msgid "Language: %s"
+msgstr "Ngôn ngữ: %s"
+
+#: includes/admin/class-admin-translations.php:355
+msgid "Save a draft first, then you can add the other language versions here."
+msgstr "Hãy lưu bản nháp trước, sau đó bạn có thể thêm các phiên bản ngôn ngữ khác ở đây."
+
+#: includes/admin/class-admin-translations.php:359
+msgid "Other language versions:"
+msgstr "Phiên bản ngôn ngữ khác:"
+
+#. translators: %s: language name.
+#: includes/admin/class-admin-translations.php:373
+#, php-format
+msgid "Edit the %s version"
+msgstr "Sửa bản %s"
+
+#. translators: %s: language name.
+#: includes/admin/class-admin-translations.php:373
+#: includes/admin/class-admin-vehicles.php:127
+msgid "Edit"
+msgstr "Sửa"
+
+#. translators: %s: language name.
+#: includes/admin/class-admin-translations.php:377
+#, php-format
+msgid "View the %s version"
+msgstr "Xem bản %s"
+
+#. translators: %s: language name.
+#: includes/admin/class-admin-translations.php:377
+msgid "View"
+msgstr "Xem"
+
+#. translators: %s: language name.
+#: includes/admin/class-admin-translations.php:381
+#, php-format
+msgid "Create the %s version as a draft copy of this content"
+msgstr "Tạo bản %s dưới dạng bản nháp sao chép nội dung này"
+
+#. translators: %s: language name.
+#: includes/admin/class-admin-translations.php:381
+msgid "+ Copy"
+msgstr "+ Sao chép"
+
+#. translators: %s: language name.
+#: includes/admin/class-admin-translations.php:383
+#, php-format
+msgid "Create an empty %s draft"
+msgstr "Tạo bản nháp %s trống"
+
+#. translators: %s: language name.
+#: includes/admin/class-admin-translations.php:383
+msgid "+ Empty"
+msgstr "+ Trống"
+
+#: includes/admin/class-admin-translations.php:391
+msgid "Page role"
+msgstr "Vai trò trang"
+
+#: includes/admin/class-admin-translations.php:392
+#: includes/admin/class-admin-translations.php:756
+#: includes/admin/class-admin-translations.php:962
+msgid "— None —"
+msgstr "— Không —"
+
+#: includes/admin/class-admin-translations.php:396
+msgid "Applies to every language version. Menus and footers find pages by role."
+msgstr "Áp dụng cho mọi phiên bản ngôn ngữ. Menu và chân trang tìm trang theo vai trò."
+
+#: includes/admin/class-admin-translations.php:408
+msgid "Link existing translations…"
+msgstr "Liên kết bản dịch có sẵn…"
+
+#: includes/admin/class-admin-translations.php:421
+msgid "Remove this content from its translation group? The other language versions are kept."
+msgstr "Gỡ nội dung này khỏi nhóm bản dịch? Các phiên bản ngôn ngữ khác vẫn được giữ."
+
+#: includes/admin/class-admin-translations.php:421
+msgid "Unlink"
+msgstr "Bỏ liên kết"
+
+#: includes/admin/class-admin-translations.php:594
+msgid "Every row is one piece of content in all languages. ✅ published · ✏️ draft or other status · ➕ create the missing version."
+msgstr "Mỗi hàng là một nội dung ở mọi ngôn ngữ. ✅ đã đăng · ✏️ nháp hoặc trạng thái khác · ➕ tạo bản còn thiếu."
+
+#: includes/admin/class-admin-translations.php:619
+msgid "Show all"
+msgstr "Hiện tất cả"
+
+#: includes/admin/class-admin-translations.php:619
+msgid "Only missing translations"
+msgstr "Chỉ bản dịch còn thiếu"
+
+#: includes/admin/class-admin-translations.php:622
+msgid "Translation matrix"
+msgstr "Ma trận bản dịch"
+
+#: includes/admin/class-admin-translations.php:624
+msgid "Nothing to show."
+msgstr "Không có gì để hiện."
+
+#: includes/admin/class-admin-translations.php:626
+msgid "Language versions per content"
+msgstr "Phiên bản ngôn ngữ của từng nội dung"
+
+#: includes/admin/class-admin-translations.php:627
+msgid "Content"
+msgstr "Nội dung"
+
+#: includes/admin/class-admin-translations.php:627
+msgid "Role"
+msgstr "Vai trò"
+
+#: includes/admin/class-admin-translations.php:639
+#: includes/admin/class-admin-translations.php:641
+#: includes/admin/class-admin-translations.php:759
+msgid "(no title)"
+msgstr "(không có tiêu đề)"
+
+#: includes/admin/class-admin-translations.php:670
+msgid "Maintenance"
+msgstr "Bảo trì"
+
+#: includes/admin/class-admin-translations.php:670
+msgid "Rebuilds every translation map from the saved relationships. Safe to run at any time."
+msgstr "Dựng lại mọi bản đồ bản dịch từ các liên kết đã lưu. Chạy lúc nào cũng an toàn."
+
+#: includes/admin/class-admin-translations.php:674
+msgid "Rebuild translation maps"
+msgstr "Dựng lại bản đồ bản dịch"
+
+#: includes/admin/class-admin-translations.php:689
+msgid "This translation cannot be created."
+msgstr "Không thể tạo bản dịch này."
+
+#. translators: %s: language name.
+#: includes/admin/class-admin-translations.php:695
+#, php-format
+msgid "Create the %s version"
+msgstr "Tạo bản %s"
+
+#. translators: %s: language name.
+#: includes/admin/class-admin-translations.php:695
+msgid "A new draft is linked to the original. Nothing is published automatically."
+msgstr "Bản nháp mới được liên kết với bản gốc. Không có gì được đăng tự động."
+
+#. translators: 1: post title, 2: language name.
+#: includes/admin/class-admin-translations.php:697
+#, php-format
+msgid "Original: “%1$s” (%2$s)"
+msgstr "Bản gốc: “%1$s” (%2$s)"
+
+#: includes/admin/class-admin-translations.php:700
+#: includes/class-translations.php:989
+msgid "This language version already exists."
+msgstr "Phiên bản ngôn ngữ này đã tồn tại."
+
+#: includes/admin/class-admin-translations.php:700
+msgid "Edit it"
+msgstr "Sửa bản này"
+
+#: includes/admin/class-admin-translations.php:708
+msgid "Copy the original content"
+msgstr "Sao chép nội dung gốc"
+
+#: includes/admin/class-admin-translations.php:709
+msgid "Start with an empty draft"
+msgstr "Bắt đầu với bản nháp trống"
+
+#: includes/admin/class-admin-translations.php:711
+msgid "A copy keeps the layout so you only replace the text. A draft that is still identical to another language can never be published."
+msgstr "Bản sao giữ nguyên bố cục nên bạn chỉ cần thay chữ. Bản nháp còn giống hệt ngôn ngữ khác sẽ không bao giờ đăng được."
+
+#: includes/admin/class-admin-translations.php:715
+msgid "← Back to translations"
+msgstr "← Về trang bản dịch"
+
+#: includes/admin/class-admin-translations.php:732
+msgid "Link existing translations"
+msgstr "Liên kết bản dịch có sẵn"
+
+#: includes/admin/class-admin-translations.php:732
+msgid "Choose which existing content is the same page in another language. A post can belong to only one group."
+msgstr "Chọn nội dung có sẵn nào là cùng một trang ở ngôn ngữ khác. Mỗi bài chỉ thuộc một nhóm."
+
+#. translators: 1: post title, 2: language name.
+#: includes/admin/class-admin-translations.php:734
+#, php-format
+msgid "“%1$s” (%2$s)"
+msgstr "“%1$s” (%2$s)"
+
+#: includes/admin/class-admin-translations.php:767
+msgid "Save links"
+msgstr "Lưu liên kết"
+
+#: includes/admin/class-admin-translations.php:770
+msgid "← Back to the editor"
+msgstr "← Về trình soạn thảo"
+
+#. translators: %s: language name.
+#: includes/admin/class-admin-translations.php:805
+#, php-format
+msgid "%s draft created with a copy of the original. Translate the title and the text, then publish."
+msgstr "Đã tạo bản nháp %s từ bản sao của bản gốc. Hãy dịch tiêu đề và nội dung, rồi đăng."
+
+#. translators: %s: language name.
+#: includes/admin/class-admin-translations.php:807
+#, php-format
+msgid "Empty %s draft created. Write the title and the text, then publish."
+msgstr "Đã tạo bản nháp %s trống. Hãy viết tiêu đề và nội dung, rồi đăng."
+
+#: includes/admin/class-admin-translations.php:857
+msgid "The links could not be saved: each language can have only one version."
+msgstr "Không lưu được liên kết: mỗi ngôn ngữ chỉ được có một phiên bản."
+
+#: includes/admin/class-admin-translations.php:859
+msgid "Translation links saved."
+msgstr "Đã lưu liên kết bản dịch."
+
+#: includes/admin/class-admin-translations.php:872
+msgid "Removed from its translation group."
+msgstr "Đã gỡ khỏi nhóm bản dịch."
+
+#. translators: %s: number of translation groups.
+#: includes/admin/class-admin-translations.php:882
+#, php-format
+msgid "%s translation map rebuilt."
+msgid_plural "%s translation maps rebuilt."
+msgstr[0] "Đã dựng lại %s bản đồ bản dịch."
+
+#: includes/admin/class-admin-translations.php:900
+#: includes/admin/class-admin-translations.php:924
+#: includes/admin/class-admin-translations.php:1074
+#: includes/class-languages.php:553
+msgid "Language"
+msgstr "Ngôn ngữ"
+
+#. translators: %s: term name.
+#: includes/admin/class-admin-translations.php:906
+#, php-format
+msgid "Will be linked as a translation of “%s”."
+msgstr "Sẽ được liên kết làm bản dịch của “%s”."
+
+#: includes/admin/class-admin-translations.php:908
+msgid "Categories and tags belong to one language; their archive is only shown in that language."
+msgstr "Chuyên mục và thẻ thuộc về một ngôn ngữ; trang lưu trữ của chúng chỉ hiện ở ngôn ngữ đó."
+
+#. translators: %s: language name.
+#: includes/admin/class-admin-translations.php:977
+#, php-format
+msgid "Add the %s translation"
+msgstr "Thêm bản dịch %s"
+
+#. translators: %s: language name.
+#: includes/admin/class-admin-translations.php:977
+msgid "+ Add new"
+msgstr "+ Thêm mới"
+
+#: includes/admin/class-admin-vehicles.php:43
+#: includes/admin/class-admin-vehicles.php:44
+#: includes/admin/class-admin-vehicles.php:108
+#: includes/admin/class-admin-vehicles.php:169
+msgid "Vehicles"
+msgstr "Xe"
+
+#: includes/admin/class-admin-vehicles.php:108
+msgid "The motorbike models Mr Tu rents out. Hidden models never appear on the website. Prices are set on the Prices screen."
+msgstr "Các dòng xe máy Mr Tu cho thuê. Dòng xe đang ẩn không bao giờ hiện trên website. Giá được đặt ở màn hình Bảng giá."
+
+#: includes/admin/class-admin-vehicles.php:111
+msgid "Models"
+msgstr "Dòng xe"
+
+#: includes/admin/class-admin-vehicles.php:111
+msgid "The order here is the order on the website."
+msgstr "Thứ tự ở đây là thứ tự trên website."
+
+#: includes/admin/class-admin-vehicles.php:125
+msgid "Price confirmed"
+msgstr "Giá đã xác nhận"
+
+#: includes/admin/class-admin-vehicles.php:125
+msgid "Price PENDING VERIFICATION"
+msgstr "Giá CHỜ XÁC MINH"
+
+#. translators: %s: vehicle name.
+#: includes/admin/class-admin-vehicles.php:129
+#, php-format
+msgid "Move %s up"
+msgstr "Chuyển %s lên"
+
+#. translators: %s: vehicle name.
+#: includes/admin/class-admin-vehicles.php:131
+#, php-format
+msgid "Move %s down"
+msgstr "Chuyển %s xuống"
+
+#. translators: %s: vehicle name.
+#: includes/admin/class-admin-vehicles.php:133
+#, php-format
+msgid "Delete %s? You can undo this in Store information → Backup & restore."
+msgstr "Xóa %s? Bạn có thể hoàn tác trong Thông tin cửa hàng → Sao lưu & khôi phục."
+
+#. translators: %s: vehicle name.
+#: includes/admin/class-admin-vehicles.php:133
+msgid "Delete"
+msgstr "Xóa"
+
+#. translators: %s: vehicle name.
+#: includes/admin/class-admin-vehicles.php:138
+#: includes/admin/class-admin-vehicles.php:179
+msgid "Add vehicle"
+msgstr "Thêm xe"
+
+#: includes/admin/class-admin-vehicles.php:167
+msgid "All vehicles"
+msgstr "Tất cả xe"
+
+#: includes/admin/class-admin-vehicles.php:170
+#: includes/admin/class-admin-vehicles.php:350
+#: includes/admin/class-admin-vehicles.php:422
+msgid "This vehicle no longer exists."
+msgstr "Xe này không còn tồn tại."
+
+#. translators: %s: vehicle name.
+#: includes/admin/class-admin-vehicles.php:179
+#, php-format
+msgid "Edit %s"
+msgstr "Sửa %s"
+
+#: includes/admin/class-admin-vehicles.php:188
+#: includes/class-blocks.php:271
+msgid "Model"
+msgstr "Dòng xe"
+
+#: includes/admin/class-admin-vehicles.php:193
+msgid "Model name"
+msgstr "Tên dòng xe"
+
+#: includes/admin/class-admin-vehicles.php:195
+msgid "For example: Honda Vision"
+msgstr "Ví dụ: Honda Vision"
+
+#: includes/admin/class-admin-vehicles.php:208
+msgid "Type"
+msgstr "Loại"
+
+#: includes/admin/class-admin-vehicles.php:209
+msgid "Status"
+msgstr "Trạng thái"
+
+#: includes/admin/class-admin-vehicles.php:209
+msgid "Hidden: kept here but never shown on the website."
+msgstr "Ẩn: vẫn giữ ở đây nhưng không bao giờ hiện trên website."
+
+#: includes/admin/class-admin-vehicles.php:213
+msgid "Short ID"
+msgstr "Mã ngắn"
+
+#: includes/admin/class-admin-vehicles.php:215
+msgid "Used internally, for example honda-vision. Lowercase letters, numbers and dashes. Leave empty to create it from the name."
+msgstr "Dùng nội bộ, ví dụ honda-vision. Chữ thường, số và dấu gạch ngang. Để trống để tạo tự động từ tên."
+
+#: includes/admin/class-admin-vehicles.php:226
+msgid "Photo"
+msgstr "Ảnh"
+
+#: includes/admin/class-admin-vehicles.php:226
+msgid "A real photo of this model. Without a photo the website shows a licence-plate style label."
+msgstr "Ảnh thật của dòng xe này. Không có ảnh, website sẽ hiện nhãn kiểu biển số xe."
+
+#: includes/admin/class-admin-vehicles.php:232
+msgid "Choose a photo"
+msgstr "Chọn ảnh"
+
+#: includes/admin/class-admin-vehicles.php:232
+msgid "Use this photo"
+msgstr "Dùng ảnh này"
+
+#: includes/admin/class-admin-vehicles.php:232
+msgid "Choose photo"
+msgstr "Chọn ảnh"
+
+#: includes/admin/class-admin-vehicles.php:233
+msgid "Remove photo"
+msgstr "Gỡ ảnh"
+
+#: includes/admin/class-admin-vehicles.php:237
+msgid "Description"
+msgstr "Mô tả"
+
+#: includes/admin/class-admin-vehicles.php:237
+msgid "One or two sentences per language (optional). Leave a language empty instead of pasting another language."
+msgstr "Một hai câu cho mỗi ngôn ngữ (tùy chọn). Thà để trống một ngôn ngữ còn hơn dán ngôn ngữ khác vào."
+
+#: includes/admin/class-admin-vehicles.php:242
+msgid "Written"
+msgstr "Đã viết"
+
+#: includes/admin/class-admin-vehicles.php:242
+msgid "Empty"
+msgstr "Trống"
+
+#. translators: %s: language name.
+#: includes/admin/class-admin-vehicles.php:248
+#, php-format
+msgid "Description in %s"
+msgstr "Mô tả bằng %s"
+
+#: includes/admin/class-admin-vehicles.php:262
+msgid "Admin note"
+msgstr "Ghi chú quản trị"
+
+#: includes/admin/class-admin-vehicles.php:266
+msgid "Note (only visible here)"
+msgstr "Ghi chú (chỉ hiện ở đây)"
+
+#: includes/admin/class-admin-vehicles.php:273
+msgid "Save vehicle"
+msgstr "Lưu xe"
+
+#: includes/admin/class-admin-vehicles.php:400
+msgid "Vehicle saved. Set or check its prices on the Prices screen."
+msgstr "Đã lưu xe. Hãy đặt hoặc kiểm tra giá của xe ở màn hình Bảng giá."
+
+#: includes/admin/class-admin-vehicles.php:427
+msgid "Vehicle deleted. You can undo this in Store information → Backup & restore."
+msgstr "Đã xóa xe. Bạn có thể hoàn tác trong Thông tin cửa hàng → Sao lưu & khôi phục."
+
+#: includes/admin/class-admin-vehicles.php:436
+msgid "Order updated."
+msgstr "Đã cập nhật thứ tự."
+
+#: includes/admin/class-admin.php:97
+msgid "Control center for languages, SEO and business data."
+msgstr "Trung tâm điều khiển ngôn ngữ, SEO và dữ liệu cửa hàng."
+
+#: includes/admin/class-admin.php:295
+msgid "Save changes"
+msgstr "Lưu thay đổi"
+
+#: includes/admin/class-admin.php:365
+msgid "Not edited yet."
+msgstr "Chưa chỉnh sửa."
+
+#. translators: 1: date and time, 2: user display name.
+#: includes/admin/class-admin.php:369
+#, php-format
+msgid "Last updated %1$s by %2$s"
+msgstr "Cập nhật lần cuối %1$s bởi %2$s"
+
+#: includes/class-blocks.php:233
+msgid "Rental prices"
+msgstr "Giá thuê xe"
+
+#: includes/class-blocks.php:240
+msgid "Our price list is being updated. Please contact Mr Tu for current prices."
+msgstr "Bảng giá đang được cập nhật. Vui lòng liên hệ Mr Tu để biết giá hiện tại."
+
+#: includes/class-blocks.php:244
+msgid "Rental period"
+msgstr "Kỳ thuê"
+
+#: includes/class-blocks.php:297
+msgid "Reference price: please confirm it with Mr Tu before booking."
+msgstr "Giá tham khảo: vui lòng xác nhận với Mr Tu trước khi đặt."
+
+#. translators: %s: delivery fee description entered by the owner.
+#: includes/class-blocks.php:301
+#, php-format
+msgid "Delivery: %s"
+msgstr "Giao xe: %s"
+
+#: includes/class-blocks.php:304
+msgid "The deposit is separate from the rental price. Please confirm the price, deposit and documents with Mr Tu before you rent."
+msgstr "Tiền cọc là khoản riêng, không nằm trong giá thuê. Vui lòng xác nhận giá, tiền cọc và giấy tờ với Mr Tu trước khi thuê."
+
+#: includes/class-blocks.php:305
+msgid "Please confirm the price and documents with Mr Tu before you rent."
+msgstr "Vui lòng xác nhận giá và giấy tờ với Mr Tu trước khi thuê."
+
+#: includes/class-blocks.php:319
+msgid "Confirmed prices"
+msgstr "Giá đã xác nhận"
+
+#: includes/class-blocks.php:322
+msgid "Reference prices"
+msgstr "Giá tham khảo"
+
+#: includes/class-blocks.php:324
+msgid "Prices on request"
+msgstr "Liên hệ báo giá"
+
+#. translators: %s: date the prices were last checked.
+#: includes/class-blocks.php:348
+#, php-format
+msgid "Updated %s"
+msgstr "Cập nhật %s"
+
+#. translators: %d: number of vehicle models shown after filtering.
+#: includes/class-blocks.php:387
+#, php-format
+msgid "Models shown: %d"
+msgstr "Số dòng xe đang hiện: %d"
+
+#: includes/class-blocks.php:398
+msgid "Our list of motorbikes is being updated. Please contact Mr Tu."
+msgstr "Danh sách xe đang được cập nhật. Vui lòng liên hệ Mr Tu."
+
+#: includes/class-blocks.php:403
+msgid "Vehicle type"
+msgstr "Loại xe"
+
+#: includes/class-blocks.php:404
+msgid "All"
+msgstr "Tất cả"
+
+#: includes/class-blocks.php:419
+msgid "All prices and deposits"
+msgstr "Tất cả giá và tiền cọc"
+
+#: includes/class-blocks.php:461
+#: includes/class-pricing.php:576
+msgid "Ask for availability"
+msgstr "Liên hệ hỏi xe"
+
+#: includes/class-blocks.php:477
+msgid "Price"
+msgstr "Giá"
+
+#: includes/class-blocks.php:523
+msgid "Email"
+msgstr "Email"
+
+#: includes/class-blocks.php:533
+msgid "Area"
+msgstr "Khu vực"
+
+#: includes/class-blocks.php:536
+msgid "Hours"
+msgstr "Giờ mở cửa"
+
+#: includes/class-blocks.php:550
+msgid "Please call ahead to arrange the hand-over time and place."
+msgstr "Vui lòng gọi trước để hẹn giờ và địa điểm giao xe."
+
+#. translators: %s: phone number.
+#: includes/class-blocks.php:579
+#, php-format
+msgid "Call %s"
+msgstr "Gọi %s"
+
+#: includes/class-business.php:279
+msgid "Use a two-letter country code, for example VN."
+msgstr "Dùng mã quốc gia hai chữ cái, ví dụ VN."
+
+#: includes/class-business.php:290
+msgid "Keep the displayed number to 20 characters or fewer."
+msgstr "Số hiển thị tối đa 20 ký tự."
+
+#: includes/class-business.php:296
+msgid "Use the international format: +84 followed by 9 or 10 digits, for example +84816659199."
+msgstr "Dùng định dạng quốc tế: +84 rồi đến 9 hoặc 10 chữ số, ví dụ +84816659199."
+
+#: includes/class-business.php:304
+msgid "A verified phone needs a valid number."
+msgstr "Điện thoại đã xác minh cần một số hợp lệ."
+
+#: includes/class-business.php:324
+msgid "Choose days from Monday to Sunday only."
+msgstr "Chỉ chọn các ngày từ Thứ Hai đến Chủ Nhật."
+
+#: includes/class-business.php:331
+msgid "Use the 24-hour format HH:MM, for example 08:00."
+msgstr "Dùng định dạng 24 giờ HH:MM, ví dụ 08:00."
+
+#: includes/class-business.php:339
+msgid "The closing time must be later than the opening time."
+msgstr "Giờ đóng cửa phải sau giờ mở cửa."
+
+#: includes/class-business.php:347
+msgid "Choose the days and both times before marking the hours as verified."
+msgstr "Chọn các ngày và cả hai mốc giờ trước khi đánh dấu giờ mở cửa là đã xác minh."
+
+#: includes/class-business.php:357
+msgid "Choose “by appointment” or “staffed shop”."
+msgstr "Chọn “theo hẹn” hoặc “cửa hàng có nhân viên”."
+
+#: includes/class-business.php:370
+msgid "The map link must be a full address starting with https://"
+msgstr "Liên kết bản đồ phải là địa chỉ đầy đủ bắt đầu bằng https://"
+
+#: includes/class-business.php:385
+msgid "Enter a valid email address."
+msgstr "Nhập địa chỉ email hợp lệ."
+
+#: includes/class-business.php:400
+msgid "Enter a full web address starting with https://"
+msgstr "Nhập địa chỉ web đầy đủ bắt đầu bằng https://"
+
+#: includes/class-business.php:412
+msgid "Fill this in before marking it as verified."
+msgstr "Điền mục này trước khi đánh dấu đã xác minh."
+
+#: includes/class-business.php:416
+msgid "Enter the street address before marking the address as verified."
+msgstr "Nhập số nhà và đường trước khi đánh dấu địa chỉ là đã xác minh."
+
+#: includes/class-business.php:434
+msgid "Use the international format: +84 followed by 9 or 10 digits."
+msgstr "Dùng định dạng quốc tế: +84 rồi đến 9 hoặc 10 chữ số."
+
+#: includes/class-business.php:435
+msgid "Use a Vietnamese phone number, for example 0816659199."
+msgstr "Dùng số điện thoại Việt Nam, ví dụ 0816659199."
+
+#: includes/class-business.php:448
+msgid "Enter the number before switching this channel on or marking it as verified."
+msgstr "Nhập số trước khi bật kênh này hoặc đánh dấu đã xác minh."
+
+#: includes/class-business.php:663
+msgid "Call buttons are switched off in Store information."
+msgstr "Nút gọi đang tắt trong Thông tin cửa hàng."
+
+#: includes/class-business.php:663
+msgid "The phone number is not verified yet."
+msgstr "Số điện thoại chưa được xác minh."
+
+#: includes/class-business.php:663
+msgid "The phone number is missing."
+msgstr "Thiếu số điện thoại."
+
+#. translators: %s: chat app name (WhatsApp or Zalo).
+#: includes/class-business.php:680
+#, php-format
+msgid "%s is switched off in Store information."
+msgstr "%s đang tắt trong Thông tin cửa hàng."
+
+#. translators: %s: chat app name (WhatsApp or Zalo).
+#: includes/class-business.php:683
+#, php-format
+msgid "%s is not verified yet."
+msgstr "%s chưa được xác minh."
+
+#. translators: %s: chat app name (WhatsApp or Zalo).
+#: includes/class-business.php:686
+#, php-format
+msgid "The %s number is missing."
+msgstr "Thiếu số %s."
+
+#: includes/class-business.php:698
+msgid "The Google Maps link is missing."
+msgstr "Thiếu liên kết Google Maps."
+
+#: includes/class-business.php:700
+msgid "The Google Maps link is not verified yet."
+msgstr "Liên kết Google Maps chưa được xác minh."
+
+#: includes/class-business.php:702
+msgid "The address is not verified yet."
+msgstr "Địa chỉ chưa được xác minh."
+
+#: includes/class-business.php:706
+#: includes/class-quick-contact.php:158
+msgid "Directions"
+msgstr "Chỉ đường"
+
+#: includes/class-business.php:724
+msgid "No published contact page in this language yet."
+msgstr "Chưa có trang liên hệ đã đăng ở ngôn ngữ này."
+
+#: includes/class-business.php:788
+msgid "Old Quarter, Hanoi"
+msgstr "Phố Cổ, Hà Nội"
+
+#: includes/class-business.php:882
+msgid "Some fields need attention. Nothing was saved."
+msgstr "Một số ô cần xem lại. Chưa lưu gì cả."
+
+#: includes/class-business.php:995
+msgid "That backup no longer exists."
+msgstr "Bản sao lưu đó không còn tồn tại."
+
+#: includes/class-business.php:1020
+msgid "The store information block is not valid."
+msgstr "Khối thông tin cửa hàng không hợp lệ."
+
+#: includes/class-business.php:1031
+msgid "The price block is not valid."
+msgstr "Khối giá không hợp lệ."
+
+#: includes/class-business.php:1041
+msgid "There is no store information or price data in it."
+msgstr "Trong đó không có dữ liệu thông tin cửa hàng hay giá."
+
+#: includes/class-business.php:1047
+msgid "This backup contains invalid data and was not restored."
+msgstr "Bản sao lưu này chứa dữ liệu không hợp lệ và chưa được khôi phục."
+
+#: includes/class-business.php:1048
+#: includes/class-business.php:1156
+msgid "The file contains invalid data. Nothing was imported."
+msgstr "Tệp chứa dữ liệu không hợp lệ. Chưa nhập gì cả."
+
+#: includes/class-business.php:1114
+msgid "The file is empty."
+msgstr "Tệp trống."
+
+#. translators: %s: technical JSON error message.
+#: includes/class-business.php:1122
+#, php-format
+msgid "The file is not valid JSON (%s)."
+msgstr "Tệp không phải JSON hợp lệ (%s)."
+
+#: includes/class-business.php:1135
+msgid "This file does not contain Mr Tu store information or prices."
+msgstr "Tệp này không chứa thông tin cửa hàng hay giá của Mr Tu."
+
+#: includes/class-business.php:1138
+msgid "This file was made by a newer version of the plugin."
+msgstr "Tệp này được tạo bởi phiên bản plugin mới hơn."
+
+#: includes/class-business.php:1145
+msgid "The store information block has none of the expected fields."
+msgstr "Khối thông tin cửa hàng không có trường nào như mong đợi."
+
+#: includes/class-business.php:1151
+msgid "The price block must contain a list of vehicles."
+msgstr "Khối giá phải chứa danh sách xe."
+
+#: includes/class-business.php:1325
+msgid "Vietnam"
+msgstr "Việt Nam"
+
+#: includes/class-business.php:1339
+msgid "Monday"
+msgstr "Thứ Hai"
+
+#: includes/class-business.php:1340
+msgid "Tuesday"
+msgstr "Thứ Ba"
+
+#: includes/class-business.php:1341
+msgid "Wednesday"
+msgstr "Thứ Tư"
+
+#: includes/class-business.php:1342
+msgid "Thursday"
+msgstr "Thứ Năm"
+
+#: includes/class-business.php:1343
+msgid "Friday"
+msgstr "Thứ Sáu"
+
+#: includes/class-business.php:1344
+msgid "Saturday"
+msgstr "Thứ Bảy"
+
+#: includes/class-business.php:1345
+msgid "Sunday"
+msgstr "Chủ Nhật"
+
+#: includes/class-business.php:1349
+msgctxt "weekday abbreviation"
+msgid "Mon"
+msgstr "T2"
+
+#: includes/class-business.php:1350
+msgctxt "weekday abbreviation"
+msgid "Tue"
+msgstr "T3"
+
+#: includes/class-business.php:1351
+msgctxt "weekday abbreviation"
+msgid "Wed"
+msgstr "T4"
+
+#: includes/class-business.php:1352
+msgctxt "weekday abbreviation"
+msgid "Thu"
+msgstr "T5"
+
+#: includes/class-business.php:1353
+msgctxt "weekday abbreviation"
+msgid "Fri"
+msgstr "T6"
+
+#: includes/class-business.php:1354
+msgctxt "weekday abbreviation"
+msgid "Sat"
+msgstr "T7"
+
+#: includes/class-business.php:1355
+msgctxt "weekday abbreviation"
+msgid "Sun"
+msgstr "CN"
+
+#: includes/class-business.php:1406
+msgid "Every day"
+msgstr "Hằng ngày"
+
+#. translators: 1: days, e.g. "Every day" or "Mon–Fri", 2: time range, e.g. "08:00–17:00".
+#: includes/class-business.php:1415
+#, php-format
+msgid "%1$s, %2$s"
+msgstr "%1$s, %2$s"
+
+#. translators: %s: language name.
+#: includes/class-languages.php:448
+#, php-format
+msgid "%s: the URL prefix must be 2 to 5 lowercase letters (a–z)."
+msgstr "%s: tiền tố URL phải gồm 2 đến 5 chữ cái thường (a–z)."
+
+#. translators: 1: language name, 2: URL prefix.
+#: includes/class-languages.php:452
+#, php-format
+msgid "%1$s: “%2$s” is reserved by WordPress and cannot be used as a URL prefix."
+msgstr "%1$s: “%2$s” được WordPress dành riêng, không thể dùng làm tiền tố URL."
+
+#. translators: 1: language name, 2: URL prefix.
+#: includes/class-languages.php:456
+#, php-format
+msgid "%1$s: the URL prefix “%2$s” is already used by another language."
+msgstr "%1$s: tiền tố URL “%2$s” đã được ngôn ngữ khác dùng."
+
+#. translators: 1: language name, 2: URL prefix.
+#: includes/class-languages.php:460
+#, php-format
+msgid "%1$s: a page or post with the address “/%2$s/” already exists, so it cannot become a language prefix."
+msgstr "%1$s: đã có trang hoặc bài viết với địa chỉ “/%2$s/”, nên không thể dùng làm tiền tố ngôn ngữ."
+
+#. translators: 1: language name, 2: language code.
+#: includes/class-languages.php:477
+#, php-format
+msgid "%1$s: the hreflang code must look like “%2$s” or “%2$s-XX” (language, optional region)."
+msgstr "%1$s: mã hreflang phải có dạng “%2$s” hoặc “%2$s-XX” (ngôn ngữ, vùng tùy chọn)."
+
+#. translators: 1: language name, 2: hreflang code.
+#: includes/class-languages.php:481
+#, php-format
+msgid "%1$s: the hreflang code “%2$s” is already used."
+msgstr "%1$s: mã hreflang “%2$s” đã được dùng."
+
+#: includes/class-languages.php:502
+msgid "The x-default language must be one of the enabled languages."
+msgstr "Ngôn ngữ x-default phải là một trong các ngôn ngữ đang bật."
+
+#: includes/class-languages.php:536
+msgid "Home"
+msgstr "Trang chủ"
+
+#: includes/class-languages.php:540
+#: includes/class-roles.php:114
+msgid "Blog"
+msgstr "Blog"
+
+#. translators: %s: search query.
+#: includes/class-languages.php:545
+#, php-format
+msgid "Search results for “%s”"
+msgstr "Kết quả tìm kiếm cho “%s”"
+
+#: includes/class-languages.php:549
+msgid "Page not found"
+msgstr "Không tìm thấy trang"
+
+#: includes/class-languages.php:557
+msgid "Not translated yet – opens the home page"
+msgstr "Chưa có bản dịch – mở trang chủ"
+
+#. translators: %d: page number.
+#: includes/class-languages.php:562
+#, php-format
+msgid "Page %d"
+msgstr "Trang %d"
+
+#: includes/class-pricing.php:106
+msgid "Only prices in VND are supported."
+msgstr "Chỉ hỗ trợ giá bằng VND."
+
+#: includes/class-pricing.php:115
+msgid "Use a valid date (YYYY-MM-DD)."
+msgstr "Dùng ngày hợp lệ (YYYY-MM-DD)."
+
+#: includes/class-pricing.php:129
+msgid "Describe the delivery fee before marking it as verified."
+msgstr "Mô tả phí giao xe trước khi đánh dấu đã xác minh."
+
+#: includes/class-pricing.php:134
+msgid "The vehicle list is not valid."
+msgstr "Danh sách xe không hợp lệ."
+
+#. translators: %d: maximum number of vehicles.
+#: includes/class-pricing.php:140
+#, php-format
+msgid "At most %d vehicles are supported."
+msgstr "Hỗ trợ tối đa %d xe."
+
+#: includes/class-pricing.php:152
+msgid "Enter the model name."
+msgstr "Nhập tên dòng xe."
+
+#: includes/class-pricing.php:161
+msgid "Enter a short ID using letters, numbers and dashes."
+msgstr "Nhập mã ngắn gồm chữ cái, số và dấu gạch ngang."
+
+#. translators: %s: vehicle ID.
+#: includes/class-pricing.php:164
+#, php-format
+msgid "The ID “%s” is used by another vehicle."
+msgstr "Mã “%s” đã được xe khác dùng."
+
+#: includes/class-pricing.php:172
+msgid "Choose a valid vehicle type."
+msgstr "Chọn loại xe hợp lệ."
+
+#: includes/class-pricing.php:179
+msgid "Choose a valid status."
+msgstr "Chọn trạng thái hợp lệ."
+
+#: includes/class-pricing.php:243
+msgid "Use whole numbers of 0 or more in VND, for example 150000."
+msgstr "Dùng số nguyên từ 0 trở lên bằng VND, ví dụ 150000."
+
+#: includes/class-pricing.php:253
+msgid "The “from” amount must not be higher than the “to” amount."
+msgstr "Số tiền “từ” không được lớn hơn số tiền “đến”."
+
+#: includes/class-pricing.php:413
+msgid "On request"
+msgstr "Liên hệ"
+
+#: includes/class-pricing.php:413
+msgid "Price on request"
+msgstr "Liên hệ báo giá"
+
+#: includes/class-pricing.php:418
+msgid "reference price, confirm before booking"
+msgstr "giá tham khảo, xác nhận trước khi đặt"
+
+#: includes/class-pricing.php:535
+msgctxt "vehicle type filter (plural)"
+msgid "Semi-automatic"
+msgstr "Xe số"
+
+#: includes/class-pricing.php:536
+msgctxt "vehicle type filter (plural)"
+msgid "Scooters"
+msgstr "Xe tay ga"
+
+#: includes/class-pricing.php:537
+msgctxt "vehicle type filter (plural)"
+msgid "50cc"
+msgstr "50cc"
+
+#: includes/class-pricing.php:538
+msgctxt "vehicle type filter (plural)"
+msgid "Electric"
+msgstr "Xe điện"
+
+#: includes/class-pricing.php:542
+msgctxt "vehicle type"
+msgid "Semi-automatic"
+msgstr "Xe số"
+
+#: includes/class-pricing.php:543
+msgctxt "vehicle type"
+msgid "Scooter"
+msgstr "Xe tay ga"
+
+#: includes/class-pricing.php:544
+msgctxt "vehicle type"
+msgid "50cc scooter"
+msgstr "Xe tay ga 50cc"
+
+#: includes/class-pricing.php:545
+msgctxt "vehicle type"
+msgid "Electric"
+msgstr "Xe điện"
+
+#: includes/class-pricing.php:559
+msgctxt "decorative licence-plate label, uppercase"
+msgid "SEMI-AUTO"
+msgstr "XE SỐ"
+
+#: includes/class-pricing.php:560
+msgctxt "decorative licence-plate label, uppercase"
+msgid "SCOOTER"
+msgstr "TAY GA"
+
+#: includes/class-pricing.php:561
+msgctxt "decorative licence-plate label, uppercase"
+msgid "50CC"
+msgstr "50CC"
+
+#: includes/class-pricing.php:562
+msgctxt "decorative licence-plate label, uppercase"
+msgid "ELECTRIC"
+msgstr "XE ĐIỆN"
+
+#: includes/class-pricing.php:575
+msgid "Available"
+msgstr "Có sẵn"
+
+#: includes/class-pricing.php:577
+msgid "Hidden from the website"
+msgstr "Ẩn khỏi website"
+
+#: includes/class-pricing.php:590
+msgid "Daily"
+msgstr "Theo ngày"
+
+#: includes/class-pricing.php:591
+msgid "Daily rental prices"
+msgstr "Giá thuê theo ngày"
+
+#: includes/class-pricing.php:592
+msgid "Price / day"
+msgstr "Giá / ngày"
+
+#: includes/class-pricing.php:593
+msgctxt "rental period"
+msgid "Day"
+msgstr "Ngày"
+
+#: includes/class-pricing.php:596
+msgid "Weekly"
+msgstr "Theo tuần"
+
+#: includes/class-pricing.php:597
+msgid "Weekly rental prices"
+msgstr "Giá thuê theo tuần"
+
+#: includes/class-pricing.php:598
+msgid "Price / week"
+msgstr "Giá / tuần"
+
+#: includes/class-pricing.php:599
+msgctxt "rental period"
+msgid "Week"
+msgstr "Tuần"
+
+#: includes/class-pricing.php:602
+msgid "Monthly"
+msgstr "Theo tháng"
+
+#: includes/class-pricing.php:603
+msgid "Monthly rental prices"
+msgstr "Giá thuê theo tháng"
+
+#: includes/class-pricing.php:604
+msgid "Price / month"
+msgstr "Giá / tháng"
+
+#: includes/class-pricing.php:605
+msgctxt "rental period"
+msgid "Month"
+msgstr "Tháng"
+
+#: includes/class-quick-contact.php:159
+msgid "Ask a question"
+msgstr "Đặt câu hỏi"
+
+#: includes/class-quick-contact.php:176
+msgid "The Mr Tu assistant plugin is not active."
+msgstr "Plugin trợ lý Mr Tu chưa được kích hoạt."
+
+#: includes/class-quick-contact.php:301
+#: includes/class-roles.php:108
+msgid "Contact"
+msgstr "Liên hệ"
+
+#: includes/class-roles.php:54
+msgid "Home page"
+msgstr "Trang chủ"
+
+#: includes/class-roles.php:60
+msgid "Motorbike rental Hanoi"
+msgstr "Thuê xe máy Hà Nội"
+
+#: includes/class-roles.php:66
+msgid "Old Quarter"
+msgstr "Phố Cổ"
+
+#: includes/class-roles.php:78
+msgid "Motorbikes"
+msgstr "Dòng xe"
+
+#: includes/class-roles.php:84
+msgid "Daily & weekly rental"
+msgstr "Thuê theo ngày & tuần"
+
+#: includes/class-roles.php:90
+msgid "Monthly rental"
+msgstr "Thuê theo tháng"
+
+#: includes/class-roles.php:96
+msgid "How to rent & FAQ"
+msgstr "Thủ tục thuê & Câu hỏi thường gặp"
+
+#: includes/class-roles.php:102
+msgid "About Mr Tu"
+msgstr "Giới thiệu Mr Tu"
+
+#: includes/class-roles.php:120
+msgid "Privacy policy"
+msgstr "Chính sách bảo mật"
+
+#: includes/class-roles.php:126
+msgid "Terms of use"
+msgstr "Điều khoản sử dụng"
+
+#: includes/class-roles.php:132
+msgid "Rental rules"
+msgstr "Quy định thuê xe"
+
+#: includes/class-router.php:1066
+msgid "Limit results to one language code, or \"all\"."
+msgstr "Giới hạn kết quả theo một mã ngôn ngữ, hoặc \"all\"."
+
+#: includes/class-toc.php:783
+msgid "Table of contents"
+msgstr "Mục lục"
+
+#: includes/class-translations.php:193
+msgid "Translation groups"
+msgstr "Nhóm bản dịch"
+
+#: includes/class-translations.php:982
+msgid "The original post does not exist or cannot be translated."
+msgstr "Bài gốc không tồn tại hoặc không thể dịch."
+
+#: includes/class-translations.php:985
+msgid "Unknown language."
+msgstr "Ngôn ngữ không xác định."
+
+#: includes/class-translations.php:1062
+msgid "The translation could not be linked to the original."
+msgstr "Không thể liên kết bản dịch với bản gốc."
+
+#. translators: %s: language name of the original.
+#: includes/class-translations.php:1168
+#, php-format
+msgid "Not published: the content is identical to the %s version. Translate it first; it was saved as a draft."
+msgstr "Chưa đăng: nội dung giống hệt bản %s. Hãy dịch trước; nội dung đã được lưu thành bản nháp."

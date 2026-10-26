@@ -1,0 +1,31 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "mrtu/cta",
+	"version": "1.0.0",
+	"title": "Call / contact buttons",
+	"category": "mrtu",
+	"icon": "phone",
+	"description": "Call and contact-page buttons. The call button appears only when the phone number is verified.",
+	"keywords": [ "call", "button", "contact" ],
+	"textdomain": "mr-tu-multilang-seo",
+	"attributes": {
+		"variant": {
+			"type": "string",
+			"enum": [ "call", "contact" ],
+			"default": "call"
+		}
+	},
+	"supports": {
+		"align": [ "wide" ],
+		"html": false
+	},
+	"example": {
+		"attributes": {
+			"variant": "call"
+		}
+	},
+	"editorScript": "mrtu-blocks-editor",
+	"editorStyle": "mrtu-blocks",
+	"render": "file:./render.php"
+}

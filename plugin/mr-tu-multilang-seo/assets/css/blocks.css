@@ -1,0 +1,477 @@
+/*
+ * Mr Tu blocks — structural CSS only (layout, visibility, states).
+ * The theme owns the visual design; every colour/size reads a theme token with a fallback,
+ * e.g. var(--color-accent, #F56A2A). Markup contract: docs/component-markup.md.
+ */
+
+.mrtu-pricing,
+.mrtu-fleet,
+.mrtu-contact-card,
+.mrtu-cta {
+	box-sizing: border-box;
+	max-width: 100%;
+}
+
+.mrtu-pricing *,
+.mrtu-fleet *,
+.mrtu-contact-card *,
+.mrtu-cta * {
+	box-sizing: inherit;
+}
+
+.mrtu-pricing .screen-reader-text,
+.mrtu-fleet .screen-reader-text,
+.mrtu-contact-card .screen-reader-text,
+.mrtu-cta .screen-reader-text {
+	position: absolute !important;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip-path: inset(50%);
+	border: 0;
+	white-space: nowrap;
+	word-wrap: normal !important;
+}
+
+/* Shared: icons, buttons, badges, plate, price. */
+.mrtu-icon {
+	flex: none;
+	width: 1.25em;
+	height: 1.25em;
+	vertical-align: -0.2em;
+}
+
+.mrtu-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: var(--space-2, 8px);
+	min-height: 48px;
+	padding: 0 var(--space-5, 24px);
+	border: 1.5px solid transparent;
+	border-radius: var(--radius-pill, 999px);
+	font-weight: 600;
+	line-height: 1.2;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.mrtu-button:focus-visible,
+.mrtu-pricing__tab:focus-visible,
+.mrtu-fleet__filter:focus-visible,
+.mrtu-pricing__panel:focus-visible {
+	outline: 3px solid var(--color-focus, #0866ff);
+	outline-offset: 2px;
+}
+
+.mrtu-button--action {
+	background: var(--color-action, #0866ff);
+	color: var(--color-on-action, #fff);
+}
+
+.mrtu-button--accent {
+	background: var(--color-accent, #f56a2a);
+	color: var(--color-on-accent, #101114);
+}
+
+.mrtu-button--ghost {
+	background: transparent;
+	border-color: var(--color-border-strong, #c9cac6);
+	color: inherit;
+}
+
+.mrtu-badge {
+	display: inline-block;
+	padding: 0.2em 0.7em;
+	border: 1px solid currentColor;
+	border-radius: var(--radius-pill, 999px);
+	font-size: var(--text-small, 0.875rem);
+	font-weight: 600;
+	line-height: 1.4;
+	white-space: nowrap;
+}
+
+.mrtu-badge--verified {
+	color: var(--color-action-ink, #0057e0);
+}
+
+.mrtu-badge--reference {
+	color: var(--color-accent-ink, #b8460f);
+}
+
+.mrtu-badge--pending {
+	color: var(--color-text-muted, #5b5e66);
+}
+
+.mrtu-plate {
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2px;
+	padding: 6px 14px;
+	border: 1.5px solid #101114;
+	border-radius: var(--radius-sm, 8px);
+	box-shadow: inset 0 0 0 3px #fff, inset 0 0 0 4px #101114;
+	background: #fff;
+	color: #101114;
+	font-family: var(--font-plate, "Arial Narrow", sans-serif);
+	font-weight: 600;
+	letter-spacing: 0.04em;
+	line-height: 1.1;
+	text-transform: uppercase;
+	font-variant-numeric: tabular-nums;
+}
+
+.mrtu-plate__code {
+	font-size: 0.75em;
+}
+
+.mrtu-plate__name {
+	font-size: 1.25em;
+}
+
+.mrtu-price {
+	white-space: nowrap;
+	font-variant-numeric: tabular-nums;
+}
+
+.mrtu-price--reference {
+	text-decoration: underline dotted;
+	text-underline-offset: 0.25em;
+}
+
+.mrtu-price__flag {
+	margin-left: 0.1em;
+	color: var(--color-accent-ink, #b8460f);
+}
+
+.mrtu-price--on-request {
+	color: var(--color-text-muted, #5b5e66);
+	white-space: normal;
+}
+
+a.mrtu-price--on-request {
+	color: var(--color-action-ink, #0057e0);
+	text-decoration: underline;
+	text-underline-offset: 0.2em;
+}
+
+/* Pricing table. */
+.mrtu-pricing__head {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--space-3, 12px);
+	margin-bottom: var(--space-4, 16px);
+}
+
+.mrtu-pricing__meta {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: var(--space-2, 8px);
+	margin: 0;
+}
+
+.mrtu-pricing__updated {
+	color: var(--color-text-muted, #5b5e66);
+	font-size: var(--text-small, 0.875rem);
+}
+
+.mrtu-pricing__tabs {
+	display: inline-flex;
+	max-width: 100%;
+	padding: 4px;
+	gap: 4px;
+	overflow-x: auto;
+	border-radius: var(--radius-pill, 999px);
+	background: var(--color-surface, #f4f4f2);
+}
+
+:root:not(.mrtu-js) .mrtu-pricing__tabs {
+	display: none;
+}
+
+.mrtu-pricing__tab {
+	min-height: 44px;
+	padding: 0 var(--space-4, 16px);
+	border: 0;
+	border-radius: var(--radius-pill, 999px);
+	background: transparent;
+	color: inherit;
+	font: inherit;
+	font-weight: 600;
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+.mrtu-pricing__tab[aria-selected="true"] {
+	background: var(--color-surface-raised, #fff);
+	box-shadow: var(--shadow-sm, 0 1px 2px rgb(16 17 20 / 0.06));
+}
+
+.mrtu-js .mrtu-pricing__panel:not(.is-active),
+.mrtu-pricing__panel[hidden] {
+	display: none;
+}
+
+:root:not(.mrtu-js) .mrtu-pricing__panel + .mrtu-pricing__panel {
+	margin-top: var(--space-5, 24px);
+}
+
+.mrtu-pricing__table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.mrtu-pricing__table th,
+.mrtu-pricing__table td {
+	padding: var(--space-3, 12px) var(--space-2, 8px);
+	border-bottom: 1px solid var(--color-border, #e3e3e0);
+	text-align: left;
+	vertical-align: middle;
+}
+
+.mrtu-pricing__table thead th {
+	color: var(--color-text-muted, #5b5e66);
+	font-size: var(--text-small, 0.875rem);
+	font-weight: 600;
+}
+
+.mrtu-pricing__model {
+	font-weight: 600;
+}
+
+.mrtu-pricing__type {
+	display: block;
+	color: var(--color-text-muted, #5b5e66);
+	font-size: var(--text-small, 0.875rem);
+	font-weight: 400;
+}
+
+.mrtu-pricing__note {
+	margin: var(--space-3, 12px) 0 0;
+	color: var(--color-text-muted, #5b5e66);
+	font-size: var(--text-small, 0.875rem);
+}
+
+/* Small screens: each row becomes a compact card (no horizontal scrolling). */
+@media (max-width: 599px) {
+
+	.mrtu-pricing__table thead {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip-path: inset(50%);
+	}
+
+	.mrtu-pricing__table,
+	.mrtu-pricing__table tbody,
+	.mrtu-pricing__table tr,
+	.mrtu-pricing__table th,
+	.mrtu-pricing__table td {
+		display: block;
+		width: 100%;
+	}
+
+	.mrtu-pricing__table tr {
+		padding: var(--space-3, 12px) 0;
+		border-bottom: 1px solid var(--color-border, #e3e3e0);
+	}
+
+	.mrtu-pricing__table th,
+	.mrtu-pricing__table td {
+		padding: 2px 0;
+		border: 0;
+	}
+
+	.mrtu-pricing__table td {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 4px var(--space-3, 12px);
+	}
+
+	.mrtu-pricing__table td::before {
+		content: attr(data-label);
+		color: var(--color-text-muted, #5b5e66);
+		font-size: var(--text-small, 0.875rem);
+	}
+}
+
+/* Fleet. */
+.mrtu-fleet__filters {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--space-2, 8px);
+	margin-bottom: var(--space-4, 16px);
+}
+
+.mrtu-fleet__filter {
+	min-height: 44px;
+	padding: 0 var(--space-4, 16px);
+	border: 1.5px solid var(--color-border-strong, #c9cac6);
+	border-radius: var(--radius-pill, 999px);
+	background: transparent;
+	color: inherit;
+	font: inherit;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.mrtu-fleet__filter[aria-pressed="true"] {
+	border-color: var(--color-text, #101114);
+	background: var(--color-text, #101114);
+	color: var(--color-background, #fff);
+}
+
+.mrtu-fleet__list {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+	gap: var(--space-4, 16px);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.mrtu-vehicle {
+	margin: 0;
+	min-width: 0;
+}
+
+.mrtu-vehicle[hidden] {
+	display: none !important;
+}
+
+.mrtu-vehicle__card {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	overflow: hidden;
+	border: 1px solid var(--color-border, #e3e3e0);
+	border-radius: var(--radius-md, 14px);
+	background: var(--color-surface-raised, #fff);
+}
+
+.mrtu-vehicle__media {
+	display: grid;
+	place-items: center;
+	aspect-ratio: 3 / 2;
+	background: var(--color-surface, #f4f4f2);
+}
+
+.mrtu-vehicle__media img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.mrtu-vehicle__body {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	gap: var(--space-2, 8px);
+	padding: var(--space-4, 16px);
+}
+
+.mrtu-vehicle__name,
+.mrtu-vehicle__type,
+.mrtu-vehicle__status,
+.mrtu-vehicle__desc {
+	margin: 0;
+}
+
+.mrtu-vehicle__type {
+	color: var(--color-text-muted, #5b5e66);
+	font-size: var(--text-small, 0.875rem);
+}
+
+.mrtu-vehicle__prices {
+	display: grid;
+	gap: 4px;
+	margin: auto 0 0;
+	padding-top: var(--space-2, 8px);
+}
+
+.mrtu-vehicle__price {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 4px var(--space-3, 12px);
+}
+
+.mrtu-vehicle__price dt,
+.mrtu-vehicle__price dd {
+	margin: 0;
+}
+
+.mrtu-vehicle__price dd {
+	margin-left: auto;
+	text-align: right;
+}
+
+.mrtu-vehicle__price dt {
+	color: var(--color-text-muted, #5b5e66);
+}
+
+.mrtu-fleet__more {
+	margin: var(--space-4, 16px) 0 0;
+}
+
+/* Contact card. */
+.mrtu-contact-card__list {
+	display: grid;
+	gap: var(--space-3, 12px);
+	margin: 0;
+}
+
+.mrtu-contact-card__item dt {
+	color: var(--color-text-muted, #5b5e66);
+	font-size: var(--text-small, 0.875rem);
+}
+
+.mrtu-contact-card__item dd {
+	margin: 0;
+	overflow-wrap: anywhere;
+}
+
+.mrtu-contact-card__item--phone a {
+	font-weight: 600;
+	white-space: nowrap;
+}
+
+.mrtu-contact-card__note {
+	margin: var(--space-4, 16px) 0 0;
+	color: var(--color-text-muted, #5b5e66);
+	font-size: var(--text-small, 0.875rem);
+}
+
+/* CTA. */
+.mrtu-cta {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: var(--space-3, 12px);
+}
+
+@media (max-width: 479px) {
+
+	.mrtu-cta .mrtu-button {
+		flex: 1 1 100%;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+	.mrtu-pricing *,
+	.mrtu-fleet *,
+	.mrtu-cta * {
+		transition: none !important;
+		animation: none !important;
+	}
+}

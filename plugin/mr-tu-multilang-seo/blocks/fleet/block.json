@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "mrtu/fleet",
+	"version": "1.0.0",
+	"title": "Motorbike models",
+	"category": "mrtu",
+	"icon": "grid-view",
+	"description": "Cards of the motorbike models from Mr Tu → Vehicles, with type filters. Hidden models never appear.",
+	"keywords": [ "fleet", "motorbike", "scooter" ],
+	"textdomain": "mr-tu-multilang-seo",
+	"attributes": {
+		"category": {
+			"type": "string",
+			"enum": [ "all", "manual", "scooter", "50cc", "electric" ],
+			"default": "all"
+		},
+		"showPrices": {
+			"type": "boolean",
+			"default": true
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"html": false
+	},
+	"example": {
+		"attributes": {
+			"category": "all",
+			"showPrices": true
+		}
+	},
+	"editorScript": "mrtu-blocks-editor",
+	"editorStyle": "mrtu-blocks",
+	"render": "file:./render.php"
+}

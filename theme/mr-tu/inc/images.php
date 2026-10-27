@@ -130,4 +130,3 @@ function mr_tu_localized_image_alt( $attrs, $attachment ) {
 	return $attrs;
 }
 add_filter( 'wp_get_attachment_image_attributes', 'mr_tu_localized_image_alt', 20, 2 );
-

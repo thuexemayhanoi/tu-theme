@@ -27,6 +27,7 @@ get_header();
 			?>
 			<div class="home-content entry-content">
 				<?php the_content(); ?>
+				<?php get_template_part( 'parts/home/guides' ); ?>
 			</div>
 			<?php
 		endif;
@@ -35,3 +36,4 @@ get_header();
 </main>
 <?php
 get_footer();
+

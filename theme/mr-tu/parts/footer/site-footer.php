@@ -1,6 +1,6 @@
 <?php
 /**
- * Site footer: brand line, public contact details only (the block is marked
+ * Site footer: brand line, public contact details only (the footer is marked
  * `data-mrtu-qc-avoid` so the Quick Contact dock steps aside), navigation columns, languages,
  * colour mode and copyright.
  *
@@ -20,7 +20,7 @@ $mr_tu_hours   = mr_tu_public_hours();
 $mr_tu_email   = function_exists( 'mrtu_business' ) ? sanitize_email( (string) mrtu_business( 'email' ) ) : '';
 $mr_tu_channels = function_exists( 'mrtu_contact_channels' ) ? mrtu_contact_channels() : array();
 ?>
-<footer class="site-footer" id="site-footer">
+<footer class="site-footer" id="site-footer" data-mrtu-qc-avoid>
 	<div class="site-footer__inner">
 		<div class="site-footer__top">
 			<p class="site-footer__tagline">

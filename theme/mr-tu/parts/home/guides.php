@@ -4,6 +4,7 @@
  *
  * @package MrTu\\Theme
  */
+
 defined( 'ABSPATH' ) || exit;
 if ( ! function_exists( 'mrtu_current_language' ) ) {
 	return;
@@ -63,7 +64,10 @@ $mr_tu_posts = get_posts(
 			<div class="card-grid" aria-label="<?php echo esc_attr( $mr_tu_words[2] ); ?>">
 				<?php
 				foreach ( $mr_tu_posts as $mr_tu_item ) {
-					get_template_part( 'parts/components/post-card', null, array( 'post' => $mr_tu_item, 'heading' => 'h3' ) );
+					get_template_part( 'parts/components/post-card', null, array(
+							'post' => $mr_tu_item,
+							'heading' => 'h3',
+						) );
 				}
 				?>
 			</div>
@@ -71,4 +75,3 @@ $mr_tu_posts = get_posts(
 		<p><a class="mrtu-btn mrtu-btn--secondary" href="<?php echo esc_url( mrtu_role_url( 'blog', $mr_tu_lang ) ); ?>"><?php echo esc_html( $mr_tu_words[3] ); ?></a></p>
 	</div>
 </section>
-

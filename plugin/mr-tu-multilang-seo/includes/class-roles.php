@@ -363,4 +363,3 @@ final class Roles {
 		return $url ? $url : '';
 	}
 }
-

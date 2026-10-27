@@ -18,14 +18,13 @@ $mr_tu_photo = mr_tu_hero_image_html();
 $mr_tu_facts = array(
 	array( 'calendar', __( 'Daily · Weekly · Monthly', 'mr-tu' ) ),
 	array( 'scooter', __( 'Scooters & semi-automatics', 'mr-tu' ) ),
-	array( 'chat', __( 'Help in Vietnamese & English', 'mr-tu' ) ),
 );
 ?>
 <section class="home-hero<?php echo $mr_tu_photo ? ' has-photo' : ''; ?>" aria-labelledby="mrtu-home-title">
 	<div class="home-hero__inner">
 		<div class="home-hero__copy">
 			<p class="home-hero__eyebrow">
-				<span class="mrtu-plate mrtu-plate--inline"><span class="mrtu-plate__top"><?php echo esc_html( 'Mr Tu · ' . mr_tu_city() ); ?></span></span>
+				<span class="mrtu-plate mrtu-plate--inline"><span class="mrtu-plate__top"><?php echo esc_html( 'Mr Tú · ' . mr_tu_city() ); ?></span></span>
 			</p>
 			<h1 class="home-hero__title" id="mrtu-home-title"><?php echo esc_html( get_the_title() ); ?></h1>
 			<?php if ( '' !== $mr_tu_lead ) : ?>
@@ -93,3 +92,4 @@ $mr_tu_facts = array(
 		</div>
 	</div>
 </section>
+

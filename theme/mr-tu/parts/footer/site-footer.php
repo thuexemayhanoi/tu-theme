@@ -17,6 +17,8 @@ $mr_tu_tel     = mr_tu_phone( 'tel' );
 $mr_tu_phone   = mr_tu_phone( 'display' );
 $mr_tu_address = mr_tu_public_address();
 $mr_tu_hours   = mr_tu_public_hours();
+$mr_tu_email   = function_exists( 'mrtu_business' ) ? sanitize_email( (string) mrtu_business( 'email' ) ) : '';
+$mr_tu_channels = function_exists( 'mrtu_contact_channels' ) ? mrtu_contact_channels() : array();
 ?>
 <footer class="site-footer" id="site-footer">
 	<div class="site-footer__inner">
@@ -49,6 +51,12 @@ $mr_tu_hours   = mr_tu_public_hours();
 							<?php mr_tu_the_icon( 'pin' ); ?>
 							<span><?php echo esc_html( '' !== $mr_tu_address ? $mr_tu_address : mr_tu_area_text() ); ?></span>
 						</li>
+						<?php if ( '' !== $mr_tu_email ) : ?>
+							<li><a href="<?php echo esc_url( 'mailto:' . $mr_tu_email, array( 'mailto' ) ); ?>"><?php echo esc_html( $mr_tu_email ); ?></a></li>
+						<?php endif; ?>
+						<?php if ( ! empty( $mr_tu_channels['directions']['url'] ) ) : ?>
+							<li><a href="<?php echo esc_url( $mr_tu_channels['directions']['url'] ); ?>"><?php echo esc_html( $mr_tu_channels['directions']['label'] ); ?></a></li>
+						<?php endif; ?>
 						<?php if ( '' !== $mr_tu_hours ) : ?>
 							<li>
 								<?php mr_tu_the_icon( 'clock' ); ?>

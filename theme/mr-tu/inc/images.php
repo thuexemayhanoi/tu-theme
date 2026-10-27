@@ -109,3 +109,25 @@ function mr_tu_featured_image_html( $post ) {
 		)
 	);
 }
+
+/**
+ * Use translated attachment descriptions when one shared photo serves several languages.
+ *
+ * @param array   $attrs      Image HTML attributes.
+ * @param WP_Post $attachment Attachment object.
+ * @return array
+ */
+function mr_tu_localized_image_alt( $attrs, $attachment ) {
+	if ( ! function_exists( 'mrtu_current_language' ) || ! $attachment instanceof WP_Post ) {
+		return $attrs;
+	}
+	$lang = mrtu_current_language();
+	$maps = get_option( 'mrtu_image_alt_translations', array() );
+	$map  = isset( $maps[ $attachment->ID ] ) ? $maps[ $attachment->ID ] : array();
+	if ( is_array( $map ) && isset( $map[ $lang ] ) && is_string( $map[ $lang ] ) ) {
+		$attrs['alt'] = wp_strip_all_tags( $map[ $lang ] );
+	}
+	return $attrs;
+}
+add_filter( 'wp_get_attachment_image_attributes', 'mr_tu_localized_image_alt', 20, 2 );
+

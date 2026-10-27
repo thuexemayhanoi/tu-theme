@@ -98,6 +98,12 @@ final class Roles {
 				'footer' => 'info',
 				'order'  => 70,
 			),
+			'delivery'      => array(
+				'label'  => __( 'Delivery & collection', 'mr-tu-multilang-seo' ),
+				'nav'    => 'more',
+				'footer' => 'info',
+				'order'  => 75,
+			),
 			'about'         => array(
 				'label'  => __( 'About Mr Tu', 'mr-tu-multilang-seo' ),
 				'nav'    => 'more',
@@ -357,3 +363,4 @@ final class Roles {
 		return $url ? $url : '';
 	}
 }
+

@@ -654,17 +654,35 @@ final class Blocks {
 
 	/**
 	 * Honest localized contact messages when no verified fleet or price is published.
+	 *
+	 * @param string $lang Language code.
+	 * @param string $kind Message kind: price or fleet.
+	 * @return string
 	 */
 	private static function confirmation_notice( $lang, $kind ) {
 		$messages = array(
-			'vi' => array( 'price' => 'Liên hệ 0816659199 để xác nhận báo giá theo xe và thời gian thuê của bạn.', 'fleet' => 'Liên hệ 0816659199 để xác nhận xe có sẵn cho ngày nhận và trả dự kiến.' ),
-			'en' => array( 'price' => 'Call 0816659199 to confirm a quote for your vehicle and rental dates.', 'fleet' => 'Call 0816659199 to confirm which vehicles are available for your dates.' ),
-			'de' => array( 'price' => 'Rufe 0816659199 an, um ein Angebot für Fahrzeug und Mietzeitraum zu bestätigen.', 'fleet' => 'Rufe 0816659199 an, um verfügbare Fahrzeuge für deinen Mietzeitraum zu erfragen.' ),
-			'fr' => array( 'price' => 'Appelez le 0816659199 pour confirmer un devis selon le véhicule et vos dates.', 'fleet' => 'Appelez le 0816659199 pour confirmer les véhicules disponibles à vos dates.' ),
-			'es' => array( 'price' => 'Llama al 0816659199 para confirmar un presupuesto según la moto y las fechas.', 'fleet' => 'Llama al 0816659199 para confirmar las motos disponibles en tus fechas.' ),
+			'vi' => array(
+				'price' => 'Liên hệ Mr Tú để xác nhận báo giá theo xe và thời gian thuê của bạn.',
+				'fleet' => 'Liên hệ Mr Tú để xác nhận xe có sẵn cho ngày nhận và trả dự kiến.',
+			),
+			'en' => array(
+				'price' => 'Contact Mr Tú to confirm a quote for your vehicle and rental dates.',
+				'fleet' => 'Contact Mr Tú to confirm which vehicles are available for your dates.',
+			),
+			'de' => array(
+				'price' => 'Kontaktiere Mr Tú, um ein Angebot für Fahrzeug und Mietzeitraum zu bestätigen.',
+				'fleet' => 'Kontaktiere Mr Tú, um verfügbare Fahrzeuge für deinen Mietzeitraum zu erfragen.',
+			),
+			'fr' => array(
+				'price' => 'Contactez Mr Tú pour confirmer un devis selon le véhicule et vos dates.',
+				'fleet' => 'Contactez Mr Tú pour confirmer les véhicules disponibles à vos dates.',
+			),
+			'es' => array(
+				'price' => 'Contacta con Mr Tú para confirmar un presupuesto según la moto y las fechas.',
+				'fleet' => 'Contacta con Mr Tú para confirmar las motos disponibles en tus fechas.',
+			),
 		);
 		$lang = isset( $messages[ $lang ] ) ? $lang : 'vi';
 		return $messages[ $lang ][ $kind ];
 	}
 }
-

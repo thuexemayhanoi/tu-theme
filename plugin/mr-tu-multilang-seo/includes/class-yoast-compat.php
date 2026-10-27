@@ -485,5 +485,3 @@ final class Yoast_Compat {
 		return substr( $output, 0, $pos ) . $links . substr( $output, $pos );
 	}
 }
-
-

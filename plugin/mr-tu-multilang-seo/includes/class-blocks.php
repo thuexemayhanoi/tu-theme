@@ -238,7 +238,7 @@ final class Blocks {
 		$html .= '<p class="mrtu-pricing__meta">' . self::pricing_badge( $meta ) . self::pricing_updated( $meta, $lang ) . '</p>';
 
 		if ( ! $vehicles ) {
-			$html .= '</div><p class="mrtu-pricing__note mrtu-pricing__note--empty">' . esc_html__( 'Our price list is being updated. Please contact Mr Tu for current prices.', 'mr-tu-multilang-seo' ) . '</p></section>';
+			$html .= '</div><p class="mrtu-pricing__note mrtu-pricing__note--empty">' . esc_html( self::confirmation_notice( $lang, 'price' ) ) . '</p></section>';
 			return $html;
 		}
 
@@ -396,7 +396,7 @@ final class Blocks {
 		) . '>';
 
 		if ( ! $vehicles ) {
-			return $html . '<p class="mrtu-fleet__empty">' . esc_html__( 'Our list of motorbikes is being updated. Please contact Mr Tu.', 'mr-tu-multilang-seo' ) . '</p></div>';
+			return $html . '<p class="mrtu-fleet__empty">' . esc_html( self::confirmation_notice( $lang, 'fleet' ) ) . '</p></div>';
 		}
 
 		if ( 'all' === $category && count( $categories ) >= 2 ) {
@@ -651,4 +651,20 @@ final class Blocks {
 		$class = 'mrtu-icon mrtu-icon--' . $name . ( '' !== $extra ? ' ' . $extra : '' );
 		return '<svg class="' . esc_attr( $class ) . '" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">' . $paths[ $name ] . '</svg>';
 	}
+
+	/**
+	 * Honest localized contact messages when no verified fleet or price is published.
+	 */
+	private static function confirmation_notice( $lang, $kind ) {
+		$messages = array(
+			'vi' => array( 'price' => 'Liên hệ 0816659199 để xác nhận báo giá theo xe và thời gian thuê của bạn.', 'fleet' => 'Liên hệ 0816659199 để xác nhận xe có sẵn cho ngày nhận và trả dự kiến.' ),
+			'en' => array( 'price' => 'Call 0816659199 to confirm a quote for your vehicle and rental dates.', 'fleet' => 'Call 0816659199 to confirm which vehicles are available for your dates.' ),
+			'de' => array( 'price' => 'Rufe 0816659199 an, um ein Angebot für Fahrzeug und Mietzeitraum zu bestätigen.', 'fleet' => 'Rufe 0816659199 an, um verfügbare Fahrzeuge für deinen Mietzeitraum zu erfragen.' ),
+			'fr' => array( 'price' => 'Appelez le 0816659199 pour confirmer un devis selon le véhicule et vos dates.', 'fleet' => 'Appelez le 0816659199 pour confirmer les véhicules disponibles à vos dates.' ),
+			'es' => array( 'price' => 'Llama al 0816659199 para confirmar un presupuesto según la moto y las fechas.', 'fleet' => 'Llama al 0816659199 para confirmar las motos disponibles en tus fechas.' ),
+		);
+		$lang = isset( $messages[ $lang ] ) ? $lang : 'vi';
+		return $messages[ $lang ][ $kind ];
+	}
 }
+

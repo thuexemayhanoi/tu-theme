@@ -789,6 +789,10 @@ final class Router {
 	 * @return array
 	 */
 	public static function scope_terms( $args, $taxonomies ) {
+		// Yoast's single sitemap covers every language, unlike frontend category lists.
+		if ( get_query_var( 'sitemap' ) ) {
+			return $args;
+		}
 		if ( '' === self::$current || ! is_array( $args ) || empty( $taxonomies ) ) {
 			return $args;
 		}
@@ -1102,3 +1106,4 @@ final class Router {
 		return $result;
 	}
 }
+

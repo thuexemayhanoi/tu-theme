@@ -81,6 +81,8 @@ final class Yoast_Compat {
 		add_filter( 'wpseo_opengraph_url', array( __CLASS__, 'canonical' ), 10, 2 );
 		add_filter( 'wpseo_locale', array( __CLASS__, 'locale' ) );
 		add_filter( 'wpseo_schema_webpage', array( __CLASS__, 'schema_webpage' ), 10, 2 );
+		add_filter( 'wpseo_schema_organization', array( __CLASS__, 'schema_organization' ), 11, 2 );
+		add_filter( 'wpseo_schema_website', array( __CLASS__, 'schema_website' ), 11, 2 );
 		add_action( 'wpseo_head', array( __CLASS__, 'print_alternates' ), 10 );
 		add_filter( 'wpseo_sitemap_entry', array( __CLASS__, 'sitemap_entry' ), 10, 3 );
 		add_filter( 'wpseo_exclude_from_sitemap_by_post_ids', array( __CLASS__, 'exclude_noindex_posts' ) );
@@ -91,6 +93,51 @@ final class Yoast_Compat {
 		add_filter( 'wpseo_frontend_presenters', array( __CLASS__, 'presenters' ), PHP_INT_MAX );
 		add_filter( 'wpseo_json_ld_output', array( __CLASS__, 'json_ld_output' ), PHP_INT_MAX );
 		return true;
+	}
+
+	/**
+	 * Enrich the existing Yoast organization instead of printing a second business graph.
+	 *
+	 * @param array $piece Organization node.
+	 * @param mixed $context Yoast context.
+	 * @return array
+	 */
+	public static function schema_organization( $piece, $context = null ) {
+		if ( ! self::is_compat() || ! is_array( $piece ) || ! Seo::local_business_enabled() ) {
+			return $piece;
+		}
+		$business = Schema::business();
+		if ( ! is_array( $business ) ) {
+			return $piece;
+		}
+		$piece['@type'] = array( 'Organization', 'LocalBusiness' );
+		foreach ( array( 'name', 'alternateName', 'url', 'telephone', 'email', 'address', 'openingHoursSpecification', 'currenciesAccepted', 'hasMap', 'areaServed' ) as $key ) {
+			if ( isset( $business[ $key ] ) ) {
+				$piece[ $key ] = $business[ $key ];
+			}
+		}
+		return $piece;
+	}
+
+	/**
+	 * One website serves all enabled languages; each webpage retains its own language.
+	 *
+	 * @param array $piece Website node.
+	 * @param mixed $context Yoast context.
+	 * @return array
+	 */
+	public static function schema_website( $piece, $context = null ) {
+		if ( self::is_compat() && is_array( $piece ) ) {
+			$piece['inLanguage'] = array_values(
+				array_map(
+					function ( $lang ) {
+						return $lang['hreflang'];
+					},
+					Languages::all( true )
+				)
+			);
+		}
+		return $piece;
 	}
 
 	/**
@@ -285,6 +332,16 @@ final class Yoast_Compat {
 		$lang = Languages::get( Router::effective_language() );
 		if ( $lang ) {
 			$piece['inLanguage'] = $lang['hreflang'];
+		}
+		$post = get_queried_object();
+		if ( $post instanceof \WP_Post && 'guide-faq' === Roles::get_post_role( $post->ID ) && Seo::setting( 'faq_schema', true ) ) {
+			$items = Schema::faq_items( $post );
+			if ( $items ) {
+				$types = isset( $piece['@type'] ) ? (array) $piece['@type'] : array( 'WebPage' );
+				$types[] = 'FAQPage';
+				$piece['@type'] = array_values( array_unique( $types ) );
+				$piece['mainEntity'] = $items;
+			}
 		}
 		return $piece;
 	}

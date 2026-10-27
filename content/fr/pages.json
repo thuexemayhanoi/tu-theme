@@ -234,5 +234,20 @@
   "file": "post-pickup-checklist.html",
   "status": "publish",
   "category": "conseils-pratiques"
+ },
+ {
+  "seed_id": "page:delivery",
+  "type": "page",
+  "role": "delivery",
+  "slug": "livraison-remise-retour-scooter",
+  "title": "Livraison, remise et retour du scooter avec Mr Tú",
+  "nav_label": "Remise & retour",
+  "excerpt": "Organisez la remise et le retour avec Mr Tú à Hanoï : confirmez lieu, horaires, frais éventuels, documents et changements avant de vous déplacer.",
+  "seo_title": "Livraison et retour du scooter à Hanoï | Mr Tú",
+  "seo_desc": "Organisez la remise et le retour avec Mr Tú à Hanoï : confirmez lieu, horaires, frais éventuels, documents et changements avant de vous déplacer.",
+  "focus_kw": "livraison retour scooter Hanoï",
+  "file": "delivery.html",
+  "status": "publish",
+  "menu_order": 8
  }
 ]

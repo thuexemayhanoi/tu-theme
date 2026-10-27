@@ -234,5 +234,20 @@
   "file": "post-pickup-checklist.html",
   "status": "publish",
   "category": "tipps"
+ },
+ {
+  "seed_id": "page:delivery",
+  "type": "page",
+  "role": "delivery",
+  "slug": "roller-zustellung-rueckgabe",
+  "title": "Rollerübergabe, Zustellung und Rückgabe bei Mr Tú",
+  "nav_label": "Übergabe & Rückgabe",
+  "excerpt": "Übergabe und Rückgabe mit Mr Tú in Hanoi planen: Treffpunkt, Zeiten, mögliche Zustellkosten, Dokumente und Änderungen vor der Anfahrt bestätigen.",
+  "seo_title": "Roller in Hanoi: Zustellung und Rückgabe | Mr Tú",
+  "seo_desc": "Übergabe und Rückgabe mit Mr Tú in Hanoi planen: Treffpunkt, Zeiten, mögliche Zustellkosten, Dokumente und Änderungen vor der Anfahrt bestätigen.",
+  "focus_kw": "Roller Zustellung Rückgabe Hanoi",
+  "file": "delivery.html",
+  "status": "publish",
+  "menu_order": 8
  }
 ]

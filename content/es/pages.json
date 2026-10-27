@@ -234,5 +234,20 @@
   "file": "post-pickup-checklist.html",
   "status": "publish",
   "category": "consejos"
+ },
+ {
+  "seed_id": "page:delivery",
+  "type": "page",
+  "role": "delivery",
+  "slug": "entrega-recogida-devolucion-moto",
+  "title": "Entrega, recogida y devolución de moto con Mr Tú",
+  "nav_label": "Entrega & devolución",
+  "excerpt": "Organiza la entrega y devolución con Mr Tú en Hanói: confirma lugar, horario, posibles costes, documentos y cambios antes de desplazarte a la cita.",
+  "seo_title": "Entrega y devolución de moto en Hanói | Mr Tú",
+  "seo_desc": "Organiza la entrega y devolución con Mr Tú en Hanói: confirma lugar, horario, posibles costes, documentos y cambios antes de desplazarte a la cita.",
+  "focus_kw": "entrega devolución moto Hanói",
+  "file": "delivery.html",
+  "status": "publish",
+  "menu_order": 8
  }
 ]

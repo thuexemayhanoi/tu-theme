@@ -234,5 +234,20 @@
   "file": "post-pickup-checklist.html",
   "status": "publish",
   "category": "kinh-nghiem"
+ },
+ {
+  "seed_id": "page:delivery",
+  "type": "page",
+  "role": "delivery",
+  "slug": "giao-nhan-xe-may",
+  "title": "Giao nhận xe máy tại Mr Tú Phố Cổ",
+  "nav_label": "Giao nhận xe",
+  "excerpt": "Hướng dẫn hẹn nhận và trả xe với Mr Tú tại Phúc Tân, Hoàn Kiếm: xác nhận địa chỉ, giờ, chi phí giao nhận, giấy tờ và cách xử lý khi đổi lịch.",
+  "seo_title": "Giao nhận xe máy Phố Cổ: hẹn giờ, địa điểm | Mr Tú",
+  "seo_desc": "Hướng dẫn hẹn nhận và trả xe với Mr Tú tại Phúc Tân, Hoàn Kiếm: xác nhận địa chỉ, giờ, chi phí giao nhận, giấy tờ và cách xử lý khi đổi lịch.",
+  "focus_kw": "giao nhận xe máy Phố Cổ",
+  "file": "delivery.html",
+  "status": "publish",
+  "menu_order": 8
  }
 ]

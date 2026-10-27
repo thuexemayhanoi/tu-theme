@@ -425,7 +425,7 @@ wp_update_post(
 MrTu_Test::section( 'Page roles' );
 
 $roles = mrtu_page_roles();
-MrTu_Test::same( array( 'home', 'pillar', 'old-quarter', 'pricing', 'fleet', 'short-term', 'monthly', 'guide-faq', 'about', 'contact', 'blog', 'privacy', 'terms', 'rental-policy' ), array_keys( $roles ), 'role registry (contract 2.3) in order' );
+MrTu_Test::same( array( 'home', 'pillar', 'old-quarter', 'pricing', 'fleet', 'short-term', 'monthly', 'guide-faq', 'delivery', 'about', 'contact', 'blog', 'privacy', 'terms', 'rental-policy' ), array_keys( $roles ), 'role registry (contract 2.3) in order' );
 MrTu_Test::same( array( 'primary', 'rent', 'more', 'legal' ), array( $roles['pillar']['nav'], $roles['pillar']['footer'], $roles['monthly']['nav'], $roles['terms']['footer'] ), 'nav/footer placement' );
 MrTu_Test::ok( mrtu_set_post_role( $homes['en'], 'home' ), 'set role on one member' );
 MrTu_Test::same( array( 'home', 'home' ), array( mrtu_get_post_role( $homes['vi'] ), get_post_meta( $homes['de'], '_mrtu_role', true ) ), 'role applies to the whole group (meta synced)' );

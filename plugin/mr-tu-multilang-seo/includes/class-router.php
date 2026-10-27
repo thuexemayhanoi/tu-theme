@@ -1106,4 +1106,3 @@ final class Router {
 		return $result;
 	}
 }
-

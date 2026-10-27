@@ -234,5 +234,20 @@
   "file": "post-pickup-checklist.html",
   "status": "publish",
   "category": "riding-tips"
+ },
+ {
+  "seed_id": "page:delivery",
+  "type": "page",
+  "role": "delivery",
+  "slug": "motorbike-delivery-collection",
+  "title": "Motorbike Delivery, Collection and Return with Mr Tú",
+  "nav_label": "Delivery & return",
+  "excerpt": "Arrange motorbike collection and return with Mr Tú: confirm the meeting point, hours, delivery costs, documents and changes before travelling in Hanoi.",
+  "seo_title": "Motorbike Delivery and Collection in Hanoi | Mr Tú",
+  "seo_desc": "Arrange motorbike collection and return with Mr Tú: confirm the meeting point, hours, delivery costs, documents and changes before travelling in Hanoi.",
+  "focus_kw": "motorbike delivery collection Hanoi",
+  "file": "delivery.html",
+  "status": "publish",
+  "menu_order": 8
  }
 ]
